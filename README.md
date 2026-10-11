@@ -1,4 +1,5 @@
-Il progetto è generato con l'utilizzo LLM.
+Il progetto è generato con l'utilizzo di vari LLM.
+
 # Osservatorio Gestionali Italiani
 
 Raccolta di dati sui software gestionali usati in Italia: prodotti, software house, ricavi, feature, dipendenza hardware e lock-in. I dati stanno in un database SQLite, vengono prodotti da bundle JSON con fonti verificabili e si consultano tramite una dashboard web statica.
