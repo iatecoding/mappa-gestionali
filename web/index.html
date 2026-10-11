@@ -101,7 +101,7 @@
 
     /* Catalog layout: filters on the left */
     .catalog-layout { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 20px; align-items: start; }
-    .catalog-sidebar { position: sticky; top: 118px; display: grid; gap: 12px; min-width: 0; }
+    .catalog-sidebar { position: sticky; top: 118px; display: grid; gap: 12px; min-width: 0; max-height: calc(100vh - 134px); overflow-y: auto; scrollbar-width: thin; padding-right: 2px; padding-bottom: 2px; }
     .catalog-sidebar .controls-panel { margin-bottom: 0; min-width: 0; }
     .catalog-sidebar .filters-grid { grid-template-columns: 1fr; }
     .catalog-sidebar .filter-item { min-width: 0; }
@@ -304,7 +304,7 @@
       .bar-row, .dp-row, .dev-row { grid-template-columns: 110px 1fr auto; }
       .dp-name { font-size: 0.74rem; }
       .catalog-layout { grid-template-columns: 1fr; }
-      .catalog-sidebar { position: static; }
+      .catalog-sidebar { position: static; max-height: none; overflow-y: visible; padding-right: 0; }
       .catalog-sidebar .filters-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 640px) {
