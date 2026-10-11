@@ -1,0 +1,384 @@
+{
+  "schema_version": "1.0",
+  "record_id": "research-insiel-siir-pa-20261011",
+  "created_at": "2026-10-11T10:00:00Z",
+  "created_by": {"agent_id": "research_bundle_agent"},
+  "scope": {"country": "IT", "language": "it"},
+  "entities": [
+    {
+      "local_id": "company:insiel",
+      "entity_type": "company",
+      "name": "Insiel S.p.A.",
+      "legal_name": "Insiel - Informatica per il Sistema degli Enti Locali S.p.A.",
+      "identifiers": {"vat_id": "00118410323"},
+      "website": "https://www.insiel.it/",
+      "headquarters_city": "Trieste",
+      "headquarters_region": "Friuli-Venezia Giulia",
+      "headquarters_country": "IT",
+      "founded_year": 1974,
+      "metadata": {
+        "ownership": "società in house della Regione Autonoma Friuli-Venezia Giulia (socio unico)",
+        "employee_band": "501-1000"
+      }
+    },
+    {
+      "local_id": "product:insiel-siir",
+      "entity_type": "product",
+      "company_ref": "company:insiel",
+      "name": "Sistema Informativo Integrato Regionale (SIIR)",
+      "slug": "insiel-siir",
+      "website": "https://www.insiel.it/",
+      "deployment": ["cloud", "on_premise"],
+      "description": "Piattaforma applicativa con cui Insiel progetta, realizza e gestisce il sistema informativo degli enti locali e della pubblica amministrazione regionale del Friuli-Venezia Giulia (contabilità, personale, tributi, stato civile, anagrafe, patrimonio, elettorale, fatturazione elettronica, protocollo).",
+      "metadata": {"aliases": ["SIIR", "Sistema informativo integrato regionale"]}
+    }
+  ],
+  "sources": [
+    {
+      "local_id": "source:insiel-company",
+      "url": "https://www.insiel.it/it/societa-3921",
+      "source_type": "official_company_page",
+      "publisher": "Insiel S.p.A.",
+      "title": "Azienda - Insiel S.p.A.",
+      "accessed_at": "2026-10-11T09:02:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:insiel-home",
+      "url": "https://www.insiel.it/",
+      "source_type": "official_company_page",
+      "publisher": "Insiel S.p.A.",
+      "title": "INSIEL S.p.A. - l'innovazione che connette",
+      "accessed_at": "2026-10-11T09:10:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:insiel-pa-division",
+      "url": "https://www.insiel.it/media/files/PORTALEINSIEL/attachment/PTPC-INSIEL_2025_NuovaStrutturaOrg.pdf",
+      "source_type": "other",
+      "publisher": "Insiel S.p.A.",
+      "title": "Organigramma ed articolazione degli uffici - Divisione Pubblica Amministrazione Digitale",
+      "accessed_at": "2026-10-11T09:11:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:insiel-regione",
+      "url": "http://regione.fvg.it/enti-controllati/dettaglio?id=69",
+      "source_type": "directory",
+      "publisher": "Regione Autonoma Friuli-Venezia Giulia",
+      "title": "Insiel - Informatica per il Sistema degli Enti Locali S.p.A. (enti controllati)",
+      "accessed_at": "2026-10-11T09:05:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:insiel-bilancio2024",
+      "url": "https://www.insiel.it/media/files/PORTALEINSIEL/attachment/Insiel_Bilancio_2024_P.pdf",
+      "source_type": "annual_report",
+      "publisher": "Insiel S.p.A.",
+      "title": "Relazione Bilancio Insiel al 31.12.2024",
+      "accessed_at": "2026-10-11T09:03:00Z",
+      "language": "it"
+    }
+  ],
+  "documents": [
+    {
+      "local_id": "document:insiel-pa-division",
+      "source_ref": "source:insiel-pa-division",
+      "title": "Divisione Pubblica Amministrazione Digitale - organigramma Insiel 2025",
+      "document_type": "pdf_document",
+      "extraction_method": "web_manual_excerpt",
+      "text": "Attraverso le aree verticali di competenza la Divisione Pubblica Amministrazione Digitale di Insiel copre: Contabilità, Personale, Patrimonio, Tributi, Servizi demografici, Stato civile, Anagrafe, Carburanti, Elettorale, Fatturazione elettronica, ATER; inoltre servizi e sistemi per ambiente, territorio e agricoltura (cartografico, territoriali, ambiente, energia, trasporti, concessioni, sicurezza)."
+    },
+    {
+      "local_id": "document:insiel-company",
+      "source_ref": "source:insiel-company",
+      "title": "Azienda - Insiel S.p.A.",
+      "document_type": "web_page",
+      "extraction_method": "web_manual_excerpt",
+      "text": "Insiel progetta, realizza e gestisce l'infrastruttura digitale del Friuli-Venezia Giulia: Pubblica Amministrazione (sviluppo e gestione di software per contabilità, stato civile, gestione del personale e tributi), Sanità, servizi al cittadino, cybersecurity e infrastrutture. È la società ICT in house della Regione Friuli-Venezia Giulia."
+    }
+  ],
+  "classifications": [
+    {
+      "subject_ref": "product:insiel-siir",
+      "kind": "category",
+      "term_slug": "pubblica-amministrazione",
+      "term_name": "Pubblica amministrazione",
+      "confidence": "high",
+      "source_ref": "source:insiel-company",
+      "evidence_excerpt": "Pubblica Amministrazione: sviluppo e gestione di software per contabilità, stato civile, gestione del personale e tributi"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "kind": "vertical",
+      "term_slug": "enti-locali",
+      "term_name": "Enti locali",
+      "confidence": "high",
+      "source_ref": "source:insiel-home",
+      "evidence_excerpt": "Enti Locali - Soluzioni e servizi pensati per i Comuni del territorio"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "kind": "segment",
+      "term_slug": "comuni-e-regioni",
+      "term_name": "Comuni, regioni e province",
+      "confidence": "medium",
+      "source_ref": "source:insiel-regione",
+      "evidence_excerpt": "PAL - Pubblica Amministrazione Locale - regioni, province, comuni, comunità montane, consorzi"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "kind": "deployment",
+      "term_slug": "cloud",
+      "term_name": "Cloud",
+      "confidence": "medium",
+      "source_ref": "source:insiel-bilancio2024",
+      "evidence_excerpt": "piattaforme basate sul cloud nazionale e/o ibrido"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "kind": "category",
+      "term_slug": "contabilita-enti-locali",
+      "term_name": "Contabilità enti locali",
+      "confidence": "medium",
+      "source_ref": "source:insiel-pa-division",
+      "evidence_excerpt": "Contabilità, Personale, Patrimonio, Tributi"
+    }
+  ],
+  "features": [
+    {
+      "subject_ref": "product:insiel-siir",
+      "feature_slug": "contabilita_enti_locali",
+      "feature_name": "Contabilità enti locali",
+      "feature_group": "finance",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:insiel-company",
+      "evidence_excerpt": "software per contabilità, stato civile, gestione del personale e tributi"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "feature_slug": "gestione_personale",
+      "feature_name": "Gestione del personale",
+      "feature_group": "hr",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:insiel-pa-division",
+      "evidence_excerpt": "Personale"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "feature_slug": "tributi_locali",
+      "feature_name": "Tributi locali",
+      "feature_group": "tax",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:insiel-pa-division",
+      "evidence_excerpt": "Tributi"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "feature_slug": "stato_civile",
+      "feature_name": "Stato civile",
+      "feature_group": "demographic_services",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:insiel-company",
+      "evidence_excerpt": "software per contabilità, stato civile"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "feature_slug": "anagrafe",
+      "feature_name": "Anagrafe",
+      "feature_group": "demographic_services",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:insiel-pa-division",
+      "evidence_excerpt": "Anagrafe"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "feature_slug": "patrimonio",
+      "feature_name": "Gestione patrimonio",
+      "feature_group": "finance",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:insiel-pa-division",
+      "evidence_excerpt": "Patrimonio"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "feature_slug": "elettorale",
+      "feature_name": "Servizi elettorali",
+      "feature_group": "demographic_services",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:insiel-pa-division",
+      "evidence_excerpt": "Elettorale"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "feature_slug": "fatturazione_elettronica",
+      "feature_name": "Fatturazione elettronica",
+      "feature_group": "finance",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:insiel-pa-division",
+      "evidence_excerpt": "Fatturazione elettronica"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "feature_slug": "conservazione_a_norma",
+      "feature_name": "Conservazione a norma",
+      "feature_group": "compliance",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:insiel-pa-division",
+      "evidence_excerpt": "eroga il servizio di conservazione a norma di RAFVG e degli Enti del Sistema Regionale"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "feature_slug": "carburanti_agevolati",
+      "feature_name": "Carburanti agevolati",
+      "feature_group": "citizen_services",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:insiel-pa-division",
+      "evidence_excerpt": "Carburanti"
+    }
+  ],
+  "technical_characteristics": [
+    {
+      "subject_ref": "product:insiel-siir",
+      "kind": "deployment_model",
+      "term_slug": "cloud",
+      "term_name": "Cloud",
+      "relationship_type": "supports",
+      "confidence": "medium",
+      "source_ref": "source:insiel-bilancio2024",
+      "evidence_excerpt": "L'uso di piattaforme basate sul cloud nazionale e/o ibrido"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "kind": "hosting_model",
+      "term_slug": "data_center_regionale",
+      "term_name": "Data center regionale (Palmanova)",
+      "relationship_type": "uses",
+      "confidence": "medium",
+      "source_ref": "source:insiel-bilancio2024",
+      "evidence_excerpt": "nuovo data center di Palmanova che appare strategico per il futuro di Insiel e della Regione"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "kind": "extensibility",
+      "term_slug": "interoperabilita_cooperazione_applicativa",
+      "term_name": "Interoperabilità e cooperazione applicativa",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:insiel-regione",
+      "evidence_excerpt": "Le soluzioni sono orientate all'integrazione, all'interoperabilità, e alla cooperazione applicativa"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "kind": "framework",
+      "term_slug": "microservizi",
+      "term_name": "Microservizi",
+      "relationship_type": "uses",
+      "confidence": "medium",
+      "source_ref": "source:insiel-company",
+      "evidence_excerpt": "piattaforma di interoperabilità, microservizi, intelligenza artificiale e big data"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "kind": "framework",
+      "term_slug": "intelligenza_artificiale",
+      "term_name": "Intelligenza artificiale e big data",
+      "relationship_type": "uses",
+      "confidence": "medium",
+      "source_ref": "source:insiel-company",
+      "evidence_excerpt": "piattaforma di interoperabilità, microservizi, intelligenza artificiale e big data"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "kind": "data_residency",
+      "term_slug": "italy",
+      "term_name": "Italia (Friuli-Venezia Giulia)",
+      "relationship_type": "available_as",
+      "confidence": "medium",
+      "source_ref": "source:insiel-regione",
+      "evidence_excerpt": "sviluppo e alla gestione delle infrastrutture di telecomunicazione e del Sistema informativo integrato regionale"
+    }
+  ],
+  "financial_metrics": [
+    {
+      "subject_ref": "company:insiel",
+      "metric": "revenue",
+      "period_year": 2024,
+      "value": {"exact": 112000000},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Valore della produzione 2024 riportato nella relazione al bilancio.",
+      "confidence": "high",
+      "source_ref": "source:insiel-bilancio2024",
+      "evidence_excerpt": "un valore della produzione di 112 milioni di Euro"
+    },
+    {
+      "subject_ref": "company:insiel",
+      "metric": "employees",
+      "period_year": 2025,
+      "value": {"exact": 695},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Professionalità impiegate nell'erogazione dei servizi in house (organigramma 2025).",
+      "confidence": "medium",
+      "source_ref": "source:insiel-pa-division",
+      "evidence_excerpt": "con l'utilizzo delle professionalità di 695"
+    }
+  ],
+  "facts": [
+    {
+      "subject_ref": "product:insiel-siir",
+      "predicate": "coverage_area",
+      "value": {"region": "Friuli-Venezia Giulia", "scope": "pubblica amministrazione locale e regionale"},
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:insiel-regione",
+      "evidence_excerpt": "PAL - Pubblica Amministrazione Locale"
+    },
+    {
+      "subject_ref": "company:insiel",
+      "predicate": "in_house_share",
+      "value": {"threshold": ">80%", "context": "fatturato verso enti soci pubblici"},
+      "value_kind": "reported",
+      "confidence": "medium",
+      "source_ref": "source:insiel-bilancio2024",
+      "evidence_excerpt": "Oltre l'ottanta per cento del fatturato della società è effettuato nello svolgimento dei compiti affidati alla società dai soci"
+    }
+  ],
+  "claims": [
+    {
+      "subject_ref": "product:insiel-siir",
+      "claim_type": "observed",
+      "predicate": "positioning",
+      "statement": "Il sistema informativo di Insiel copre le aree funzionali della PA locale e regionale (contabilità, personale, tributi, stato civile, anagrafe) ed è gestito in modalità in house per la Regione FVG.",
+      "assessment": "observed",
+      "confidence": "high",
+      "source_ref": "source:insiel-company",
+      "evidence_excerpt": "sviluppo e gestione di software per contabilità, stato civile, gestione del personale e tributi"
+    }
+  ],
+  "notes": [
+    {
+      "subject_ref": "product:insiel-siir",
+      "note_type": "classification_rationale",
+      "text": "Categoria 'pubblica amministrazione' e vertical 'enti locali' per mappatura macro-settore PA/Utility.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "product:insiel-siir",
+      "note_type": "data_quality",
+      "text": "A differenza di Se.Sa.Mo., qui il 'prodotto' è una piattaforma/sistema informativo regionale senza denominazione commerciale univoca: le funzionalità sono ricostruite dalle aree di competenza della Divisione Pubblica Amministrazione Digitale di Insiel. Confidenza media.",
+      "confidence": "medium"
+    }
+  ]
+}

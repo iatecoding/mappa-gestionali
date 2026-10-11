@@ -1,0 +1,30 @@
+# Database and SQLite sidecar files are generated locally.
+data/*.sqlite
+data/*.sqlite-shm
+data/*.sqlite-wal
+data/*.db
+data/*.db-shm
+data/*.db-wal
+
+# Generated exports and validation reports.
+data/curated/*
+!data/curated/.gitkeep
+data/reports/*
+!data/reports/.gitkeep
+data/artifacts/
+data/extracts/
+data/research-state.sqlite
+data/research-state.sqlite-shm
+data/research-state.sqlite-wal
+
+# Note: web/catalog-data.js is committed to enable GitHub Pages to serve data directly without running SQLite.
+
+# Keep empty workflow directories in Git without committing research by accident.
+data/inbox/*
+!data/inbox/.gitkeep
+
+__pycache__/
+*.pyc
+
+# macOS Finder metadata.
+.DS_Store

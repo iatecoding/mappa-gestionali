@@ -1,0 +1,464 @@
+{
+  "schema_version": "1.0",
+  "record_id": "research-eng-neta-open-suite-20261011",
+  "created_at": "2026-10-11T10:00:00Z",
+  "created_by": {"agent_id": "research_bundle_agent"},
+  "scope": {"country": "IT", "language": "it"},
+  "entities": [
+    {
+      "local_id": "company:engineering",
+      "entity_type": "company",
+      "name": "Engineering Ingegneria Informatica S.p.A.",
+      "legal_name": "Engineering Ingegneria Informatica S.p.A.",
+      "identifiers": {"vat_id": "05724831002", "tax_code": "00967720285"},
+      "website": "https://www.eng.it/",
+      "headquarters_city": "Roma",
+      "headquarters_region": "Lazio",
+      "headquarters_country": "IT",
+      "founded_year": 1980,
+      "employee_band": "oltre 10000",
+      "metadata": {"capogruppo": "Engineering Group (società unipersonale di Centurion Newco S.p.A.)"}
+    },
+    {
+      "local_id": "product:neta-open-suite",
+      "entity_type": "product",
+      "company_ref": "company:engineering",
+      "name": "Neta Open Suite",
+      "slug": "neta-open-suite",
+      "website": "https://www.eng.it/it/neta",
+      "deployment": ["cloud", "on_premise", "saas"],
+      "description": "Suite/piattaforma componibile per gli operatori di vendita e distribuzione nei mercati gas, acqua ed elettricità: gestione dei processi core Meter-to-Cash, billing, credit management, CRM e servizi digitali al cliente, con delivery as-a-Service e on-premise, cloud-ready.",
+      "metadata": {"aliases": ["Neta", "Neta Suite", "Net@2A"]}
+    }
+  ],
+  "sources": [
+    {
+      "local_id": "source:neta-platform",
+      "url": "https://www.eng.it/it/neta",
+      "source_type": "official_product_page",
+      "publisher": "Engineering Ingegneria Informatica S.p.A.",
+      "title": "Neta: la Energy & Utilities Platform di Engineering",
+      "accessed_at": "2026-10-11T09:20:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:neta-meter-to-cash",
+      "url": "https://www.eng.it/it/neta/prodotti-e-soluzioni/meter-to-cash",
+      "source_type": "official_product_page",
+      "publisher": "Engineering Ingegneria Informatica S.p.A.",
+      "title": "Neta - Meter to Cash",
+      "accessed_at": "2026-10-11T09:21:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:neta-brochure",
+      "url": "https://www.eng.it/content/dam/eng-portal/resources/documents/brochure/platforms/neta-open-suite/ENG23_NetaOpenSuite_ENG.pdf",
+      "source_type": "other",
+      "publisher": "Engineering Ingegneria Informatica S.p.A.",
+      "title": "Neta Open Suite - brochure",
+      "accessed_at": "2026-10-11T09:22:00Z",
+      "language": "en"
+    },
+    {
+      "local_id": "source:neta-microsoft",
+      "url": "https://www.eng.it/it/news/press-releases/2024/01/engineering-sceglie-microsoft-azure-per-la-nuova-neta-open-suite",
+      "source_type": "press_release",
+      "publisher": "Engineering Ingegneria Informatica S.p.A.",
+      "title": "Engineering sceglie Microsoft Azure per la nuova Neta Open Suite",
+      "accessed_at": "2026-10-11T09:23:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:eng-bilancio2024",
+      "url": "https://www.eng.it/content/dam/eng-portal/resources/documents/corporate-governance/bilancio/Engineering_BilancioAnnualeConsolidato2024.pdf",
+      "source_type": "annual_report",
+      "publisher": "Engineering Ingegneria Informatica S.p.A.",
+      "title": "Bilancio Consolidato 2024 - Engineering Group",
+      "accessed_at": "2026-10-11T09:24:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:eng-fy2025",
+      "url": "https://www.eng.it/en/news/press-releases/2026/03/engineering-approva-il-bilancio-consolidato-2025",
+      "source_type": "press_release",
+      "publisher": "Engineering Ingegneria Informatica S.p.A.",
+      "title": "Engineering approves the 2025 Consolidated Financial Statements",
+      "accessed_at": "2026-10-11T09:25:00Z",
+      "language": "en"
+    },
+    {
+      "local_id": "source:eng-company",
+      "url": "https://www.eng.it/en/group/eng-at-a-glance",
+      "source_type": "official_company_page",
+      "publisher": "Engineering Ingegneria Informatica S.p.A.",
+      "title": "Engineering at a Glance",
+      "accessed_at": "2026-10-11T09:26:00Z",
+      "language": "en"
+    }
+  ],
+  "documents": [
+    {
+      "local_id": "document:neta-platform",
+      "source_ref": "source:neta-platform",
+      "title": "Neta - Energy & Utilities Platform",
+      "document_type": "web_page",
+      "extraction_method": "web_manual_excerpt",
+      "text": "Neta è la piattaforma software Energy & Utilities di Engineering. Copre Meter to Cash (metering, billing, credit management), la relazione con i clienti (CRM, digital self service, portali distribuzione), post-fatturazione/pagamenti/contabilità (NetaPay, NetaSIAL), prodotti complementari (gestione agenti, comunità energetiche, previsioni consumi, settlement), AI & Analytics e il Portale Normativo. Oltre 150 clienti nazionali e internazionali."
+    },
+    {
+      "local_id": "document:neta-brochure",
+      "source_ref": "source:neta-brochure",
+      "title": "Neta Open Suite - brochure",
+      "document_type": "pdf_document",
+      "extraction_method": "web_manual_excerpt",
+      "text": "Neta Open Suite è la soluzione Customer Information System (CIS) leader per la gestione dei processi Meter2Cash e dei processi chiave degli operatori Energy & Utilities. Offre soluzioni SaaS con Cloud, Artificial Intelligence e Machine Learning; è abilitata dalla Neta Open Platform con API e Data Lakehouse Management. Copre Metering, Billing, Credit Management, Accounting/Logistics, CRM, Energy Communities, Distribution."
+    }
+  ],
+  "classifications": [
+    {
+      "subject_ref": "product:neta-open-suite",
+      "kind": "category",
+      "term_slug": "utility",
+      "term_name": "Utility",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Neta: la Energy & Utilities Platform di Engineering"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "kind": "category",
+      "term_slug": "customer-information-system",
+      "term_name": "Customer Information System (CIS)",
+      "confidence": "high",
+      "source_ref": "source:neta-brochure",
+      "evidence_excerpt": "the leading Customer Information System (CIS) solution"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "kind": "vertical",
+      "term_slug": "energy-utilities",
+      "term_name": "Energy & Utilities",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "abilita ecosistemi digitali per ... i settori Energy & Utilities"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "kind": "segment",
+      "term_slug": "multiutility",
+      "term_name": "Multiutility",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "La multiutility veneta lancia il programma Etra4Future adottando la nuova Suite Net@2A"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "kind": "deployment",
+      "term_slug": "saas",
+      "term_name": "SaaS / as-a-Service",
+      "confidence": "high",
+      "source_ref": "source:neta-brochure",
+      "evidence_excerpt": "As-a-Service & On Prem, Cloud-ready delivery"
+    }
+  ],
+  "features": [
+    {
+      "subject_ref": "product:neta-open-suite",
+      "feature_slug": "meter_to_cash",
+      "feature_name": "Meter to Cash",
+      "feature_group": "billing",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Automatizza il ciclo Meter-to-Cash"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "feature_slug": "metering",
+      "feature_name": "Metering / Metering Data Management",
+      "feature_group": "metering",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Metering Data Management"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "feature_slug": "billing_management",
+      "feature_name": "Billing Management",
+      "feature_group": "billing",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Billing Management"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "feature_slug": "credit_management",
+      "feature_name": "Credit Management",
+      "feature_group": "finance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Credit Management"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "feature_slug": "crm_contracts",
+      "feature_name": "Gestione contratti e CRM",
+      "feature_group": "crm",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Gestione Contratti CRM"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "feature_slug": "digital_self_service",
+      "feature_name": "Digital Self Service",
+      "feature_group": "customer_experience",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Digital Self Service"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "feature_slug": "digital_payments",
+      "feature_name": "Pagamenti e incassi digitali",
+      "feature_group": "payments",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Pagamenti e Incassi Digitali"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "feature_slug": "accounting_logistics",
+      "feature_name": "Contabilità e Logistica",
+      "feature_group": "finance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Contabilità e Logistica"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "feature_slug": "energy_community",
+      "feature_name": "Comunità energetiche",
+      "feature_group": "energy",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Comunità Energetiche"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "feature_slug": "consumption_forecast",
+      "feature_name": "Previsioni consumi",
+      "feature_group": "analytics",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Previsioni Consumi"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "feature_slug": "ai_analytics",
+      "feature_name": "AI & Analytics",
+      "feature_group": "analytics",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Dashboard e Analytics"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "feature_slug": "regulatory_portal",
+      "feature_name": "Portale Normativo",
+      "feature_group": "compliance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Governare la compliance normativa nel settore Utilities"
+    }
+  ],
+  "technical_characteristics": [
+    {
+      "subject_ref": "product:neta-open-suite",
+      "kind": "deployment_model",
+      "term_slug": "cloud",
+      "term_name": "Cloud",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Cloud Native"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "kind": "cloud_provider",
+      "term_slug": "microsoft_azure",
+      "term_name": "Microsoft Azure",
+      "relationship_type": "uses",
+      "confidence": "high",
+      "source_ref": "source:neta-microsoft",
+      "evidence_excerpt": "Engineering sceglie Microsoft Azure per la nuova Neta Open Suite"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "kind": "delivery_model",
+      "term_slug": "saas",
+      "term_name": "SaaS / as-a-Service",
+      "relationship_type": "available_as",
+      "confidence": "high",
+      "source_ref": "source:neta-brochure",
+      "evidence_excerpt": "As-a-Service & On Prem, Cloud-ready delivery"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "kind": "delivery_model",
+      "term_slug": "on_premise",
+      "term_name": "On premise",
+      "relationship_type": "available_as",
+      "confidence": "high",
+      "source_ref": "source:neta-brochure",
+      "evidence_excerpt": "As-a-Service & On Prem"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "kind": "api_protocol",
+      "term_slug": "open_api",
+      "term_name": "Open API",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Integra facilmente altre soluzioni grazie a open API"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "kind": "framework",
+      "term_slug": "machine_learning",
+      "term_name": "Machine Learning",
+      "relationship_type": "uses",
+      "confidence": "high",
+      "source_ref": "source:neta-brochure",
+      "evidence_excerpt": "Cloud, Artificial Intelligence and Machine Learning"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "kind": "data_residency",
+      "term_slug": "eu_regions",
+      "term_name": "Regioni europee (Italy North, Germany West Central, West Europe)",
+      "relationship_type": "available_as",
+      "confidence": "high",
+      "source_ref": "source:neta-microsoft",
+      "evidence_excerpt": "ospitati nelle Region europee di Microsoft Azure più legate all'Italia (Italy North, Germany West Central, West Europe)"
+    }
+  ],
+  "financial_metrics": [
+    {
+      "subject_ref": "company:engineering",
+      "metric": "revenue",
+      "period_year": 2025,
+      "value": {"exact": 1759700000},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Ricavi netti consolidati di Gruppo FY2025.",
+      "confidence": "high",
+      "source_ref": "source:eng-fy2025",
+      "evidence_excerpt": "Net revenues: €1,759.7 million (+2.5% YoY)"
+    },
+    {
+      "subject_ref": "company:engineering",
+      "metric": "revenue",
+      "period_year": 2024,
+      "value": {"exact": 1716600000},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Ricavi netti consolidati di Gruppo 2024 (comparativo FY2025).",
+      "confidence": "high",
+      "source_ref": "source:eng-fy2025",
+      "evidence_excerpt": "compared to €1,716.6 million in the previous year"
+    },
+    {
+      "subject_ref": "company:engineering",
+      "metric": "ebitda",
+      "period_year": 2025,
+      "value": {"exact": 280300000},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "EBITDA Adjusted di Gruppo FY2025.",
+      "confidence": "high",
+      "source_ref": "source:eng-fy2025",
+      "evidence_excerpt": "Adjusted EBITDA: €280.3 million"
+    },
+    {
+      "subject_ref": "company:engineering",
+      "metric": "employees",
+      "period_year": 2024,
+      "value": {"exact": 14000},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Organico di Gruppo 'circa 14.000 dipendenti' indicato nel bilancio 2024.",
+      "confidence": "medium",
+      "source_ref": "source:eng-bilancio2024",
+      "evidence_excerpt": "con circa 14.000 dipendenti e oltre 80 sedi"
+    }
+  ],
+  "facts": [
+    {
+      "subject_ref": "product:neta-open-suite",
+      "predicate": "installed_base",
+      "value": {"clients": 150, "scope": "Italia e Spagna"},
+      "value_kind": "reported",
+      "confidence": "medium",
+      "source_ref": "source:neta-platform",
+      "evidence_excerpt": "Oltre 150 clienti nazionali e internazionali hanno scelto Neta"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "predicate": "market_coverage",
+      "value": {"electricity": "60% (esclusi contatori Enel)", "gas": "50%", "water": "40%"},
+      "value_kind": "reported",
+      "confidence": "medium",
+      "source_ref": "source:neta-brochure",
+      "evidence_excerpt": "60% ELECTRICITY MARKET (excl. meters run by Enel), 50% GAS MARKET, 40% WATER MARKET"
+    }
+  ],
+  "claims": [
+    {
+      "subject_ref": "product:neta-open-suite",
+      "claim_type": "observed",
+      "predicate": "positioning",
+      "statement": "Neta Open Suite è presentata come la soluzione Customer Information System (CIS) leader per la gestione dei processi Meter2Cash degli operatori Energy & Utilities, con delivery cloud-native e as-a-Service.",
+      "assessment": "observed",
+      "confidence": "high",
+      "source_ref": "source:neta-brochure",
+      "evidence_excerpt": "the leading Customer Information System (CIS) solution for managing Meter2Cash"
+    },
+    {
+      "subject_ref": "product:neta-open-suite",
+      "claim_type": "inferred",
+      "predicate": "competitive_positioning",
+      "statement": "La base installata (150+ clienti) e la copertura dichiarata nei mercati elettrico, gas e idrico suggeriscono un posizionamento di primo piano nel mercato italiano delle utility.",
+      "assessment": "inference",
+      "confidence": "medium",
+      "source_ref": "source:neta-brochure",
+      "evidence_excerpt": "+150 CLIENTS IN ITALY, SPAIN"
+    }
+  ],
+  "notes": [
+    {
+      "subject_ref": "product:neta-open-suite",
+      "note_type": "classification_rationale",
+      "text": "Categoria/vertical 'Energy & Utilities' per mappatura macro-settore PA/Utility.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "company:engineering",
+      "note_type": "research_note",
+      "text": "Engineering Ingegneria Informatica S.p.A. è la capogruppo del gruppo Engineering (oltre 70 società): i dati economici sono consolidati di Gruppo, non della sola controllante.",
+      "confidence": "high"
+    }
+  ]
+}

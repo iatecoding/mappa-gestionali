@@ -1,0 +1,765 @@
+{
+  "schema_version": "1.0",
+  "record_id": "2026-07-31-associations-nonprofit-membership-001",
+  "created_at": "2026-07-31T00:20:00Z",
+  "created_by": {
+    "agent_id": "codex-associations-20260731"
+  },
+  "scope": {
+    "category": "associations_nonprofit_membership",
+    "research_policy": "Solo pagine ufficiali del produttore, riservate nel registro prima dell'acquisizione.",
+    "products_covered": 4
+  },
+  "entities": [
+    {
+      "local_id": "company:emilio-alfredo-lodigiani",
+      "entity_type": "company",
+      "name": "Emilio Alfredo Lodigiani",
+      "legal_name": "Emilio Alfredo Lodigiani",
+      "identifiers": {
+        "vat_id": "01862980339"
+      },
+      "website": "https://tesserati.cloud/",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "product:tesserati",
+      "entity_type": "product",
+      "company_ref": "company:emilio-alfredo-lodigiani",
+      "name": "Tesserati",
+      "slug": "tesserati",
+      "website": "https://tesserati.cloud/",
+      "deployment": ["cloud", "web"],
+      "description": "Gestionale cloud italiano per associazioni, con libro soci, quote, pagamenti, ricevute e area soci."
+    },
+    {
+      "local_id": "company:etsi-operator-unconfirmed",
+      "entity_type": "company",
+      "name": "ETSi (operatore legale non dichiarato)",
+      "website": "https://etsi.it/",
+      "headquarters_country": "IT",
+      "metadata": {
+        "identity_status": "legal_operator_not_declared_on_official_product_page"
+      }
+    },
+    {
+      "local_id": "product:etsi",
+      "entity_type": "product",
+      "company_ref": "company:etsi-operator-unconfirmed",
+      "name": "ETSi",
+      "slug": "etsi",
+      "website": "https://etsi.it/",
+      "deployment": ["web"],
+      "description": "Applicazione gestionale per APS, ODV ed enti del Terzo Settore, con registro soci e volontari, contabilità, attività e verbali."
+    },
+    {
+      "local_id": "company:labonext",
+      "entity_type": "company",
+      "name": "Labonext S.r.l.",
+      "legal_name": "Labonext S.r.l.",
+      "identifiers": {
+        "vat_id": "08113420726"
+      },
+      "website": "https://www.softwaretessere.it/",
+      "headquarters_city": "Santeramo in Colle",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "product:softwaretessere",
+      "entity_type": "product",
+      "company_ref": "company:labonext",
+      "name": "SoftwareTessere",
+      "slug": "softwaretessere",
+      "website": "https://www.softwaretessere.it/go/funzionalita-software-associazioni.aspx",
+      "deployment": ["cloud"],
+      "description": "Gestionale cloud italiano per iscrizioni, tessere, corsi, attività, quote e presenze di associazioni culturali e sportive."
+    },
+    {
+      "local_id": "company:aig-azienda-informatica-genova",
+      "entity_type": "company",
+      "name": "AIG Azienda Informatica Genova S.r.l.",
+      "legal_name": "AIG Azienda Informatica Genova S.r.l.",
+      "identifiers": {
+        "vat_id": "02927720991"
+      },
+      "website": "https://gestionesportiva.it/",
+      "headquarters_city": "Genova",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "product:gestione-sportiva",
+      "entity_type": "product",
+      "company_ref": "company:aig-azienda-informatica-genova",
+      "name": "Gestione Sportiva",
+      "slug": "gestione-sportiva",
+      "website": "https://gestionesportiva.it/",
+      "deployment": ["web"],
+      "description": "Gestionale per associazioni e società sportive, con anagrafiche, tesseramenti, amministrazione, attività e controllo accessi."
+    }
+  ],
+  "sources": [
+    {
+      "local_id": "source:tesserati-home-20260730",
+      "url": "https://tesserati.cloud/",
+      "source_type": "official_product_page",
+      "publisher": "Emilio Alfredo Lodigiani",
+      "title": "Tesserati — Gestionale, area soci e sito per associazioni",
+      "accessed_at": "2026-07-30T22:12:23Z",
+      "language": "it",
+      "content_hash": "sha256:1f23920db7306159a071f1a04baa3df2fa3541877cebed352edabb48d2d15e41",
+      "metadata": {
+        "retention": "excerpt",
+        "rights_basis": "publicly_available",
+        "evidence_excerpt": "Il gestionale cloud per associazioni italiane: soci, quote, pagamenti, ricevute, area soci e sito pubblico in un unico spazio."
+      }
+    },
+    {
+      "local_id": "source:etsi-home-20260730",
+      "url": "https://etsi.it/",
+      "source_type": "official_product_page",
+      "publisher": "ETSi",
+      "title": "ETSi - Gestionale per Enti del Terzo Settore",
+      "accessed_at": "2026-07-30T22:12:23Z",
+      "language": "it",
+      "content_hash": "sha256:14fb3338a8c139502425292fcb769ed2bc5e71bebcd9408b6b980fa2dd344211",
+      "metadata": {
+        "retention": "excerpt",
+        "rights_basis": "publicly_available",
+        "evidence_excerpt": "L'app gestionale facile per Enti del Terzo Settore: registro soci e volontari, contabilità, attività ed eventi, archivio verbali."
+      }
+    },
+    {
+      "local_id": "source:softwaretessere-features-20260730",
+      "url": "https://www.softwaretessere.it/go/funzionalita-software-associazioni.aspx",
+      "source_type": "official_product_page",
+      "publisher": "Labonext S.r.l.",
+      "title": "Iscrizione soci e anagrafica iscritti",
+      "accessed_at": "2026-07-30T22:12:26Z",
+      "language": "it",
+      "content_hash": "sha256:fdaf0c568e27c21a4a8d064b71a73079c9bc69d734619fae1456571919a4b422",
+      "metadata": {
+        "retention": "excerpt",
+        "rights_basis": "publicly_available",
+        "evidence_excerpt": "Software on cloud per iscrizioni e stampa tessere, con gestione di anagrafica, corsi, quote, pagamenti e presenze."
+      }
+    },
+    {
+      "local_id": "source:gestione-sportiva-home-20260730",
+      "url": "https://gestionesportiva.it/",
+      "source_type": "official_product_page",
+      "publisher": "AIG Azienda Informatica Genova S.r.l.",
+      "title": "Gestionale per associazioni sportive e palestre | Gestione Sportiva",
+      "accessed_at": "2026-07-30T22:12:25Z",
+      "language": "it",
+      "content_hash": "sha256:140bc74b1f94457c596e5de405a2dcc41981873ede1d22ea09bb1bbe41969d2a",
+      "metadata": {
+        "retention": "excerpt",
+        "rights_basis": "publicly_available",
+        "evidence_excerpt": "Gestionale per palestre e associazioni sportive con accesso da PC e smartphone; gestisce anagrafiche, tesseramenti, report e controllo accessi."
+      }
+    }
+  ],
+  "classifications": [
+    {
+      "subject_ref": "product:tesserati",
+      "kind": "category",
+      "term_slug": "association_management",
+      "term_name": "Gestione associazioni",
+      "confidence": "high",
+      "source_ref": "source:tesserati-home-20260730",
+      "evidence_excerpt": "Per ASD, SSD, APS, ODV, ETS, circoli e pro loco."
+    },
+    {
+      "subject_ref": "product:etsi",
+      "kind": "vertical",
+      "term_slug": "third_sector",
+      "term_name": "Enti del Terzo Settore",
+      "confidence": "high",
+      "source_ref": "source:etsi-home-20260730",
+      "evidence_excerpt": "L'app gestionale facile per Enti del Terzo Settore."
+    },
+    {
+      "subject_ref": "product:softwaretessere",
+      "kind": "vertical",
+      "term_slug": "associations",
+      "term_name": "Associazioni culturali e sportive",
+      "confidence": "high",
+      "source_ref": "source:softwaretessere-features-20260730",
+      "evidence_excerpt": "Software gestionale pensato per Associazione Culturale, Sportiva e per Oratori e Parrocchie."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "kind": "vertical",
+      "term_slug": "sports_associations",
+      "term_name": "Associazioni e società sportive",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Gestionale per palestre e associazioni sportive."
+    }
+  ],
+  "features": [
+    {
+      "subject_ref": "product:tesserati",
+      "feature_slug": "membership_registry",
+      "feature_name": "Libro soci",
+      "feature_group": "membership",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:tesserati-home-20260730",
+      "evidence_excerpt": "Tesserati riunisce libro soci, quote e pagamenti, ricevute, documenti, area soci e sito pubblico."
+    },
+    {
+      "subject_ref": "product:tesserati",
+      "feature_slug": "membership_dues_management",
+      "feature_name": "Gestione quote associative",
+      "feature_group": "membership",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:tesserati-home-20260730",
+      "evidence_excerpt": "Gestire soci, quote e pagamenti della tua associazione."
+    },
+    {
+      "subject_ref": "product:tesserati",
+      "feature_slug": "online_membership_payments",
+      "feature_name": "Pagamenti quote online",
+      "feature_group": "payments",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:tesserati-home-20260730",
+      "evidence_excerpt": "I soci consultano le quote, pagano online, aggiornano i dati e scaricano le ricevute."
+    },
+    {
+      "subject_ref": "product:tesserati",
+      "feature_slug": "membership_receipt_generation",
+      "feature_name": "Generazione ricevute associative",
+      "feature_group": "payments",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:tesserati-home-20260730",
+      "evidence_excerpt": "Generi ricevute numerate e le invii ai soci direttamente dalla piattaforma."
+    },
+    {
+      "subject_ref": "product:tesserati",
+      "feature_slug": "member_portal",
+      "feature_name": "Area riservata soci e famiglie",
+      "feature_group": "member_portal",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:tesserati-home-20260730",
+      "evidence_excerpt": "Sito pubblico e area soci inclusi, con accesso riservato per soci e famiglie."
+    },
+    {
+      "subject_ref": "product:tesserati",
+      "feature_slug": "association_cashbook_reporting",
+      "feature_name": "Prima nota e rendiconto associativo",
+      "feature_group": "association_accounting",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:tesserati-home-20260730",
+      "evidence_excerpt": "Base ordinata per prima nota e rendiconto."
+    },
+    {
+      "subject_ref": "product:etsi",
+      "feature_slug": "member_and_volunteer_registry",
+      "feature_name": "Registro soci e volontari",
+      "feature_group": "membership",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:etsi-home-20260730",
+      "evidence_excerpt": "Controlla i dati di soci e volontari e il versamento delle quote associative."
+    },
+    {
+      "subject_ref": "product:etsi",
+      "feature_slug": "online_membership_application",
+      "feature_name": "Domanda socio online",
+      "feature_group": "membership",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:etsi-home-20260730",
+      "evidence_excerpt": "I nuovi soci possono compilare la domanda di ammissione direttamente online."
+    },
+    {
+      "subject_ref": "product:etsi",
+      "feature_slug": "association_accounting",
+      "feature_name": "Contabilità associativa",
+      "feature_group": "association_accounting",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:etsi-home-20260730",
+      "evidence_excerpt": "Inserire tutti i movimenti di cassa e dei conti bancari."
+    },
+    {
+      "subject_ref": "product:etsi",
+      "feature_slug": "annual_financial_statement",
+      "feature_name": "Bilancio consuntivo annuale",
+      "feature_group": "association_accounting",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:etsi-home-20260730",
+      "evidence_excerpt": "Bilancio consuntivo annuale e libro giornale generati automaticamente."
+    },
+    {
+      "subject_ref": "product:etsi",
+      "feature_slug": "association_activity_event_management",
+      "feature_name": "Gestione attività ed eventi",
+      "feature_group": "events",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:etsi-home-20260730",
+      "evidence_excerpt": "Imposta attività, eventi e raccolte fondi e seguine la gestione con la produzione di rendiconti economici."
+    },
+    {
+      "subject_ref": "product:etsi",
+      "feature_slug": "meeting_minutes_archive",
+      "feature_name": "Archivio verbali",
+      "feature_group": "governance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:etsi-home-20260730",
+      "evidence_excerpt": "Verbali di consiglio e di assemblea organizzati per tipologia e per anno."
+    },
+    {
+      "subject_ref": "product:softwaretessere",
+      "feature_slug": "member_registry",
+      "feature_name": "Anagrafica associati",
+      "feature_group": "membership",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:softwaretessere-features-20260730",
+      "evidence_excerpt": "Il software gestisce l'anagrafica, l'iscrizione per stagione/corso e il registro presenze di tutti gli associati."
+    },
+    {
+      "subject_ref": "product:softwaretessere",
+      "feature_slug": "course_activity_enrolment",
+      "feature_name": "Iscrizioni a corsi e attività",
+      "feature_group": "events",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:softwaretessere-features-20260730",
+      "evidence_excerpt": "Permette di relazionare un iscritto a un determinato corso o attività gestito dall'Associazione."
+    },
+    {
+      "subject_ref": "product:softwaretessere",
+      "feature_slug": "membership_card_printing",
+      "feature_name": "Stampa tessere associative",
+      "feature_group": "membership",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:softwaretessere-features-20260730",
+      "evidence_excerpt": "Stampa tessera personalizzabile con immagini sul fronte e retro."
+    },
+    {
+      "subject_ref": "product:softwaretessere",
+      "feature_slug": "digital_membership_card_delivery",
+      "feature_name": "Invio digitale tessera",
+      "feature_group": "member_communications",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:softwaretessere-features-20260730",
+      "evidence_excerpt": "Invio della tessera in formato digitale tramite WhatsApp oppure email."
+    },
+    {
+      "subject_ref": "product:softwaretessere",
+      "feature_slug": "attendance_management",
+      "feature_name": "Gestione presenze",
+      "feature_group": "attendance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:softwaretessere-features-20260730",
+      "evidence_excerpt": "Gestione delle presenze dei soci ai vari corsi o attività organizzate."
+    },
+    {
+      "subject_ref": "product:softwaretessere",
+      "feature_slug": "membership_dues_payment_management",
+      "feature_name": "Gestione quote e pagamenti soci",
+      "feature_group": "payments",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:softwaretessere-features-20260730",
+      "evidence_excerpt": "Gestire le quote e/o pagamenti dei soci e personalizzare gli abbonamenti alle attività."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "feature_slug": "sports_member_and_athlete_registry",
+      "feature_name": "Anagrafiche soci e atleti",
+      "feature_group": "membership",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Gestisci soci, atleti, direttivo, fornitori, federazioni e tesseramenti."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "feature_slug": "sports_membership_management",
+      "feature_name": "Gestione tesseramenti sportivi",
+      "feature_group": "membership",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Report con tabelle e grafici per bilancio, insolventi, prenotazioni, risultati sportivi e tesseramenti."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "feature_slug": "association_cashbook",
+      "feature_name": "Gestione incassi e spese",
+      "feature_group": "association_accounting",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Incassi, spese, rimborsi, sponsor: gestione facile e report chiari."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "feature_slug": "association_reporting",
+      "feature_name": "Report associativi",
+      "feature_group": "reporting",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Genera report con tabelle e grafici per bilancio, insolventi, prenotazioni e tesseramenti."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "feature_slug": "member_communications",
+      "feature_name": "Comunicazioni agli iscritti",
+      "feature_group": "member_communications",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Invia comunicazioni e avvisi agli iscritti."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "feature_slug": "assembly_minutes_management",
+      "feature_name": "Assemblee e verbali",
+      "feature_group": "governance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Convoca assemblee di soci e direttivo, con composizione guidata dei verbali."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "feature_slug": "safeguarding_report_management",
+      "feature_name": "Gestione segnalazioni safeguarding",
+      "feature_group": "compliance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Nomina il responsabile del safeguarding e gestisci le segnalazioni degli utenti."
+    }
+  ],
+  "technical_characteristics": [
+    {
+      "subject_ref": "product:tesserati",
+      "kind": "deployment_model",
+      "term_slug": "cloud",
+      "term_name": "Cloud",
+      "relationship_type": "available_as",
+      "confidence": "high",
+      "source_ref": "source:tesserati-home-20260730",
+      "evidence_excerpt": "Il gestionale cloud per associazioni italiane."
+    },
+    {
+      "subject_ref": "product:etsi",
+      "kind": "delivery_model",
+      "term_slug": "browser-web-application",
+      "term_name": "Applicazione web da browser",
+      "relationship_type": "available_as",
+      "confidence": "high",
+      "source_ref": "source:etsi-home-20260730",
+      "evidence_excerpt": "Accedi ad ETSi col browser senza dover installare e aggiornare software sul proprio computer."
+    },
+    {
+      "subject_ref": "product:etsi",
+      "kind": "client_platform",
+      "term_slug": "pc-tablet-smartphone",
+      "term_name": "PC, tablet e smartphone",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:etsi-home-20260730",
+      "evidence_excerpt": "Puoi usare ETSi dal PC, portatile, tablet e smartphone."
+    },
+    {
+      "subject_ref": "product:etsi",
+      "kind": "extensibility",
+      "term_slug": "excel-data-import",
+      "term_name": "Importazione dati da Excel",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:etsi-home-20260730",
+      "evidence_excerpt": "Puoi importare il tuo registro esistente direttamente da Excel."
+    },
+    {
+      "subject_ref": "product:softwaretessere",
+      "kind": "deployment_model",
+      "term_slug": "cloud",
+      "term_name": "Cloud",
+      "relationship_type": "available_as",
+      "confidence": "high",
+      "source_ref": "source:softwaretessere-features-20260730",
+      "evidence_excerpt": "Il software on cloud per le Iscrizioni e la Stampa Tessere."
+    },
+    {
+      "subject_ref": "product:softwaretessere",
+      "kind": "hardware_integration",
+      "term_slug": "qr-code-reader",
+      "term_name": "Lettore QR code",
+      "relationship_type": "compatible_with",
+      "confidence": "high",
+      "source_ref": "source:softwaretessere-features-20260730",
+      "evidence_excerpt": "Smartphone/tablet dotato di un comune lettore QR per leggere il codice QR presente sulla tessera."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "kind": "delivery_model",
+      "term_slug": "browser-web-application",
+      "term_name": "Applicazione web senza installazione",
+      "relationship_type": "available_as",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Non devi installare nulla: basta un collegamento a Internet per usare qualunque PC o tablet."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "kind": "extensibility",
+      "term_slug": "excel-data-import-export",
+      "term_name": "Importazione ed esportazione Excel",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Inserimento massivo da vecchio gestionale o fogli Excel ed esportazione in formato Excel dei dati delle tabelle."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "kind": "hardware_integration",
+      "term_slug": "rfid-card-reader",
+      "term_name": "Lettore schede RFID",
+      "relationship_type": "compatible_with",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Controllo accessi con o senza tornelli, con lettori di schede RFID o QRCode."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "kind": "hardware_integration",
+      "term_slug": "qr-code-reader",
+      "term_name": "Lettore QR code",
+      "relationship_type": "compatible_with",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Controllo accessi con o senza tornelli, con lettori di schede RFID o QRCode."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "kind": "hardware_integration",
+      "term_slug": "turnstile-access-control",
+      "term_name": "Tornelli per controllo accessi",
+      "relationship_type": "compatible_with",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Gestisci l'accesso alle tue strutture, con o senza tornelli."
+    }
+  ],
+  "facts": [
+    {
+      "subject_ref": "product:tesserati",
+      "predicate": "technical.association_subdomain",
+      "value": "nomeassociazione.tesserati.cloud",
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:tesserati-home-20260730",
+      "evidence_excerpt": "Ogni associazione ha il proprio spazio: nomeassociazione.tesserati.cloud."
+    },
+    {
+      "subject_ref": "product:etsi",
+      "predicate": "technical.document_archive_formats",
+      "value": ["jpeg", "word", "pdf"],
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:etsi-home-20260730",
+      "evidence_excerpt": "Carica direttamente un file Jpeg, Word o PDF; oppure genera un documento PDF da stampare."
+    },
+    {
+      "subject_ref": "product:softwaretessere",
+      "predicate": "technical.qr_attendance_workflow",
+      "value": "L'amministratore legge il QR della tessera da smartphone o tablet e registra presenza o iscrizione al corso/attività.",
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:softwaretessere-features-20260730",
+      "evidence_excerpt": "L'amministratore può effettuare la lettura del Codice QR presente sulla tessera e registrare la presenza o l'iscrizione."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "predicate": "technical.access_control_options",
+      "value": {
+        "turnstiles": "optional",
+        "reader_types": ["rfid_card", "qr_code"]
+      },
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Gestisci l'accesso alle strutture, con o senza tornelli, con lettori di schede RFID o QRCode."
+    }
+  ],
+  "claims": [
+    {
+      "subject_ref": "product:tesserati",
+      "claim_type": "inferred",
+      "predicate": "module.implementation_complexity",
+      "statement": "Per una nuova applicazione, un modulo equivalente a Tesserati ha complessità media.",
+      "assessment": "medium",
+      "methodology": "Heuristica per una nuova applicazione basata su registro soci, quote e pagamenti online, ricevute, area riservata, rendiconto e convocazioni osservati.",
+      "confidence": "medium",
+      "source_ref": "source:tesserati-home-20260730",
+      "evidence_excerpt": "Libro soci, quote e pagamenti, ricevute, area soci e sito pubblico in un unico spazio online."
+    },
+    {
+      "subject_ref": "product:tesserati",
+      "claim_type": "inferred",
+      "predicate": "module.market_fit",
+      "statement": "Il fit di mercato osservato è per associazioni italiane, incluse ASD, SSD, APS, ODV, ETS, circoli e pro loco.",
+      "assessment": "associations_and_third_sector",
+      "methodology": "Mappatura qualitativa dei segmenti dichiarati dal produttore.",
+      "confidence": "high",
+      "source_ref": "source:tesserati-home-20260730",
+      "evidence_excerpt": "Per ASD, SSD, APS, ODV, ETS, circoli e pro loco."
+    },
+    {
+      "subject_ref": "product:tesserati",
+      "claim_type": "inferred",
+      "predicate": "module.hardware_moat",
+      "statement": "Il moat hardware non è determinabile dal corpus ufficiale consultato; il gap non prova l'assenza di hardware.",
+      "assessment": "insufficient_evidence",
+      "methodology": "La fonte dichiara una piattaforma cloud e portale soci, ma non dispositivi proprietari, installazioni o connettori hardware.",
+      "confidence": "high",
+      "source_ref": "source:tesserati-home-20260730",
+      "evidence_excerpt": "Il gestionale cloud per associazioni italiane."
+    },
+    {
+      "subject_ref": "product:etsi",
+      "claim_type": "inferred",
+      "predicate": "module.implementation_complexity",
+      "statement": "Per una nuova applicazione, un modulo equivalente a ETSi ha complessità media.",
+      "assessment": "medium",
+      "methodology": "Heuristica per una nuova applicazione basata su registro soci e volontari, contabilità, bilanci, import Excel, documentale, attività ed eventi osservati.",
+      "confidence": "medium",
+      "source_ref": "source:etsi-home-20260730",
+      "evidence_excerpt": "Registro soci e volontari, contabilità, attività ed eventi, archivio verbali."
+    },
+    {
+      "subject_ref": "product:etsi",
+      "claim_type": "inferred",
+      "predicate": "module.market_fit",
+      "statement": "Il fit di mercato osservato è per APS, ODV ed enti italiani del Terzo Settore.",
+      "assessment": "third_sector_organisations",
+      "methodology": "Mappatura qualitativa del target espressamente dichiarato nella pagina ufficiale.",
+      "confidence": "high",
+      "source_ref": "source:etsi-home-20260730",
+      "evidence_excerpt": "Gestisci la tua APS e ODV con semplicità ed efficacia."
+    },
+    {
+      "subject_ref": "product:etsi",
+      "claim_type": "inferred",
+      "predicate": "module.hardware_moat",
+      "statement": "Il moat hardware non è determinabile dal corpus ufficiale consultato; il gap non prova l'assenza di hardware.",
+      "assessment": "insufficient_evidence",
+      "methodology": "La fonte descrive browser, PC, tablet e smartphone, ma non dispositivi proprietari o integrazioni hardware dedicate.",
+      "confidence": "high",
+      "source_ref": "source:etsi-home-20260730",
+      "evidence_excerpt": "Puoi usare ETSi dal PC, portatile, tablet e smartphone."
+    },
+    {
+      "subject_ref": "product:softwaretessere",
+      "claim_type": "inferred",
+      "predicate": "module.implementation_complexity",
+      "statement": "Per una nuova applicazione, un modulo equivalente a SoftwareTessere ha complessità media.",
+      "assessment": "medium",
+      "methodology": "Heuristica per una nuova applicazione basata su anagrafiche, corsi, tesseramento, quote, presenze e lettura QR da dispositivi mobili osservati.",
+      "confidence": "medium",
+      "source_ref": "source:softwaretessere-features-20260730",
+      "evidence_excerpt": "Anagrafica, iscrizione per stagione/corso, stampa tessera e registro presenze di tutti gli associati."
+    },
+    {
+      "subject_ref": "product:softwaretessere",
+      "claim_type": "inferred",
+      "predicate": "module.market_fit",
+      "statement": "Il fit di mercato osservato comprende associazioni culturali e sportive, oratori e parrocchie.",
+      "assessment": "cultural_and_sports_associations",
+      "methodology": "Mappatura qualitativa dei segmenti dichiarati dal produttore.",
+      "confidence": "high",
+      "source_ref": "source:softwaretessere-features-20260730",
+      "evidence_excerpt": "Pensato per Associazione Culturale, Sportiva oppure per Oratori e Parrocchie."
+    },
+    {
+      "subject_ref": "product:softwaretessere",
+      "claim_type": "inferred",
+      "predicate": "module.hardware_moat",
+      "statement": "Il moat hardware è basso: la fonte documenta compatibilità con un comune lettore QR, non un dispositivo proprietario o una base installata esclusiva.",
+      "assessment": "low",
+      "methodology": "La valutazione distingue un workflow QR dichiarato dalla prova di hardware proprietario, che non emerge dalla fonte consultata.",
+      "confidence": "high",
+      "source_ref": "source:softwaretessere-features-20260730",
+      "evidence_excerpt": "Smartphone/tablet dotato di un comune lettore QR."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "claim_type": "inferred",
+      "predicate": "module.implementation_complexity",
+      "statement": "Per una nuova applicazione, un modulo equivalente a Gestione Sportiva ha complessità alta.",
+      "assessment": "high",
+      "methodology": "Heuristica per una nuova applicazione basata su amministrazione, tesseramenti, report, safeguarding, import/export ed integrazione con tornelli, RFID e QR osservati.",
+      "confidence": "medium",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Controllo accessi con o senza tornelli, con lettori di schede RFID o QRCode."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "claim_type": "inferred",
+      "predicate": "module.market_fit",
+      "statement": "Il fit di mercato osservato è per palestre, associazioni e società sportive.",
+      "assessment": "sports_associations",
+      "methodology": "Mappatura qualitativa della descrizione ufficiale e delle anagrafiche/tesseramenti sportivi dichiarati.",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Gestionale per palestre e associazioni sportive."
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "claim_type": "inferred",
+      "predicate": "module.hardware_moat",
+      "statement": "Il moat hardware è basso: la fonte dichiara compatibilità con tornelli e lettori RFID/QR, ma non dimostra dispositivi proprietari o processi installativi esclusivi.",
+      "assessment": "low",
+      "methodology": "La valutazione considera la compatibilità hardware osservata senza trattarla come prova di lock-in proprietario.",
+      "confidence": "high",
+      "source_ref": "source:gestione-sportiva-home-20260730",
+      "evidence_excerpt": "Controllo accessi con o senza tornelli, con lettori di schede RFID o QRCode."
+    }
+  ],
+  "notes": [
+    {
+      "subject_ref": "product:tesserati",
+      "note_type": "data_quality",
+      "text": "La pagina ufficiale consultata attesta cloud, portale soci e pagamenti online, ma non dichiara API pubbliche, SSO, audit trail, app nativa o uso offline; il gap non è trattato come assenza del prodotto.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "product:etsi",
+      "note_type": "data_quality",
+      "text": "La pagina ufficiale presenta il prodotto ma non dichiara il relativo operatore legale, P.IVA o sede; sono inoltre assenti dichiarazioni specifiche su API, SSO, audit, app nativa e offline. I gap non sono interpretati come assenze del prodotto.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "product:softwaretessere",
+      "note_type": "data_quality",
+      "text": "Sono stati verificati cloud e workflow QR con lettore comune; non sono stati trovati nella fonte consultata API, SSO, audit trail, app nativa o modalità offline. I gap non sono interpretati come assenze del prodotto.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "product:gestione-sportiva",
+      "note_type": "data_quality",
+      "text": "Sono stati verificati accesso web, import/export Excel e compatibilità con tornelli/RFID/QR; non sono state trovate dichiarazioni specifiche su API pubbliche, SSO, audit trail, app nativa o funzionamento offline. I gap non sono interpretati come assenze del prodotto.",
+      "confidence": "high"
+    }
+  ]
+}

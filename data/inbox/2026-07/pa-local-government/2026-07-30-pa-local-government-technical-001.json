@@ -1,0 +1,491 @@
+{
+  "schema_version": "1.0",
+  "record_id": "pa-local-government-technical-2026-07-30-001",
+  "created_at": "2026-07-30T23:46:28+02:00",
+  "created_by": {
+    "agent_id": "pa-local-government-2026-07-30"
+  },
+  "scope": {
+    "country": "IT",
+    "language": "it",
+    "category": "public_administration_management",
+    "vertical": "local_government",
+    "purpose": "technical feature enrichment from official producer sources",
+    "assigned_directory": "data/inbox/2026-07/pa-local-government"
+  },
+  "entities": [
+    {
+      "local_id": "company:maggioli",
+      "entity_type": "company",
+      "name": "Maggioli S.p.A.",
+      "legal_name": "Maggioli S.p.A.",
+      "identifiers": {"vat_id": "02066400405"},
+      "website": "https://www.maggioli.com/",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "product:sicraweb-evo",
+      "entity_type": "product",
+      "company_ref": "company:maggioli",
+      "name": "Sicraweb EVO",
+      "slug": "sicraweb-evo",
+      "website": "https://www.maggioli.com/",
+      "deployment": ["cloud"],
+      "description": "Suite gestionale web per la Pubblica Amministrazione locale, arricchita qui con moduli e integrazioni esplicitamente elencati dal produttore."
+    },
+    {
+      "local_id": "company:halley-informatica",
+      "entity_type": "company",
+      "name": "Halley Informatica S.r.l.",
+      "legal_name": "Halley Informatica S.r.l.",
+      "identifiers": {"vat_id": "00384350435"},
+      "website": "https://www.halley.it/",
+      "headquarters_city": "Matelica",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "product:halley-suite-enti-locali",
+      "entity_type": "product",
+      "company_ref": "company:halley-informatica",
+      "name": "Halley Suite Enti Locali",
+      "slug": "halley-suite-enti-locali",
+      "website": "https://www.halley.it/",
+      "description": "Famiglia di applicativi Halley per uffici e servizi degli enti locali."
+    },
+    {
+      "local_id": "company:deda-next",
+      "entity_type": "company",
+      "name": "Deda Next S.r.l.",
+      "legal_name": "Deda Next S.r.l.",
+      "identifiers": {"vat_id": "01727860221"},
+      "website": "https://www.civilianext.it/",
+      "headquarters_city": "Trento",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "product:civilianext",
+      "entity_type": "product",
+      "company_ref": "company:deda-next",
+      "name": "CiviliaNext",
+      "slug": "civilianext",
+      "website": "https://www.civilianext.it/",
+      "deployment": ["cloud"],
+      "description": "Piattaforma cloud per processi e servizi della Pubblica Amministrazione locale, con documentazione API ufficiale per l'area demografica."
+    },
+    {
+      "local_id": "company:palitalsoft",
+      "entity_type": "company",
+      "name": "Palitalsoft Srl Unipersonale",
+      "legal_name": "Palitalsoft Srl Unipersonale",
+      "identifiers": {"vat_id": "00994810430"},
+      "website": "https://www.palitalsoft.it/",
+      "headquarters_city": "Jesi",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "product:cityware-online",
+      "entity_type": "product",
+      "company_ref": "company:palitalsoft",
+      "name": "Cityware.online",
+      "slug": "cityware-online",
+      "website": "https://www.palitalsoft.it/",
+      "deployment": ["cloud", "on_premise"],
+      "description": "Suite gestionale integrata web based per la Pubblica Amministrazione, disponibile su server interno o in cloud."
+    },
+    {
+      "local_id": "company:siscom",
+      "entity_type": "company",
+      "name": "Siscom S.p.A.",
+      "legal_name": "Siscom S.p.A.",
+      "identifiers": {"vat_id": "01778000040"},
+      "website": "https://www.siscom.eu/",
+      "headquarters_city": "Cervere",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "product:nuvolacomuni",
+      "entity_type": "product",
+      "company_ref": "company:siscom",
+      "name": "NuvolaComuni",
+      "slug": "nuvolacomuni",
+      "website": "https://www.siscom.eu/comuni/",
+      "deployment": ["cloud"],
+      "description": "Soluzione integrata cloud/web per i servizi comunali, con moduli documentali, demografici, tributi, territorio e servizi al cittadino."
+    },
+    {
+      "local_id": "company:urba",
+      "entity_type": "company",
+      "name": "URBA S.r.l.",
+      "legal_name": "URBA S.r.l.",
+      "identifiers": {"vat_id": "18459571008"},
+      "website": "https://urba.cloud/",
+      "headquarters_city": "Roma",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "product:urba",
+      "entity_type": "product",
+      "company_ref": "company:urba",
+      "name": "URBA",
+      "slug": "urba",
+      "website": "https://urba.cloud/",
+      "deployment": ["cloud"],
+      "description": "Suite cloud per gestione territoriale, servizi online e interoperabilità degli enti pubblici."
+    }
+  ],
+  "sources": [
+    {
+      "local_id": "source:sicraweb-webinar",
+      "url": "https://assistenza.maggioli.it/webinar/la-nuova-suite-sicraweb-evo/",
+      "source_type": "official_product_page",
+      "publisher": "Gruppo Maggioli",
+      "title": "La nuova suite SICRAWEB EVO",
+      "accessed_at": "2026-07-30T23:46:28+02:00",
+      "language": "it",
+      "metadata": {"retention": "excerpt", "rights_basis": "publicly_available", "registry_agent_id": "pa-local-government-2026-07-30"}
+    },
+    {
+      "local_id": "source:sicraweb-wiki",
+      "url": "https://wiki.maggioli.it/",
+      "source_type": "official_product_page",
+      "publisher": "Gruppo Maggioli",
+      "title": "Wiki Maggioli - Pagina principale",
+      "accessed_at": "2026-07-30T23:46:28+02:00",
+      "language": "it",
+      "metadata": {"retention": "excerpt", "rights_basis": "publicly_available", "registry_agent_id": "pa-local-government-2026-07-30"}
+    },
+    {
+      "local_id": "source:halley-home",
+      "url": "https://www.halley.it/",
+      "source_type": "official_product_page",
+      "publisher": "Halley Informatica S.r.l.",
+      "title": "Halley Informatica",
+      "accessed_at": "2026-07-30T23:46:28+02:00",
+      "language": "it",
+      "metadata": {"retention": "excerpt", "rights_basis": "publicly_available", "registry_agent_id": "pa-local-government-2026-07-30"}
+    },
+    {
+      "local_id": "source:civilianext-api",
+      "url": "https://api.civilianext.it/Demografici/api/help/doc/index",
+      "source_type": "official_product_page",
+      "publisher": "Deda Next S.r.l.",
+      "title": "CiviliaNext Demografici API - Swagger UI",
+      "accessed_at": "2026-07-30T23:46:28+02:00",
+      "language": "it",
+      "metadata": {"retention": "excerpt", "rights_basis": "publicly_available", "registry_agent_id": "pa-local-government-2026-07-30"}
+    },
+    {
+      "local_id": "source:civilianext-eprocurement",
+      "url": "https://www.civilianext.it/civilia-next/lavori-pubblici-gare-appalti/e-procurement",
+      "source_type": "official_product_page",
+      "publisher": "Deda Next S.r.l.",
+      "title": "CiviliaNext E-procurement, Albo e Gare",
+      "accessed_at": "2026-07-30T23:46:28+02:00",
+      "language": "it",
+      "metadata": {"retention": "excerpt", "rights_basis": "publicly_available", "registry_agent_id": "pa-local-government-2026-07-30"}
+    },
+    {
+      "local_id": "source:cityware-home",
+      "url": "https://www.palitalsoft.it/",
+      "source_type": "official_product_page",
+      "publisher": "Palitalsoft Srl Unipersonale",
+      "title": "Il partner tecnologico per la Pubblica Amministrazione",
+      "accessed_at": "2026-07-30T23:46:28+02:00",
+      "language": "it",
+      "metadata": {"retention": "excerpt", "rights_basis": "publicly_available", "registry_agent_id": "pa-local-government-2026-07-30"}
+    },
+    {
+      "local_id": "source:cityware-services",
+      "url": "https://www.palitalsoft.it/cityware/servizi-per-la-persona/",
+      "source_type": "official_product_page",
+      "publisher": "Palitalsoft Srl Unipersonale",
+      "title": "Servizi per la Persona - Cityware",
+      "accessed_at": "2026-07-30T23:46:28+02:00",
+      "language": "it",
+      "metadata": {"retention": "excerpt", "rights_basis": "publicly_available", "registry_agent_id": "pa-local-government-2026-07-30"}
+    },
+    {
+      "local_id": "source:nuvolacomuni",
+      "url": "https://www.siscom.eu/comuni/",
+      "source_type": "official_product_page",
+      "publisher": "Siscom S.p.A.",
+      "title": "Comuni - NuvolaComuni",
+      "accessed_at": "2026-07-30T23:46:28+02:00",
+      "language": "it",
+      "metadata": {"retention": "excerpt", "rights_basis": "publicly_available", "registry_agent_id": "pa-local-government-2026-07-30"}
+    },
+    {
+      "local_id": "source:nuvolacomuni-cloud",
+      "url": "https://www.siscom.eu/cloud-computing/",
+      "source_type": "official_product_page",
+      "publisher": "Siscom S.p.A.",
+      "title": "Cloud computing - NuvolaComuni",
+      "accessed_at": "2026-07-30T23:46:28+02:00",
+      "language": "it",
+      "metadata": {"retention": "excerpt", "rights_basis": "publicly_available", "registry_agent_id": "pa-local-government-2026-07-30"}
+    },
+    {
+      "local_id": "source:nuvolacomuni-documentale",
+      "url": "https://www.siscom.eu/sistema-gestionale-integrato-sistema-documentale-digitale/",
+      "source_type": "official_product_page",
+      "publisher": "Siscom S.p.A.",
+      "title": "Sistema gestionale integrato - Sistema documentale digitale",
+      "accessed_at": "2026-07-30T23:46:28+02:00",
+      "language": "it",
+      "metadata": {"retention": "excerpt", "rights_basis": "publicly_available", "registry_agent_id": "pa-local-government-2026-07-30"}
+    },
+    {
+      "local_id": "source:nuvolacomuni-web",
+      "url": "https://www.siscom.eu/siti-web/",
+      "source_type": "official_product_page",
+      "publisher": "Siscom S.p.A.",
+      "title": "Siti web istituzionali per i Comuni",
+      "accessed_at": "2026-07-30T23:46:28+02:00",
+      "language": "it",
+      "metadata": {"retention": "excerpt", "rights_basis": "publicly_available", "registry_agent_id": "pa-local-government-2026-07-30"}
+    },
+    {
+      "local_id": "source:nuvolacomuni-portale",
+      "url": "https://www.siscom.eu/portalecontribuente/",
+      "source_type": "official_product_page",
+      "publisher": "Siscom S.p.A.",
+      "title": "Il portale del contribuente",
+      "accessed_at": "2026-07-30T23:46:28+02:00",
+      "language": "it",
+      "metadata": {"retention": "excerpt", "rights_basis": "publicly_available", "registry_agent_id": "pa-local-government-2026-07-30"}
+    },
+    {
+      "local_id": "source:urba",
+      "url": "https://urba.cloud/",
+      "source_type": "official_product_page",
+      "publisher": "URBA S.r.l.",
+      "title": "URBA - Strumenti per innovare la Pubblica Amministrazione",
+      "accessed_at": "2026-07-30T23:46:28+02:00",
+      "language": "it",
+      "metadata": {"retention": "excerpt", "rights_basis": "publicly_available", "registry_agent_id": "pa-local-government-2026-07-30"}
+    }
+  ],
+  "documents": [
+    {
+      "local_id": "document:sicraweb-webinar",
+      "source_ref": "source:sicraweb-webinar",
+      "title": "La nuova suite SICRAWEB EVO",
+      "document_type": "web_page",
+      "extraction_method": "browser_official_excerpt",
+      "text": "Il produttore presenta Sicraweb EVO come suite full web HTML5 su Angular, responsive e cloud, con moduli J-Serfin, J-Trib, J-Iride, J-Demos, J-Suap, J-Ter, J-Pers e Icaro.",
+      "metadata": {"retention": "excerpt"}
+    },
+    {
+      "local_id": "document:sicraweb-wiki",
+      "source_ref": "source:sicraweb-wiki",
+      "title": "Wiki Maggioli - moduli Sicraweb",
+      "document_type": "web_page",
+      "extraction_method": "browser_official_excerpt",
+      "text": "La wiki ufficiale elenca per Sicraweb le aree Segreteria e Protocollo, Finanziaria, Tributi, Risorse Umane, Demografici, Edilizia e Territorio, Appalti e Contratti, Sociale e Sanità e Portali e App.",
+      "metadata": {"retention": "excerpt"}
+    },
+    {
+      "local_id": "document:halley-home",
+      "source_ref": "source:halley-home",
+      "title": "Halley Informatica - novità prodotti",
+      "document_type": "web_page",
+      "extraction_method": "browser_official_excerpt",
+      "text": "La pagina ufficiale Halley indica per Territorio funzioni cartografiche e notifiche App IO; per Pratiche Edilizie importazione allegati SUE e protocollo di riscontro; per Attività Produttive lettura di XML SUAP e uso di Halley File System.",
+      "metadata": {"retention": "excerpt"}
+    },
+    {
+      "local_id": "document:civilianext-api",
+      "source_ref": "source:civilianext-api",
+      "title": "CiviliaNext Demografici API - Swagger UI",
+      "document_type": "web_page",
+      "extraction_method": "browser_official_excerpt",
+      "text": "L'endpoint ufficiale api.civilianext.it/Demografici/api/help/doc/index espone una documentazione Swagger UI e mostra un campo api_key per l'esplorazione dell'API demografica.",
+      "metadata": {"retention": "excerpt"}
+    },
+    {
+      "local_id": "document:civilianext-eprocurement",
+      "source_ref": "source:civilianext-eprocurement",
+      "title": "CiviliaNext E-procurement, Albo e Gare",
+      "document_type": "web_page",
+      "extraction_method": "browser_official_excerpt",
+      "text": "Deda Next presenta E-procurement, Albo e Gare come PAD cloud certificata AgID, integrata con CiviliaNext Lavori, Forniture e Servizi per il ciclo del contratto pubblico.",
+      "metadata": {"retention": "excerpt"}
+    },
+    {
+      "local_id": "document:cityware-home",
+      "source_ref": "source:cityware-home",
+      "title": "Palitalsoft - Cityware.online",
+      "document_type": "web_page",
+      "extraction_method": "browser_official_excerpt",
+      "text": "Palitalsoft presenta CWOL (Cityware.online) come piattaforma dinamica web based installabile su server interno o in cloud e qualificata nel marketplace AgID per servizi SaaS.",
+      "metadata": {"retention": "excerpt"}
+    },
+    {
+      "local_id": "document:cityware-services",
+      "source_ref": "source:cityware-services",
+      "title": "Cityware - Servizi per la Persona",
+      "document_type": "web_page",
+      "extraction_method": "browser_official_excerpt",
+      "text": "La pagina ufficiale descrive richieste dei cittadini, servizi scolastici, servizi sociali, interventi economici, immobili comunali, ISEE e INPS, workflow e procedure, servizi cimiteriali e report con foglio elettronico; cita anche PagoPA e moduli Protocollo, Tributi e Demografici.",
+      "metadata": {"retention": "excerpt"}
+    },
+    {
+      "local_id": "document:nuvolacomuni",
+      "source_ref": "source:nuvolacomuni",
+      "title": "Siscom - Comuni",
+      "document_type": "web_page",
+      "extraction_method": "browser_official_excerpt",
+      "text": "Siscom elenca per i Comuni gestione documentale, protocollo e conservazione, contabilità, atti amministrativi, demografici con XML-SAIA2/AP5 e interfacciamento ANPR/ANSC, cimitero, tributi, territorio, lavori pubblici, personale, PagoPA, polizia municipale, siti web, sportelli e app.",
+      "metadata": {"retention": "excerpt"}
+    },
+    {
+      "local_id": "document:nuvolacomuni-cloud",
+      "source_ref": "source:nuvolacomuni-cloud",
+      "title": "Siscom - Cloud computing",
+      "document_type": "web_page",
+      "extraction_method": "browser_official_excerpt",
+      "text": "Siscom dichiara che NuvolaComuni è una soluzione web per la gestione cloud dei propri software e che il servizio SaaS è qualificato ACN.",
+      "metadata": {"retention": "excerpt"}
+    },
+    {
+      "local_id": "document:nuvolacomuni-documentale",
+      "source_ref": "source:nuvolacomuni-documentale",
+      "title": "Siscom - Sistema documentale digitale",
+      "document_type": "web_page",
+      "extraction_method": "browser_official_excerpt",
+      "text": "Olimpo è descritto come soluzione cloud per documenti e procedimenti; i moduli ufficiali includono scrivania digitale, archivio documentale, workflow, conservazione, Olimpomobile per smartphone ed Egisto per il protocollo.",
+      "metadata": {"retention": "excerpt"}
+    },
+    {
+      "local_id": "document:nuvolacomuni-web",
+      "source_ref": "source:nuvolacomuni-web",
+      "title": "Siscom - Siti web istituzionali",
+      "document_type": "web_page",
+      "extraction_method": "browser_official_excerpt",
+      "text": "Siscom dichiara che i siti comunali conformi al Modello Comuni AgID/Designers Italia si integrano nativamente con Nuvola per la pubblicazione automatica dei contenuti.",
+      "metadata": {"retention": "excerpt"}
+    },
+    {
+      "local_id": "document:nuvolacomuni-portale",
+      "source_ref": "source:nuvolacomuni-portale",
+      "title": "Siscom - Portale del contribuente",
+      "document_type": "web_page",
+      "extraction_method": "browser_official_excerpt",
+      "text": "Il Portale del Contribuente è integrato con i gestionali Nuvola e consente consultazione tributi, download di avvisi e ricevute, pagamenti PagoPA, invio di istanze e documenti e comunicazioni.",
+      "metadata": {"retention": "excerpt"}
+    },
+    {
+      "local_id": "document:urba",
+      "source_ref": "source:urba",
+      "title": "URBA - Suite cloud per la PA",
+      "document_type": "web_page",
+      "extraction_method": "browser_official_excerpt",
+      "text": "URBA dichiara una piattaforma cloud aperta con API REST, integrazione SPID/CIE/eIDAS, PagoPA, App IO, PDND, sistemi di protocollo e firma digitale remota; per i dati geografici cita QGIS Server e per la sicurezza ISO 27001.",
+      "metadata": {"retention": "excerpt"}
+    }
+  ],
+  "classifications": [
+    {"subject_ref":"product:cityware-online","kind":"category","term_slug":"public_administration_management","term_name":"Gestione della Pubblica Amministrazione","confidence":"high","source_ref":"source:cityware-home","evidence_excerpt":"La Suite Gestionale Integrata per la Pubblica Amministrazione"},
+    {"subject_ref":"product:cityware-online","kind":"vertical","term_slug":"local_government","term_name":"Enti locali","confidence":"high","source_ref":"source:cityware-home","evidence_excerpt":"Regioni, Province, Comuni ... e altri enti locali"},
+    {"subject_ref":"product:nuvolacomuni","kind":"category","term_slug":"public_administration_management","term_name":"Gestione della Pubblica Amministrazione","confidence":"high","source_ref":"source:nuvolacomuni","evidence_excerpt":"soluzioni informatiche professionali per la Pubblica Amministrazione Locale"},
+    {"subject_ref":"product:nuvolacomuni","kind":"vertical","term_slug":"local_government","term_name":"Enti locali","confidence":"high","source_ref":"source:nuvolacomuni","evidence_excerpt":"Comuni"},
+    {"subject_ref":"product:urba","kind":"category","term_slug":"public_administration_management","term_name":"Gestione della Pubblica Amministrazione","confidence":"high","source_ref":"source:urba","evidence_excerpt":"suite in cloud per la gestione dei servizi della PA"},
+    {"subject_ref":"product:urba","kind":"vertical","term_slug":"local_government","term_name":"Enti locali","confidence":"high","source_ref":"source:urba","evidence_excerpt":"Servizio per Comuni e Province"}
+  ],
+  "features": [
+    {"subject_ref":"product:sicraweb-evo","feature_slug":"public_procurement_management","feature_name":"E-procurement e appalti pubblici","feature_group":"public_administration","support_level":"native","confidence":"high","source_ref":"source:sicraweb-wiki","evidence_excerpt":"APPALTI E CONTRATTI - e-Procurement"},
+    {"subject_ref":"product:sicraweb-evo","feature_slug":"municipal_portal_and_citizen_app","feature_name":"Portali e app per l'ente","feature_group":"citizen_services","support_level":"native","confidence":"high","source_ref":"source:sicraweb-wiki","evidence_excerpt":"PORTALI E APP - J-City.gov"},
+    {"subject_ref":"product:sicraweb-evo","feature_slug":"municipal_police_management","feature_name":"Gestione della polizia locale","feature_group":"public_administration","support_level":"native","confidence":"high","source_ref":"source:sicraweb-wiki","evidence_excerpt":"POLIZIA LOCALE - Concilia"},
+    {"subject_ref":"product:halley-suite-enti-locali","feature_slug":"app_io_citizen_notifications","feature_name":"Notifiche ai cittadini tramite App IO","feature_group":"citizen_services","support_level":"native","confidence":"high","source_ref":"source:halley-home","evidence_excerpt":"APPIO: notifica ai cittadini selezionando la porzione di territorio dalla mappa"},
+    {"subject_ref":"product:halley-suite-enti-locali","feature_slug":"map_based_territory_management","feature_name":"Gestione del territorio con integrazione cartografica","feature_group":"territory","support_level":"native","confidence":"high","source_ref":"source:halley-home","evidence_excerpt":"Catasto: integrazione in mappa ... Applicazioni grafiche"},
+    {"subject_ref":"product:halley-suite-enti-locali","feature_slug":"suap_xml_workflow","feature_name":"Lettura XML per pratiche SUAP","feature_group":"public_administration","support_level":"native","confidence":"high","source_ref":"source:halley-home","evidence_excerpt":"SUAP: migliorata la lettura degli XML non compressi"},
+    {"subject_ref":"product:halley-suite-enti-locali","feature_slug":"sue_attachment_import","feature_name":"Importazione allegati SUE","feature_group":"public_administration","support_level":"native","confidence":"high","source_ref":"source:halley-home","evidence_excerpt":"SUE: importazione allegati, predisposto protocollo di riscontro"},
+    {"subject_ref":"product:civilianext","feature_slug":"demographic_web_api","feature_name":"API web per servizi demografici","feature_group":"integration","support_level":"integration","confidence":"high","source_ref":"source:civilianext-api","evidence_excerpt":"Documentazione Swagger UI per l'area Demografici con api_key"},
+    {"subject_ref":"product:cityware-online","feature_slug":"municipal_service_request_management","feature_name":"Gestione richieste ai servizi dell'ente","feature_group":"citizen_services","support_level":"native","confidence":"high","source_ref":"source:cityware-services","evidence_excerpt":"Il Modulo Servizi per la Persona permette di gestire le richieste dei cittadini"},
+    {"subject_ref":"product:cityware-online","feature_slug":"school_services_management","feature_name":"Gestione servizi scolastici comunali","feature_group":"citizen_services","support_level":"native","confidence":"high","source_ref":"source:cityware-services","evidence_excerpt":"graduatorie comunali ... trasporti e mensa"},
+    {"subject_ref":"product:cityware-online","feature_slug":"social_services_case_management","feature_name":"Gestione cartella sociale e interventi","feature_group":"social_services","support_level":"native","confidence":"high","source_ref":"source:cityware-services","evidence_excerpt":"gestione della cartella sociale dei casi in carico"},
+    {"subject_ref":"product:cityware-online","feature_slug":"municipal_property_management","feature_name":"Gestione immobili comunali e alloggi pubblici","feature_group":"territory","support_level":"native","confidence":"high","source_ref":"source:cityware-services","evidence_excerpt":"gestione degli immobili comunali, degli alloggi pubblici"},
+    {"subject_ref":"product:cityware-online","feature_slug":"workflow_procedure_management","feature_name":"Workflow e procedure amministrative","feature_group":"workflow","support_level":"native","confidence":"high","source_ref":"source:cityware-services","evidence_excerpt":"La funzione struttura il Workflow dei processi"},
+    {"subject_ref":"product:cityware-online","feature_slug":"public_payment_management","feature_name":"Gestione pagamenti e riconciliazione PagoPA","feature_group":"payments","support_level":"integration","confidence":"high","source_ref":"source:cityware-services","evidence_excerpt":"recupero coattivo dei crediti, in conformità con il nodo PagoPA ... riconciliazione in tempo reale"},
+    {"subject_ref":"product:nuvolacomuni","feature_slug":"municipal_document_management","feature_name":"Gestione documentale comunale","feature_group":"public_administration","support_level":"native","confidence":"high","source_ref":"source:nuvolacomuni","evidence_excerpt":"Scrivania digitale, Gestione documentale, Protocollo e Conservazione documentale"},
+    {"subject_ref":"product:nuvolacomuni","feature_slug":"digital_protocol_management","feature_name":"Protocollo informatico","feature_group":"public_administration","support_level":"native","confidence":"high","source_ref":"source:nuvolacomuni","evidence_excerpt":"Protocollo e Conservazione documentale"},
+    {"subject_ref":"product:nuvolacomuni","feature_slug":"municipal_workflow_management","feature_name":"Workflow dei procedimenti comunali","feature_group":"workflow","support_level":"native","confidence":"high","source_ref":"source:nuvolacomuni-documentale","evidence_excerpt":"Olimpo: Scrivania digitale, Archivio documentale, Workflow"},
+    {"subject_ref":"product:nuvolacomuni","feature_slug":"population_registry_management","feature_name":"Servizi demografici comunali","feature_group":"public_administration","support_level":"native","confidence":"high","source_ref":"source:nuvolacomuni","evidence_excerpt":"Anagrafe, Elettorale, Stato Civile"},
+    {"subject_ref":"product:nuvolacomuni","feature_slug":"local_tax_management","feature_name":"Gestione tributi locali","feature_group":"public_administration","support_level":"native","confidence":"high","source_ref":"source:nuvolacomuni-portale","evidence_excerpt":"consultare la situazione dei tributi locali (IMU, TARI, ecc.)"},
+    {"subject_ref":"product:nuvolacomuni","feature_slug":"municipal_cemetery_services","feature_name":"Gestione cimiteriale e concessioni","feature_group":"public_administration","support_level":"native","confidence":"high","source_ref":"source:nuvolacomuni","evidence_excerpt":"Gestione delle strutture e delle concessioni cimiteriali"},
+    {"subject_ref":"product:nuvolacomuni","feature_slug":"municipal_web_portal","feature_name":"Siti web comunali integrati","feature_group":"citizen_services","support_level":"integration","confidence":"high","source_ref":"source:nuvolacomuni-web","evidence_excerpt":"si integra nativamente con la soluzione gestionale Nuvola"},
+    {"subject_ref":"product:nuvolacomuni","feature_slug":"public_payment_management","feature_name":"Pagamenti digitali PagoPA","feature_group":"payments","support_level":"integration","confidence":"high","source_ref":"source:nuvolacomuni-portale","evidence_excerpt":"effettuare pagamenti online ... sul circuito PAGOPA"},
+    {"subject_ref":"product:urba","feature_slug":"municipal_cemetery_services","feature_name":"Sistema informativo cimiteriale","feature_group":"public_administration","support_level":"native","confidence":"high","source_ref":"source:urba","evidence_excerpt":"gestire i defunti, i contratti, le sepolture"},
+    {"subject_ref":"product:urba","feature_slug":"geoportal_territorial_management","feature_name":"Geoportale e gestione dati territoriali","feature_group":"territory","support_level":"native","confidence":"high","source_ref":"source:urba","evidence_excerpt":"atlante digitale ... mappe, dati cartografici e informazioni urbanistiche"},
+    {"subject_ref":"product:urba","feature_slug":"sue_suaf_management","feature_name":"Gestione pratiche GeoSUE e GeoSUAF","feature_group":"public_administration","support_level":"native","confidence":"high","source_ref":"source:urba","evidence_excerpt":"gestione delle pratiche edilizie o delle attività forestali"},
+    {"subject_ref":"product:urba","feature_slug":"civil_protection_management","feature_name":"Gestione integrata della protezione civile","feature_group":"public_services","support_level":"native","confidence":"high","source_ref":"source:urba","evidence_excerpt":"sistema integrato di allerta e gestione delle emergenze"},
+    {"subject_ref":"product:urba","feature_slug":"municipal_toponymy_management","feature_name":"Toponomastica e numerazione civica","feature_group":"territory","support_level":"native","confidence":"high","source_ref":"source:urba","evidence_excerpt":"georeferenziazione e gestione della toponomastica e della numerazione civica"},
+    {"subject_ref":"product:urba","feature_slug":"citizen_online_services","feature_name":"Servizi online per cittadini e concessioni","feature_group":"citizen_services","support_level":"native","confidence":"high","source_ref":"source:urba","evidence_excerpt":"Servizi Online - Concessioni d'uso"},
+    {"subject_ref":"product:urba","feature_slug":"public_payment_management","feature_name":"Pagamenti PagoPA per servizi dell'ente","feature_group":"payments","support_level":"integration","confidence":"high","source_ref":"source:urba","evidence_excerpt":"URBA è completamente integrato con il sistema PagoPA"}
+  ],
+  "technical_characteristics": [
+    {"subject_ref":"product:halley-suite-enti-locali","kind":"integration_standard","term_slug":"app-io","term_name":"App IO","relationship_type":"supports","confidence":"high","source_ref":"source:halley-home","evidence_excerpt":"APPIO: notifica ai cittadini"},
+    {"subject_ref":"product:halley-suite-enti-locali","kind":"integration_standard","term_slug":"xml","term_name":"XML per pratiche SUAP","relationship_type":"supports","confidence":"high","source_ref":"source:halley-home","evidence_excerpt":"lettura degli XML non compressi"},
+    {"subject_ref":"product:civilianext","kind":"api_protocol","term_slug":"swagger-ui","term_name":"Documentazione API Swagger UI","relationship_type":"supports","confidence":"high","source_ref":"source:civilianext-api","evidence_excerpt":"Swagger UI"},
+    {"subject_ref":"product:civilianext","kind":"authentication","term_slug":"api-key","term_name":"API key","relationship_type":"supports","confidence":"high","source_ref":"source:civilianext-api","evidence_excerpt":"api_key"},
+    {"subject_ref":"product:cityware-online","kind":"deployment_model","term_slug":"cloud-or-internal-server","term_name":"Cloud o server interno","relationship_type":"available_as","confidence":"high","source_ref":"source:cityware-home","evidence_excerpt":"può essere installata sia su un server interno che in Cloud"},
+    {"subject_ref":"product:cityware-online","kind":"delivery_model","term_slug":"saas","term_name":"SaaS","relationship_type":"available_as","confidence":"high","source_ref":"source:cityware-home","evidence_excerpt":"qualificata nel marketplace di Agid per l'erogazione dei servizi in SAAS"},
+    {"subject_ref":"product:cityware-online","kind":"client_platform","term_slug":"web-based","term_name":"Web based","relationship_type":"available_as","confidence":"high","source_ref":"source:cityware-home","evidence_excerpt":"piattaforma dinamica e web based"},
+    {"subject_ref":"product:cityware-online","kind":"integration_standard","term_slug":"pagopa","term_name":"PagoPA","relationship_type":"supports","confidence":"high","source_ref":"source:cityware-services","evidence_excerpt":"in conformità con il nodo PagoPA"},
+    {"subject_ref":"product:nuvolacomuni","kind":"delivery_model","term_slug":"acn-qualified-saas","term_name":"SaaS qualificato ACN","relationship_type":"certified_for","confidence":"high","source_ref":"source:nuvolacomuni-cloud","evidence_excerpt":"La soluzione Siscom SAAS ... qualificata da ACN"},
+    {"subject_ref":"product:nuvolacomuni","kind":"client_platform","term_slug":"web","term_name":"Web","relationship_type":"available_as","confidence":"high","source_ref":"source:nuvolacomuni-cloud","evidence_excerpt":"soluzione web NuvolaComuni"},
+    {"subject_ref":"product:nuvolacomuni","kind":"mobile_platform","term_slug":"smartphone","term_name":"Smartphone tramite Olimpomobile","relationship_type":"available_as","confidence":"high","source_ref":"source:nuvolacomuni-documentale","evidence_excerpt":"Olimpomobile ... consultazione rapida da smartphone"},
+    {"subject_ref":"product:nuvolacomuni","kind":"integration_standard","term_slug":"xml-saia2-ap5","term_name":"XML-SAIA2/AP5","relationship_type":"supports","confidence":"high","source_ref":"source:nuvolacomuni","evidence_excerpt":"Interscambio con Enti XML-SAIA2/AP5"},
+    {"subject_ref":"product:nuvolacomuni","kind":"integration_standard","term_slug":"anpr-ansc","term_name":"ANPR e ANSC","relationship_type":"supports","confidence":"high","source_ref":"source:nuvolacomuni","evidence_excerpt":"interfacciamento con sistema ANPR e ANSC"},
+    {"subject_ref":"product:nuvolacomuni","kind":"integration_standard","term_slug":"pagopa","term_name":"PagoPA","relationship_type":"supports","confidence":"high","source_ref":"source:nuvolacomuni","evidence_excerpt":"Pago PA - Pagamenti digitali"},
+    {"subject_ref":"product:urba","kind":"deployment_model","term_slug":"cloud","term_name":"Cloud","relationship_type":"available_as","confidence":"high","source_ref":"source:urba","evidence_excerpt":"URBA è una piattaforma cloud aperta e connessa"},
+    {"subject_ref":"product:urba","kind":"api_protocol","term_slug":"rest-api","term_name":"API REST","relationship_type":"supports","confidence":"high","source_ref":"source:urba","evidence_excerpt":"servizi di interoperabilità API REST"},
+    {"subject_ref":"product:urba","kind":"authentication","term_slug":"spid-cie-eidas","term_name":"SPID, CIE ed eIDAS","relationship_type":"supports","confidence":"high","source_ref":"source:urba","evidence_excerpt":"integrazione con SPID, CIE ed eIDAS"},
+    {"subject_ref":"product:urba","kind":"integration_standard","term_slug":"pagopa","term_name":"PagoPA","relationship_type":"supports","confidence":"high","source_ref":"source:urba","evidence_excerpt":"integrato con il sistema PagoPA"},
+    {"subject_ref":"product:urba","kind":"integration_standard","term_slug":"app-io","term_name":"App IO","relationship_type":"supports","confidence":"high","source_ref":"source:urba","evidence_excerpt":"supporta l'integrazione con AppIO"},
+    {"subject_ref":"product:urba","kind":"integration_standard","term_slug":"pdnd","term_name":"PDND","relationship_type":"supports","confidence":"high","source_ref":"source:urba","evidence_excerpt":"può distribuire informazioni attraverso API ... come PDND"},
+    {"subject_ref":"product:urba","kind":"integration_standard","term_slug":"qgis-server","term_name":"QGIS Server","relationship_type":"compatible_with","confidence":"high","source_ref":"source:urba","evidence_excerpt":"standard comuni attraverso QGIS server"},
+    {"subject_ref":"product:urba","kind":"integration_standard","term_slug":"remote-digital-signature","term_name":"Firma digitale remota","relationship_type":"supports","confidence":"high","source_ref":"source:urba","evidence_excerpt":"partner che rilasciano Firma Digitale Remota"},
+    {"subject_ref":"product:urba","kind":"security_standard","term_slug":"iso-27001","term_name":"ISO 27001","relationship_type":"certified_for","confidence":"high","source_ref":"source:urba","evidence_excerpt":"BIDATA è certificato ... ISO 27001"}
+  ],
+  "facts": [
+    {"subject_ref":"product:sicraweb-evo","predicate":"technical.module_catalog","value":["J-Iride","J-Serfin","J-Trib","J-Pers","J-Demos","J-Ter","e-Procurement","Concilia","J-City.gov","Icaro"],"value_kind":"observed","confidence":"high","source_ref":"source:sicraweb-wiki","evidence_excerpt":"La wiki ufficiale elenca le aree e i moduli Sicraweb"},
+    {"subject_ref":"product:halley-suite-enti-locali","predicate":"technical.map_based_appio_notification","value":true,"value_kind":"observed","confidence":"high","source_ref":"source:halley-home","evidence_excerpt":"APPIO: notifica ai cittadini selezionando la porzione di territorio dalla mappa"},
+    {"subject_ref":"product:halley-suite-enti-locali","predicate":"technical.file_system","value":"Halley File System","value_kind":"observed","confidence":"high","source_ref":"source:halley-home","evidence_excerpt":"HFS ... Halley File System"},
+    {"subject_ref":"product:civilianext","predicate":"technical.api_documentation","value":"Swagger UI","value_kind":"observed","confidence":"high","source_ref":"source:civilianext-api","evidence_excerpt":"Swagger UI"},
+    {"subject_ref":"product:civilianext","predicate":"technical.api_authentication","value":"api_key","value_kind":"observed","confidence":"high","source_ref":"source:civilianext-api","evidence_excerpt":"api_key"},
+    {"subject_ref":"product:cityware-online","predicate":"technical.payment_reconciliation","value":"real_time_online_portal_and_centralized_provider_reconciliation","value_kind":"observed","confidence":"high","source_ref":"source:cityware-services","evidence_excerpt":"riconciliazione centralizzata ... riconciliazione in tempo reale dei pagamenti"},
+    {"subject_ref":"product:nuvolacomuni","predicate":"technical.document_modules","value":["Olimpo","OlimpoConserve","Olimpomobile","Egisto"],"value_kind":"observed","confidence":"high","source_ref":"source:nuvolacomuni-documentale","evidence_excerpt":"MODULI SOFTWARE: Olimpo, OlimpoConserve, Olimpomobile, Egisto"},
+    {"subject_ref":"product:urba","predicate":"technical.cms_and_stack","value":{"cms":"proprietary","technology_basis":"open_source"},"value_kind":"observed","confidence":"high","source_ref":"source:urba","evidence_excerpt":"tecnologie open source ... CMS proprietario"},
+    {"subject_ref":"product:urba","predicate":"technical.protocol_integration","value":"existing_compliant_information_protocol_systems","value_kind":"observed","confidence":"high","source_ref":"source:urba","evidence_excerpt":"si integra a tutti i sistemi di protocollo informatico esistenti"}
+  ],
+  "claims": [
+    {"subject_ref":"product:sicraweb-evo","claim_type":"inferred","predicate":"module.implementation_complexity","statement":"Per una nuova applicazione, la complessità di implementazione è alta.","assessment":"high","methodology":"Inferenza separata dai dati osservati: suite multi-area per enti locali, workflow regolati e superficie funzionale ampia; il claim non esprime prezzo o qualità del prodotto.","confidence":"medium","source_ref":"source:sicraweb-wiki","evidence_excerpt":"La wiki elenca protocollo, finanziaria, tributi, demografici, territorio, appalti, polizia locale, sociale e portali/app."},
+    {"subject_ref":"product:sicraweb-evo","claim_type":"inferred","predicate":"module.market_fit","statement":"Il fit di mercato osservato è alto per comuni ed enti locali con più uffici e processi integrati.","assessment":"high","methodology":"Inferenza dai moduli ufficiali dedicati a funzioni comunali core e servizi al cittadino; non è una stima di quota o ricavi.","confidence":"medium","source_ref":"source:sicraweb-wiki","evidence_excerpt":"SEGRETERIA E PROTOCOLLO, FINANZIARIA, TRIBUTI, SERVIZI DEMOGRAFICI, APPALTI E CONTRATTI."},
+    {"subject_ref":"product:sicraweb-evo","claim_type":"inferred","predicate":"module.hardware_moat","statement":"Un moat hardware non è dimostrabile nel perimetro delle fonti consultate; la leva osservata è software/web.","assessment":"low","methodology":"Inferenza prudente: le fonti usate descrivono moduli software, portali/app e interfaccia web; non indicano terminali proprietari o dispositivi installati. Il gap non equivale all'assenza di hardware nel prodotto.","confidence":"medium","source_ref":"source:sicraweb-webinar","evidence_excerpt":"interfaccia full web ... full responsive ... soluzione cloud"},
+    {"subject_ref":"product:halley-suite-enti-locali","claim_type":"inferred","predicate":"module.implementation_complexity","statement":"Per una nuova applicazione, la complessità di implementazione è alta.","assessment":"high","methodology":"Inferenza dai driver ufficiali osservati: moduli comunali, integrazione cartografica, notifiche App IO, import SUE e trattamento XML SUAP; non è un giudizio sulla qualità del fornitore.","confidence":"medium","source_ref":"source:halley-home","evidence_excerpt":"Territorio, APPIO, SUE, SUAP XML e Halley File System."},
+    {"subject_ref":"product:halley-suite-enti-locali","claim_type":"inferred","predicate":"module.market_fit","statement":"Il fit di mercato osservato è alto per comuni ed enti locali che devono coprire uffici amministrativi, territorio e servizi digitali.","assessment":"high","methodology":"Inferenza dalla copertura funzionale esposta dal produttore e dall'identificazione ufficiale di Halley EGOV; non è una stima di penetrazione.","confidence":"medium","source_ref":"source:halley-home","evidence_excerpt":"HALLEYEGOV e novità per Polizia Locale, Territorio, Pratiche Edilizie e Attività Produttive."},
+    {"subject_ref":"product:halley-suite-enti-locali","claim_type":"inferred","predicate":"module.hardware_moat","statement":"Un moat hardware non è dimostrabile nel perimetro delle fonti consultate.","assessment":"low","methodology":"Inferenza basata sulle evidenze disponibili, concentrate su software, mappe, XML, notifiche e workflow; non sono stati dichiarati terminali proprietari. Il risultato è un gap di evidenza, non un'assenza di prodotto hardware.","confidence":"medium","source_ref":"source:halley-home","evidence_excerpt":"Le novità ufficiali consultate descrivono funzioni software e integrazioni."},
+    {"subject_ref":"product:civilianext","claim_type":"inferred","predicate":"module.implementation_complexity","statement":"Per una nuova applicazione, la complessità di implementazione è molto alta.","assessment":"very_high","methodology":"Inferenza dai driver osservati: PAD cloud certificata AgID, ciclo di gara pubblico, integrazione con altri moduli e API documentata; non è una stima di costi o tempi.","confidence":"medium","source_ref":"source:civilianext-eprocurement","evidence_excerpt":"PAD cloud certificata AgID ... completa gestione dei fornitori e di tutte le fasi di una gara."},
+    {"subject_ref":"product:civilianext","claim_type":"inferred","predicate":"module.market_fit","statement":"Il fit di mercato osservato è alto per enti locali con procedimenti SUAP, procurement e integrazioni applicative.","assessment":"high","methodology":"Inferenza dall'offerta ufficiale per PA locale e dai moduli e-procurement/API verificati; non è una stima di clienti o ricavi.","confidence":"medium","source_ref":"source:civilianext-eprocurement","evidence_excerpt":"software in cloud per la PA locale ... integrata con CiviliaNext Lavori, Forniture e Servizi."},
+    {"subject_ref":"product:civilianext","claim_type":"inferred","predicate":"module.hardware_moat","statement":"Un moat hardware non è dimostrabile nel perimetro delle fonti consultate; la differenziazione osservata è regolatoria e d'integrazione software.","assessment":"low","methodology":"Inferenza: fonti ufficiali su PAD, API e cloud non dichiarano terminali o hardware proprietario. Il gap di evidenza non equivale all'assenza di eventuali compatibilità hardware.","confidence":"medium","source_ref":"source:civilianext-api","evidence_excerpt":"Documentazione API demografica esposta tramite Swagger UI."},
+    {"subject_ref":"product:cityware-online","claim_type":"inferred","predicate":"module.implementation_complexity","statement":"Per una nuova applicazione, la complessità di implementazione è alta.","assessment":"high","methodology":"Inferenza dai driver osservati: suite integrata con cloud/server interno, workflow, pagamenti, servizi scolastici/sociali, immobili e moduli comunali; non è un preventivo.","confidence":"medium","source_ref":"source:cityware-services","evidence_excerpt":"Servizi scolastici, sociali, immobili comunali, workflow, PagoPA e riconciliazione."},
+    {"subject_ref":"product:cityware-online","claim_type":"inferred","predicate":"module.market_fit","statement":"Il fit di mercato osservato è alto per comuni e altri enti pubblici locali con servizi a domanda individuale.","assessment":"high","methodology":"Inferenza dalla descrizione ufficiale di Palitalsoft per PA, Comuni, Province e altri enti locali e dai moduli per cittadini.","confidence":"medium","source_ref":"source:cityware-home","evidence_excerpt":"Regioni, Province, Comuni ... altri enti locali."},
+    {"subject_ref":"product:cityware-online","claim_type":"inferred","predicate":"module.hardware_moat","statement":"Un moat hardware non è dimostrabile nel perimetro delle fonti consultate.","assessment":"low","methodology":"Le fonti osservate descrivono una piattaforma web/cloud o su server interno e integrazioni di servizio, senza dichiarare terminali proprietari; il gap non dimostra l'assenza di hardware.","confidence":"medium","source_ref":"source:cityware-home","evidence_excerpt":"piattaforma dinamica e web based ... server interno o Cloud."},
+    {"subject_ref":"product:nuvolacomuni","claim_type":"inferred","predicate":"module.implementation_complexity","statement":"Per una nuova applicazione, la complessità di implementazione è molto alta.","assessment":"very_high","methodology":"Inferenza dai driver osservati: suite comunale ampia, cloud SaaS qualificato ACN, interscambi XML/ANPR/ANSC, protocollo, workflow, pagamenti e portale/app; non è una stima di costi.","confidence":"medium","source_ref":"source:nuvolacomuni","evidence_excerpt":"Moduli comunali e interscambio XML-SAIA2/AP5, ANPR e ANSC, PagoPA, siti e app."},
+    {"subject_ref":"product:nuvolacomuni","claim_type":"inferred","predicate":"module.market_fit","statement":"Il fit di mercato osservato è alto per comuni ed enti locali che cercano una suite integrata cloud.","assessment":"high","methodology":"Inferenza dalla presentazione ufficiale di Siscom come software house per PA locale e dalla copertura dei servizi comunali; non è una stima di quota.","confidence":"medium","source_ref":"source:nuvolacomuni","evidence_excerpt":"soluzioni ... per la Pubblica Amministrazione Locale"},
+    {"subject_ref":"product:nuvolacomuni","claim_type":"inferred","predicate":"module.hardware_moat","statement":"Un moat hardware non è dimostrabile nel perimetro delle fonti consultate; i driver osservati sono dati, integrazioni e processi comunali.","assessment":"low","methodology":"Inferenza da fonti su software cloud/web, documentale, protocolli e portali/app; non sono stati dichiarati terminali proprietari. Il gap non equivale all'assenza di hardware.","confidence":"medium","source_ref":"source:nuvolacomuni-cloud","evidence_excerpt":"soluzione web NuvolaComuni ... gestione in Cloud dei propri software."},
+    {"subject_ref":"product:urba","claim_type":"inferred","predicate":"module.implementation_complexity","statement":"Per una nuova applicazione, la complessità di implementazione è molto alta.","assessment":"very_high","methodology":"Inferenza dai driver osservati: API REST, identità SPID/CIE/eIDAS, PagoPA, App IO, PDND, QGIS Server, protocollo, firma remota, cloud e servizi territoriali; non è una stima di tempi o costi.","confidence":"medium","source_ref":"source:urba","evidence_excerpt":"API REST, SPID/CIE/eIDAS, PagoPA, AppIO, PDND e QGIS server."},
+    {"subject_ref":"product:urba","claim_type":"inferred","predicate":"module.market_fit","statement":"Il fit di mercato osservato è alto per Comuni e Province che necessitano di servizi territoriali e citizen-facing interoperabili.","assessment":"high","methodology":"Inferenza dalla lista ufficiale di servizi per Comuni/Province, dalla suite PA e dalle integrazioni nazionali dichiarate; non è una stima di penetrazione.","confidence":"medium","source_ref":"source:urba","evidence_excerpt":"Servizio per Comuni e Province ... Geoportale, GeoSUE/SUAF, Protezione Civile e Servizi Online."},
+    {"subject_ref":"product:urba","claim_type":"inferred","predicate":"module.hardware_moat","statement":"Un moat hardware non è dimostrabile nel perimetro delle fonti consultate; la leva osservata è piattaforma, interoperabilità e componente GIS.","assessment":"low","methodology":"Inferenza dalle fonti ufficiali che descrivono servizi cloud, API, identità, pagamenti e GIS senza dichiarare dispositivi proprietari; il gap non equivale all'assenza di hardware.","confidence":"medium","source_ref":"source:urba","evidence_excerpt":"piattaforma cloud ... API REST ... QGIS server."}
+  ],
+  "notes": [
+    {"subject_ref":"product:sicraweb-evo","note_type":"data_quality","text":"In questa passata non sono state aggiunte API, SSO/MFA, audit trail o offline/sync perché le fonti ufficiali consultate non li esplicitano; l'assenza del dato non è stata trasformata in assenza di prodotto.","confidence":"high"},
+    {"subject_ref":"product:halley-suite-enti-locali","note_type":"data_quality","text":"La fonte ufficiale consultata esplicita App IO, XML, mappe, SUE e HFS, ma non espone in modo verificabile API pubbliche, SSO/MFA o modalità offline/sync per l'intera suite.","confidence":"high"},
+    {"subject_ref":"product:civilianext","note_type":"data_quality","text":"La documentazione API ufficiale osservata mostra Swagger UI e api_key, ma non sono stati registrati versione, limiti, schema completo o protocolli ulteriori non visibili nella pagina consultata.","confidence":"high"},
+    {"subject_ref":"product:cityware-online","note_type":"data_quality","text":"La fonte ufficiale conferma cloud, server interno, web based, SaaS AgID, PagoPA e workflow; API, SSO/MFA, audit trail e offline/sync non sono stati registrati senza dichiarazione esplicita.","confidence":"high"},
+    {"subject_ref":"product:nuvolacomuni","note_type":"data_quality","text":"Le fonti ufficiali confermano cloud/SaaS ACN, web, mobile, interscambi XML/ANPR/ANSC, PagoPA e portale; non sono stati aggiunti API, SSO/MFA o audit trail perché non esplicitati nelle pagine consultate.","confidence":"high"},
+    {"subject_ref":"product:urba","note_type":"data_quality","text":"Il sito ufficiale presenta il brand URBA e il footer URBA S.r.l.; nella stessa pagina la certificazione ISO è attribuita a BIDATA. Il bundle mantiene URBA S.r.l. come produttore dichiarato dal footer e non attribuisce a URBA dettagli societari ulteriori.","confidence":"high"},
+    {"subject_ref":"product:urba","note_type":"data_quality","text":"Le fonti ufficiali consultate non esplicitano audit trail, MFA, modalità offline/sync o hardware proprietario; questi gap restano aperti e non sono stati modellati come assenze.","confidence":"high"}
+  ]
+}

@@ -1,0 +1,37 @@
+NOTICE
+======
+
+Marchi e nomi commerciali
+-------------------------
+
+Tutti i nomi di prodotto, i nomi aziendali e i marchi citati in questo
+repository (a titolo di esempio e non esaustivo: TeamSystem, Zucchetti,
+Wolters Kluwer, Maggioli, Dedalus, Sistemi, e ogni altro software o società
+menzionata) sono di proprietà dei rispettivi titolari.
+
+Tali nomi vengono utilizzati esclusivamente in funzione descrittiva,
+identificativa e informativa, per riferirsi alle aziende e ai prodotti oggetto
+dell'analisi. Il loro uso NON implica alcuna affiliazione, sponsorizzazione,
+approvazione o partnership con questo progetto, né con gli autori dello stesso.
+
+Dati e fonti
+------------
+
+I dati pubblicati sono aggregati da fonti pubbliche (siti ufficiali dei
+fornitori, documentazione tecnica, bilanci societari depositati e registri
+camerali) e sono archiviati con riferimento alla fonte e alla data di recupero
+per garantirne la verificabilità. I valori economici (ricavi, dipendenti,
+utile) si riferiscono alla persona giuridica produttrice e non al singolo
+applicativo.
+
+Il catalogo non è un albo esaustivo: l'assenza di una società o di una
+funzionalità non ne implica l'inesistenza, ma solo l'assenza di evidenza
+verificata nel perimetro di audit corrente.
+
+Correzioni e rimozioni
+----------------------
+
+Titolari di marchi o aziende citate che desiderino una correzione, un
+aggiornamento o la rimozione di un contenuto possono aprire una Issue o una
+Pull Request sul repository. Le richieste ragionevoli vengono gestite con
+priorità.

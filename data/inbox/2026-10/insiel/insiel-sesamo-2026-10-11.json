@@ -1,0 +1,468 @@
+{
+  "schema_version": "1.0",
+  "record_id": "research-insiel-sesamo-20261011",
+  "created_at": "2026-10-11T10:00:00Z",
+  "created_by": {"agent_id": "research_bundle_agent"},
+  "scope": {"country": "IT", "language": "it"},
+  "entities": [
+    {
+      "local_id": "company:insiel",
+      "entity_type": "company",
+      "name": "Insiel S.p.A.",
+      "legal_name": "Insiel - Informatica per il Sistema degli Enti Locali S.p.A.",
+      "identifiers": {"vat_id": "00118410323"},
+      "website": "https://www.insiel.it/",
+      "headquarters_city": "Trieste",
+      "headquarters_region": "Friuli-Venezia Giulia",
+      "headquarters_country": "IT",
+      "founded_year": 1974,
+      "metadata": {
+        "ownership": "società in house della Regione Autonoma Friuli-Venezia Giulia (socio unico)",
+        "employee_band": "501-1000"
+      }
+    },
+    {
+      "local_id": "product:insiel-sesamo",
+      "entity_type": "product",
+      "company_ref": "company:insiel",
+      "name": "Se.Sa.Mo.",
+      "slug": "insiel-sesamo",
+      "website": "https://sesamo.sanita.fvg.it/sesamo",
+      "deployment": ["web", "mobile"],
+      "description": "Portale regionale della Sanità Digitale del Friuli-Venezia Giulia: punto di accesso al Fascicolo Sanitario Elettronico (FSE) regionale e ai servizi sanitari online (referti, prenotazioni, pagamenti ticket, servizi fast).",
+      "metadata": {"aliases": ["Sesamo", "Sesamo FSE", "FSE FVG"]}
+    }
+  ],
+  "sources": [
+    {
+      "local_id": "source:insiel-sesamo-portal",
+      "url": "https://sesamo.sanita.fvg.it/sesamo",
+      "source_type": "official_product_page",
+      "publisher": "Regione Autonoma Friuli-Venezia Giulia / Insiel S.p.A.",
+      "title": "SESAMO - Piattaforma elettronica di servizi salute in mobilità",
+      "accessed_at": "2026-10-11T09:00:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:insiel-sanita",
+      "url": "https://www.insiel.it/it/sanita-461",
+      "source_type": "official_product_page",
+      "publisher": "Insiel S.p.A.",
+      "title": "Insiel - Sanità: servizi digitali per il Sistema Informativo Socio Sanitario Regionale",
+      "accessed_at": "2026-10-11T09:01:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:insiel-company",
+      "url": "https://www.insiel.it/it/societa-3921",
+      "source_type": "official_company_page",
+      "publisher": "Insiel S.p.A.",
+      "title": "Azienda - Insiel S.p.A.",
+      "accessed_at": "2026-10-11T09:02:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:insiel-bilancio2024",
+      "url": "https://www.insiel.it/media/files/PORTALEINSIEL/attachment/Insiel_Bilancio_2024_P.pdf",
+      "source_type": "annual_report",
+      "publisher": "Insiel S.p.A.",
+      "title": "Relazione Bilancio Insiel al 31.12.2024",
+      "accessed_at": "2026-10-11T09:03:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:insiel-bilancio2025-news",
+      "url": "https://www.friulioggi.it/economia/insiel-approva-bilancio-crescono-utile-investimenti-intelligenza-artificiale-28-maggio-2026",
+      "source_type": "news_article",
+      "publisher": "FriuliOggi",
+      "title": "Insiel approva il bilancio 2025: crescono utile e investimenti, focus sull'intelligenza artificiale",
+      "accessed_at": "2026-10-11T09:04:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:insiel-regione",
+      "url": "http://regione.fvg.it/enti-controllati/dettaglio?id=69",
+      "source_type": "directory",
+      "publisher": "Regione Autonoma Friuli-Venezia Giulia",
+      "title": "Insiel - Informatica per il Sistema degli Enti Locali S.p.A. (enti controllati)",
+      "accessed_at": "2026-10-11T09:05:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:sesamo-app",
+      "url": "https://apps.apple.com/us/app/sesamo-fse/id1445657352",
+      "source_type": "directory",
+      "publisher": "Apple App Store",
+      "title": "Sesamo FSE - App Store",
+      "accessed_at": "2026-10-11T09:06:00Z",
+      "language": "it"
+    }
+  ],
+  "documents": [
+    {
+      "local_id": "document:insiel-sesamo-portal",
+      "source_ref": "source:insiel-sesamo-portal",
+      "title": "SESAMO - Piattaforma elettronica di servizi salute in mobilità",
+      "document_type": "web_page",
+      "extraction_method": "web_manual_excerpt",
+      "text": "Sesamo è il portale dedicato alla Salute della Regione Friuli-Venezia Giulia: offre servizi sanitari ad accesso veloce (orari medici, farmacie di turno, guardie mediche, pronto soccorso, richiesta/annullamento/pagamento di prestazioni e ritiro referti di laboratorio) e l'accesso sicuro al Fascicolo Sanitario Elettronico, dove è custodita la documentazione sanitaria prodotta nelle strutture pubbliche e private convenzionate regionali."
+    },
+    {
+      "local_id": "document:insiel-sanita",
+      "source_ref": "source:insiel-sanita",
+      "title": "Insiel - Sanità",
+      "document_type": "web_page",
+      "extraction_method": "web_manual_excerpt",
+      "text": "Se.Sa.Mo è il portale regionale della Sanità Digitale. Attraverso Se.Sa.Mo i cittadini residenti in regione possono accedere, utilizzando SPID o la Carta Regionale dei Servizi, al proprio Fascicolo Sanitario Elettronico (FSE FVG). Insiel assicura l'operatività dei servizi digitali del Sistema Informativo Socio Sanitario Regionale."
+    }
+  ],
+  "classifications": [
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "kind": "category",
+      "term_slug": "sanita-digitale",
+      "term_name": "Sanità digitale",
+      "confidence": "high",
+      "source_ref": "source:insiel-sanita",
+      "evidence_excerpt": "Se.Sa.Mo è il portale regionale della Sanità Digitale"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "kind": "category",
+      "term_slug": "fascicolo-sanitario-elettronico",
+      "term_name": "Fascicolo Sanitario Elettronico",
+      "confidence": "high",
+      "source_ref": "source:insiel-sanita",
+      "evidence_excerpt": "accesso al proprio Fascicolo Sanitario Elettronico (FSE FVG)"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "kind": "vertical",
+      "term_slug": "sanita",
+      "term_name": "Sanità",
+      "confidence": "high",
+      "source_ref": "source:insiel-company",
+      "evidence_excerpt": "Sanità: soluzioni digitali per la gestione del Fascicolo Sanitario Elettronico"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "kind": "segment",
+      "term_slug": "aziende-sanitarie-regionali",
+      "term_name": "Aziende sanitarie e regionali",
+      "confidence": "medium",
+      "source_ref": "source:insiel-company",
+      "evidence_excerpt": "consentono agli operatori sanitari... delle strutture decisionali e di governo"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "kind": "deployment",
+      "term_slug": "web",
+      "term_name": "Web (portale)",
+      "confidence": "high",
+      "source_ref": "source:insiel-sesamo-portal",
+      "evidence_excerpt": "SESAMO - Piattaforma elettronica di servizi salute in mobilità"
+    }
+  ],
+  "features": [
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "feature_slug": "fascicolo_sanitario_elettronico",
+      "feature_name": "Fascicolo Sanitario Elettronico",
+      "feature_group": "clinical",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:insiel-sanita",
+      "evidence_excerpt": "accesso ... al proprio Fascicolo Sanitario Elettronico (FSE FVG)"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "feature_slug": "consultazione_referti",
+      "feature_name": "Consultazione referti",
+      "feature_group": "clinical",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:insiel-sesamo-portal",
+      "evidence_excerpt": "ritirare i referti di laboratorio"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "feature_slug": "ricette_dematerializzate",
+      "feature_name": "Ricette dematerializzate",
+      "feature_group": "clinical",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:insiel-sanita",
+      "evidence_excerpt": "L'accesso sicuro e protetto al tuo Fascicolo Sanitario Elettronico"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "feature_slug": "prenotazione_prestazioni",
+      "feature_name": "Prenotazione prestazioni (CUP)",
+      "feature_group": "booking",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:insiel-sesamo-portal",
+      "evidence_excerpt": "richiedere, annullare e pagare prestazioni sanitarie"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "feature_slug": "pagamento_ticket",
+      "feature_name": "Pagamento ticket online",
+      "feature_group": "payments",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:insiel-sesamo-portal",
+      "evidence_excerpt": "pagare prestazioni sanitarie"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "feature_slug": "profilo_sanitario_sintetico",
+      "feature_name": "Profilo Sanitario Sintetico",
+      "feature_group": "clinical",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:insiel-sesamo-portal",
+      "evidence_excerpt": "visualizzare il tuo profilo sanitario sintetico"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "feature_slug": "gestione_consenso_fse",
+      "feature_name": "Gestione consenso al FSE",
+      "feature_group": "compliance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:insiel-sesamo-portal",
+      "evidence_excerpt": "Potrai decidere se renderli visibili agli operatori sanitari... solo dietro il tuo consenso"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "feature_slug": "accesso_spid_crs",
+      "feature_name": "Accesso con SPID o CRS",
+      "feature_group": "platform",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:insiel-sanita",
+      "evidence_excerpt": "utilizzando SPID o la Carta Regionale dei Servizi attiva"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "feature_slug": "taccuino_personale",
+      "feature_name": "Taccuino personale",
+      "feature_group": "clinical",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:sesamo-app",
+      "evidence_excerpt": "caricare ulteriori documenti nella sezione \"Taccuino personale\""
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "feature_slug": "servizi_fast",
+      "feature_name": "Servizi Fast",
+      "feature_group": "citizen_services",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:insiel-sanita",
+      "evidence_excerpt": "servizi sanitari di utilità ad accesso veloce (Servizi Fast)"
+    }
+  ],
+  "technical_characteristics": [
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "kind": "deployment_model",
+      "term_slug": "cloud",
+      "term_name": "Cloud",
+      "relationship_type": "supports",
+      "confidence": "medium",
+      "source_ref": "source:insiel-bilancio2024",
+      "evidence_excerpt": "L'uso di piattaforme basate sul cloud nazionale e/o ibrido"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "kind": "client_platform",
+      "term_slug": "web_browser",
+      "term_name": "Web browser",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:insiel-sesamo-portal",
+      "evidence_excerpt": "consultabile da qualunque dispositivo connesso in rete ... smartphone, tablet, computer"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "kind": "mobile_platform",
+      "term_slug": "ios",
+      "term_name": "iOS",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:sesamo-app",
+      "evidence_excerpt": "Requires iOS 12.1 or later"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "kind": "mobile_platform",
+      "term_slug": "android",
+      "term_name": "Android",
+      "relationship_type": "supports",
+      "confidence": "medium",
+      "source_ref": "source:insiel-sesamo-portal",
+      "evidence_excerpt": "consultabile da qualunque dispositivo connesso in rete"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "kind": "authentication",
+      "term_slug": "spid",
+      "term_name": "SPID",
+      "relationship_type": "uses",
+      "confidence": "high",
+      "source_ref": "source:insiel-sanita",
+      "evidence_excerpt": "utilizzando SPID o la Carta Regionale dei Servizi attiva"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "kind": "authentication",
+      "term_slug": "carta_regionale_servizi",
+      "term_name": "Carta Regionale dei Servizi (CRS)",
+      "relationship_type": "uses",
+      "confidence": "high",
+      "source_ref": "source:insiel-sanita",
+      "evidence_excerpt": "la Carta Regionale dei Servizi attiva"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "kind": "integration_standard",
+      "term_slug": "fse_interoperability",
+      "term_name": "Interoperabilità FSE (specifiche nazionali)",
+      "relationship_type": "supports",
+      "confidence": "medium",
+      "source_ref": "source:insiel-sanita",
+      "evidence_excerpt": "altre regioni se integrate nell'infrastruttura nazionale"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "kind": "data_residency",
+      "term_slug": "italy",
+      "term_name": "Italia (Friuli-Venezia Giulia)",
+      "relationship_type": "available_as",
+      "confidence": "medium",
+      "source_ref": "source:insiel-bilancio2024",
+      "evidence_excerpt": "nuovo data center di Palmanova che appare strategico"
+    }
+  ],
+  "financial_metrics": [
+    {
+      "subject_ref": "company:insiel",
+      "metric": "revenue",
+      "period_year": 2025,
+      "value": {"min": 130000000},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Valore della produzione 2025: 'supera i 130 milioni di euro', +16,2% sul 2024.",
+      "confidence": "medium",
+      "source_ref": "source:insiel-bilancio2025-news",
+      "evidence_excerpt": "il valore della produzione, che supera i 130 milioni di euro"
+    },
+    {
+      "subject_ref": "company:insiel",
+      "metric": "ebitda",
+      "period_year": 2025,
+      "value": {"exact": 12600000},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "EBITDA 2025 a 12,6 milioni di euro (+89,4% sul 2024).",
+      "confidence": "high",
+      "source_ref": "source:insiel-bilancio2025-news",
+      "evidence_excerpt": "L'Ebitda si attesta invece a 12,6 milioni di euro"
+    },
+    {
+      "subject_ref": "company:insiel",
+      "metric": "net_income",
+      "period_year": 2025,
+      "value": {"exact": 1790526},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Utile d'esercizio 2025 dell'assemblea degli azionisti.",
+      "confidence": "high",
+      "source_ref": "source:insiel-bilancio2025-news",
+      "evidence_excerpt": "l'esercizio 2025 si chiude con un utile pari a 1.790.526 euro"
+    },
+    {
+      "subject_ref": "company:insiel",
+      "metric": "revenue",
+      "period_year": 2024,
+      "value": {"exact": 112000000},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Valore della produzione 2024 riportato nella relazione al bilancio.",
+      "confidence": "high",
+      "source_ref": "source:insiel-bilancio2024",
+      "evidence_excerpt": "un valore della produzione di 112 milioni di Euro, in crescita del 15,1%"
+    },
+    {
+      "subject_ref": "company:insiel",
+      "metric": "employees",
+      "period_year": 2025,
+      "value": {"exact": 700},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Organico formato al 100% nel 2025; circa 700 dipendenti (690-700 nelle fonti societarie).",
+      "confidence": "medium",
+      "source_ref": "source:insiel-bilancio2025-news",
+      "evidence_excerpt": "Nel 2025 sono stati formati 700 dipendenti, pari al 100% dell'organico"
+    }
+  ],
+  "facts": [
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "predicate": "coverage_area",
+      "value": {"region": "Friuli-Venezia Giulia", "country": "IT"},
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:insiel-sesamo-portal",
+      "evidence_excerpt": "portale dedicato alla Salute della Regione Friuli Venezia Giulia"
+    },
+    {
+      "subject_ref": "company:insiel",
+      "predicate": "public_entities_supported",
+      "value": {"count": 270, "context": "enti in Friuli-Venezia Giulia"},
+      "value_kind": "reported",
+      "confidence": "medium",
+      "source_ref": "source:insiel-company",
+      "evidence_excerpt": "Sistemi utilizzati da 270 enti in FVG"
+    }
+  ],
+  "claims": [
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "claim_type": "observed",
+      "predicate": "positioning",
+      "statement": "Se.Sa.Mo. è il portale regionale della Sanità Digitale del Friuli-Venezia Giulia e il punto di accesso al Fascicolo Sanitario Elettronico regionale per i cittadini.",
+      "assessment": "observed",
+      "confidence": "high",
+      "source_ref": "source:insiel-sanita",
+      "evidence_excerpt": "Se.Sa.Mo è il portale regionale della Sanità Digitale"
+    },
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "claim_type": "inferred",
+      "predicate": "adoption_model",
+      "statement": "Essendo espressione della società ICT in house della Regione FVG, il prodotto è adottato in primis dal sistema sanitario regionale friulano.",
+      "assessment": "inference",
+      "confidence": "medium",
+      "source_ref": "source:insiel-regione",
+      "evidence_excerpt": "società in house della Regione Autonoma Friuli Venezia Giulia"
+    }
+  ],
+  "notes": [
+    {
+      "subject_ref": "product:insiel-sesamo",
+      "note_type": "classification_rationale",
+      "text": "Prodotto sanitario: categoria/vertical 'sanità' per mappatura macro-settore verso Professioni/Salute.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "company:insiel",
+      "note_type": "research_note",
+      "text": "Insiel è una società in house della Regione Friuli-Venezia Giulia: oltre l'80% del fatturato deriva da compiti affidati dai soci pubblici, quindi la dimensione commerciale è meno comparabile con software house di mercato.",
+      "confidence": "medium"
+    }
+  ]
+}

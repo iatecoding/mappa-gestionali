@@ -1,0 +1,1969 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Osservatorio Gestionali Italiani: Business Intelligence, analisi di mercato, dipendenza hardware e lock-in del software B2B in Italia.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="favicon-180.png">
+  <title>Osservatorio Gestionali Italiani · Business Intelligence B2B</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --canvas: #f8f9fa;
+      --surface: #ffffff;
+      --surface-soft: #f1f3f5;
+      --text: #111827;
+      --text-muted: #4b5563;
+      --line: #e5e7eb;
+      --line-strong: #9ca3af;
+      --accent: #1d4ed8;
+      --accent-soft: #eff6ff;
+      --accent-text: #1e40af;
+      --green: #059669;
+      --green-soft: #ecfdf5;
+      --amber: #b45309;
+      --amber-soft: #fffbeb;
+      --red: #b91c1c;
+      --red-soft: #fef2f2;
+      --chart-1: #475569;
+      --chart-2: #0f766e;
+      --chart-3: #b45309;
+      --chart-4: #be123c;
+      --chart-5: #4d7c0f;
+      --chart-6: #0e7490;
+    }
+    [data-theme="dark"] {
+      --canvas: #0d1117;
+      --surface: #161b22;
+      --surface-soft: #21262d;
+      --text: #f0f6fc;
+      --text-muted: #8b949e;
+      --line: #30363d;
+      --line-strong: #484f58;
+      --accent: #388bfd;
+      --accent-soft: #1f2937;
+      --accent-text: #79c0ff;
+      --green: #238636;
+      --green-soft: #0d2818;
+      --amber: #d29922;
+      --amber-soft: #271e0c;
+      --red: #da3633;
+      --red-soft: #301111;
+      --chart-1: #94a3b8;
+      --chart-2: #2dd4bf;
+      --chart-3: #fbbf24;
+      --chart-4: #fb7185;
+      --chart-5: #a3e635;
+      --chart-6: #67e8f9;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; border-radius: 0 !important; }
+    body { background: var(--canvas); color: var(--text); min-width: 320px; line-height: 1.5; font-size: 0.938rem; }
+    button, input, select { font: inherit; color: inherit; }
+    button { cursor: pointer; border: none; background: none; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Layout */
+    .container { width: min(1500px, calc(100% - 32px)); margin: 0 auto; }
+    header.site-header { border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: 0; z-index: 40; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-logo { width: 34px; height: 34px; background: var(--text); display: grid; place-items: center; color: var(--canvas); font-weight: 900; font-size: 1.1rem; }
+    .brand-title { font-size: 1.05rem; font-weight: 850; letter-spacing: -0.02em; line-height: 1.15; color: var(--text); }
+    .brand-stats { font-size: 0.72rem; color: var(--text-muted); font-weight: 500; margin-top: 2px; }
+    .header-actions { display: flex; align-items: center; gap: 8px; }
+    .theme-toggle, .github-btn { padding: 6px 12px; border: 1px solid var(--line-strong); font-size: 0.8rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; background: var(--surface-soft); color: var(--text); }
+    .theme-toggle:hover, .github-btn:hover { background: var(--line); text-decoration: none; }
+
+    /* Nav tabs */
+    nav.nav-tabs { display: flex; gap: 0; overflow-x: auto; border-top: 1px solid var(--line); scrollbar-width: none; background: var(--surface); }
+    nav.nav-tabs::-webkit-scrollbar { display: none; }
+    .tab-btn { padding: 10px 18px; font-size: 0.84rem; font-weight: 750; color: var(--text-muted); border-bottom: 2px solid transparent; border-right: 1px solid var(--line); white-space: nowrap; transition: color .15s, background .15s; }
+    .tab-btn:hover { color: var(--text); background: var(--surface-soft); }
+    .tab-btn[aria-selected="true"] { color: var(--text); font-weight: 850; border-bottom-color: transparent; }
+
+    /* Disclaimer Banner */
+    .disclaimer-banner { margin: 14px 0 18px; padding: 12px 16px; border: 1px solid var(--amber); background: var(--amber-soft); color: var(--text); font-size: 0.82rem; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .disclaimer-banner strong { font-weight: 750; color: var(--amber); }
+    .disclaimer-content { flex: 1; }
+    .disclaimer-close { color: var(--text-muted); font-size: 1.1rem; padding: 0 4px; line-height: 1; }
+
+    /* Tab panels */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* Controls Panel */
+    .controls-panel { background: var(--surface); border: 1px solid var(--line); padding: 14px; margin-bottom: 16px; display: grid; gap: 12px; }
+
+    /* Catalog layout: filters on the left */
+    .catalog-layout { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 20px; align-items: start; }
+    .catalog-sidebar { position: sticky; top: 118px; display: grid; gap: 12px; min-width: 0; }
+    .catalog-sidebar .controls-panel { margin-bottom: 0; min-width: 0; }
+    .catalog-sidebar .filters-grid { grid-template-columns: 1fr; }
+    .catalog-sidebar .filter-item { min-width: 0; }
+    .catalog-sidebar .search-row { flex-direction: column; align-items: stretch; }
+    .catalog-sidebar .search-input-wrap { min-width: 0; }
+    .catalog-sidebar .filter-item select,
+    .catalog-sidebar .search-input { width: 100%; min-width: 0; max-width: 100%; }
+    .catalog-sidebar .view-toggle { width: 100%; }
+    .catalog-sidebar .view-toggle button { flex: 1; }
+    .catalog-results { min-width: 0; }
+    .search-row { display: flex; gap: 8px; align-items: center; }
+    .search-input-wrap { flex: 1; position: relative; }
+    .search-input { width: 100%; height: 38px; border: 1px solid var(--line-strong); padding: 0 12px; background: var(--surface-soft); color: var(--text); font-size: 0.88rem; }
+    .search-input:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+    .view-toggle { display: flex; border: 1px solid var(--line-strong); }
+    .view-toggle button { padding: 8px 14px; font-size: 0.8rem; font-weight: 750; background: var(--surface-soft); color: var(--text-muted); border-right: 1px solid var(--line-strong); }
+    .view-toggle button:last-child { border-right: none; }
+    .view-toggle button[aria-pressed="true"] { background: var(--text); color: var(--surface); }
+
+    .filters-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) auto; gap: 8px; align-items: end; }
+    .filter-item { display: grid; gap: 4px; }
+    .filter-item label { font-size: 0.72rem; font-weight: 750; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.03em; }
+    .filter-item select { height: 36px; border: 1px solid var(--line-strong); padding: 0 8px; background: var(--surface-soft); color: var(--text); font-size: 0.82rem; }
+    .btn-clear { height: 36px; padding: 0 14px; border: 1px solid var(--line-strong); background: var(--surface-soft); color: var(--text); font-size: 0.8rem; font-weight: 750; }
+    .btn-clear:hover { background: var(--line); }
+
+    /* Macro Sectors Quick Bar */
+    .macro-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .macro-pill { padding: 6px 12px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--text-muted); font-size: 0.78rem; font-weight: 750; display: inline-flex; align-items: center; gap: 6px; }
+    .macro-pill:hover { border-color: var(--text); color: var(--text); }
+    .macro-pill[aria-pressed="true"] { background: var(--text); border-color: var(--text); color: var(--surface); }
+    .macro-pill span.count { font-size: 0.7rem; opacity: 0.85; padding: 0 4px; background: rgba(128,128,128,0.2); }
+    .macro-pill[aria-pressed="true"] span.count { background: rgba(255,255,255,0.25); color: #fff; }
+
+    /* Results Header */
+    .results-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 0.82rem; color: var(--text-muted); }
+    .results-meta strong { color: var(--text); }
+
+    /* Card Grid */
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
+    .product-card { background: var(--surface); border: 1px solid var(--line); padding: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; }
+    .product-card:hover { border-color: var(--line-strong); }
+    .card-top { display: grid; gap: 5px; }
+    .product-title-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+    .product-name { font-size: 1.05rem; font-weight: 850; line-height: 1.25; color: var(--text); }
+    .company-name { font-size: 0.82rem; color: var(--text-muted); font-weight: 600; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .badge-group { font-size: 0.68rem; padding: 1px 6px; background: var(--surface-soft); color: var(--text); font-weight: 750; border: 1px solid var(--line-strong); }
+    .product-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-top: 4px; }
+
+    /* Badges */
+    .badge-row { display: flex; flex-wrap: wrap; gap: 5px; }
+    .badge { font-size: 0.7rem; font-weight: 750; padding: 2px 7px; display: inline-flex; align-items: center; border: 1px solid transparent; }
+    .badge-macro { background: var(--surface-soft); color: var(--text); border-color: var(--line); }
+    .badge-rev { background: var(--green-soft); color: var(--green); border-color: var(--green); font-weight: 800; }
+    .badge-hw-high { background: var(--red-soft); color: var(--red); border-color: var(--red); }
+    .badge-hw-med { background: var(--amber-soft); color: var(--amber); border-color: var(--amber); }
+    .badge-hw-none { background: var(--surface-soft); color: var(--text-muted); border-color: var(--line); }
+    .badge-lock-high { background: var(--red-soft); color: var(--red); border-color: var(--red); }
+    .badge-lock-med { background: var(--amber-soft); color: var(--amber); border-color: var(--amber); }
+    .badge-lock-low { background: var(--green-soft); color: var(--green); border-color: var(--green); }
+    .badge-api { background: var(--surface-soft); color: var(--text); border-color: var(--line-strong); }
+
+    .card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid var(--line); font-size: 0.77rem; color: var(--text-muted); }
+    .btn-detail { font-size: 0.77rem; font-weight: 800; color: var(--accent); padding: 4px 8px; border: 1px solid var(--line-strong); background: var(--surface-soft); }
+    .btn-detail:hover { background: var(--line); text-decoration: none; }
+
+    /* Table View */
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--surface); }
+    table.product-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.82rem; }
+    table.product-table th { background: var(--surface-soft); padding: 10px 14px; font-weight: 750; border-bottom: 1px solid var(--line-strong); color: var(--text); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.03em; white-space: nowrap; }
+    table.product-table td { padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+    table.product-table tr:hover td { background: var(--surface-soft); }
+
+    /* Centered Pop-up Modal */
+    .modal-backdrop { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.65); z-index: 50; display: none; }
+    .modal-backdrop.active { display: block; }
+    .modal-dialog { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(780px, calc(100% - 32px)); max-height: 86vh; background: var(--surface); border: 2px solid var(--line-strong); z-index: 51; box-shadow: 0 16px 40px rgba(0,0,0,0.35); overflow-y: auto; padding: 26px; display: none; gap: 18px; }
+    .modal-dialog.active { display: grid; }
+    .modal-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; border-bottom: 1px solid var(--line); padding-bottom: 14px; }
+    .modal-close { font-size: 0.8rem; font-weight: 800; padding: 5px 10px; border: 1px solid var(--line-strong); background: var(--surface-soft); color: var(--text); }
+    .modal-close:hover { background: var(--line); }
+    .modal-dialog h2 { font-size: 1.35rem; font-weight: 850; letter-spacing: -0.02em; line-height: 1.2; }
+    .modal-dialog h3 { font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text); margin-bottom: 8px; border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+    .modal-section { padding: 14px; border: 1px solid var(--line); background: var(--surface-soft); display: grid; gap: 8px; font-size: 0.82rem; }
+    .modal-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .modal-tag { font-size: 0.74rem; padding: 3px 8px; background: var(--surface); border: 1px solid var(--line-strong); color: var(--text); }
+
+    /* BI & Market Analysis View */
+    .bi-section { margin-bottom: 30px; }
+    .section-title { font-size: 1.2rem; font-weight: 850; letter-spacing: -0.02em; margin-bottom: 6px; color: var(--text); }
+    .section-lead { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px; max-width: 90ch; }
+    .chart-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 14px; }
+    .chart-card { background: var(--surface); border: 1px solid var(--line); padding: 18px; min-width: 0; }
+    .chart-card h4 { font-size: 0.92rem; font-weight: 800; margin-bottom: 14px; color: var(--text); display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+    .chart-card h4 span { font-size: 0.72rem; font-weight: 600; color: var(--text-muted); text-align: right; }
+    .chart-note { font-size: 0.72rem; color: var(--text-muted); margin-top: 10px; line-height: 1.55; }
+    .chart-note strong { color: var(--text); }
+    .tabular { font-variant-numeric: tabular-nums; }
+    .chart-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 12px; font-size: 0.76rem; color: var(--text-muted); }
+    .chart-legend .lg { display: inline-flex; align-items: center; gap: 7px; }
+    .chart-legend .sw { width: 11px; height: 11px; display: inline-block; flex: 0 0 auto; }
+    .chart-legend .lg strong { color: var(--text); font-variant-numeric: tabular-nums; }
+
+    /* Dot plot (lollipop) */
+    .dot-plot { display: grid; gap: 7px; }
+    .dp-row { display: grid; grid-template-columns: minmax(150px, 1.6fr) 2.6fr minmax(84px, auto); gap: 10px; align-items: center; font-size: 0.8rem; }
+    .dp-row:hover .dp-name { color: var(--accent); }
+    .dp-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 650; }
+    .dp-rank { color: var(--text-muted); font-weight: 700; font-variant-numeric: tabular-nums; margin-right: 4px; }
+    .dp-track { position: relative; height: 18px; min-width: 0; }
+    .dp-axis { position: absolute; left: 0; right: 0; top: 50%; border-top: 1px solid var(--line); }
+    .dp-bar { position: absolute; top: calc(50% - 1px); left: 0; height: 2px; background: var(--line-strong); }
+    .dp-dot { position: absolute; top: 50%; width: 11px; height: 11px; background: var(--chart-1); transform: translate(-50%, -50%); border: 2px solid var(--surface); }
+    .dp-row.lead .dp-dot { background: var(--chart-4); }
+    .dp-row.lead .dp-bar { background: var(--chart-4); }
+    .dp-marker { position: absolute; top: 0; bottom: 0; border-left: 2px dashed var(--line-strong); }
+    .dp-val { text-align: right; font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+    /* Waffle chart */
+    .waffle { display: grid; gap: 3px; width: 100%; max-width: 560px; }
+    .waffle i { display: block; aspect-ratio: 1; background: var(--line); }
+    .waffle i.w-public { background: var(--chart-2); }
+    .waffle i.w-trial { background: var(--chart-3); }
+    .waffle i.w-quote { background: var(--chart-1); }
+
+    /* Stacked 100% bar */
+    .stack-wrap { display: grid; gap: 6px; }
+    .stack-wrap + .stack-wrap { margin-top: 18px; }
+    .stack-title { font-size: 0.78rem; font-weight: 750; color: var(--text); display: flex; justify-content: space-between; gap: 8px; }
+    .stack-title span { font-weight: 600; color: var(--text-muted); }
+    .stack { display: flex; height: 28px; overflow: hidden; background: var(--surface-soft); }
+    .stack > i { display: block; height: 100%; min-width: 3px; }
+    .stack > i .s-lbl { display: flex; align-items: center; height: 100%; padding: 0 7px; color: #fff; font-size: 0.7rem; font-weight: 800; font-style: normal; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+    /* Heat matrix */
+    .heat { overflow-x: auto; }
+    .heat table { width: 100%; border-collapse: collapse; text-align: center; font-size: 0.8rem; }
+    .heat th, .heat td { border: 1px solid var(--line); padding: 9px 8px; }
+    .heat th { background: var(--surface-soft); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; }
+    .heat th em { display: block; font-style: normal; font-weight: 600; text-transform: none; color: var(--text-muted); letter-spacing: 0; }
+    .heat td.metric { text-align: left; font-weight: 650; white-space: nowrap; }
+    .heat td.cell { font-weight: 850; font-variant-numeric: tabular-nums; }
+
+    /* Concentration curve */
+    .conc svg { width: 100%; height: auto; display: block; }
+    .conc-axis { font-size: 0.68rem; fill: var(--text-muted); }
+    .conc-val { font-size: 0.74rem; font-weight: 800; fill: var(--text); }
+    .conc-rank { font-size: 0.68rem; fill: var(--text-muted); }
+    .conc-line { fill: none; stroke: var(--chart-2); stroke-width: 2.5; }
+    .conc-dot { fill: var(--chart-2); stroke: var(--surface); stroke-width: 2; }
+    .conc-grid { stroke: var(--line); stroke-width: 1; }
+    .conc-50 { stroke: var(--line-strong); stroke-dasharray: 4 4; stroke-width: 1; }
+
+    /* Device dot units */
+    .dev-plot { display: grid; gap: 10px; }
+    .dev-row { display: grid; grid-template-columns: minmax(150px, 1.5fr) 3fr minmax(78px, auto); gap: 10px; align-items: center; font-size: 0.8rem; }
+    .dev-units { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; min-width: 0; }
+    .dev-units i { width: 11px; height: 11px; background: var(--chart-4); display: block; }
+    .dev-units i.part { background: transparent; border: 2px solid var(--chart-4); opacity: 0.55; }
+    .dev-val { text-align: right; font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+    /* Bar lists */
+    .bar-list { display: grid; gap: 9px; }
+    .bar-row { display: grid; grid-template-columns: minmax(140px, 1.5fr) 3fr minmax(84px, auto); gap: 10px; align-items: center; font-size: 0.8rem; }
+    .bar-lbl { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .bar-track { height: 14px; background: var(--surface-soft); position: relative; }
+    .bar-fill { height: 100%; background: var(--chart-1); transition: width .3s ease; }
+    .bar-fill.teal { background: var(--chart-2); }
+    .bar-fill.amber { background: var(--chart-3); }
+    .bar-fill.red { background: var(--chart-4); }
+    .bar-avg { position: absolute; top: -4px; bottom: -4px; border-left: 2px dashed var(--line-strong); }
+    .bar-val { font-weight: 800; font-size: 0.78rem; text-align: right; min-width: 65px; color: var(--text); font-variant-numeric: tabular-nums; }
+
+    /* Treemap */
+    .treemap { position: relative; width: 100%; height: 320px; border: 1px solid var(--line); background: var(--surface-soft); }
+    .tm-cell { position: absolute; padding: 8px 10px; overflow: hidden; border: 2px solid var(--surface); display: flex; flex-direction: column; justify-content: space-between; cursor: default; }
+    .tm-cell:hover { outline: 2px solid var(--text); outline-offset: -2px; z-index: 2; }
+    .tm-name { font-size: 0.76rem; font-weight: 850; line-height: 1.2; }
+    .tm-val { font-size: 0.72rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .tm-sub { font-size: 0.68rem; opacity: 0.85; font-variant-numeric: tabular-nums; }
+
+    /* Editorial Callouts */
+    .insight-callout { background: var(--surface-soft); border: 1px solid var(--line); padding: 16px; margin: 14px 0; color: var(--text); font-size: 0.86rem; line-height: 1.6; }
+    .insight-callout h4 { font-weight: 850; color: var(--text); margin-bottom: 5px; font-size: 0.92rem; }
+
+    /* Deep Cards */
+    .deep-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; margin: 16px 0; }
+    .deep-card { background: var(--surface); border: 1px solid var(--line); padding: 18px; display: grid; gap: 8px; }
+    .deep-card-header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+    .deep-card-title { font-size: 0.95rem; font-weight: 850; color: var(--text); }
+    .deep-card-body { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+    .deep-card-badge { font-size: 0.7rem; font-weight: 750; padding: 2px 6px; border: 1px solid var(--line-strong); }
+
+    /* Footer */
+    footer.site-footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 24px 0; background: var(--surface); color: var(--text-muted); font-size: 0.8rem; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+
+    @media (max-width: 900px) {
+      .chart-grid { grid-template-columns: 1fr; }
+      .bar-row, .dp-row, .dev-row { grid-template-columns: 110px 1fr auto; }
+      .dp-name { font-size: 0.74rem; }
+      .catalog-layout { grid-template-columns: 1fr; }
+      .catalog-sidebar { position: static; }
+      .catalog-sidebar .filters-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .container { width: calc(100% - 20px); }
+      .search-row { flex-direction: column; align-items: stretch; }
+      .filters-grid { grid-template-columns: 1fr 1fr; }
+      .btn-clear { grid-column: span 2; }
+      .product-grid { grid-template-columns: 1fr; }
+      .modal-dialog { width: calc(100% - 20px); padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="brand">
+          <div class="brand-logo">OG</div>
+          <div>
+            <div class="brand-title">Osservatorio Gestionali Italiani</div>
+            <div class="brand-stats" id="header-stats-text">
+              Caricamento…
+            </div>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambia tema">
+            <span id="theme-text">Tema Scuro</span>
+          </button>
+          <a class="github-btn" href="https://github.com/iatecoding/mappa-gestionali" target="_blank" rel="noreferrer" id="gh-link">
+            <span>Repository GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="nav-tabs" role="tablist" aria-label="Sezioni dell'osservatorio">
+        <button class="tab-btn" role="tab" aria-selected="true" data-tab="catalog" id="tab-catalog">
+          Mappa e Catalogo
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="market" id="tab-market">
+          Analisi Economica e Mercato
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="hardware" id="tab-hardware">
+          Hardware e Barriere
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="lockin" id="tab-lockin">
+          Lock-in e Interconnessione
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="methodology" id="tab-methodology">
+          Metodologia e Disclaimer
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 14px; padding-bottom: 40px;">
+
+    <!-- Disclaimer Banner -->
+    <aside class="disclaimer-banner" id="disclaimer-banner" role="complementary" aria-label="Disclaimer sui dati">
+      <div class="disclaimer-content">
+        <strong>Nota metodologica e Disclaimer sui dati:</strong>
+        Questo osservatorio di business intelligence censisce i software sulla base di evidenze pubbliche, documentazione e bilanci societari depositati. L'assenza di una software house o di una funzionalità non ne implica l'inesistenza sul mercato, ma l'assenza di evidenza verificata nel perimetro attuale di audit. I dati di fatturato si riferiscono alla società produttrice (persona giuridica) e non al fatturato del singolo software. Le informazioni sono raccolte da fonti pubbliche e possono risultare inaccurate, incomplete o non aggiornate: il catalogo è fornito "così com'è", senza garanzie, a scopo informativo.
+        <a href="#tab-methodology" onclick="switchTab('methodology'); return false;" style="font-weight: 750; margin-left: 4px;">Approfondisci la metodologia →</a>
+      </div>
+      <button class="disclaimer-close" id="disclaimer-close" aria-label="Chiudi avviso">[X]</button>
+    </aside>
+
+    <!-- ========================================== -->
+    <!-- TAB 1: MAPPA E CATALOGO SOFTWARE          -->
+    <!-- ========================================== -->
+    <section class="tab-panel active" id="panel-catalog" role="tabpanel" aria-labelledby="tab-catalog">
+      
+      <div class="catalog-layout">
+
+        <!-- Sidebar: search, filters, macro pills -->
+        <aside class="catalog-sidebar" aria-label="Filtri catalogo">
+          <div class="controls-panel">
+            <div class="search-row">
+              <div class="search-input-wrap">
+                <input class="search-input" id="search-input" type="search" placeholder="Cerca nome, produttore, feature, standard (SDI, RENTRI, API)..." autocomplete="off">
+              </div>
+            </div>
+            <div class="view-toggle" role="group" aria-label="Visualizzazione">
+              <button id="view-grid-btn" type="button" aria-pressed="true" title="Vista schede">Schede</button>
+              <button id="view-table-btn" type="button" aria-pressed="false" title="Vista tabella compatta">Tabella</button>
+            </div>
+
+            <div class="filters-grid">
+              <div class="filter-item">
+                <label for="filter-macro">Macro-Settore</label>
+                <select id="filter-macro"><option value="all">Tutti i 10 macro-settori</option></select>
+              </div>
+              <div class="filter-item">
+                <label for="filter-category">Micro-Categoria</label>
+                <select id="filter-category"><option value="all">Tutte le categorie</option></select>
+              </div>
+              <div class="filter-item">
+                <label for="filter-hw">Dipendenza Hardware</label>
+                <select id="filter-hw">
+                  <option value="all">Tutti i livelli</option>
+                  <option value="high">Alta (hardware obbligatorio)</option>
+                  <option value="medium">Media (periferiche o mobile)</option>
+                  <option value="none">Nulla (puro cloud)</option>
+                </select>
+              </div>
+              <div class="filter-item">
+                <label for="filter-lockin">Rischio Lock-in</label>
+                <select id="filter-lockin">
+                  <option value="all">Tutti i livelli</option>
+                  <option value="high">Alto Lock-in</option>
+                  <option value="medium">Medio Lock-in</option>
+                  <option value="low">Basso Lock-in (Aperto)</option>
+                </select>
+              </div>
+              <div class="filter-item">
+                <label for="filter-pricing">Modello Commerciale</label>
+                <select id="filter-pricing">
+                  <option value="all">Tutti i modelli</option>
+                  <option value="public">Prezzi pubblici verificati</option>
+                  <option value="trial">Prova gratuita / Demo</option>
+                  <option value="quote">Trattativa / Preventivo</option>
+                </select>
+              </div>
+              <div class="filter-item">
+                <label for="filter-api">Apertura API</label>
+                <select id="filter-api">
+                  <option value="all">Tutte le soluzioni</option>
+                  <option value="with_api">Con API documentata</option>
+                  <option value="without_api">Senza API pubblica</option>
+                </select>
+              </div>
+              <div class="filter-item">
+                <label for="filter-sort">Ordina per</label>
+                <select id="filter-sort">
+                  <option value="name">Nome Prodotto (A-Z)</option>
+                  <option value="revenue">Fatturato Società (Decrescente)</option>
+                  <option value="features">Numero Feature Rilevate</option>
+                  <option value="lockin">Livello Lock-in</option>
+                </select>
+              </div>
+              <button class="btn-clear" id="btn-clear-filters" type="button">Azzera filtri</button>
+            </div>
+          </div>
+
+          <!-- Quick Macro Filter Pills -->
+          <div class="macro-bar" id="macro-bar" aria-label="Filtro rapido macro-settori"></div>
+        </aside>
+
+        <!-- Results -->
+        <div class="catalog-results">
+          <div class="results-meta">
+            <span id="results-count">Caricamento catalogo in corso...</span>
+            <span id="active-filters-summary"></span>
+          </div>
+          <div id="catalog-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 2: ANALISI ECONOMICA E MERCATO        -->
+    <!-- ========================================== -->
+    <section class="tab-panel" id="panel-market" role="tabpanel" aria-labelledby="tab-market">
+      <div class="bi-section">
+        <h2 class="section-title">L'Economia dei Gestionali in Italia: Oligopolio e Coda Lunga</h2>
+        <p class="section-lead">
+          L'analisi aggregata dei bilanci societari rivela una struttura di mercato fortemente polarizzata: da una parte grandi conglomerati consolidatori (TeamSystem, Zucchetti, Wolters Kluwer, Sistemi, Maggioli) cresciuti tramite decenni di fusioni e acquisizioni, dall'altra una rete di PMI software house verticali e nuove realtà SaaS native.
+        </p>
+
+        <div class="insight-callout">
+          <h4>Evidenza Economica:</h4>
+          I ricavi societari complessivamente censiti ammontano a <strong id="callout-total-rev">…</strong>, riferiti alle <strong id="callout-coverage">…</strong> con bilancio noto su <span id="callout-companies">…</span> osservate. I primi 5 produttori per fatturato controllano il <strong id="callout-top5-share">…</strong> dei ricavi osservati, confermando una netta concentrazione economica attorno a pochi grandi poli.
+        </div>
+
+        <div class="chart-grid">
+          <div class="chart-card">
+            <h4>
+              Top 15 Software House per Fatturato Societario
+              <span>Bilanci civilistici depositati · valore = società, non singolo software</span>
+            </h4>
+            <div class="dot-plot" id="chart-top-companies"></div>
+          </div>
+
+          <div class="chart-card">
+            <h4>
+              Quanto è Concentrato il Mercato
+              <span>quota cumulata dei ricavi osservati</span>
+            </h4>
+            <div class="conc" id="chart-concentration"></div>
+            <div class="chart-note" id="concentration-note"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bi-section">
+        <div class="chart-grid">
+          <div class="chart-card">
+            <h4>
+              Fatturato per Macro-Settore
+              <span>area = quota ricavi ponderata · colore = dipendenza hardware</span>
+            </h4>
+            <div id="chart-sector-revenue"></div>
+            <div class="chart-note">
+              I ricavi delle aziende pluri-prodotto (es. TeamSystem, Zucchetti) sono ripartiti in base alla distribuzione dei loro prodotti tra i settori, per evitare duplicazioni del fatturato societario. Il colore legge la quota di prodotti del settore che richiedono dispositivi fisici: le aree più estese (Pubblica Amministrazione, Professioni) sono anche le meno dipendenti dall'hardware.
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <h4>
+              Trasparenza dei Listini
+              <span>ogni quadratino = 1 software censito</span>
+            </h4>
+            <div id="chart-pricing-breakdown"></div>
+            <div class="chart-note" id="pricing-note"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bi-section">
+        <div class="chart-grid">
+          <div class="chart-card">
+            <h4>
+              Top 10 Software House per Dipendenti
+              <span>organico dichiarato o camerale</span>
+            </h4>
+            <div class="bar-list" id="chart-top-employees"></div>
+          </div>
+
+          <div class="chart-card">
+            <h4>
+              Fatturato per Dipendente
+              <span>produttività osservata · società con ≥5 dipendenti e bilancio noto</span>
+            </h4>
+            <div id="chart-rev-per-emp"></div>
+            <div class="chart-note" id="rev-per-emp-note"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bi-section">
+        <h3 class="section-title" style="font-size: 1.1rem;">Classifica delle Top 25 Aziende per Fatturato</h3>
+        <div class="table-wrap">
+          <table class="product-table" id="table-top-companies">
+            <thead>
+              <tr>
+                <th>Posizione</th>
+                <th>Società Produttrice</th>
+                <th>Gruppo di Appartenenza</th>
+                <th>Fatturato Annuo</th>
+                <th>Dipendenti</th>
+                <th>Software a Catalogo</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="bi-section">
+        <h3 class="section-title" style="font-size: 1.1rem;">Lock-in, Trasparenza e Apertura: cosa si correla</h3>
+        <p class="section-lead">
+          Incrociando il livello di lock-in con trasparenza dei prezzi, apertura delle API e dipendenza hardware si leggono relazioni non sempre intuitive: il lock-in non coincide tanto con la chiusura tecnica, quanto con i vincoli normativi e fisici.
+        </p>
+        <div class="chart-card">
+          <h4>
+            Matrice delle Correlazioni per Livello di Lock-in
+            <span>% dei software del gruppo · ogni colonna è un gruppo di prodotti</span>
+          </h4>
+          <div id="chart-lockin-corr"></div>
+          <div class="chart-note" id="lockin-corr-note"></div>
+        </div>
+        <div class="insight-callout" id="lockin-corr-insight"></div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 3: HARDWARE E BARRIERE COMPETITIVE     -->
+    <!-- ========================================== -->
+    <section class="tab-panel" id="panel-hardware" role="tabpanel" aria-labelledby="tab-hardware">
+      <div class="bi-section">
+        <h2 class="section-title">La Dipendenza dall'Hardware: una Barriera Competitiva</h2>
+        <p class="section-lead">
+          Mentre il software puramente documentale opera nel cloud senza legami fisici, ampi comparti dell'economia reale richiedono dispositivi hardware omologati, sensori, varchi o macchinari. Questa dipendenza rappresenta una <strong>barriera all'ingresso e alla sostituzione</strong> per il fornitore, ma anche un vincolo operativo per il cliente.
+        </p>
+
+        <div class="chart-grid">
+          <div class="chart-card">
+            <h4>
+              Dipendenza Hardware per Macro-Settore
+              <span>% di prodotti che richiedono dispositivi fisici</span>
+            </h4>
+            <div class="bar-list" id="chart-hw-by-sector"></div>
+            <div class="chart-note" id="hw-sector-note"></div>
+          </div>
+          <div class="chart-card">
+            <h4>
+              I 7 Dispositivi Fisici Più Frequenti nel B2B Italiano
+              <span>1 quadratino = 5 software</span>
+            </h4>
+            <div class="dev-plot" id="chart-hw-devices"></div>
+            <div class="chart-note">
+              Dispositivi rilevati dalle schede tecniche e dai listini dei fornitori. Un gestionale può richiedere più dispositivi: i conteggi non sono mutuamente esclusivi.
+            </div>
+          </div>
+          <div class="chart-card">
+            <h4>
+              Ripartizione per Livello di Dipendenza
+              <span>software censiti, valori assoluti e quota</span>
+            </h4>
+            <div id="chart-hw-levels"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bi-section">
+        <h3 class="section-title" style="font-size: 1.1rem;">Analisi Tecnica dei 7 Dispositivi Chiave</h3>
+        <div class="deep-cards-grid">
+          <div class="deep-card">
+            <div class="deep-card-header">
+              <div class="deep-card-title">Punto Cassa e Stampanti RT</div>
+              <span class="deep-card-badge">Alta Dipendenza</span>
+            </div>
+            <div class="deep-card-body">
+              <strong>Settori:</strong> Ristorazione, Retail, Hospitality.<br>
+              <strong>Vincolo normativo:</strong> Registratore Telematico (RT) omologato dall'Agenzia delle Entrate con protocollo ESC/POS, Custom, RCH, Epson. La trasmissione telematica dei corrispettivi rende la sostituzione del punto cassa un'operazione tecnica e burocratica vincolata.
+            </div>
+          </div>
+
+          <div class="deep-card">
+            <div class="deep-card-header">
+              <div class="deep-card-title">Tornelli e Varchi di Accesso</div>
+              <span class="deep-card-badge">Alta Dipendenza</span>
+            </div>
+            <div class="deep-card-body">
+              <strong>Settori:</strong> Palestre, Centri fitness, ASD/SSD, Camping, Piscine.<br>
+              <strong>Impatto competitivo:</strong> integrazione con relè, lettori di badge RFID, braccialetti impermeabili o varchi a tutta altezza. Sostituire il gestionale comporta la riprogrammazione o la sostituzione dell'elettronica di varco.
+            </div>
+          </div>
+
+          <div class="deep-card">
+            <div class="deep-card-header">
+              <div class="deep-card-title">Terminali Timbratura e Badge</div>
+              <span class="deep-card-badge">Alta Dipendenza</span>
+            </div>
+            <div class="deep-card-body">
+              <strong>Settori:</strong> Manifattura, Sanità, Grande distribuzione, Logistica.<br>
+              <strong>Impatto competitivo:</strong> terminali a muro (es. serie ZP3/ZP4 Zucchetti), orologi marcatempo biometrici/NFC, Bluetooth Beacon. Una flotta di decine di timbratrici installate nelle sedi costituisce una forte barriera all'ingresso per soluzioni puramente cloud.
+            </div>
+          </div>
+
+          <div class="deep-card">
+            <div class="deep-card-header">
+              <div class="deep-card-title">Smart Lock e Domotica</div>
+              <span class="deep-card-badge">Media Dipendenza</span>
+            </div>
+            <div class="deep-card-body">
+              <strong>Settori:</strong> Hotel, B&B, affitti brevi, Coworking.<br>
+              <strong>Impatto competitivo:</strong> serrature elettroniche (Vikey, Chekin, tessere RFID, tastierini codice PIN, sensori rumore Roomonitor). Spesso gestito tramite bridge cloud/gateway o protocollo KNX.
+            </div>
+          </div>
+
+          <div class="deep-card">
+            <div class="deep-card-header">
+              <div class="deep-card-title">Scanner Barcode e Terminali Rugged</div>
+              <span class="deep-card-badge">Alta Dipendenza</span>
+            </div>
+            <div class="deep-card-body">
+              <strong>Settori:</strong> Logistica, Magazzini WMS, Distribuzione.<br>
+              <strong>Impatto competitivo:</strong> palmari industriali Zebra, Honeywell o Datalogic con app terminal dedicata per picking rapido, inventario e barcode 2D.
+            </div>
+          </div>
+
+          <div class="deep-card">
+            <div class="deep-card-header">
+              <div class="deep-card-title">GPS e Telemetria Veicoli</div>
+              <span class="deep-card-badge">Media Dipendenza</span>
+            </div>
+            <div class="deep-card-body">
+              <strong>Settori:</strong> Flotte aziendali, Trasporti TMS, Assistenza sul campo.<br>
+              <strong>Impatto competitivo:</strong> centraline OBD su veicoli, tachigrafi digitali per la normativa sui tempi di guida degli autisti, geofence cantieri.
+            </div>
+          </div>
+
+          <div class="deep-card">
+            <div class="deep-card-header">
+              <div class="deep-card-title">IoT Industriale, PLC e Macchinari</div>
+              <span class="deep-card-badge">Alta Dipendenza</span>
+            </div>
+            <div class="deep-card-body">
+              <strong>Settori:</strong> Manifattura, Industria 4.0, MES, Laboratori.<br>
+              <strong>Impatto competitivo:</strong> interconnessione bidirezionale con PLC Siemens/Fanuc, standard OPC-UA, sensori e bilance analitiche LIMS per conformità alle agevolazioni fiscali Transizione 4.0/5.0.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 4: LOCK-IN E INTERCONNESSIONE         -->
+    <!-- ========================================== -->
+    <section class="tab-panel" id="panel-lockin" role="tabpanel" aria-labelledby="tab-lockin">
+      <div class="bi-section">
+        <h2 class="section-title">I 4 Pilastri del Lock-in nel Mercato Italiano</h2>
+        <p class="section-lead">
+          Il costo e il rischio di cambiare fornitore gestionale in Italia nascono dalla convergenza di 4 fattori specifici del nostro contesto normativo e industriale.
+        </p>
+
+        <div class="deep-cards-grid">
+          <div class="deep-card">
+            <div class="deep-card-header">
+              <div class="deep-card-title">1. Ancoraggio Normativo e Fiscale</div>
+              <span class="deep-card-badge">Impatto Critico</span>
+            </div>
+            <div class="deep-card-body">
+              L'Italia presenta uno dei sistemi fiscali più digitalizzati e vincolanti d'Europa:
+              <ul style="margin: 6px 0 0 16px; display: grid; gap: 4px;">
+                <li><strong>SDI (Fattura Elettronica):</strong> codice destinatario, conservazione decennale a norma.</li>
+                <li><strong>Paghe e Consulenti del Lavoro:</strong> Uniemens, Libro Unico del Lavoro, CU, F24.</li>
+                <li><strong>RENTRI:</strong> Tracciabilità obbligatoria rifiuti per le imprese.</li>
+                <li><strong>Alloggiati Web e ISTAT:</strong> Portale Polizia di Stato per il turismo.</li>
+                <li><strong>PagoPA e SIOPE+:</strong> Flussi finanziari con la Pubblica Amministrazione.</li>
+              </ul>
+              Questo vincolo genera forte inerzia: CFO e commercialisti temono rischi fiscali e sanzioni in caso di migrazione.
+            </div>
+          </div>
+
+          <div class="deep-card">
+            <div class="deep-card-header">
+              <div class="deep-card-title">2. Ecosistemi a Suite Conglomerata</div>
+              <span class="deep-card-badge">Ecosistema Chiuso</span>
+            </div>
+            <div class="deep-card-body">
+              I grandi poli (TeamSystem, Zucchetti, Wolters Kluwer, Sistemi) offrono suite in cui contabilità, paghe, CRM, presenze e produzione condividono database o connettori nativi proprietari.
+              <br><br>
+              Inoltre, <strong>lo studio professionale (commercialista o consulente del lavoro)</strong> funge spesso da canale di lock-in per le PMI clienti, richiedendo software compatibili con la propria postazione di studio.
+            </div>
+          </div>
+
+          <div class="deep-card">
+            <div class="deep-card-header">
+              <div class="deep-card-title">3. Chiusura API e Barriere ai Dati</div>
+              <span class="deep-card-badge">Barriera Tecnica</span>
+            </div>
+            <div class="deep-card-body">
+              Nel nostro censimento, il <strong id="lockin-api-share">…</strong> dei gestionali analizzati non documenta pubblicamente API REST aperte.
+              <br><br>
+              Molti sistemi legacy su database on-premise consentono l'integrazione solo tramite costosi moduli SDK venduti come add-on o tracciati file testo a lunghezza fissa, ostacolando l'estrazione autonoma dei dati storici.
+            </div>
+          </div>
+
+          <div class="deep-card">
+            <div class="deep-card-header">
+              <div class="deep-card-title">4. Costi di Sostituzione dell'Hardware</div>
+              <span class="deep-card-badge">Costo Diretto</span>
+            </div>
+            <div class="deep-card-body">
+              Nei settori ad alta dipendenza fisica (cassa, tornelli, timbratrici, sensori industriali), abbandonare il fornitore comporta la sostituzione o riconfigurazione di asset fisici, collaudi in loco e interruzioni di servizio operativo.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bi-section">
+        <h3 class="section-title" style="font-size: 1.1rem;">La Fotografia del Catalogo: Rischio e Apertura</h3>
+        <p class="section-lead">
+          Tre letture sull'intero perimetro dei 373 software censiti: il livello di lock-in, la copertura API e la dipendenza hardware. Le stesse quote si ritrovano nei filtri del catalogo.
+        </p>
+        <div class="chart-grid">
+          <div class="chart-card">
+            <h4>
+              Lock-in e Dipendenza Hardware
+              <span>quota sul totale del catalogo</span>
+            </h4>
+            <div id="chart-lockin-breakdown"></div>
+            <div class="chart-note" id="lockin-breakdown-note"></div>
+          </div>
+          <div class="chart-card">
+            <h4>
+              Copertura API e Interoperabilità
+              <span>quota sul totale del catalogo</span>
+            </h4>
+            <div id="chart-api-breakdown"></div>
+            <div class="chart-note" id="api-breakdown-note"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 5: METODOLOGIA E DISCLAIMER           -->
+    <!-- ========================================== -->
+    <section class="tab-panel" id="panel-methodology" role="tabpanel" aria-labelledby="tab-methodology">
+      <div class="bi-section">
+        <h2 class="section-title">Metodologia di Ricerca, Trasparenza e Disclaimer</h2>
+        <p class="section-lead">
+          L'Osservatorio Gestionali Italiani nasce come progetto open-source di Business Intelligence e ricerca empirica per comprendere l'articolazione, le tecnologie e il potere di mercato del software gestionale in Italia.
+        </p>
+
+        <div class="deep-cards-grid">
+          <div class="deep-card">
+            <div class="deep-card-title">Criteri di Inclusione e Audit</div>
+            <div class="deep-card-body">
+              Ogni software censito nel catalogo passa attraverso un processo strutturato:
+              <ul style="margin: 8px 0 0 16px; display: grid; gap: 4px;">
+                <li><strong>Perimetro:</strong> solo software house italiane (sviluppo/prodotto italiano). I gestionali internazionali distribuiti in Italia da gruppi esteri sono esclusi.</li>
+                <li>Raccolta evidenze tramite bundle JSON immutabili con URL fonte, data e citazione testuale.</li>
+                <li>Validazione con schema JSON formale e inserimento idempotente nel database SQLite locale.</li>
+                <li>Estrazione di dati da siti ufficiali, schede tecniche, whitepaper e registri camerali.</li>
+                <li>Normalizzazione della tassonomia in 10 macro-settori omogenei.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="deep-card">
+            <div class="deep-card-title">Disclaimer sulle Aziende Mancanti</div>
+            <div class="deep-card-body">
+              <strong>Il catalogo non è esaustivo.</strong> L'Italia conta migliaia di software house e verticalizzazioni territoriali. La mancata presenza di un'azienda o di una soluzione non indica che non esista o che sia meno rilevante, ma semplicemente che <em>non è ancora stata sottoposta a ciclo di audit verificato</em>. L'osservatorio cresce a rilascio continuo con nuovi bundle di ricerca.
+            </div>
+          </div>
+
+          <div class="deep-card">
+            <div class="deep-card-title">Disclaimer sui Dati Finanziari</div>
+            <div class="deep-card-body">
+              I valori economici (ricavi, dipendenti, utile netto) sono estratti da fonti camerali e bilanci depositati. <strong>Tali valori si riferiscono alla persona giuridica complessiva (la software house o il gruppo societario)</strong> e non devono essere confusi con il fatturato generato dal singolo applicativo, specialmente nel caso di aziende pluri-prodotto.
+            </div>
+          </div>
+
+          <div class="deep-card">
+            <div class="deep-card-title">Disclaimer sull'Accuratezza dei Dati</div>
+            <div class="deep-card-body">
+              Le informazioni sono raccolte da fonti pubbliche e possono risultare <strong>inaccurate, incomplete o non aggiornate</strong>. Prezzi, funzionalità e caratteristiche cambiano nel tempo e i dati qui riportati potrebbero non riflettere la situazione attuale. Il catalogo è fornito "così com'è", <strong>senza alcuna garanzia di accuratezza o completezza</strong>, a scopo puramente informativo e di ricerca. Non costituisce consulenza commerciale, legale o di investimento e non va usato come unica base per decisioni di acquisto. In caso di discrepanze fa sempre fede la documentazione ufficiale del fornitore.
+            </div>
+          </div>
+
+          <div class="deep-card">
+            <div class="deep-card-title">Come Contribuire all'Hub</div>
+            <div class="deep-card-body">
+              Il progetto accoglie contributi da sviluppatori, fornitori e analisti di settore:
+              <ul style="margin: 8px 0 0 16px; display: grid; gap: 4px;">
+                <li><strong>Segnalare un gestionale mancante:</strong> apri una Issue su GitHub con nome prodotto, società produttrice e link al sito ufficiale.</li>
+                <li><strong>Inviare un bundle di ricerca:</strong> crea un bundle JSON in <code>data/inbox/</code> conforme allo schema e apri una Pull Request.</li>
+                <li><strong>Segnalare correzioni:</strong> proponi modifiche via GitHub per aggiornare feature o dati societari.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Centered Pop-up Modal -->
+  <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true"></div>
+  <div class="modal-dialog" id="modal-dialog" role="dialog" aria-modal="true" aria-label="Scheda dettagli software">
+    <div class="modal-header">
+      <div>
+        <h2 id="modal-product-name">Nome Software</h2>
+        <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 3px;" id="modal-product-sub">
+          Produttore
+        </div>
+      </div>
+      <button class="modal-close" id="modal-close" aria-label="Chiudi finestra">Chiudi [X]</button>
+    </div>
+    <div id="modal-content" style="display: grid; gap: 14px;"></div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <strong>Osservatorio Gestionali Italiani</strong> · progetto open source (codice MIT, dati CC0)
+          <div style="font-size: 0.72rem; margin-top: 2px;">
+            Dati aggregati da fonti pubbliche e bilanci depositati: possono essere inaccurati, incompleti o non aggiornati e sono forniti "così com'è", senza garanzie. Non costituiscono consulenza e non sostituiscono la documentazione ufficiale dei fornitori. Marchi e nomi citati appartengono ai rispettivi titolari.
+          </div>
+        </div>
+        <div>
+          <a href="https://github.com/iatecoding/mappa-gestionali" target="_blank" rel="noreferrer">Repository GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Catalog Data Payload -->
+  <script src="catalog-data.js"></script>
+
+  <!-- Application Logic -->
+  <script>
+    const appData = window.CATALOGUE_DATA || { products: [], macroSectors: [], marketInsights: {} };
+    let currentView = 'grid';
+    let selectedMacro = 'all';
+
+    const currencyEUR = new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+    const numberInt = new Intl.NumberFormat('it-IT');
+
+    function escapeHtml(str) {
+      if (str == null) return '';
+      return String(str).replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[char]);
+    }
+
+    function safeUrl(url) {
+      try {
+        const u = new URL(url);
+        return ['http:', 'https:'].includes(u.protocol) ? u.href : '#';
+      } catch { return '#'; }
+    }
+
+    function formatRevenue(rev) {
+      if (!rev) return 'Non disponibile';
+      const val = rev.exact ?? rev.max ?? rev.min ?? null;
+      if (val == null) return 'Non disponibile';
+      return formatEuroCompact(val);
+    }
+
+    function formatEuroCompact(val) {
+      if (val >= 1_000_000_000) return `${decimalIt(val / 1_000_000_000, 2)} Mld €`;
+      if (val >= 1_000_000) return `${decimalIt(val / 1_000_000, 1)} Mln €`;
+      if (val >= 1_000) return `${decimalIt(val / 1_000, 0)} k €`;
+      return currencyEUR.format(val);
+    }
+
+    function decimalIt(value, digits) {
+      return value.toLocaleString('it-IT', { minimumFractionDigits: digits, maximumFractionDigits: digits });
+    }
+
+    function formatPct(value, digits = 1) {
+      return `${decimalIt(value, digits)}%`;
+    }
+
+    const KEY_LABELS = {
+      plan: 'Piano', plans: 'Piani', model: 'Modello', addons: 'Opzioni aggiuntive', addon: 'Opzione',
+      name: 'Nome', plan_name: 'Nome piano', plan_slug: 'Codice piano', label: 'Etichetta',
+      billing: 'Fatturazione', billing_period: 'Periodo', billing_model: 'Modello di fatturazione',
+      billing_options: 'Opzioni di fatturazione', period: 'Periodo', currency: 'Valuta', unit: 'Unità',
+      basis: 'Base', scope: 'Ambito', tier: 'Fascia', tiers: 'Fasce', quote_based: 'A preventivo',
+      price: 'Prezzo', exact: 'Valore', amount: 'Importo', price_eur: 'Prezzo',
+      price_annual_eur: 'Prezzo annuale', price_monthly_eur: 'Prezzo mensile',
+      price_one_time_eur: 'Prezzo una tantum', price_annual: 'Prezzo annuale', price_monthly: 'Prezzo mensile',
+      annual_eur: 'Prezzo annuale', monthly_eur: 'Prezzo mensile', one_time_eur: 'Prezzo una tantum',
+      annual: 'Prezzo annuale', monthly: 'Prezzo mensile', one_time: 'Prezzo una tantum',
+      setup_eur: 'Costo di avvio', setup_fee: 'Costo di avvio', activation_fee: 'Costo di attivazione',
+      activation_fee_eur: 'Costo di attivazione', service: 'Servizio', services: 'Servizi',
+      tax_included: 'IVA inclusa', tax_excluded: 'IVA esclusa', vat_included: 'IVA inclusa',
+      vat: 'IVA', tax_status: 'Trattamento IVA',
+      included_users: 'Utenti inclusi', users: 'Utenti', user_limit: 'Limite utenti',
+      minimum_users: 'Utenti minimi', max_documents: 'Documenti massimi', duration: 'Durata',
+      trial_days: 'Giorni di prova', available: 'Disponibile', includes: 'Include',
+      included_features: 'Funzionalità incluse', included_services: 'Servizi inclusi',
+      public_numeric_price: 'Prezzo numerico pubblico', numeric_price_public: 'Prezzo numerico pubblico',
+      quote_available: 'Preventivo disponibile', requires_contact: 'Richiede contatto',
+      free_forever: 'Gratis per sempre', free_account: 'Account gratuito', demo_available: 'Demo disponibile',
+      workstation_scope: 'Ambito postazione',
+      type: 'Tipo', status: 'Stato', value: 'Valore', method: 'Metodo', notes: 'Note', plan_type: 'Tipo di piano',
+      price_driver: 'Fattore di prezzo', price_drivers: 'Fattori di prezzo', price_disclosure: 'Trasparenza prezzo',
+      price_qualifier: 'Qualifica', price_basis: 'Base di prezzo', billing_basis: 'Base di fatturazione',
+      starting_price: 'Prezzo iniziale', monthly_starting_price: 'Prezzo iniziale mensile',
+      starting_monthly_price: 'Prezzo iniziale mensile', starting_monthly_eur: 'Prezzo iniziale mensile',
+      annual_starting_price: 'Prezzo iniziale annuale', public_starting_price: 'Prezzo iniziale pubblico',
+      annual_assistance_updates_eur: 'Assistenza e aggiornamenti (annuale)',
+      additional_workstation_eur: 'Postazione aggiuntiva',
+      migration_from_eur: 'Migrazione da altro gestionale',
+      remote_training_2_hours_eur: 'Formazione remota (2 ore)',
+      license_one_time_eur: 'Licenza una tantum',
+      included_transaction_limit: 'Transazioni incluse',
+      verification_limit_annual: 'Verifiche incluse all\'anno',
+      included_invoices_per_year: 'Fatture incluse per anno',
+      included_invoices: 'Fatture incluse',
+      included_declarations: 'Dichiarazioni incluse',
+      included_shipments: 'Spedizioni incluse',
+      max_monthly_shipments: 'Spedizioni mensili massime',
+      list_price_monthly_eur: 'Prezzo di listino mensile',
+      standard_monthly_eur: 'Canone mensile Standard',
+      launch_monthly_eur: 'Canone mensile di lancio',
+      annual_fee: 'Canone annuale', annual_price: 'Prezzo annuale',
+      annual_subscription_eur: 'Abbonamento annuale', annual_subscription: 'Abbonamento annuale',
+      annual_commitment: 'Impegno annuale', contract_commitment: 'Vincolo contrattuale',
+      duration_constraint: 'Vincolo di durata', contract_duration_constraint: 'Vincolo di durata contrattuale',
+      credit_card_required: 'Carta di credito richiesta', credit_card_for_signup: 'Carta di credito per la registrazione',
+      card_required_for_trial: 'Carta richiesta per la prova', contact_required: 'Contatto richiesto',
+      contact_for_solution: 'Contatto per la soluzione', custom_quote_available: 'Preventivo personalizzato disponibile',
+      demo_or_consultation: 'Demo o consulenza', demo_or_contact: 'Demo o contatto',
+      annual_renewal: 'Rinnovo annuale', annual_renewal_includes: 'Il rinnovo annuale include',
+      annual_update: 'Aggiornamento annuale', annual_support_included: 'Assistenza annuale inclusa',
+      base_plan: 'Piano base', custom_plan: 'Piano personalizzato',
+      feature_scope: 'Ambito funzionale', features_included: 'Funzionalità incluse',
+      core_module: 'Modulo base', comparison_module_annual_eur: 'Modulo confronto (annuale)',
+      members_limit: 'Iscritti inclusi', member_limit: 'Iscritti inclusi',
+      active_members_limit: 'Iscritti attivi inclusi', active_clients_limit: 'Clienti attivi inclusi',
+      trainers_limit: 'Trainer inclusi', mobile_devices: 'Dispositivi mobili',
+      attachment_storage_gb: 'Spazio allegati (GB)', annual_monthly_equivalent_gbp: 'Equivalente mensile annuale (GBP)',
+      monthly_gbp: 'Canone mensile (GBP)', promotion: 'Promozione', promotion_end: 'Fine promozione',
+      sales_commission: 'Commissione sulle vendite', commission_on_sales: 'Commissione sulle vendite',
+      auto_renewal: 'Rinnovo automatico', license: 'Licenza', units: 'Unità', eur_per_unit: 'Prezzo per unità',
+      from: 'A partire da', offer: 'Offerta', limit: 'Limite', free_plan: 'Piano gratuito',
+      annual_enrollment_limit: 'Iscrizioni annuali incluse', included_allowance: 'Plafond incluso',
+      price_after_allowance_annual_eur: 'Prezzo annuale dopo il plafond',
+      bank_transfer_eur: 'Bonifico bancario', card_or_paypal_eur: 'Carta o PayPal',
+      charge_frequency: 'Frequenza di addebito',
+      addon_accounting: 'Contabilità (modulo aggiuntivo)',
+      addon_business_information: 'Business information (modulo aggiuntivo)',
+      addon_e_invoicing_extra_company: 'Fatturazione elettronica, società extra (modulo aggiuntivo)',
+      addon_sms: 'SMS (modulo aggiuntivo)',
+      additional_user_annual_eur: 'Utente aggiuntivo (annuale)',
+      additional_user_monthly_eur: 'Utente aggiuntivo (mensile)',
+      additional_user_price_annual_eur: 'Utente aggiuntivo (prezzo annuale)',
+      admin_users: 'Utenti amministratori', client_portal_users: 'Utenti portale clienti'
+    };
+
+    const VALUE_LABELS = {
+      annual: 'annuale', yearly: 'annuale', monthly: 'mensile', quarterly: 'trimestrale',
+      weekly: 'settimanale', one_time: 'una tantum', per_month: 'al mese', per_year: "all'anno",
+      annual_commitment: 'impegno annuale', perpetual_license_plus_annual_service: 'licenza perpetua + servizio annuale',
+      custom_quote: 'preventivo personalizzato', custom_quotation: 'preventivo personalizzato',
+      quote_required: 'solo preventivo', quote_only: 'solo preventivo', quote_based: 'a preventivo',
+      contact_sales: 'contatto commerciale', demo_or_custom_quote: 'demo o preventivo',
+      custom_quote_or_demo: 'preventivo o demo', not_declared: 'non dichiarato', not_disclosed: 'non comunicato',
+      per_company: 'per azienda', per_active_user: 'per utente attivo', usage_based: 'a consumo',
+      number_of_users: 'numero di utenti', number_of_active_user_licenses: 'numero di licenze attive',
+      annual_payable_monthly: 'annuale, pagabile mensilmente', per_annual_payment: 'con pagamento annuale',
+      first_year_one_time: 'primo anno, una tantum', first_year: 'primo anno', first_year_only: 'solo primo anno',
+      property_type: 'tipo di struttura', modules_requested: 'moduli richiesti',
+      functional_modules: 'moduli funzionali', business_type: 'tipo di attività',
+      existing_integrations: 'integrazioni esistenti', additional_company: 'società aggiuntiva',
+      e_invoicing: 'fatturazione elettronica', cloud_hosting: 'hosting cloud', annual_license: 'licenza annuale',
+      multi_user: 'multiutente', unlimited_web_environment_access: 'accesso web illimitato',
+      personal_walkthrough: 'demo guidata individuale', custom_or_early_access: 'personalizzato o accesso anticipato',
+      consultation_required: 'consulenza richiesta', priority_support: 'supporto prioritario',
+      pay_per_use_periodic_fee: 'a consumo con canone periodico'
+    };
+
+    function humanizeKey(key) {
+      const raw = String(key).replace(/^(pricing|trial)\./, '');
+      if (KEY_LABELS[raw]) return KEY_LABELS[raw];
+      const stripped = raw.replace(/_eur$/, '');
+      if (KEY_LABELS[stripped]) return KEY_LABELS[stripped];
+      return stripped.replace(/[_\.]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    function humanizePricingValue(key, value) {
+      if (value == null) return '';
+      if (typeof value === 'boolean') return value ? 'Sì' : 'No';
+      if (typeof value === 'number') return /eur|price|cost|fee|amount/i.test(key) ? currencyEUR.format(value) : numberInt.format(value);
+      if (Array.isArray(value)) return value.map(v => humanizePricingValue(key, v)).join(', ');
+      if (typeof value === 'object') {
+        return Object.entries(value).map(([k, v]) => `${humanizeKey(k)}: ${humanizePricingValue(k, v)}`).join(' · ');
+      }
+      const text = String(value);
+      if (VALUE_LABELS[text]) return VALUE_LABELS[text];
+      if (text.includes('_')) {
+        return text.split('_').map(w => VALUE_LABELS[w] || w).join(' ');
+      }
+      return text;
+    }
+
+    /* ==========================================
+       CHART TOOLKIT (SVG/CSS puro, nessuna dipendenza)
+       ========================================== */
+    const CHART = {
+      slate: 'var(--chart-1)',
+      teal: 'var(--chart-2)',
+      amber: 'var(--chart-3)',
+      red: 'var(--chart-4)'
+    };
+
+    function legendHtml(items) {
+      return `<div class="chart-legend">${items.map(it => `
+        <span class="lg" title="${escapeHtml(it.title || it.label)}">
+          <span class="sw" style="background: ${it.color}"></span>${escapeHtml(it.label)}
+          ${it.value != null ? ` <strong>${numberInt.format(it.value)}</strong>` : ''}${it.pct != null ? ` · ${formatPct(it.pct, 1)}` : ''}
+        </span>`).join('')}</div>`;
+    }
+
+    /* Dot plot (lollipop): confronto preciso di valori su scala condivisa */
+    function renderDotPlot(container, items, opts = {}) {
+      if (!container || !items.length) return;
+      container.classList.add('dot-plot');
+      const max = opts.max || Math.max(...items.map(it => it.value), 1);
+      const fmt = opts.format || (v => numberInt.format(v));
+      const markerPct = opts.markerValue != null ? Math.min(100, opts.markerValue / max * 100) : null;
+      container.innerHTML = items.map((it, idx) => {
+        const pos = Math.max(0.5, Math.min(100, it.value / max * 100));
+        return `
+          <div class="dp-row${opts.lead && idx === 0 ? ' lead' : ''}">
+            <span class="dp-name" title="${escapeHtml(it.name)}"><span class="dp-rank">${idx + 1}.</span>${escapeHtml(it.name)}</span>
+            <span class="dp-track">
+              <span class="dp-axis"></span>
+              <span class="dp-bar" style="width: ${pos}%"></span>
+              ${markerPct != null ? `<span class="dp-marker" style="left: ${markerPct}%"></span>` : ''}
+              <span class="dp-dot" style="left: ${pos}%"></span>
+            </span>
+            <span class="dp-val">${fmt(it.value)}</span>
+          </div>`;
+      }).join('');
+    }
+
+    /* Serie di quadratini: 1 quadratino = 1 unità di valore */
+    function renderDeviceDots(container, devices, unit = 5) {
+      if (!container || !devices.length) return;
+      container.innerHTML = devices.map(d => {
+        const full = Math.floor(d.count / unit);
+        const rest = d.count % unit;
+        const cells = Array.from({ length: full }, () => `<i title="${unit} software"></i>`).join('')
+          + (rest ? `<i class="part" title="${rest} software (quadratino parziale)"></i>` : '');
+        return `
+          <div class="dev-row" title="${escapeHtml(d.device)}: ${numberInt.format(d.count)} software">
+            <span class="bar-lbl">${escapeHtml(d.device)}</span>
+            <span class="dev-units">${cells}</span>
+            <span class="dev-val">${numberInt.format(d.count)}</span>
+          </div>`;
+      }).join('');
+    }
+
+    /* Waffle: ogni quadratino è un software (valori esatti) */
+    function renderWaffle(container, groups, opts = {}) {
+      if (!container) return;
+      const cols = opts.cols || 20;
+      const total = groups.reduce((s, g) => s + g.value, 0) || 1;
+      const cells = [];
+      groups.forEach(g => {
+        for (let i = 0; i < g.value; i++) cells.push(`<i class="${g.cls}"></i>`);
+      });
+      const legend = legendHtml(groups.map(g => ({
+        label: g.label, value: g.value, pct: g.value / total * 100, color: g.swatch || 'var(--line)',
+        title: `${g.label}: ${numberInt.format(g.value)} software`
+      })));
+      container.innerHTML = `
+        <div class="waffle" style="grid-template-columns: repeat(${cols}, minmax(0, 1fr));"
+             role="img" aria-label="${escapeHtml(opts.ariaLabel || 'Distribuzione dei software')}">${cells.join('')}</div>
+        ${legend}`;
+    }
+
+    /* Barre impilate al 100%: quote esatte con valori assoluti in legenda */
+    function renderStacked(container, barsArr) {
+      if (!container) return;
+      container.innerHTML = barsArr.map(bar => {
+        const total = bar.items.reduce((s, it) => s + it.value, 0) || 1;
+        const segs = bar.items.map(it => {
+          const pct = it.value / total * 100;
+          const label = pct >= 11 ? `<span class="s-lbl">${formatPct(pct, pct >= 20 ? 0 : 1)}</span>` : '';
+          return `<i style="width: ${pct}%; background: ${it.color}" title="${escapeHtml(it.label)}: ${numberInt.format(it.value)} software (${formatPct(pct, 1)})">${label}</i>`;
+        }).join('');
+        const legend = legendHtml(bar.items.map(it => ({
+          label: it.label, value: it.value, pct: it.value / total * 100, color: it.color
+        })));
+        return `
+          <div class="stack-wrap">
+            ${bar.title ? `<div class="stack-title"><span>${escapeHtml(bar.title)}</span>${bar.subtitle ? `<span>${escapeHtml(bar.subtitle)}</span>` : ''}</div>` : ''}
+            <div class="stack">${segs}</div>
+            ${legend}
+          </div>`;
+      }).join('');
+    }
+
+    /* Matrice di correlazione: numeri esatti + intensità del colore */
+    function renderHeatMatrix(container, groups, rows) {
+      if (!container) return;
+      const head = groups.map(g => `<th>${escapeHtml(g.label)}<em>${numberInt.format(g.count)} software</em></th>`).join('');
+      const body = rows.map(row => `
+        <tr>
+          <td class="metric">${escapeHtml(row.label)}</td>
+          ${row.values.map(v => `<td class="cell" style="background: color-mix(in srgb, ${row.color} ${Math.round(Math.min(100, v) * 0.45 + 4)}%, transparent)" title="${escapeHtml(row.label)}: ${formatPct(v, 1)}">${formatPct(v, 1)}</td>`).join('')}
+        </tr>`).join('');
+      container.innerHTML = `
+        <div class="heat">
+          <table>
+            <thead><tr><th aria-label="Indicatore"></th>${head}</tr></thead>
+            <tbody>${body}</tbody>
+          </table>
+        </div>`;
+    }
+
+    /* Curva di concentrazione: quota cumulata dei ricavi per rango */
+    function renderConcentration(container, companies, total, opts = {}) {
+      if (!container || !companies.length) return [];
+      const top = companies.slice(0, opts.maxRank || 25);
+      const cum = [];
+      let acc = 0;
+      top.forEach((c, i) => { acc += c.revenue; cum.push({ rank: i + 1, share: acc / total * 100, name: c.name }); });
+
+      const W = 600, H = 252, L = 46, R = 16, T = 22, B = 36;
+      const x = rank => L + (rank - 1) / Math.max(1, top.length - 1) * (W - L - R);
+      const y = share => T + (1 - Math.min(share, 100) / 100) * (H - T - B);
+
+      let line = `M ${x(1)} ${y(0)}`;
+      cum.forEach(pt => {
+        const prev = pt.rank > 1 ? cum[pt.rank - 2].share : 0;
+        line += ` L ${x(pt.rank)} ${y(prev)} L ${x(pt.rank)} ${y(pt.share)}`;
+      });
+      const area = `${line} L ${x(top.length)} ${y(0)} Z`;
+
+      const grid = [25, 50, 75, 100].map(g => `
+        <line class="conc-grid" x1="${L}" x2="${W - R}" y1="${y(g)}" y2="${y(g)}"></line>
+        <text class="conc-axis" x="${L - 8}" y="${y(g) + 3.5}" text-anchor="end">${g}%</text>`).join('');
+
+      const marks = (opts.markers || [1, 5, 10, 25]).filter(m => m <= top.length);
+      const markEls = marks.map(m => {
+        const pt = cum[m - 1];
+        const fy = y(pt.share);
+        const anchor = m === 1 ? 'start' : (m === top.length ? 'end' : 'middle');
+        return `
+          <circle class="conc-dot" cx="${x(m)}" cy="${fy}" r="4.5"></circle>
+          <text class="conc-val" x="${x(m)}" y="${fy - 9}" text-anchor="${anchor}">${formatPct(pt.share, 0)}</text>
+          <text class="conc-rank" x="${x(m)}" y="${H - B + 17}" text-anchor="${anchor}">Top ${m}</text>`;
+      }).join('');
+
+      container.innerHTML = `
+        <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Curva di concentrazione: quota cumulata dei ricavi per rango delle software house">
+          <defs>
+            <linearGradient id="concArea" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="var(--chart-2)" stop-opacity="0.30"></stop>
+              <stop offset="100%" stop-color="var(--chart-2)" stop-opacity="0.02"></stop>
+            </linearGradient>
+          </defs>
+          ${grid}
+          <path d="${area}" fill="url(#concArea)"></path>
+          <path class="conc-line" d="${line}"></path>
+          ${markEls}
+          <text class="conc-axis" x="${L}" y="${H - 6}">prime N società per fatturato, ordine decrescente</text>
+        </svg>`;
+      return cum;
+    }
+
+    function treemapLayout(items, x, y, w, h) {
+      if (!items.length) return [];
+      if (items.length === 1) return [{ ...items[0], x, y, w, h }];
+      const total = items.reduce((s, it) => s + it.value, 0) || 1;
+      let acc = 0, split = 1;
+      for (let i = 0; i < items.length; i++) {
+        acc += items[i].value;
+        if (acc >= total / 2) { split = i + 1; break; }
+      }
+      const g1 = items.slice(0, split), g2 = items.slice(split);
+      const s1 = g1.reduce((s, it) => s + it.value, 0);
+      const s2 = g2.reduce((s, it) => s + it.value, 0) || 1;
+      const frac = s1 / (s1 + s2);
+      if (w >= h) {
+        const w1 = w * frac;
+        return [...treemapLayout(g1, x, y, w1, h), ...treemapLayout(g2, x + w1, y, w - w1, h)];
+      }
+      const h1 = h * frac;
+      return [...treemapLayout(g1, x, y, w, h1), ...treemapLayout(g2, x, y + h1, w, h - h1)];
+    }
+
+    function hexToRgb(hex) {
+      const n = parseInt(hex.slice(1), 16);
+      return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+    }
+
+    function mixHex(a, b, t) {
+      const A = hexToRgb(a), B = hexToRgb(b);
+      return '#' + [0, 1, 2].map(i => Math.round(A[i] + (B[i] - A[i]) * t).toString(16).padStart(2, '0')).join('');
+    }
+
+    /* Scala sequenziale ambra: rosso quanto più il settore dipende dall'hardware */
+    function hwRateColor(rate) {
+      const stops = [[0, '#fdf0dd'], [30, '#f6cf95'], [60, '#df9a52'], [100, '#8a3c0d']];
+      const v = Math.max(0, Math.min(100, rate || 0));
+      for (let i = 1; i < stops.length; i++) {
+        if (v <= stops[i][0]) {
+          const [p0, c0] = stops[i - 1], [p1, c1] = stops[i];
+          return mixHex(c0, c1, (v - p0) / (p1 - p0));
+        }
+      }
+      return stops[stops.length - 1][1];
+    }
+
+    function isLightHex(hex) {
+      const [r, g, b] = hexToRgb(hex);
+      return (0.299 * r + 0.587 * g + 0.114 * b) > 168;
+    }
+
+    function renderTreemap(container, items) {
+      if (!container) return;
+      const data = [...items].filter(it => it.value > 0).sort((a, b) => b.value - a.value);
+      const total = data.reduce((s, it) => s + it.value, 0) || 1;
+      const rects = treemapLayout(data, 0, 0, 100, 100);
+      const tail = [];
+      const cells = rects.map(r => {
+        const color = hwRateColor(r.hwRate);
+        const textColor = isLightHex(color) ? '#41290f' : '#ffffff';
+        const share = r.value / total * 100;
+        const showName = r.w >= 8.5 && r.h >= 13;
+        const showValue = r.w >= 16 && r.h >= 26;
+        if (!showName) tail.push({ label: r.label, value: r.value, share });
+        return `
+          <div class="tm-cell" style="left: ${r.x}%; top: ${r.y}%; width: ${r.w}%; height: ${r.h}%; background: ${color}; color: ${textColor};"
+               title="${escapeHtml(r.label)}: ${formatEuroCompact(r.value)} (${formatPct(share, 1)} dei ricavi ponderati) · dipendenza hardware ${formatPct(r.hwRate, 0)}">
+            ${showName ? `<div class="tm-name">${escapeHtml(r.label)}</div>` : '<div></div>'}
+            ${showValue ? `<div><div class="tm-val">${formatEuroCompact(r.value)}</div><div class="tm-sub">${formatPct(share, 1)} ricavi · ${formatPct(r.hwRate, 0)} HW</div></div>` : ''}
+          </div>`;
+      }).join('');
+      const tailNote = tail.length
+        ? `<div class="chart-note">Coda (aree senza etichetta): ${tail.map(t => `${escapeHtml(t.label)} ${formatEuroCompact(t.value)} (${formatPct(t.share, 1)})`).join(' · ')}.</div>`
+        : '';
+      container.innerHTML = `
+        <div class="treemap">${cells}</div>
+        ${legendHtml([
+          { label: 'dipendenza hardware bassa', color: '#fdf0dd', title: 'Fino al 30% dei prodotti con dispositivi fisici' },
+          { label: 'media', color: '#f6cf95', title: 'Tra il 30% e il 60%' },
+          { label: 'alta', color: '#8a3c0d', title: 'Oltre il 60%' }
+        ])}
+        ${tailNote}`;
+    }
+
+    // Tab Switching
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.setAttribute('aria-selected', btn.dataset.tab === tabId ? 'true' : 'false');
+      });
+      document.querySelectorAll('.tab-panel').forEach(panel => {
+        panel.classList.toggle('active', panel.id === `panel-${tabId}`);
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+    });
+
+    // Theme Management
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeText = document.getElementById('theme-text');
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeText.textContent = 'Tema Chiaro';
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        themeText.textContent = 'Tema Scuro';
+      }
+      localStorage.setItem('og_theme', theme);
+    }
+
+    const savedTheme = localStorage.getItem('og_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      applyTheme(isDark ? 'light' : 'dark');
+    });
+
+    // Disclaimer banner
+    const disclaimerBanner = document.getElementById('disclaimer-banner');
+    const disclaimerClose = document.getElementById('disclaimer-close');
+    disclaimerClose.addEventListener('click', () => {
+      disclaimerBanner.style.display = 'none';
+      localStorage.setItem('og_disclaimer_closed', 'true');
+    });
+    if (localStorage.getItem('og_disclaimer_closed') === 'true') {
+      disclaimerBanner.style.display = 'none';
+    }
+
+    // Populate Filters
+    function initFilters() {
+      const macroSelect = document.getElementById('filter-macro');
+      const macroBar = document.getElementById('macro-bar');
+      const catSelect = document.getElementById('filter-category');
+
+      macroSelect.innerHTML = '<option value="all">Tutti i 10 macro-settori</option>' +
+        appData.macroSectors.map(m => `<option value="${escapeHtml(m.id)}">${escapeHtml(m.name)} (${m.productCount})</option>`).join('');
+
+      macroBar.innerHTML = `
+        <button class="macro-pill" type="button" data-macro="all" aria-pressed="true">
+          Tutti i settori <span class="count">${appData.products.length}</span>
+        </button>
+      ` + appData.macroSectors.map(m => `
+        <button class="macro-pill" type="button" data-macro="${escapeHtml(m.id)}" aria-pressed="false">
+          ${escapeHtml(m.name)} <span class="count">${m.productCount}</span>
+        </button>
+      `).join('');
+
+      const categories = new Map();
+      appData.products.forEach(p => {
+        if (p.categorySlug && p.categorySlug !== 'unclassified') {
+          categories.set(p.categorySlug, p.categoryName);
+        }
+      });
+      catSelect.innerHTML = '<option value="all">Tutte le categorie</option>' +
+        [...categories.entries()].sort((a,b) => a[1].localeCompare(b[1], 'it')).map(([slug, name]) => `
+          <option value="${escapeHtml(slug)}">${escapeHtml(name)}</option>
+        `).join('');
+
+      macroBar.addEventListener('click', e => {
+        const pill = e.target.closest('.macro-pill');
+        if (!pill) return;
+        selectedMacro = pill.dataset.macro;
+        document.querySelectorAll('.macro-pill').forEach(p => p.setAttribute('aria-pressed', p === pill ? 'true' : 'false'));
+        macroSelect.value = selectedMacro;
+        renderCatalog();
+      });
+
+      macroSelect.addEventListener('change', () => {
+        selectedMacro = macroSelect.value;
+        document.querySelectorAll('.macro-pill').forEach(p => p.setAttribute('aria-pressed', p.dataset.macro === selectedMacro ? 'true' : 'false'));
+        renderCatalog();
+      });
+
+      ['filter-category', 'filter-hw', 'filter-lockin', 'filter-pricing', 'filter-api', 'filter-sort'].forEach(id => {
+        document.getElementById(id).addEventListener('change', renderCatalog);
+      });
+
+      document.getElementById('search-input').addEventListener('input', renderCatalog);
+
+      document.getElementById('btn-clear-filters').addEventListener('click', () => {
+        document.getElementById('search-input').value = '';
+        macroSelect.value = 'all';
+        selectedMacro = 'all';
+        document.querySelectorAll('.macro-pill').forEach(p => p.setAttribute('aria-pressed', p.dataset.macro === 'all' ? 'true' : 'false'));
+        document.getElementById('filter-category').value = 'all';
+        document.getElementById('filter-hw').value = 'all';
+        document.getElementById('filter-lockin').value = 'all';
+        document.getElementById('filter-pricing').value = 'all';
+        document.getElementById('filter-api').value = 'all';
+        document.getElementById('filter-sort').value = 'name';
+        renderCatalog();
+      });
+
+      const gridBtn = document.getElementById('view-grid-btn');
+      const tableBtn = document.getElementById('view-table-btn');
+      gridBtn.addEventListener('click', () => {
+        currentView = 'grid';
+        gridBtn.setAttribute('aria-pressed', 'true');
+        tableBtn.setAttribute('aria-pressed', 'false');
+        renderCatalog();
+      });
+      tableBtn.addEventListener('click', () => {
+        currentView = 'table';
+        gridBtn.setAttribute('aria-pressed', 'false');
+        tableBtn.setAttribute('aria-pressed', 'true');
+        renderCatalog();
+      });
+    }
+
+    function matchesFilters(p, query, macroVal, catVal, hwVal, lockVal, priceVal, apiVal) {
+      if (macroVal !== 'all' && p.macroSectorId !== macroVal) return false;
+      if (catVal !== 'all' && p.categorySlug !== catVal) return false;
+      if (hwVal !== 'all' && p.hardwareDependency.level !== hwVal) return false;
+      if (lockVal !== 'all' && p.lockIn.level !== lockVal) return false;
+      if (priceVal !== 'all' && p.pricingModel.type !== priceVal) return false;
+      if (apiVal === 'with_api' && !p.apiConnectivity.hasApi) return false;
+      if (apiVal === 'without_api' && p.apiConnectivity.hasApi) return false;
+
+      if (query) {
+        const searchable = [
+          p.name, p.company, p.companyGroup || '', p.description || '',
+          p.macroSector, p.categoryName,
+          ...p.terms.map(t => t.name),
+          ...p.features.map(f => f.name),
+          ...p.technical.map(t => t.name),
+          ...p.claims.map(c => c.statement),
+          ...p.hardwareDependency.devices
+        ].join(' ').toLowerCase();
+        if (!searchable.includes(query)) return false;
+      }
+      return true;
+    }
+
+    function sortProducts(products, sortBy) {
+      return [...products].sort((a, b) => {
+        if (sortBy === 'revenue') {
+          const revA = a.revenue?.exact ?? a.revenue?.max ?? a.revenue?.min ?? -1;
+          const revB = b.revenue?.exact ?? b.revenue?.max ?? b.revenue?.min ?? -1;
+          return revB - revA || a.name.localeCompare(b.name, 'it');
+        }
+        if (sortBy === 'features') {
+          return b.featureCount - a.featureCount || a.name.localeCompare(b.name, 'it');
+        }
+        if (sortBy === 'lockin') {
+          return b.lockIn.score - a.lockIn.score || a.name.localeCompare(b.name, 'it');
+        }
+        return a.name.localeCompare(b.name, 'it');
+      });
+    }
+
+    function renderCatalog() {
+      const container = document.getElementById('catalog-container');
+      const query = document.getElementById('search-input').value.trim().toLowerCase();
+      const macroVal = selectedMacro;
+      const catVal = document.getElementById('filter-category').value;
+      const hwVal = document.getElementById('filter-hw').value;
+      const lockVal = document.getElementById('filter-lockin').value;
+      const priceVal = document.getElementById('filter-pricing').value;
+      const apiVal = document.getElementById('filter-api').value;
+      const sortBy = document.getElementById('filter-sort').value;
+
+      const filtered = appData.products.filter(p => matchesFilters(p, query, macroVal, catVal, hwVal, lockVal, priceVal, apiVal));
+      const sorted = sortProducts(filtered, sortBy);
+
+      document.getElementById('results-count').innerHTML = `Mostrando <strong>${numberInt.format(sorted.length)}</strong> su ${appData.products.length} software censiti`;
+      
+      const activeFilters = [];
+      if (query) activeFilters.push(`ricerca: “${query}”`);
+      if (macroVal !== 'all') activeFilters.push(document.getElementById('filter-macro').selectedOptions[0]?.text);
+      if (catVal !== 'all') activeFilters.push(document.getElementById('filter-category').selectedOptions[0]?.text);
+      if (hwVal !== 'all') activeFilters.push(document.getElementById('filter-hw').selectedOptions[0]?.text);
+      if (lockVal !== 'all') activeFilters.push(document.getElementById('filter-lockin').selectedOptions[0]?.text);
+      if (priceVal !== 'all') activeFilters.push(document.getElementById('filter-pricing').selectedOptions[0]?.text);
+      if (apiVal !== 'all') activeFilters.push(document.getElementById('filter-api').selectedOptions[0]?.text);
+      document.getElementById('active-filters-summary').textContent = activeFilters.length ? `Filtri attivi: ${activeFilters.join(' · ')}` : '';
+
+      if (sorted.length === 0) {
+        container.innerHTML = `
+          <div style="padding: 30px; text-align: center; border: 1px dashed var(--line-strong); background: var(--surface);">
+            <h3 style="font-size: 1.05rem; font-weight: 750;">Nessun software trovato</h3>
+            <p style="color: var(--text-muted); font-size: 0.82rem; margin-top: 4px;">Modifica i termini di ricerca o azzera i filtri.</p>
+          </div>
+        `;
+        return;
+      }
+
+      if (currentView === 'grid') {
+        container.innerHTML = `
+          <div class="product-grid">
+            ${sorted.map(p => `
+              <article class="product-card" data-product-id="${p.id}">
+                <div class="card-top">
+                  <div class="product-title-row">
+                    <span class="product-name">${escapeHtml(p.name)}</span>
+                    ${p.website ? `<a href="${safeUrl(p.website)}" target="_blank" rel="noreferrer" title="Sito ufficiale" style="font-size: 0.85rem; font-weight: 750;">Sito ↗</a>` : ''}
+                  </div>
+                  <div class="company-name">
+                    <span>${escapeHtml(p.company)}</span>
+                    ${p.companyGroup ? `<span class="badge-group">${escapeHtml(p.companyGroup)}</span>` : ''}
+                  </div>
+                  <div class="badge-row" style="margin-top: 6px;">
+                    <span class="badge badge-macro">${escapeHtml(p.macroSector)}</span>
+                    ${p.revenue ? `<span class="badge badge-rev" title="Ricavi societari ${p.revenue.year}">Ricavi: ${formatRevenue(p.revenue)}</span>` : ''}
+                    <span class="badge badge-hw-${p.hardwareDependency.level}" title="${escapeHtml(p.hardwareDependency.moat)}">
+                      ${p.hardwareDependency.level === 'high' ? 'Hardware alto' : (p.hardwareDependency.level === 'medium' ? 'Hardware medio' : 'Puro cloud')}
+                    </span>
+                    <span class="badge badge-lock-${p.lockIn.level}" title="${escapeHtml(p.lockIn.label)}">
+                      ${p.lockIn.level === 'high' ? 'Alto Lock-in' : (p.lockIn.level === 'medium' ? 'Medio Lock-in' : 'Basso Lock-in')}
+                    </span>
+                    ${p.apiConnectivity.hasApi ? '<span class="badge badge-api" title="API documentate">API</span>' : ''}
+                  </div>
+                  ${p.description ? `<p class="product-desc">${escapeHtml(p.description)}</p>` : ''}
+                </div>
+                <div class="card-footer">
+                  <span>${p.featureCount} feature · ${p.technicalCount} spec</span>
+                  <button class="btn-detail" type="button" onclick="openModal(${p.id})">Scheda dettagli</button>
+                </div>
+              </article>
+            `).join('')}
+          </div>
+        `;
+      } else {
+        container.innerHTML = `
+          <div class="table-wrap">
+            <table class="product-table">
+              <thead>
+                <tr>
+                  <th>Software</th>
+                  <th>Produttore e Gruppo</th>
+                  <th>Macro-Settore</th>
+                  <th>Ricavi Società</th>
+                  <th>Dipendenza HW</th>
+                  <th>Lock-in</th>
+                  <th>API</th>
+                  <th>Azioni</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${sorted.map(p => `
+                  <tr>
+                    <td>
+                      <strong style="color: var(--text);">${escapeHtml(p.name)}</strong>
+                      ${p.website ? `<br><a href="${safeUrl(p.website)}" target="_blank" rel="noreferrer" style="font-size: 0.72rem;">Sito ufficiale ↗</a>` : ''}
+                    </td>
+                    <td>
+                      ${escapeHtml(p.company)}
+                      ${p.companyGroup ? `<br><span class="badge-group">${escapeHtml(p.companyGroup)}</span>` : ''}
+                    </td>
+                    <td>${escapeHtml(p.macroSector)}</td>
+                    <td>${p.revenue ? `<span style="font-weight: 750; color: var(--green);">${formatRevenue(p.revenue)}</span> <span style="font-size: 0.7rem; color: var(--text-muted);">(${p.revenue.year})</span>` : '<span style="color: var(--text-muted);">N/D</span>'}</td>
+                    <td>
+                      <span class="badge badge-hw-${p.hardwareDependency.level}">
+                        ${p.hardwareDependency.level === 'high' ? 'Alta' : (p.hardwareDependency.level === 'medium' ? 'Media' : 'Nulla')}
+                      </span>
+                    </td>
+                    <td>
+                      <span class="badge badge-lock-${p.lockIn.level}">
+                        ${p.lockIn.level === 'high' ? 'Alto' : (p.lockIn.level === 'medium' ? 'Medio' : 'Basso')}
+                      </span>
+                    </td>
+                    <td>${p.apiConnectivity.hasApi ? 'Sì' : 'No'}</td>
+                    <td>
+                      <button class="btn-detail" type="button" onclick="openModal(${p.id})">Dettagli</button>
+                    </td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        `;
+      }
+    }
+
+    // Centered Pop-up Modal Window
+    const modalBackdrop = document.getElementById('modal-backdrop');
+    const modalDialog = document.getElementById('modal-dialog');
+    const modalClose = document.getElementById('modal-close');
+    const modalProductName = document.getElementById('modal-product-name');
+    const modalProductSub = document.getElementById('modal-product-sub');
+    const modalContent = document.getElementById('modal-content');
+
+    function openModal(productId) {
+      const p = appData.products.find(item => item.id === productId);
+      if (!p) return;
+
+      modalProductName.textContent = p.name;
+      modalProductSub.innerHTML = `
+        Sviluppato da <strong>${escapeHtml(p.company)}</strong>
+        ${p.companyGroup ? ` · Parte di <strong>${escapeHtml(p.companyGroup)}</strong>` : ''}
+        ${p.website ? ` · <a href="${safeUrl(p.website)}" target="_blank" rel="noreferrer" style="font-weight: 750;">Visita il sito web ufficiale ↗</a>` : ''}
+      `;
+
+      modalContent.innerHTML = `
+        ${p.description ? `<p style="font-size: 0.88rem; line-height: 1.5; color: var(--text-muted);">${escapeHtml(p.description)}</p>` : ''}
+
+        <!-- Profile & Financials -->
+        <div class="modal-section">
+          <h3>Profilo Societario e Finanziario</h3>
+          <div style="display: grid; gap: 4px;">
+            <div><strong>Ragione Sociale:</strong> ${escapeHtml(p.company)}</div>
+            ${p.companyGroup ? `<div><strong>Gruppo Industriale:</strong> ${escapeHtml(p.companyGroup)}</div>` : ''}
+            <div><strong>Ultimo Fatturato Osservato:</strong> ${p.revenue ? `${currencyEUR.format(p.revenue.exact || p.revenue.max || p.revenue.min)} (Esercizio ${p.revenue.year}${p.revenue.kind === 'estimated' ? ' - Stima' : ''})` : 'Dato di bilancio non censito'}</div>
+            ${p.employees ? `<div><strong>Dipendenti Dichiarati o Censiti:</strong> ${numberInt.format(p.employees)}</div>` : ''}
+            ${p.netIncome ? `<div><strong>Utile Netto d'Esercizio:</strong> ${currencyEUR.format(p.netIncome)}</div>` : ''}
+            <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 3px;">
+              * Nota: I dati finanziari fanno riferimento alla società produttrice, non al singolo software.
+            </div>
+          </div>
+        </div>
+
+        <!-- Hardware Analysis -->
+        <div class="modal-section">
+          <h3>Analisi Dipendenza Hardware</h3>
+          <div style="display: grid; gap: 6px;">
+            <div><strong>Livello di Dipendenza:</strong> <span class="badge badge-hw-${p.hardwareDependency.level}">${escapeHtml(p.hardwareDependency.label)}</span></div>
+            <div><strong>Impatto Competitivo:</strong> ${escapeHtml(p.hardwareDependency.moat)}</div>
+            ${p.hardwareDependency.devices.length ? `
+              <div><strong>Dispositivi o Periferiche Coinvolte:</strong></div>
+              <div class="modal-tags">
+                ${p.hardwareDependency.devices.map(d => `<span class="modal-tag">${escapeHtml(d)}</span>`).join('')}
+              </div>
+            ` : '<div style="color: var(--text-muted);">Nessun dispositivo hardware obbligatorio: opera interamente in cloud/browser.</div>'}
+          </div>
+        </div>
+
+        <!-- Lock-in Analysis -->
+        <div class="modal-section">
+          <h3>Analisi del Lock-in e dell'Apertura</h3>
+          <div style="display: grid; gap: 6px;">
+            <div><strong>Valutazione Lock-in:</strong> <span class="badge badge-lock-${p.lockIn.level}">${escapeHtml(p.lockIn.label)} (Indice ${p.lockIn.score}/5)</span></div>
+            <div><strong>Fattori Rilevati nel Campione:</strong></div>
+            <ul style="padding-left: 18px; margin: 0; display: grid; gap: 4px;">
+              ${p.lockIn.factors.map(f => `<li>${escapeHtml(f)}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pricing & Commercial -->
+        <div class="modal-section">
+          <h3>Modello Commerciale e Listini</h3>
+          <div style="display: grid; gap: 6px;">
+            <div><strong>Stato Trasparenza:</strong> ${escapeHtml(p.pricingModel.label)}</div>
+            ${p.pricing.length ? `
+              <div style="display: grid; gap: 6px;">
+                ${p.pricing.map(item => `
+                  <div>
+                    <strong>${escapeHtml(humanizeKey(item.predicate))}:</strong>
+                    ${escapeHtml(humanizePricingValue(item.predicate, item.value))}
+                  </div>
+                `).join('')}
+              </div>
+            ` : '<div style="color: var(--text-muted);">Nessun dettaglio economico pubblico comunicato (richiede trattativa commerciale).</div>'}
+          </div>
+        </div>
+
+        <!-- Features -->
+        <div class="modal-section">
+          <h3>Funzionalità Business Rilevate (${p.features.length})</h3>
+          ${p.features.length ? `
+            <div class="modal-tags">
+              ${p.features.map(f => `<span class="modal-tag" title="Supporto: ${f.supportLevel} · Confidenza: ${f.confidence}">✓ ${escapeHtml(f.name)}</span>`).join('')}
+            </div>
+          ` : '<div style="color: var(--text-muted);">Feature dettagliate non ancora registrate nei bundle attuali.</div>'}
+        </div>
+
+        <!-- Technical Specs -->
+        <div class="modal-section">
+          <h3>Specifiche Tecniche e Integrazioni (${p.technical.length})</h3>
+          ${p.technical.length ? `
+            <div class="modal-tags">
+              ${p.technical.map(t => `<span class="modal-tag"><strong>${escapeHtml(t.kind)}:</strong> ${escapeHtml(t.name)}</span>`).join('')}
+            </div>
+          ` : '<div style="color: var(--text-muted);">Nessuna specifica tecnica registrata nelle fonti esaminate.</div>'}
+        </div>
+
+        <!-- Claims & Positioning -->
+        ${p.claims.length ? `
+          <div class="modal-section">
+            <h3>Posizionamento e Casi d'Uso Dichiarati</h3>
+            <ul style="padding-left: 18px; margin: 0; font-size: 0.82rem; display: grid; gap: 6px; color: var(--text-muted);">
+              ${p.claims.map(c => `<li>“${escapeHtml(c.statement)}”</li>`).join('')}
+            </ul>
+          </div>
+        ` : ''}
+      `;
+
+      modalBackdrop.classList.add('active');
+      modalDialog.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modalBackdrop.classList.remove('active');
+      modalDialog.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    modalClose.addEventListener('click', closeModal);
+    modalBackdrop.addEventListener('click', closeModal);
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modalDialog.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    // ==========================================
+    // BI & MARKET CHARTS
+    // ==========================================
+    function initBICharts() {
+      const insights = appData.marketInsights || {};
+      const companies = insights.topCompaniesByRevenue || [];
+      const sectors = insights.macroSectors || [];
+      const total = insights.totalRevenue || 1;
+      const nProd = appData.products.length || 1;
+      const setText = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
+
+      // ---- Numeri editoriali calcolati dai dati (mai hardcoded) ----
+      const top5Sum = companies.slice(0, 5).reduce((s, c) => s + c.revenue, 0);
+      setText('callout-total-rev', `${decimalIt(total / 1e9, 2)} Miliardi di Euro`);
+      setText('callout-coverage', `${numberInt.format(insights.companiesWithRevenue)} società`);
+      setText('callout-companies', `${numberInt.format(appData.companyCount)} software house`);
+      setText('callout-top5-share', formatPct(top5Sum / total * 100, 0));
+
+      // 1. Top 15 Companies — dot plot con scala condivisa
+      renderDotPlot(document.getElementById('chart-top-companies'),
+        companies.slice(0, 15).map(c => ({ name: c.name, value: c.revenue })),
+        { format: v => formatEuroCompact(v), lead: true });
+
+      // 2. Concentration curve — quota cumulata dei ricavi
+      const cum = renderConcentration(document.getElementById('chart-concentration'), companies, total, { markers: [1, 5, 10, 25] });
+      if (cum.length >= 25) {
+        setText('concentration-note',
+          `La prima società vale da sola il ${formatPct(cum[0].share, 0)} dei ricavi osservati, le prime 5 il ${formatPct(cum[4].share, 0)} e le prime 25 il ${formatPct(cum[24].share, 0)}. `
+          + `I dati coprono ${numberInt.format(insights.companiesWithRevenue)} società su ${numberInt.format(appData.companyCount)} con bilancio depositato.`);
+      }
+
+      // 3. Sector Revenue treemap — area = quota ricavi, colore = dipendenza hardware
+      renderTreemap(document.getElementById('chart-sector-revenue'),
+        [...sectors].sort((a, b) => b.totalRevenue - a.totalRevenue)
+          .map(s => ({ label: s.name, value: s.totalRevenue, hwRate: s.hwRate })));
+
+      // 4. Pricing breakdown — waffle: 1 quadratino = 1 software
+      const pt = insights.pricingTransparency || {};
+      const contactCount = (pt.quoteCount || 0) + (pt.undisclosedCount || 0);
+      const pricingContainer = document.getElementById('chart-pricing-breakdown');
+      if (pricingContainer) {
+        renderWaffle(pricingContainer, [
+          { label: 'Con listino pubblico verificato', value: pt.publicCount || 0, cls: 'w-public', swatch: CHART.teal },
+          { label: 'Prova gratuita o demo in autonomia', value: pt.trialCount || 0, cls: 'w-trial', swatch: CHART.amber },
+          { label: 'Solo preventivo o trattativa riservata', value: contactCount, cls: 'w-quote', swatch: CHART.slate }
+        ], { cols: 20, ariaLabel: 'Un quadratino per software, colorato per modello di offerta' });
+        setText('pricing-note',
+          `Su ${numberInt.format(nProd)} software, ${numberInt.format(contactCount)} (${formatPct(contactCount / nProd * 100, 1)}) non pubblicano listini e richiedono contatto commerciale; `
+          + `${numberInt.format(pt.publicCount || 0)} espongono prezzi verificabili (${formatPct((pt.publicCount || 0) / nProd * 100, 1)}).`);
+      }
+
+      // 5. Top Employees — barre snelle
+      const topEmp = insights.topCompaniesByEmployees || [];
+      const maxEmp = topEmp[0]?.employees || 1;
+      const empContainer = document.getElementById('chart-top-employees');
+      if (empContainer) {
+        empContainer.innerHTML = topEmp.slice(0, 10).map((co, idx) => `
+          <div class="bar-row" title="${escapeHtml(co.name)}: ${numberInt.format(co.employees)} dipendenti">
+            <span class="bar-lbl">${idx + 1}. ${escapeHtml(co.name)}</span>
+            <div class="bar-track">
+              <div class="bar-fill teal" style="width: ${(co.employees / maxEmp * 100).toFixed(1)}%;"></div>
+            </div>
+            <span class="bar-val">${numberInt.format(co.employees)} dip.</span>
+          </div>
+        `).join('');
+      }
+
+      // 6. Hardware Dependency by Sector — barre con media di catalogo
+      const hwm = insights.hardwareMatrix || {};
+      const overallHwRate = ((hwm.highCount || 0) + (hwm.mediumCount || 0)) / nProd * 100;
+      const sortedByHw = [...sectors].sort((a, b) => b.hwRate - a.hwRate);
+      const hwSecContainer = document.getElementById('chart-hw-by-sector');
+      if (hwSecContainer) {
+        hwSecContainer.innerHTML = sortedByHw.map(s => `
+          <div class="bar-row" title="${escapeHtml(s.name)}: ${s.hwHighCount + s.hwMedCount} prodotti su ${s.productCount} con dispositivi fisici">
+            <span class="bar-lbl">${escapeHtml(s.name)}</span>
+            <div class="bar-track">
+              <div class="bar-fill ${s.hwRate > 60 ? 'red' : (s.hwRate > 30 ? 'amber' : 'teal')}" style="width: ${s.hwRate}%;"></div>
+              <span class="bar-avg" style="left: ${overallHwRate}%;"></span>
+            </div>
+            <span class="bar-val">${formatPct(s.hwRate, 0)}</span>
+          </div>
+        `).join('');
+        setText('hw-sector-note',
+          `Media del catalogo: ${formatPct(overallHwRate, 1)} (${numberInt.format((hwm.highCount || 0) + (hwm.mediumCount || 0))} software su ${numberInt.format(nProd)} con almeno un dispositivo fisico). `
+          + `Il tratteggio verticale nelle barre segna questa media.`);
+      }
+
+      // 7. Hardware Devices — quadratini, 1 = 5 software
+      renderDeviceDots(document.getElementById('chart-hw-devices'), insights.hardwareMatrix?.devices || [], 5);
+
+      // 8. Hardware levels — barra impilata 100%
+      const hwLevelsContainer = document.getElementById('chart-hw-levels');
+      if (hwLevelsContainer) {
+        renderStacked(hwLevelsContainer, [{
+          title: 'Livello di dipendenza hardware',
+          subtitle: `${numberInt.format(nProd)} software`,
+          items: [
+            { label: 'Puro cloud, nessun dispositivo', value: hwm.noneCount || 0, color: CHART.teal },
+            { label: 'Periferiche standard o mobile', value: hwm.mediumCount || 0, color: CHART.amber },
+            { label: 'Hardware dedicato obbligatorio', value: hwm.highCount || 0, color: CHART.red }
+          ]
+        }]);
+      }
+
+      // 9. Lock-in tab — ripartizioni a barre impilate
+      const lm = insights.lockInMatrix || {};
+      const lockContainer = document.getElementById('chart-lockin-breakdown');
+      if (lockContainer) {
+        renderStacked(lockContainer, [
+          {
+            title: 'Rischio di lock-in',
+            subtitle: 'quota per livello',
+            items: [
+              { label: 'Basso (aperto, SaaS)', value: lm.lowCount || 0, color: CHART.teal },
+              { label: 'Medio (standard)', value: lm.mediumCount || 0, color: CHART.amber },
+              { label: 'Alto (ecosistema chiuso, normativo, hardware)', value: lm.highCount || 0, color: CHART.red }
+            ]
+          },
+          {
+            title: 'Dipendenza hardware',
+            subtitle: 'quota per livello',
+            items: [
+              { label: 'Nessuna', value: hwm.noneCount || 0, color: CHART.teal },
+              { label: 'Media', value: hwm.mediumCount || 0, color: CHART.amber },
+              { label: 'Alta', value: hwm.highCount || 0, color: CHART.red }
+            ]
+          }
+        ]);
+        setText('lockin-breakdown-note',
+          `Il lock-in alto riguarda il ${formatPct((lm.highCount || 0) / nProd * 100, 1)} del catalogo: ecosistemi chiusi, vincoli normativi e hardware installato. `
+          + `Il livello medio (${formatPct((lm.mediumCount || 0) / nProd * 100, 1)}) è lo standard del mercato italiano.`);
+      }
+
+      const apiContainer = document.getElementById('chart-api-breakdown');
+      if (apiContainer) {
+        renderStacked(apiContainer, [{
+          title: 'API documentate e connettori',
+          subtitle: 'quota sul catalogo',
+          items: [
+            { label: 'Con API o connettori documentati (REST, iCal, Open API)', value: lm.withApiCount || 0, color: CHART.teal },
+            { label: 'Nessuna API pubblica dichiarata', value: lm.withoutApiCount || 0, color: CHART.slate }
+          ]
+        }]);
+        setText('api-breakdown-note',
+          `${numberInt.format(lm.withoutApiCount || 0)} software su ${numberInt.format(nProd)} (${formatPct((lm.withoutApiCount || 0) / nProd * 100, 1)}) non documentano API pubbliche: `
+          + `l'estrazione autonoma dei dati resta il principale punto di attrito in caso di migrazione.`);
+        setText('lockin-api-share',
+          `${formatPct((lm.withoutApiCount || 0) / nProd * 100, 1)} (${numberInt.format(lm.withoutApiCount || 0)} su ${numberInt.format(nProd)})`);
+      }
+
+      // 10. Top 25 Companies Table
+      const tableBody = document.querySelector('#table-top-companies tbody');
+      if (tableBody) {
+        tableBody.innerHTML = companies.slice(0, 25).map((co, idx) => `
+          <tr>
+            <td><strong>#${idx + 1}</strong></td>
+            <td>
+              <strong>${escapeHtml(co.name)}</strong>
+              ${co.website ? `<br><a href="${safeUrl(co.website)}" target="_blank" rel="noreferrer" style="font-size: 0.72rem;">Sito web ↗</a>` : ''}
+            </td>
+            <td>${co.group ? `<span class="badge-group">${escapeHtml(co.group)}</span>` : '<span style="color: var(--text-muted);">Indipendente</span>'}</td>
+            <td><strong class="tabular" style="color: var(--green);">${formatEuroCompact(co.revenue)}</strong> <span style="font-size: 0.72rem; color: var(--text-muted);">(${co.revenueYear})</span></td>
+            <td class="tabular">${co.employees ? `${numberInt.format(co.employees)}` : '<span style="color: var(--text-muted);">N/D</span>'}</td>
+            <td><strong>${co.products.length}</strong> software censiti</td>
+          </tr>
+        `).join('');
+      }
+
+      // 11. Lock-in correlation matrix
+      const corr = insights.lockInCorrelation || [];
+      const corrContainer = document.getElementById('chart-lockin-corr');
+      if (corrContainer && corr.length) {
+        renderHeatMatrix(corrContainer,
+          corr.map(g => ({ label: g.label.replace(/\s*\(.*\)$/, ''), count: g.count })),
+          [
+            { label: 'Prezzi pubblici', values: corr.map(g => g.publicPricingRate), color: 'var(--chart-2)' },
+            { label: 'API documentate', values: corr.map(g => g.apiRate), color: 'var(--chart-1)' },
+            { label: 'Dipendenza hardware', values: corr.map(g => g.hwRate), color: 'var(--chart-3)' }
+          ]
+        );
+        const high = corr.find(g => g.level === 'high');
+        const low = corr.find(g => g.level === 'low');
+        const avgApi = Math.round(corr.reduce((s, g) => s + g.apiRate, 0) / corr.length);
+        if (high && low) {
+          setText('lockin-corr-note',
+            `Feature medie per prodotto: ${decimalIt(low.avgFeatures, 1)} (lock-in basso) → ${decimalIt(high.avgFeatures, 1)} (lock-in alto). `
+            + `La copertura API resta invece piatta a tutti i livelli (media ${avgApi}%): l'apertura tecnica da sola non riduce il lock-in.`);
+          const corrInsight = document.getElementById('lockin-corr-insight');
+          if (corrInsight) {
+            corrInsight.innerHTML = `
+              <h4>Lettura dei dati</h4>
+              Al crescere del lock-in, la dipendenza hardware passa dal ${formatPct(low.hwRate, 1)} al ${formatPct(high.hwRate, 1)} e la ricchezza funzionale cresce (${decimalIt(low.avgFeatures, 1)} → ${decimalIt(high.avgFeatures, 1)} feature medie per prodotto). La trasparenza sui prezzi cala leggermente (${formatPct(low.publicPricingRate, 1)} → ${formatPct(high.publicPricingRate, 1)}).
+              La presenza di API documentate resta invece piatta (media ${avgApi}%): l'apertura tecnica da sola non riduce il lock-in, che in Italia è trainato soprattutto da vincoli normativi e da hardware installato.
+            `;
+          }
+        }
+      }
+
+      // 12. Revenue per employee — dot plot con mediana di riferimento
+      const rpe = insights.revenuePerEmployee || {};
+      const rpeTop = rpe.top || [];
+      const rpeContainer = document.getElementById('chart-rev-per-emp');
+      if (rpeContainer && rpeTop.length) {
+        renderDotPlot(rpeContainer, rpeTop.slice(0, 12).map(co => ({ name: co.name, value: co.ratio })),
+          { format: v => `${formatEuroCompact(v)}/dip`, markerValue: rpe.median });
+      }
+      if (rpe.sample) {
+        setText('rev-per-emp-note',
+          `Campione: ${rpe.sample} società con almeno 5 dipendenti e fatturato noto. Mediana ${formatEuroCompact(rpe.median)}/dipendente (tratteggio), media ${formatEuroCompact(rpe.average)}/dipendente. `
+          + `Il rapporto usa il fatturato dell'intera società, non del singolo prodotto: le società veicolo con pochi dipendenti possono risultare sovrastimate.`);
+      }
+    }
+
+    const statsEl = document.getElementById('header-stats-text');
+    if (statsEl) {
+      const rev = (appData.marketInsights && appData.marketInsights.totalRevenue) || 0;
+      const revLabel = rev >= 1_000_000_000
+        ? `${decimalIt(rev / 1_000_000_000, 2)} Mld €`
+        : `${decimalIt(rev / 1_000_000, 1)} Mln €`;
+      statsEl.textContent = `${numberInt.format(appData.products.length)} software censiti · ${numberInt.format(appData.companyCount)} software house · ${revLabel} di ricavi societari tracciati`;
+    }
+
+    initFilters();
+    renderCatalog();
+    initBICharts();
+  </script>
+</body>
+</html>

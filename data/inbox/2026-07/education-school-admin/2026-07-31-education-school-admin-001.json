@@ -1,0 +1,234 @@
+{
+  "schema_version": "1.0",
+  "record_id": "education-school-admin-2026-07-31-001",
+  "created_at": "2026-07-31T00:05:00Z",
+  "created_by": {"agent_id": "education-school-admin"},
+  "scope": {
+    "country": "IT",
+    "category": "education_school_admin",
+    "research_type": "official_product_technical_inventory"
+  },
+  "entities": [
+    {
+      "local_id": "company:madisoft",
+      "entity_type": "company",
+      "name": "Madisoft S.p.A.",
+      "legal_name": "Madisoft S.p.A. a socio unico",
+      "identifiers": {"vat_id": "01818840439"},
+      "website": "https://madisoft.it/",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "product:nuvola",
+      "entity_type": "product",
+      "company_ref": "company:madisoft",
+      "name": "Nuvola",
+      "slug": "nuvola-school-management",
+      "website": "https://madisoft.it/",
+      "description": "Ecosistema software per digitalizzare processi didattici e amministrativi delle scuole italiane."
+    },
+    {
+      "local_id": "company:infoitalia-servizi",
+      "entity_type": "company",
+      "name": "Infoitalia Servizi S.r.l.",
+      "legal_name": "Infoitalia Servizi S.r.l.",
+      "identifiers": {"vat_id": "02095920803"},
+      "website": "https://webschoolsystem.it/",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "product:webschool",
+      "entity_type": "product",
+      "company_ref": "company:infoitalia-servizi",
+      "name": "WebSchool",
+      "slug": "webschool",
+      "website": "https://webschoolsystem.it/",
+      "description": "Gestionale web per scuole di lingue, con organizzazione didattica, comunicazioni e amministrazione."
+    },
+    {
+      "local_id": "company:develoop",
+      "entity_type": "company",
+      "name": "Develoop S.r.l. a socio unico",
+      "legal_name": "Develoop S.r.l. a socio unico",
+      "identifiers": {"vat_id": "06411890962"},
+      "website": "https://www.dvloop.it/",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "product:loop-scuola",
+      "entity_type": "product",
+      "company_ref": "company:develoop",
+      "name": "Loop Scuola",
+      "slug": "loop-scuola",
+      "website": "https://www.dvloop.it/",
+      "description": "School-management software cloud per scuole private e paritarie."
+    },
+    {
+      "local_id": "company:sigma-sistemi",
+      "entity_type": "company",
+      "name": "Sigma Sistemi S.r.l.",
+      "legal_name": "Sigma Sistemi S.r.l.",
+      "identifiers": {"vat_id": "02453640167"},
+      "website": "https://www.sigma-sistemi.it/",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "product:oneclickschool",
+      "entity_type": "product",
+      "company_ref": "company:sigma-sistemi",
+      "name": "OneClickSchool",
+      "slug": "oneclickschool",
+      "website": "https://www.oneclickschool.it/",
+      "description": "Registro elettronico e applicazione per istituti paritari."
+    },
+    {
+      "local_id": "company:dream-factory-design",
+      "entity_type": "company",
+      "name": "Dream Factory Design",
+      "identifiers": {"vat_id": "01536570557"},
+      "website": "https://www.simpleschool.it/",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "product:simple-school",
+      "entity_type": "product",
+      "company_ref": "company:dream-factory-design",
+      "name": "Simple School",
+      "slug": "simple-school",
+      "website": "https://www.simpleschool.it/",
+      "description": "Software cloud per amministrare servizi scolastici, anagrafiche, quote e fatturazione."
+    }
+  ],
+  "sources": [
+    {
+      "local_id": "s:madisoft-home",
+      "url": "https://madisoft.it/",
+      "source_type": "official_product_page",
+      "publisher": "Madisoft S.p.A.",
+      "title": "Madisoft – Innovatori della scuola Italiana",
+      "accessed_at": "2026-07-30T21:53:00Z",
+      "language": "it",
+      "excerpt": "Nuvola è una soluzione software che copre le esigenze delle scuole dalla didattica all’amministrazione.",
+      "metadata": {"research_method": "official_page_review", "retention": "excerpt", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "s:webschool-home",
+      "url": "https://webschoolsystem.it/",
+      "source_type": "official_product_page",
+      "publisher": "Infoitalia Servizi S.r.l.",
+      "title": "Il software gestionale per le scuole di lingue",
+      "accessed_at": "2026-07-30T21:50:00Z",
+      "language": "it",
+      "excerpt": "WebSchool è un software gestionale per pianificare e organizzare le attività scolastiche.",
+      "metadata": {"research_method": "official_page_review", "retention": "excerpt", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "s:loop-home",
+      "url": "https://www.dvloop.it/",
+      "source_type": "official_product_page",
+      "publisher": "Develoop S.r.l. a socio unico",
+      "title": "Develoop - Software di gestione per le scuole paritarie e private",
+      "accessed_at": "2026-07-30T21:50:00Z",
+      "language": "it",
+      "excerpt": "Loop Scuola è un software cloud per scuole private e paritarie con registro, pagamenti e firma digitale forte.",
+      "metadata": {"research_method": "official_page_review", "retention": "excerpt", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "s:oneclickschool-home",
+      "url": "https://www.oneclickschool.it/",
+      "source_type": "official_product_page",
+      "publisher": "Sigma Sistemi S.r.l.",
+      "title": "Registro elettronico - OneClickSchool",
+      "accessed_at": "2026-07-30T21:50:00Z",
+      "language": "it",
+      "excerpt": "Registro elettronico dedicato agli istituti paritari, prodotto da Sigma Sistemi.",
+      "metadata": {"research_method": "official_page_review", "retention": "excerpt", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "s:simple-school-home",
+      "url": "https://www.simpleschool.it/",
+      "source_type": "official_product_page",
+      "publisher": "Dream Factory Design",
+      "title": "Simple School - il software per la gestione della tua scuola",
+      "accessed_at": "2026-07-30T21:50:00Z",
+      "language": "it",
+      "excerpt": "Simple School è un software cloud per gestire servizi, pagamenti e fatturazione della scuola.",
+      "metadata": {"research_method": "official_page_review", "retention": "excerpt", "rights_basis": "publicly_available"}
+    }
+  ],
+  "classifications": [
+    {"subject_ref": "product:nuvola", "kind": "category", "term_slug": "school_information_system", "term_name": "Sistema informativo scolastico", "confidence": "high", "source_ref": "s:madisoft-home", "evidence_excerpt": "Nuvola è una soluzione software che offre una serie di servizi che coprono a 360° le esigenze delle scuole."},
+    {"subject_ref": "product:nuvola", "kind": "vertical", "term_slug": "education", "term_name": "Istruzione", "confidence": "high", "source_ref": "s:madisoft-home", "evidence_excerpt": "La nostra mission è innovare la Scuola Italiana fornendo soluzioni software avanzate."},
+    {"subject_ref": "product:webschool", "kind": "category", "term_slug": "school_management_software", "term_name": "Gestionale scolastico", "confidence": "high", "source_ref": "s:webschool-home", "evidence_excerpt": "WebSchool è il software gestionale pensato per facilitare la pianificazione e l’organizzazione delle attività scolastiche."},
+    {"subject_ref": "product:webschool", "kind": "vertical", "term_slug": "language_schools", "term_name": "Scuole di lingue", "confidence": "high", "source_ref": "s:webschool-home", "evidence_excerpt": "Un sistema gestionale personalizzabile dedicato alle Scuole di lingue."},
+    {"subject_ref": "product:loop-scuola", "kind": "category", "term_slug": "school_management_software", "term_name": "Gestionale scolastico", "confidence": "high", "source_ref": "s:loop-home", "evidence_excerpt": "School Management Software per gestire tutta la didattica e l’amministrazione con un’unica piattaforma integrata."},
+    {"subject_ref": "product:loop-scuola", "kind": "vertical", "term_slug": "private_and_paritarie_education", "term_name": "Scuole private e paritarie", "confidence": "high", "source_ref": "s:loop-home", "evidence_excerpt": "Il software di gestione cloud per le scuole private e paritarie italiane."},
+    {"subject_ref": "product:oneclickschool", "kind": "category", "term_slug": "school_information_system", "term_name": "Sistema informativo scolastico", "confidence": "high", "source_ref": "s:oneclickschool-home", "evidence_excerpt": "Il registro elettronico dedicato agli istituti paritari."},
+    {"subject_ref": "product:oneclickschool", "kind": "vertical", "term_slug": "private_and_paritarie_education", "term_name": "Scuole private e paritarie", "confidence": "high", "source_ref": "s:oneclickschool-home", "evidence_excerpt": "Il servizio è rivolto a tutti gli istituti paritari presenti sul territorio italiano."},
+    {"subject_ref": "product:simple-school", "kind": "category", "term_slug": "school_administration", "term_name": "Amministrazione scolastica", "confidence": "high", "source_ref": "s:simple-school-home", "evidence_excerpt": "Simple School - il software per la gestione della tua scuola."},
+    {"subject_ref": "product:simple-school", "kind": "vertical", "term_slug": "education_services", "term_name": "Servizi scolastici", "confidence": "high", "source_ref": "s:simple-school-home", "evidence_excerpt": "Permette di creare servizi una tantum, a periodo fisso, di durata fissa e ad importo libero, suddividendoli per annualità."}
+  ],
+  "features": [
+    {"subject_ref": "product:nuvola", "feature_slug": "electronic_class_register", "feature_name": "Registro elettronico", "feature_group": "education", "support_level": "native", "confidence": "high", "source_ref": "s:madisoft-home", "evidence_excerpt": "Nuvola – Il registro elettronico."},
+    {"subject_ref": "product:nuvola", "feature_slug": "teaching_management", "feature_name": "Gestione didattica", "feature_group": "education", "support_level": "native", "confidence": "high", "source_ref": "s:madisoft-home", "evidence_excerpt": "Nuvola è una soluzione software che copre a 360° le esigenze delle scuole, dalla didattica all’amministrazione."},
+    {"subject_ref": "product:nuvola", "feature_slug": "school_administration", "feature_name": "Amministrazione scolastica", "feature_group": "education", "support_level": "native", "confidence": "high", "source_ref": "s:madisoft-home", "evidence_excerpt": "Nuvola è una soluzione software che copre a 360° le esigenze delle scuole, dalla didattica all’amministrazione."},
+    {"subject_ref": "product:webschool", "feature_slug": "student_profile_management", "feature_name": "Schede studenti", "feature_group": "education", "support_level": "native", "confidence": "high", "source_ref": "s:webschool-home", "evidence_excerpt": "Ogni studente ha una propria scheda con informazioni sul percorso, avvisi didattici, iscrizione ai corsi e situazione amministrativa."},
+    {"subject_ref": "product:webschool", "feature_slug": "school_communications", "feature_name": "Comunicazioni scolastiche", "feature_group": "education", "support_level": "native", "confidence": "high", "source_ref": "s:webschool-home", "evidence_excerpt": "I formati di messaggi supportati includono e-mail, SMS e WhatsApp."},
+    {"subject_ref": "product:webschool", "feature_slug": "staff_scheduling", "feature_name": "Pianificazione attività del personale", "feature_group": "education_operations", "support_level": "native", "confidence": "high", "source_ref": "s:webschool-home", "evidence_excerpt": "Attraverso un Time Table dedicato allo Staff è possibile pianificare le attività del personale non docente."},
+    {"subject_ref": "product:webschool", "feature_slug": "school_reporting", "feature_name": "Reportistica didattica e amministrativa", "feature_group": "analytics", "support_level": "native", "confidence": "high", "source_ref": "s:webschool-home", "evidence_excerpt": "I report amministrativi consentono il monitoraggio delle iscrizioni, degli incassi e del fatturato dell’Istituto."},
+    {"subject_ref": "product:webschool", "feature_slug": "installment_payment_management", "feature_name": "Gestione pagamenti rateali", "feature_group": "payments", "support_level": "native", "confidence": "high", "source_ref": "s:webschool-home", "evidence_excerpt": "È possibile gestire le iscrizioni e i pagamenti rateali a corsi o esami."},
+    {"subject_ref": "product:webschool", "feature_slug": "electronic_invoicing", "feature_name": "Fatturazione elettronica", "feature_group": "administration", "support_level": "native", "confidence": "high", "source_ref": "s:webschool-home", "evidence_excerpt": "È possibile visualizzare gli elenchi delle fatture, comprese le fatture elettroniche."},
+    {"subject_ref": "product:loop-scuola", "feature_slug": "electronic_class_register", "feature_name": "Registro elettronico", "feature_group": "education", "support_level": "native", "confidence": "high", "source_ref": "s:loop-home", "evidence_excerpt": "Registro elettronico, sistemi di pagamento online, firma digitale forte e molto altro ancora."},
+    {"subject_ref": "product:loop-scuola", "feature_slug": "school_administration", "feature_name": "Amministrazione scolastica", "feature_group": "education", "support_level": "native", "confidence": "high", "source_ref": "s:loop-home", "evidence_excerpt": "Gestire tutta la didattica e l’amministrazione con un’unica piattaforma integrata."},
+    {"subject_ref": "product:loop-scuola", "feature_slug": "online_payments", "feature_name": "Pagamenti online", "feature_group": "payments", "support_level": "native", "confidence": "high", "source_ref": "s:loop-home", "evidence_excerpt": "DeveloopPay permette all’istituto scolastico di ricevere pagamenti attraverso carte di credito o conto bancario."},
+    {"subject_ref": "product:oneclickschool", "feature_slug": "electronic_class_register", "feature_name": "Registro elettronico", "feature_group": "education", "support_level": "native", "confidence": "high", "source_ref": "s:oneclickschool-home", "evidence_excerpt": "Il registro elettronico dedicato agli istituti paritari."},
+    {"subject_ref": "product:oneclickschool", "feature_slug": "school_communications", "feature_name": "Comunicazioni scolastiche", "feature_group": "education", "support_level": "native", "confidence": "high", "source_ref": "s:oneclickschool-home", "evidence_excerpt": "Funzionalità: Registro elettronico, Comunicazioni, Amministrazione, Mensa."},
+    {"subject_ref": "product:oneclickschool", "feature_slug": "school_cafeteria_management", "feature_name": "Gestione mensa", "feature_group": "school_services", "support_level": "native", "confidence": "high", "source_ref": "s:oneclickschool-home", "evidence_excerpt": "Funzionalità: Registro elettronico, Comunicazioni, Amministrazione, Mensa."},
+    {"subject_ref": "product:oneclickschool", "feature_slug": "online_enrollment", "feature_name": "Preiscrizioni online", "feature_group": "enrollment", "support_level": "native", "confidence": "high", "source_ref": "s:oneclickschool-home", "evidence_excerpt": "Preiscrizioni online."},
+    {"subject_ref": "product:oneclickschool", "feature_slug": "online_payments", "feature_name": "Pagamenti online", "feature_group": "payments", "support_level": "native", "confidence": "high", "source_ref": "s:oneclickschool-home", "evidence_excerpt": "Pagamento diretto in app."},
+    {"subject_ref": "product:simple-school", "feature_slug": "customer_profile_management", "feature_name": "Anagrafiche utenti", "feature_group": "administration", "support_level": "native", "confidence": "high", "source_ref": "s:simple-school-home", "evidence_excerpt": "Scheda dettagliata di ogni cliente con dati anagrafici, servizi richiesti, stato dei pagamenti ed elenco fatture emesse."},
+    {"subject_ref": "product:simple-school", "feature_slug": "service_subscription_management", "feature_name": "Gestione servizi e quote", "feature_group": "administration", "support_level": "native", "confidence": "high", "source_ref": "s:simple-school-home", "evidence_excerpt": "Gestione servizi con tipologia una-tantum, periodo fisso, durata fissa o libera."},
+    {"subject_ref": "product:simple-school", "feature_slug": "payment_tracking", "feature_name": "Monitoraggio pagamenti", "feature_group": "payments", "support_level": "native", "confidence": "high", "source_ref": "s:simple-school-home", "evidence_excerpt": "Verifica lo stato di pagamento delle quote di ogni singola anagrafica."},
+    {"subject_ref": "product:simple-school", "feature_slug": "electronic_invoicing", "feature_name": "Fatturazione elettronica", "feature_group": "administration", "support_level": "native", "confidence": "high", "source_ref": "s:simple-school-home", "evidence_excerpt": "Una volta registrato il pagamento, Simple School provvede ad inviare al SDI il file XML della fattura elettronica."},
+    {"subject_ref": "product:simple-school", "feature_slug": "cash_and_bank_ledger", "feature_name": "Prima nota cassa e banca", "feature_group": "administration", "support_level": "native", "confidence": "high", "source_ref": "s:simple-school-home", "evidence_excerpt": "Gestione prima nota: mastrini di cassa e banca e giroconto."},
+    {"subject_ref": "product:simple-school", "feature_slug": "accounts_payable_management", "feature_name": "Gestione fatture passive", "feature_group": "administration", "support_level": "native", "confidence": "high", "source_ref": "s:simple-school-home", "evidence_excerpt": "Utilizzando il nostro codice destinatario, sarà possibile scaricare l’elenco delle fatture passive."}
+  ],
+  "technical_characteristics": [
+    {"subject_ref": "product:nuvola", "kind": "mobile_platform", "term_slug": "tutore-studente-app", "term_name": "App tutore e studente", "relationship_type": "available_as", "confidence": "high", "source_ref": "s:madisoft-home", "evidence_excerpt": "App tutore e studente."},
+    {"subject_ref": "product:nuvola", "kind": "integration_standard", "term_slug": "sidi-synchronization", "term_name": "Sincronizzazione con SIDI", "relationship_type": "supports", "confidence": "high", "source_ref": "s:madisoft-home", "evidence_excerpt": "Sincronizzazione automatica con il portale SIDI."},
+    {"subject_ref": "product:webschool", "kind": "client_platform", "term_slug": "web-browser", "term_name": "Applicazione web browser", "relationship_type": "available_as", "confidence": "high", "source_ref": "s:webschool-home", "evidence_excerpt": "Il gestionale Web based accessibile da qualsiasi browser."},
+    {"subject_ref": "product:webschool", "kind": "mobile_platform", "term_slug": "android-ios", "term_name": "Android e iOS", "relationship_type": "available_as", "confidence": "high", "source_ref": "s:webschool-home", "evidence_excerpt": "Il sistema è completo di app gratuita per sistemi iOS che Android."},
+    {"subject_ref": "product:loop-scuola", "kind": "deployment_model", "term_slug": "cloud", "term_name": "Cloud", "relationship_type": "available_as", "confidence": "high", "source_ref": "s:loop-home", "evidence_excerpt": "Il software di gestione cloud per le scuole private e paritarie italiane."},
+    {"subject_ref": "product:loop-scuola", "kind": "mobile_platform", "term_slug": "school-mobile-app", "term_name": "App mobile per docenti, studenti e famiglie", "relationship_type": "available_as", "confidence": "high", "source_ref": "s:loop-home", "evidence_excerpt": "App mobile dedicati a docenti, studenti e famiglie."},
+    {"subject_ref": "product:loop-scuola", "kind": "cloud_provider", "term_slug": "microsoft-azure", "term_name": "Microsoft Azure", "relationship_type": "uses", "confidence": "high", "source_ref": "s:loop-home", "evidence_excerpt": "Integra nativamente servizi di Microsoft Azure."},
+    {"subject_ref": "product:loop-scuola", "kind": "cloud_provider", "term_slug": "amazon-web-services", "term_name": "Amazon Web Services", "relationship_type": "uses", "confidence": "high", "source_ref": "s:loop-home", "evidence_excerpt": "Integra nativamente servizi di Amazon Web Services."},
+    {"subject_ref": "product:loop-scuola", "kind": "integration_standard", "term_slug": "stripe-payments", "term_name": "Stripe Payments", "relationship_type": "supports", "confidence": "high", "source_ref": "s:loop-home", "evidence_excerpt": "Integra nativamente servizi di Stripe Payments."},
+    {"subject_ref": "product:loop-scuola", "kind": "integration_standard", "term_slug": "digital-signature", "term_name": "Firma digitale", "relationship_type": "supports", "confidence": "high", "source_ref": "s:loop-home", "evidence_excerpt": "Firma digitale forte."},
+    {"subject_ref": "product:oneclickschool", "kind": "mobile_platform", "term_slug": "school-mobile-app", "term_name": "App mobile scolastica", "relationship_type": "available_as", "confidence": "high", "source_ref": "s:oneclickschool-home", "evidence_excerpt": "One Click School è l’app che rende la scuola a portata di CLICK."},
+    {"subject_ref": "product:oneclickschool", "kind": "integration_standard", "term_slug": "google-integration", "term_name": "Integrazione Google", "relationship_type": "supports", "confidence": "high", "source_ref": "s:oneclickschool-home", "evidence_excerpt": "Integrazione Google."},
+    {"subject_ref": "product:simple-school", "kind": "deployment_model", "term_slug": "cloud", "term_name": "Cloud", "relationship_type": "available_as", "confidence": "high", "source_ref": "s:simple-school-home", "evidence_excerpt": "Il software è in cloud."},
+    {"subject_ref": "product:simple-school", "kind": "client_platform", "term_slug": "responsive-web-desktop-tablet-smartphone", "term_name": "Web responsive per PC, tablet e smartphone", "relationship_type": "supports", "confidence": "high", "source_ref": "s:simple-school-home", "evidence_excerpt": "Software ottimizzato per essere visualizzato correttamente su pc, tablet e smartphone."},
+    {"subject_ref": "product:simple-school", "kind": "extensibility", "term_slug": "excel-export", "term_name": "Esportazione Excel", "relationship_type": "supports", "confidence": "high", "source_ref": "s:simple-school-home", "evidence_excerpt": "Export dell’elenco filtrato in formato Excel."}
+  ],
+  "facts": [
+    {"subject_ref": "product:nuvola", "predicate": "market.schools", "value": 1200, "unit": "schools", "value_kind": "reported", "confidence": "high", "source_ref": "s:madisoft-home", "evidence_excerpt": "1200 Scuole."},
+    {"subject_ref": "product:nuvola", "predicate": "market.daily_users", "value": 400000, "unit": "users", "value_kind": "reported", "confidence": "high", "source_ref": "s:madisoft-home", "evidence_excerpt": "400K Utenti giornalieri."},
+    {"subject_ref": "product:loop-scuola", "predicate": "technical.integrated_services", "value": ["Microsoft Azure", "Amazon Web Services", "Stripe Payments"], "value_kind": "observed", "confidence": "high", "source_ref": "s:loop-home", "evidence_excerpt": "Integra nativamente servizi di Microsoft Azure, Amazon Web Services, Stripe Payments."},
+    {"subject_ref": "product:simple-school", "predicate": "pricing.plan", "value": {"name": "Base", "price_eur": 999, "billing_period": "first_year_one_time", "tax_excluded": true}, "valid_from": "2026-07-30", "value_kind": "observed", "confidence": "high", "source_ref": "s:simple-school-home", "evidence_excerpt": "€ 999,00 IVA esclusa una tantum, comprensivi del costo della licenza per il primo anno."},
+    {"subject_ref": "product:simple-school", "predicate": "pricing.plan", "value": {"name": "Premium", "price_eur": 1499, "billing_period": "first_year_one_time", "tax_excluded": true}, "valid_from": "2026-07-30", "value_kind": "observed", "confidence": "high", "source_ref": "s:simple-school-home", "evidence_excerpt": "Versione PREMIUM: € 1.499,00 IVA esclusa una tantum, comprensivi del costo della licenza per il primo anno."},
+    {"subject_ref": "product:simple-school", "predicate": "pricing.annual_renewal", "value": {"price_eur": 100, "tax_excluded": true, "includes": "hosting"}, "valid_from": "2026-07-30", "value_kind": "observed", "confidence": "high", "source_ref": "s:simple-school-home", "evidence_excerpt": "Dal secondo anno in poi la licenza costa € 100 IVA esclusa, comprensiva dei servizi di hosting."}
+  ],
+  "claims": [
+    {"subject_ref": "product:webschool", "claim_type": "inferred", "predicate": "module.implementation_complexity", "statement": "La replica del nucleo operativo appare di complessità media.", "assessment": "medium", "methodology": "Inferenza dell’analista basata su anagrafiche studente, pianificazione dello staff, comunicazioni multicanale, pagamenti rateali, fatturazione e app mobile dichiarati nella fonte ufficiale; non sono stati assunti API, SSO o audit trail non documentati.", "confidence": "medium", "source_ref": "s:webschool-home", "evidence_excerpt": "Gestisce pianificazione scolastica, comunicazioni, pagamenti rateali, fatture elettroniche e app Android/iOS."},
+    {"subject_ref": "product:loop-scuola", "claim_type": "inferred", "predicate": "module.implementation_complexity", "statement": "La replica del nucleo operativo appare di complessità alta.", "assessment": "high", "methodology": "Inferenza dell’analista basata su registro, amministrazione, pagamenti con carta o conto, firma digitale forte, portale/app multiutente e integrazioni dichiarate con Azure, AWS e Stripe; non vengono presunti requisiti ulteriori.", "confidence": "medium", "source_ref": "s:loop-home", "evidence_excerpt": "Registro, pagamenti online, firma digitale forte, portale web/app e integrazioni Azure, AWS e Stripe Payments."},
+    {"subject_ref": "product:oneclickschool", "claim_type": "inferred", "predicate": "module.implementation_complexity", "statement": "La replica del nucleo operativo appare di complessità media.", "assessment": "medium", "methodology": "Inferenza dell’analista basata su registro elettronico, mensa, comunicazioni, preiscrizioni, pagamenti in app e integrazione Google dichiarati nella fonte ufficiale.", "confidence": "medium", "source_ref": "s:oneclickschool-home", "evidence_excerpt": "Registro, comunicazioni, amministrazione, mensa, integrazione Google, pagamento in app e preiscrizioni online."},
+    {"subject_ref": "product:simple-school", "claim_type": "inferred", "predicate": "module.implementation_complexity", "statement": "La replica del nucleo operativo appare di complessità media.", "assessment": "medium", "methodology": "Inferenza dell’analista basata su servizi e quote, gestione pagamenti, prima nota, fatture passive e flusso XML verso SDI, oltre a deployment cloud ed export Excel dichiarati nella fonte ufficiale.", "confidence": "medium", "source_ref": "s:simple-school-home", "evidence_excerpt": "Invio al SDI del file XML di fattura elettronica, prima nota, fatture passive, cloud ed export Excel."}
+  ],
+  "notes": [
+    {"subject_ref": "product:nuvola", "note_type": "research_note", "text": "La pagina ufficiale consultata dichiara registro elettronico, app e sincronizzazione SIDI. In questo ciclo non sono state raccolte specifiche ufficiali su API, SSO, audit trail o piattaforme mobile supportate oltre alle app nominate.", "confidence": "high"},
+    {"subject_ref": "product:webschool", "note_type": "research_note", "text": "La fonte ufficiale dichiara web browser e app Android/iOS. Non sono state trovate nella pagina consultata evidenze sufficienti per API, SSO, audit trail o integrazioni tecniche ulteriori.", "confidence": "high"},
+    {"subject_ref": "product:loop-scuola", "note_type": "research_note", "text": "Azure, AWS, Stripe e firma digitale sono registrati solo perché dichiarati dalla pagina ufficiale; la pagina non documenta protocolli API, SSO, MFA o audit trail.", "confidence": "high"},
+    {"subject_ref": "product:oneclickschool", "note_type": "research_note", "text": "La pagina ufficiale dichiara app e integrazione Google, ma non dettaglia API, protocollo dell’integrazione, SSO, audit trail o cloud; il gap non è interpretato come assenza del prodotto.", "confidence": "high"},
+    {"subject_ref": "product:simple-school", "note_type": "data_quality", "text": "La pagina attribuisce il prodotto a Dream Factory Design e riporta P.IVA e Registro Imprese, ma non espone nel contenuto consultato la forma societaria completa; l’anagrafica legale va raffinata solo con una fonte ufficiale aggiuntiva.", "confidence": "high"}
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "record_id": "demo-gestionale-italiano-001",
+  "created_at": "2026-07-30T10:00:00Z",
+  "created_by": {"agent_id": "demo-agent"},
+  "scope": {"country": "IT", "language": "it"},
+  "entities": [
+    {
+      "local_id": "group:example",
+      "entity_type": "group",
+      "name": "Gruppo Esempio",
+      "headquarters_country": "IT",
+      "metadata": {"demo": true}
+    },
+    {
+      "local_id": "company:example",
+      "entity_type": "company",
+      "name": "Gestionale Esempio S.r.l.",
+      "legal_name": "Gestionale Esempio S.r.l.",
+      "identifiers": {"vat_id": "12345678901"},
+      "website": "https://example.com",
+      "headquarters_city": "Milano",
+      "headquarters_region": "Lombardia",
+      "employee_band": "11-50",
+      "group_ref": "group:example",
+      "metadata": {"demo": true}
+    },
+    {
+      "local_id": "product:example-erp",
+      "entity_type": "product",
+      "company_ref": "company:example",
+      "name": "Esempio ERP",
+      "slug": "esempio-erp",
+      "website": "https://example.com/erp",
+      "deployment": ["cloud"],
+      "description": "Dato dimostrativo: non rappresenta un prodotto reale.",
+      "metadata": {"demo": true}
+    }
+  ],
+  "sources": [
+    {
+      "local_id": "source:demo-product-page",
+      "url": "https://example.com/erp",
+      "source_type": "official_product_page",
+      "publisher": "Gestionale Esempio S.r.l.",
+      "title": "Esempio ERP — funzionalità",
+      "accessed_at": "2026-07-30T09:55:00Z",
+      "language": "it",
+      "metadata": {"demo": true}
+    },
+    {
+      "local_id": "source:demo-financial",
+      "url": "https://example.com/investors",
+      "source_type": "other",
+      "publisher": "Gestionale Esempio S.r.l.",
+      "title": "Dati finanziari dimostrativi",
+      "accessed_at": "2026-07-30T09:56:00Z",
+      "language": "it",
+      "metadata": {"demo": true}
+    }
+  ],
+  "documents": [
+    {
+      "local_id": "document:demo-product-page",
+      "source_ref": "source:demo-product-page",
+      "title": "Esempio ERP — funzionalità",
+      "document_type": "web_page",
+      "extraction_method": "manual_demo",
+      "text": "Esempio ERP include contabilità generale, fatturazione elettronica, gestione del magazzino e API per integrazioni. Il servizio è destinato alle piccole e medie imprese italiane.",
+      "metadata": {"demo": true}
+    }
+  ],
+  "classifications": [
+    {
+      "subject_ref": "product:example-erp",
+      "kind": "category",
+      "term_slug": "erp",
+      "term_name": "ERP",
+      "confidence": "high",
+      "source_ref": "source:demo-product-page",
+      "evidence_excerpt": "Esempio ERP include contabilità generale"
+    },
+    {
+      "subject_ref": "product:example-erp",
+      "kind": "segment",
+      "term_slug": "sme",
+      "term_name": "PMI",
+      "confidence": "high",
+      "source_ref": "source:demo-product-page",
+      "evidence_excerpt": "destinato alle piccole e medie imprese italiane"
+    }
+  ],
+  "features": [
+    {
+      "subject_ref": "product:example-erp",
+      "feature_slug": "e_invoicing",
+      "feature_name": "Fatturazione elettronica",
+      "feature_group": "accounting",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:demo-product-page",
+      "evidence_excerpt": "fatturazione elettronica"
+    },
+    {
+      "subject_ref": "product:example-erp",
+      "feature_slug": "inventory_management",
+      "feature_name": "Gestione magazzino",
+      "feature_group": "operations",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:demo-product-page",
+      "evidence_excerpt": "gestione del magazzino"
+    },
+    {
+      "subject_ref": "product:example-erp",
+      "feature_slug": "api",
+      "feature_name": "API",
+      "feature_group": "platform",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:demo-product-page",
+      "evidence_excerpt": "API per integrazioni"
+    }
+  ],
+  "technical_characteristics": [
+    {
+      "subject_ref": "product:example-erp",
+      "kind": "deployment_model",
+      "term_slug": "cloud",
+      "term_name": "Cloud",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:demo-product-page",
+      "evidence_excerpt": "Dato dimostrativo sul deployment cloud"
+    },
+    {
+      "subject_ref": "product:example-erp",
+      "kind": "api_protocol",
+      "term_slug": "api",
+      "term_name": "API dichiarate",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:demo-product-page",
+      "evidence_excerpt": "API per integrazioni"
+    }
+  ],
+  "industry_classifications": [
+    {
+      "company_ref": "company:example",
+      "classification_system": "ATECO",
+      "classification_version": "demo",
+      "code": "62.01.00",
+      "label": "Produzione di software non connesso all'edizione",
+      "role": "primary",
+      "source_ref": "source:demo-financial",
+      "evidence_excerpt": "Dato dimostrativo: classificazione ATECO"
+    }
+  ],
+  "financial_metrics": [
+    {
+      "subject_ref": "company:example",
+      "metric": "revenue",
+      "period_year": 2025,
+      "value": {"exact": 4200000},
+      "currency": "EUR",
+      "value_kind": "estimated",
+      "methodology": "Valore puramente dimostrativo.",
+      "confidence": "low",
+      "source_ref": "source:demo-financial",
+      "evidence_excerpt": "Dato dimostrativo"
+    }
+  ],
+  "facts": [
+    {
+      "subject_ref": "product:example-erp",
+      "predicate": "pricing_model",
+      "value": {"model": "subscription", "billing": "monthly"},
+      "value_kind": "observed",
+      "confidence": "low",
+      "source_ref": "source:demo-product-page",
+      "evidence_excerpt": "Dato dimostrativo"
+    }
+  ],
+  "claims": [
+    {
+      "subject_ref": "product:example-erp",
+      "claim_type": "inferred",
+      "predicate": "positioning",
+      "statement": "Il prodotto appare posizionato per PMI italiane.",
+      "assessment": "inference",
+      "methodology": "Basato sul target dichiarato nella fonte dimostrativa.",
+      "confidence": "medium",
+      "source_ref": "source:demo-product-page",
+      "evidence_excerpt": "piccole e medie imprese italiane"
+    }
+  ],
+  "notes": [
+    {
+      "subject_ref": "product:example-erp",
+      "note_type": "data_quality",
+      "text": "Questo bundle è esclusivamente un esempio tecnico.",
+      "confidence": "high"
+    }
+  ]
+}

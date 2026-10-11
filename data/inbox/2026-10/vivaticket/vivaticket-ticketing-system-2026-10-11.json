@@ -1,0 +1,482 @@
+{
+  "schema_version": "1.0",
+  "record_id": "research-retail-vivaticket-20261011",
+  "created_at": "2026-10-11T10:30:00Z",
+  "created_by": {"agent_id": "research_retail"},
+  "scope": {"country": "IT", "language": "it", "macro_sector": "Retail/Cassa"},
+  "entities": [
+    {
+      "local_id": "company:vivaticket",
+      "entity_type": "company",
+      "name": "Vivaticket S.p.A.",
+      "legal_name": "Vivaticket S.p.A.",
+      "identifiers": {"vat_id": "02011381205"},
+      "website": "https://corporate.vivaticket.com/it/",
+      "headquarters_country": "IT",
+      "headquarters_city": "Bologna",
+      "headquarters_region": "Emilia-Romagna",
+      "employee_band": "250-499",
+      "metadata": {"founded_year": 1999, "markets": ["Leisure", "Cultura", "Sport", "Live entertainment", "Opera e teatro", "Fiere ed expo", "Trasporti"]}
+    },
+    {
+      "local_id": "product:vivaticket-ticketing-system",
+      "entity_type": "product",
+      "company_ref": "company:vivaticket",
+      "name": "Vivaticket Ticketing System",
+      "slug": "vivaticket-ticketing-system",
+      "website": "https://corporate.vivaticket.com/it/business-solution/ticketing-system/",
+      "deployment": ["cloud", "on_premise", "hybrid"],
+      "description": "Piattaforma integrata di ticketing, access control e cashless per venue ed eventi: biglietteria online, assegnazione posti, prezzi dinamici, controllo accessi, membership e pagamenti contactless."
+    }
+  ],
+  "sources": [
+    {
+      "local_id": "source:vivaticket-ticketing",
+      "url": "https://corporate.vivaticket.com/it/business-solution/ticketing-system/",
+      "source_type": "official_product_page",
+      "publisher": "Vivaticket S.p.A.",
+      "title": "Ticketing system",
+      "accessed_at": "2026-10-11T10:05:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:vivaticket-access-control",
+      "url": "https://corporate.vivaticket.com/business-solution/access-control/",
+      "source_type": "official_product_page",
+      "publisher": "Vivaticket S.p.A.",
+      "title": "Access control",
+      "accessed_at": "2026-10-11T10:08:00Z",
+      "language": "en"
+    },
+    {
+      "local_id": "source:vivaticket-cashless",
+      "url": "https://corporate.vivaticket.com/business-solution/cashless/",
+      "source_type": "official_product_page",
+      "publisher": "Vivaticket S.p.A.",
+      "title": "Cashless",
+      "accessed_at": "2026-10-11T10:10:00Z",
+      "language": "en"
+    },
+    {
+      "local_id": "source:vivaticket-home",
+      "url": "https://corporate.vivaticket.com/it/",
+      "source_type": "official_company_page",
+      "publisher": "Vivaticket S.p.A.",
+      "title": "Vivaticket - The world of endless experiences",
+      "accessed_at": "2026-10-11T10:12:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:vivaticket-financial-2024",
+      "url": "https://www.companyreports.it/vivaticket-spa-02011381205",
+      "source_type": "company_register",
+      "publisher": "CompanyReports (AdCapital Srl)",
+      "title": "Vivaticket Spa: fatturato, utile e visure",
+      "accessed_at": "2026-10-11T10:15:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:vivaticket-financial-2025",
+      "url": "https://fatturatoaziende.com/vivaticket-02011381205",
+      "source_type": "directory",
+      "publisher": "FatturatoAziende",
+      "title": "Vivaticket: Fatturato 2025, Utile, Dipendenti",
+      "accessed_at": "2026-10-11T10:17:00Z",
+      "language": "it"
+    }
+  ],
+  "documents": [
+    {
+      "local_id": "document:vivaticket-ticketing",
+      "source_ref": "source:vivaticket-ticketing",
+      "title": "Ticketing system - funzioni principali",
+      "document_type": "web_page",
+      "extraction_method": "web_manual_excerpt",
+      "text": "Vivaticket Ticketing System e' una soluzione unica per vendite, marketing e coinvolgimento clienti. Funzioni principali: biglietteria web responsive multilingua e multivaluta, prezzi dinamici con integrazione AI via API, cashless, membership e abbonamenti, assegnazione posto (posti liberi, assegnati, selezione su mappa anche 3D), eventi a fasce orarie, full offline management, multi-tenant (server locale, cloud o ibrido) e chioschi Kiosk (TVM) per ritiro e vendita biglietti."
+    },
+    {
+      "local_id": "document:vivaticket-access-control",
+      "source_ref": "source:vivaticket-access-control",
+      "title": "Access control - funzioni",
+      "document_type": "web_page",
+      "extraction_method": "web_manual_excerpt",
+      "text": "L'access control Vivaticket si integra con tornelli, lettori laser o a immagine, dispositivi Android tramite app proprietaria Gatekeeper, e supporta barcode, QR code, banda magnetica, RFID contact/proximity, UHF, NFC e lettori biometrici. Include riconoscimento facciale, Frictionless Engine con accesso contactless, QR code dinamico antifrode, gestione offline e multi-venue."
+    }
+  ],
+  "classifications": [
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "kind": "category",
+      "term_slug": "ticketing-retail",
+      "term_name": "Ticketing, accessi e Retail per le venue",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "Un potente sistema per gestire tutte le vendite, il marketing e il coinvolgimento dei clienti"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "kind": "vertical",
+      "term_slug": "leisure-cultura-sport",
+      "term_name": "Leisure, cultura, sport e live entertainment",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-home",
+      "evidence_excerpt": "LEISURE CULTURA SPORT LIVE ENTERTAINMENT OPERA E TEATRO FIERE E EXPO TRASPORTI"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "kind": "category",
+      "term_slug": "cashless-payments",
+      "term_name": "Cashless e pagamenti contactless",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-cashless",
+      "evidence_excerpt": "tecnologia NFC/RFID propi"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "kind": "category",
+      "term_slug": "access-control",
+      "term_name": "Controllo accessi",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-access-control",
+      "evidence_excerpt": "simply monitor and regulate time and visitors flow"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "kind": "deployment",
+      "term_slug": "multi-deployment",
+      "term_name": "Cloud, on-premise o ibrido",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "attivabile su server locale, in cloud o con soluzione ibrida"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "kind": "segment",
+      "term_slug": "large-enterprise",
+      "term_name": "Grandi venue ed enterprise",
+      "confidence": "medium",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "configurare, gestire e monitorare, in tempo reale e da un unico punto di controllo, diverse location"
+    }
+  ],
+  "features": [
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "feature_slug": "online_ticketing",
+      "feature_name": "Biglietteria online",
+      "feature_group": "sales",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "Crea una biglietteria web online"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "feature_slug": "seat_assignment",
+      "feature_name": "Assegnazione del posto",
+      "feature_group": "sales",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "Posti liberi, posti assegnati con selezione automatica dei posti migliori o selezione su mappa"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "feature_slug": "dynamic_pricing",
+      "feature_name": "Prezzi dinamici",
+      "feature_group": "pricing",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "Integrazione completa tramite API con sistemi di intelligenza artificiale per prezzi ottimali"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "feature_slug": "cashless_payments",
+      "feature_name": "Soluzione Cashless",
+      "feature_group": "payments",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "la nostra soluzione cashless"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "feature_slug": "access_control",
+      "feature_name": "Controllo accessi multi-dispositivo",
+      "feature_group": "security",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-access-control",
+      "evidence_excerpt": "integrated with the most common access control devices on the market"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "feature_slug": "facial_recognition",
+      "feature_name": "Riconoscimento facciale e Frictionless Engine",
+      "feature_group": "security",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-access-control",
+      "evidence_excerpt": "Frictionless Engine"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "feature_slug": "memberships_subscriptions",
+      "feature_name": "Membership e abbonamenti",
+      "feature_group": "crm",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "Membership e abbonamenti"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "feature_slug": "multi_tenant",
+      "feature_name": "Multi-tenant e multi-sito",
+      "feature_group": "platform",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "La funzionalita' multi-tenant"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "feature_slug": "kiosk_tvm",
+      "feature_name": "Kiosk (TVM)",
+      "feature_group": "self_service",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "Kiosk (TVM)"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "feature_slug": "fnb_retail",
+      "feature_name": "F&B e merchandising",
+      "feature_group": "operations",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-cashless",
+      "evidence_excerpt": "Gestion integral de tu evento, recinto o estadio"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "feature_slug": "offline_management",
+      "feature_name": "Gestione offline",
+      "feature_group": "platform",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-access-control",
+      "evidence_excerpt": "Full Offline management"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "feature_slug": "api_integrations",
+      "feature_name": "API e integrazioni",
+      "feature_group": "integration",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "una delle piu' ricche librerie di API sul mercato"
+    }
+  ],
+  "technical_characteristics": [
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "kind": "deployment_model",
+      "term_slug": "cloud-onpremise-hybrid",
+      "term_name": "Cloud / on-premise / ibrido",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "server locale, in cloud o con soluzione ibrida"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "kind": "api_protocol",
+      "term_slug": "rest_api",
+      "term_name": "Libreria API per integrazioni",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "una delle piu' ricche librerie di API sul mercato"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "kind": "hardware_integration",
+      "term_slug": "rfid_nfc",
+      "term_name": "RFID / NFC",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-cashless",
+      "evidence_excerpt": "tecnologia NFC/RFID propi"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "kind": "hardware_integration",
+      "term_slug": "turnstiles-readers",
+      "term_name": "Tornelli e lettori laser/imaging",
+      "relationship_type": "compatible_with",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-access-control",
+      "evidence_excerpt": "Full height or standard turnstiles"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "kind": "authentication",
+      "term_slug": "biometric-face",
+      "term_name": "Riconoscimento facciale / biometria",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-access-control",
+      "evidence_excerpt": "biometric readers (fingerprint recognition, facial recognition)"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "kind": "security_standard",
+      "term_slug": "gdpr",
+      "term_name": "GDPR compliance",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-access-control",
+      "evidence_excerpt": "full GDPR compliance"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "kind": "mobile_platform",
+      "term_slug": "android",
+      "term_name": "Android (app Gatekeeper)",
+      "relationship_type": "compatible_with",
+      "confidence": "medium",
+      "source_ref": "source:vivaticket-access-control",
+      "evidence_excerpt": "Android devices through the proprietary App Gatekeeper"
+    }
+  ],
+  "financial_metrics": [
+    {
+      "subject_ref": "company:vivaticket",
+      "metric": "revenue",
+      "period_year": 2024,
+      "value": {"exact": 46677178},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Fatturato 2024 da bilancio depositato.",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-financial-2024",
+      "evidence_excerpt": "Fatturato € 46.677.178 (2024)"
+    },
+    {
+      "subject_ref": "company:vivaticket",
+      "metric": "net_income",
+      "period_year": 2024,
+      "value": {"exact": -2869820},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Risultato d'esercizio 2024 (perdita).",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-financial-2024",
+      "evidence_excerpt": "€ -2.869.820 (2024)"
+    },
+    {
+      "subject_ref": "company:vivaticket",
+      "metric": "employees",
+      "period_year": 2024,
+      "value": {"exact": 272},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Numero dipendenti 2024 (fascia 250-499).",
+      "confidence": "medium",
+      "source_ref": "source:vivaticket-financial-2025",
+      "evidence_excerpt": "esercizio 2024 | 272"
+    },
+    {
+      "subject_ref": "company:vivaticket",
+      "metric": "revenue",
+      "period_year": 2025,
+      "value": {"exact": 47948346},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Fatturato 2025 da base dati bilanci.",
+      "confidence": "medium",
+      "source_ref": "source:vivaticket-financial-2025",
+      "evidence_excerpt": "esercizio 2025 | € 47.948.346"
+    }
+  ],
+  "facts": [
+    {
+      "subject_ref": "company:vivaticket",
+      "predicate": "founded_year",
+      "value": 1999,
+      "value_kind": "reported",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-financial-2024",
+      "evidence_excerpt": "Anno fondazione 1999"
+    },
+    {
+      "subject_ref": "company:vivaticket",
+      "predicate": "channels",
+      "value": ["POS", "web", "app", "kiosk", "OTA", "distributori"],
+      "value_kind": "observed",
+      "confidence": "medium",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "dai distributori o OTA"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "predicate": "supported_media",
+      "value": ["biglietto cartaceo", "e-wallet", "bracciale RFID", "chiave hotel", "riconoscimento facciale"],
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "il tuo smartphone, la chiave dell'hotel, un braccialetto RFID"
+    }
+  ],
+  "claims": [
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "claim_type": "observed",
+      "predicate": "positioning",
+      "statement": "Vivaticket Ticketing System e' presentato come soluzione unica che integra ticketing, access control e cashless, con multi-tenant e gestione dell'intero customer journey della venue.",
+      "assessment": "observed",
+      "confidence": "high",
+      "source_ref": "source:vivaticket-ticketing",
+      "evidence_excerpt": "TUTTO IN UN'UNICA SOLUZIONE"
+    },
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "claim_type": "observed",
+      "predicate": "differentiator",
+      "statement": "Il Frictionless Engine viene presentato come la tecnologia di ticketing piu' avanzata del mercato per l'accesso contactless tramite riconoscimento facciale.",
+      "assessment": "observed",
+      "confidence": "medium",
+      "source_ref": "source:vivaticket-access-control",
+      "evidence_excerpt": "the most advanced ticketing technology on the market to date"
+    },
+    {
+      "subject_ref": "company:vivaticket",
+      "claim_type": "inferred",
+      "predicate": "business_focus",
+      "statement": "Il posizionamento e' verticale su venue ed eventi (leisure, cultura, sport, live), con forte componente di servizi e integrazioni piuttosto che di solo software licenziato.",
+      "assessment": "inference",
+      "methodology": "Basato sui mercati dichiarati e sul codice ATECO 79.90.11 (servizi di biglietteria).",
+      "confidence": "medium",
+      "source_ref": "source:vivaticket-home",
+      "evidence_excerpt": "NOSTRI MERCATI LEISURE CULTURA SPORT LIVE ENTERTAINMENT"
+    }
+  ],
+  "notes": [
+    {
+      "subject_ref": "product:vivaticket-ticketing-system",
+      "note_type": "classification_rationale",
+      "text": "Assegnato al macro-settore Retail/Cassa tramite la categoria 'Ticketing, accessi e Retail per le venue', che include il keyword 'retail'.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "company:vivaticket",
+      "note_type": "data_quality",
+      "text": "I dati finanziari 2024 provengono da database bilanci (Registro Imprese); il valore 2025 e' indicativo e da verificare su bilancio depositato. Vivaticket opera anche all'estero ma la societa' e' italiana con sede a Bologna.",
+      "confidence": "medium"
+    }
+  ]
+}

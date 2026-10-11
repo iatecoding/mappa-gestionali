@@ -1,0 +1,1148 @@
+{
+  "schema_version": "1.0",
+  "record_id": "2026-07-30-legal-professional-technical-enrichment-001",
+  "created_at": "2026-07-30T21:45:00Z",
+  "created_by": {
+    "agent_id": "codex-legal-professional-20260730"
+  },
+  "scope": {
+    "category": "legal_professional_practice_compliance",
+    "assigned_directory": "data/inbox/2026-07/legal-professional-practice",
+    "research_mode": "enrichment_only",
+    "products_covered": 8,
+    "new_products_added": 0,
+    "duplicate_check": {
+      "catalog": "data/catalog.sqlite",
+      "inbox_scope": "data/inbox/2026-07/all_directories",
+      "match_keys": ["name", "slug", "domain", "canonical_url"]
+    }
+  },
+  "entities": [
+    {
+      "local_id": "company:studio-web-designer-capuano",
+      "entity_type": "company",
+      "name": "Studio Web Designer di Simone Capuano",
+      "legal_name": "STUDIO WEB DESIGNER di Simone Capuano",
+      "website": "https://www.avvodesk.it/",
+      "headquarters_city": "Cassino",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "company:matteo-tomasini",
+      "entity_type": "company",
+      "name": "Matteo Tomasini",
+      "website": "https://matteotomasini.com/",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "company:datev-koinos",
+      "entity_type": "company",
+      "name": "DATEV KOINOS S.r.l.",
+      "legal_name": "DATEV KOINOS S.r.l.",
+      "identifiers": {
+        "vat_id": "03336420967"
+      },
+      "website": "https://www.datevkoinos.it/",
+      "headquarters_city": "Milano",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "company:wolters-kluwer-italia",
+      "entity_type": "company",
+      "name": "Wolters Kluwer Italia S.r.l.",
+      "legal_name": "Wolters Kluwer Italia S.r.l.",
+      "website": "https://www.wolterskluwer.com/it-it",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "company:gbsoftware",
+      "entity_type": "company",
+      "name": "GBsoftware S.p.A.",
+      "legal_name": "GBsoftware S.p.A.",
+      "identifiers": {
+        "vat_id": "07946271009"
+      },
+      "website": "https://www.softwaregb.it/",
+      "headquarters_city": "Roma",
+      "headquarters_country": "IT"
+    },
+    {
+      "local_id": "product:avvodesk",
+      "entity_type": "product",
+      "company_ref": "company:studio-web-designer-capuano",
+      "name": "AvvoDesk",
+      "slug": "avvodesk",
+      "website": "https://www.avvodesk.it/",
+      "deployment": ["cloud"]
+    },
+    {
+      "local_id": "product:regestio",
+      "entity_type": "product",
+      "company_ref": "company:matteo-tomasini",
+      "name": "Regestio",
+      "slug": "regestio",
+      "website": "https://matteotomasini.com/regestio/",
+      "deployment": ["cloud"]
+    },
+    {
+      "local_id": "product:brainy-datev-koinos",
+      "entity_type": "product",
+      "company_ref": "company:datev-koinos",
+      "name": "Brainy",
+      "slug": "brainy-datev-koinos",
+      "website": "https://brainy.datev.it/",
+      "deployment": ["cloud"]
+    },
+    {
+      "local_id": "product:genya",
+      "entity_type": "product",
+      "company_ref": "company:wolters-kluwer-italia",
+      "name": "Genya",
+      "slug": "genya",
+      "website": "https://www.wolterskluwer.com/it-it/solutions/genya/genya-per-commercialisti",
+      "deployment": ["cloud"]
+    },
+    {
+      "local_id": "product:gb-inweb",
+      "entity_type": "product",
+      "company_ref": "company:gbsoftware",
+      "name": "GB inWeb",
+      "slug": "gb-inweb",
+      "website": "https://www.softwaregb.it/",
+      "deployment": ["cloud"]
+    },
+    {
+      "local_id": "product:revisione-legale-gb",
+      "entity_type": "product",
+      "company_ref": "company:gbsoftware",
+      "name": "REVISIONE LEGALE GB",
+      "slug": "revisione-legale-gb",
+      "website": "https://www.softwaregb.it/",
+      "deployment": ["cloud"]
+    },
+    {
+      "local_id": "product:antiriciclaggio-gb",
+      "entity_type": "product",
+      "company_ref": "company:gbsoftware",
+      "name": "ANTIRICICLAGGIO GB",
+      "slug": "antiriciclaggio-gb",
+      "website": "https://www.softwaregb.it/software-antiriciclaggio-professionisti/",
+      "deployment": ["cloud"]
+    },
+    {
+      "local_id": "product:documentale-gb",
+      "entity_type": "product",
+      "company_ref": "company:gbsoftware",
+      "name": "DOCUMENTALE GB",
+      "slug": "documentale-gb",
+      "website": "https://www.softwaregb.it/software-fatturazione-elettronica-commercialisti/documentale/",
+      "deployment": ["cloud"]
+    }
+  ],
+  "sources": [
+    {
+      "local_id": "source:avvodesk-home-20260730",
+      "url": "https://www.avvodesk.it/",
+      "source_type": "official_product_page",
+      "publisher": "Studio Web Designer di Simone Capuano",
+      "title": "Gestionale Avvocati e Software Studio Legale Cloud",
+      "accessed_at": "2026-07-30T21:37:00Z",
+      "language": "it",
+      "metadata": {"retention": "url_and_excerpt_only", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "source:avvodesk-brochure-20260730",
+      "url": "https://www.avvodesk.it/brochureavvodesk.pdf",
+      "source_type": "official_product_page",
+      "publisher": "Studio Web Designer di Simone Capuano",
+      "title": "Il Gestione Studio Legale Intelligente",
+      "accessed_at": "2026-07-30T21:37:00Z",
+      "language": "it",
+      "metadata": {"retention": "url_and_excerpt_only", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "source:avvodesk-privacy-20260730",
+      "url": "https://www.avvodesk.it/privacy",
+      "source_type": "official_company_page",
+      "publisher": "Studio Web Designer di Simone Capuano",
+      "title": "Privacy Policy GDPR | AvvoDesk",
+      "accessed_at": "2026-07-30T21:38:00Z",
+      "language": "it",
+      "metadata": {"retention": "url_and_excerpt_only", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "source:regestio-home-20260730",
+      "url": "https://matteotomasini.com/regestio/",
+      "source_type": "official_product_page",
+      "publisher": "Matteo Tomasini",
+      "title": "Gestionale Corsi e Iscrizioni per Associazioni | Regestio",
+      "accessed_at": "2026-07-30T21:39:00Z",
+      "language": "it",
+      "metadata": {"retention": "url_and_excerpt_only", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "source:brainy-home-20260730",
+      "url": "https://brainy.datev.it/",
+      "source_type": "official_product_page",
+      "publisher": "DATEV KOINOS S.r.l.",
+      "title": "Brainy - Datev Koinos",
+      "accessed_at": "2026-07-30T21:39:00Z",
+      "language": "en",
+      "metadata": {"retention": "url_and_excerpt_only", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "source:datev-developer-20260730",
+      "url": "https://developer.datev.it/",
+      "source_type": "official_company_page",
+      "publisher": "DATEV KOINOS S.r.l.",
+      "title": "Homepage - Developer Portal",
+      "accessed_at": "2026-07-30T21:40:00Z",
+      "language": "it",
+      "metadata": {"retention": "url_and_excerpt_only", "rights_basis": "publicly_available", "scope": "company_ecosystem"}
+    },
+    {
+      "local_id": "source:datev-api-architecture-20260730",
+      "url": "https://developer.datev.it/Docs/Architettura",
+      "source_type": "official_company_page",
+      "publisher": "DATEV KOINOS S.r.l.",
+      "title": "Architettura - Developer Portal",
+      "accessed_at": "2026-07-30T21:40:00Z",
+      "language": "it",
+      "metadata": {"retention": "url_and_excerpt_only", "rights_basis": "publicly_available", "scope": "company_ecosystem"}
+    },
+    {
+      "local_id": "source:datev-api-auth-20260730",
+      "url": "https://developer.datev.it/Docs/Autenticazione",
+      "source_type": "official_company_page",
+      "publisher": "DATEV KOINOS S.r.l.",
+      "title": "Autenticazione - Developer Portal",
+      "accessed_at": "2026-07-30T21:40:00Z",
+      "language": "it",
+      "metadata": {"retention": "url_and_excerpt_only", "rights_basis": "publicly_available", "scope": "company_ecosystem"}
+    },
+    {
+      "local_id": "source:genya-professional-20260730",
+      "url": "https://www.wolterskluwer.com/it-it/solutions/genya/genya-per-commercialisti",
+      "source_type": "official_product_page",
+      "publisher": "Wolters Kluwer Italia S.r.l.",
+      "title": "Genya: Software per commercialisti",
+      "accessed_at": "2026-07-30T21:41:00Z",
+      "language": "it",
+      "metadata": {"retention": "url_and_excerpt_only", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "source:genya-accounting-20260730",
+      "url": "https://www.wolterskluwer.com/it-it/solutions/genya/genya-contabilita",
+      "source_type": "official_product_page",
+      "publisher": "Wolters Kluwer Italia S.r.l.",
+      "title": "Genya Contabilità: il programma di contabilità",
+      "accessed_at": "2026-07-30T21:41:00Z",
+      "language": "it",
+      "metadata": {"retention": "url_and_excerpt_only", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "source:gb-inweb-security-20260730",
+      "url": "https://www.softwaregb.it/app-gb-inweb-la-tua-chiave-per-sicurezza-avanzata-autenticazione-a-due-fattori-firma-cie/",
+      "source_type": "official_product_page",
+      "publisher": "GBsoftware S.p.A.",
+      "title": "App GB inWeb: autenticazione a due fattori e firma CIE",
+      "accessed_at": "2026-07-30T17:58:00Z",
+      "language": "it",
+      "metadata": {"retention": "url_and_excerpt_only", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "source:gb-inweb-mobile-20260730",
+      "url": "https://www.softwaregb.it/gb-inweb-app-documentale-carica-archivia-condividi-documenti-da-mobile-n-2/",
+      "source_type": "official_product_page",
+      "publisher": "GBsoftware S.p.A.",
+      "title": "GB inWeb: App Documentale",
+      "accessed_at": "2026-07-30T17:58:00Z",
+      "language": "it",
+      "metadata": {"retention": "url_and_excerpt_only", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "source:gb-inweb-documentale-20260730",
+      "url": "https://www.softwaregb.it/documentale-inweb-organizza-la-digitalizzazione-dei-tuoi-documenti-n-2/",
+      "source_type": "official_product_page",
+      "publisher": "GBsoftware S.p.A.",
+      "title": "Documentale InWeb",
+      "accessed_at": "2026-07-30T17:58:00Z",
+      "language": "it",
+      "metadata": {"retention": "url_and_excerpt_only", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "source:gb-revisione-20260730",
+      "url": "https://www.softwaregb.it/software-revisione-legale-revisori/",
+      "source_type": "official_product_page",
+      "publisher": "GBsoftware S.p.A.",
+      "title": "Software Revisione Legale per Revisori",
+      "accessed_at": "2026-07-30T18:17:00Z",
+      "language": "it",
+      "metadata": {"retention": "url_and_excerpt_only", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "source:gb-revisione-workpapers-20260730",
+      "url": "https://www.softwaregb.it/carte-di-lavoro-revisione-legale-l-rev-23/",
+      "source_type": "official_product_page",
+      "publisher": "GBsoftware S.p.A.",
+      "title": "Carte di lavoro e fascicolo software revisione legale",
+      "accessed_at": "2026-07-30T18:17:00Z",
+      "language": "it",
+      "metadata": {"retention": "url_and_excerpt_only", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "source:gb-antiriciclaggio-20260730",
+      "url": "https://www.softwaregb.it/software-antiriciclaggio-professionisti/",
+      "source_type": "official_product_page",
+      "publisher": "GBsoftware S.p.A.",
+      "title": "Software Antiriciclaggio GB per Professionisti",
+      "accessed_at": "2026-07-30T19:01:55Z",
+      "language": "it",
+      "content_hash": "sha256:e26ef1026ea15b7031aed0d2edb2126c6ac909e42ee02c10cdec49958fa71977",
+      "metadata": {"retention": "excerpt", "rights_basis": "publicly_available"}
+    },
+    {
+      "local_id": "source:gb-documentale-20260730",
+      "url": "https://www.softwaregb.it/software-fatturazione-elettronica-commercialisti/documentale/",
+      "source_type": "official_product_page",
+      "publisher": "GBsoftware S.p.A.",
+      "title": "Software Documentale per Studi, Aziende e P.IVA",
+      "accessed_at": "2026-07-30T19:06:43Z",
+      "language": "it",
+      "content_hash": "sha256:e5ff76a36ed263b53c5747b367bf0afb03e60f28dbca631dcc7cfc024ce6a1d2",
+      "metadata": {"retention": "excerpt", "rights_basis": "publicly_available"}
+    }
+  ],
+  "features": [
+    {
+      "subject_ref": "product:avvodesk",
+      "feature_slug": "legal_document_archive_tracked",
+      "feature_name": "Archiviazione documentale sicura e tracciabile",
+      "feature_group": "document_management",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-brochure-20260730",
+      "evidence_excerpt": "Archiviazione digitale sicura e tracciabile"
+    },
+    {
+      "subject_ref": "product:avvodesk",
+      "feature_slug": "legal_task_workflow_delegation",
+      "feature_name": "Workflow di task, deleghe e notifiche",
+      "feature_group": "workflow",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-home-20260730",
+      "evidence_excerpt": "Kanban per il team, scadenze con notifiche, assegnazioni ai collaboratori"
+    },
+    {
+      "subject_ref": "product:avvodesk",
+      "feature_slug": "internal_legal_team_chat",
+      "feature_name": "Chat interna tra professionisti dello studio",
+      "feature_group": "collaboration",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-home-20260730",
+      "evidence_excerpt": "Chat interna tra avvocati dello studio"
+    },
+    {
+      "subject_ref": "product:avvodesk",
+      "feature_slug": "google_calendar_hearing_sync",
+      "feature_name": "Sincronizzazione udienze e appuntamenti con Google Calendar",
+      "feature_group": "integration",
+      "support_level": "integration",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-privacy-20260730",
+      "evidence_excerpt": "integrazione con Google Calendar per sincronizzare udienze, appuntamenti e impegni"
+    },
+    {
+      "subject_ref": "product:regestio",
+      "feature_slug": "association_push_notifications",
+      "feature_name": "Notifiche push ai soci",
+      "feature_group": "communication",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:regestio-home-20260730",
+      "evidence_excerpt": "Comunica con i soci tramite notifiche push su smartphone"
+    },
+    {
+      "subject_ref": "product:regestio",
+      "feature_slug": "association_email_newsletter_communication",
+      "feature_name": "Email transazionali e newsletter",
+      "feature_group": "communication",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:regestio-home-20260730",
+      "evidence_excerpt": "Notifiche push, email transazionali e newsletter"
+    },
+    {
+      "subject_ref": "product:regestio",
+      "feature_slug": "stripe_association_payments",
+      "feature_name": "Pagamento con carta tramite Stripe",
+      "feature_group": "payments",
+      "support_level": "integration",
+      "confidence": "high",
+      "source_ref": "source:regestio-home-20260730",
+      "evidence_excerpt": "Pagamento sicuro con carta tramite Stripe"
+    },
+    {
+      "subject_ref": "product:brainy-datev-koinos",
+      "feature_slug": "brainy_mydesktop_workspace",
+      "feature_name": "Workspace MyDesktop per applicazioni Brainy",
+      "feature_group": "professional_firms",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:brainy-home-20260730",
+      "evidence_excerpt": "Welcome to myDesktop of Brainy ... use MyDesktop and your applications"
+    },
+    {
+      "subject_ref": "product:genya",
+      "feature_slug": "guided_customizable_professional_workflows",
+      "feature_name": "Workflow guidati e personalizzabili",
+      "feature_group": "workflow",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:genya-accounting-20260730",
+      "evidence_excerpt": "Un flusso di lavoro proposto e personalizzabile guida ogni singolo operatore"
+    },
+    {
+      "subject_ref": "product:genya",
+      "feature_slug": "professional_activity_time_tracking",
+      "feature_name": "Monitoraggio del tempo per attività e cliente",
+      "feature_group": "timesheet",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:genya-accounting-20260730",
+      "evidence_excerpt": "monitorato ... il tempo impiegato per ogni attività su ogni cliente"
+    },
+    {
+      "subject_ref": "product:genya",
+      "feature_slug": "client_deadline_alerts",
+      "feature_name": "Scadenze cliente con alert",
+      "feature_group": "workflow",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:genya-accounting-20260730",
+      "evidence_excerpt": "flussi di lavoro predefiniti e le scadenze con alert su ogni cliente"
+    },
+    {
+      "subject_ref": "product:genya",
+      "feature_slug": "automatic_invoice_bank_statement_import",
+      "feature_name": "Import automatico di fatture ed estratti conto",
+      "feature_group": "integration",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:genya-professional-20260730",
+      "evidence_excerpt": "import automatico ... di fatture ed estratti conto"
+    },
+    {
+      "subject_ref": "product:genya",
+      "feature_slug": "professional_digital_archiving",
+      "feature_name": "Archiviazione documentale per lo studio",
+      "feature_group": "document_management",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:genya-professional-20260730",
+      "evidence_excerpt": "Archiviazione"
+    },
+    {
+      "subject_ref": "product:genya",
+      "feature_slug": "professional_practice_billing",
+      "feature_name": "Parcellazione",
+      "feature_group": "professional_firms",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:genya-professional-20260730",
+      "evidence_excerpt": "Parcellazione"
+    },
+    {
+      "subject_ref": "product:gb-inweb",
+      "feature_slug": "gb_inweb_otp_authenticator_push_approval",
+      "feature_name": "Autenticatore OTP e approvazione accesso con notifica push",
+      "feature_group": "security",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gb-inweb-security-20260730",
+      "evidence_excerpt": "generatore di codici OTP ... approvare l’accesso con un semplice clic sulla notifica push"
+    },
+    {
+      "subject_ref": "product:revisione-legale-gb",
+      "feature_slug": "csv_financial_statement_import",
+      "feature_name": "Importazione bilancio CSV",
+      "feature_group": "integration",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gb-revisione-workpapers-20260730",
+      "evidence_excerpt": "Importazione Bilancio in formato XBRL e CSV"
+    },
+    {
+      "subject_ref": "product:revisione-legale-gb",
+      "feature_slug": "online_non_editable_audit_archive",
+      "feature_name": "Archiviazione online in PDF non editabile",
+      "feature_group": "document_management",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gb-revisione-20260730",
+      "evidence_excerpt": "carte di lavoro ... archiviate online ... salvate in PDF non editabile"
+    },
+    {
+      "subject_ref": "product:antiriciclaggio-gb",
+      "feature_slug": "live_normative_updates",
+      "feature_name": "Aggiornamenti normativi automatici tramite LIVE UPDATE",
+      "feature_group": "compliance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gb-antiriciclaggio-20260730",
+      "evidence_excerpt": "Installerai automaticamente gli aggiornamenti normativi ... LIVE UPDATE"
+    },
+    {
+      "subject_ref": "product:antiriciclaggio-gb",
+      "feature_slug": "compliance_client_registry_search",
+      "feature_name": "Ricerca anagrafiche clienti e operazioni",
+      "feature_group": "compliance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gb-antiriciclaggio-20260730",
+      "evidence_excerpt": "Ricerca per consultare l’elenco delle anagrafiche clienti e ... operazioni"
+    },
+    {
+      "subject_ref": "product:documentale-gb",
+      "feature_slug": "regulated_digital_document_preservation",
+      "feature_name": "Conservazione digitale dei documenti prevista dalla legge",
+      "feature_group": "document_management",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gb-documentale-20260730",
+      "evidence_excerpt": "Conservazione digitale dei documenti come prevista dalla legge"
+    },
+    {
+      "subject_ref": "product:documentale-gb",
+      "feature_slug": "bank_statement_import_multiformat",
+      "feature_name": "Importazione estratti conto bancari multiformato",
+      "feature_group": "integration",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gb-documentale-20260730",
+      "evidence_excerpt": "Importazione estratti conto bancari in formato Excel, TXT, CSV"
+    },
+    {
+      "subject_ref": "product:documentale-gb",
+      "feature_slug": "nso_e_order_receipt",
+      "feature_name": "Ricezione ordini elettronici tramite Nodo Smistamento Ordini",
+      "feature_group": "integration",
+      "support_level": "integration",
+      "confidence": "high",
+      "source_ref": "source:gb-documentale-20260730",
+      "evidence_excerpt": "Ricezione di ordini elettronici con collegamento diretto al Nodo Smistamento Ordini"
+    },
+    {
+      "subject_ref": "product:documentale-gb",
+      "feature_slug": "document_action_email_notifications",
+      "feature_name": "Notifiche email su caricamento e condivisione",
+      "feature_group": "workflow",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gb-documentale-20260730",
+      "evidence_excerpt": "sistema di e-mail di notifica per segnalare azioni di caricamento e condivisione"
+    },
+    {
+      "subject_ref": "product:documentale-gb",
+      "feature_slug": "legacy_archive_import",
+      "feature_name": "Importazione di archivi preesistenti",
+      "feature_group": "migration",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:gb-documentale-20260730",
+      "evidence_excerpt": "Puoi importare ... i tuoi vecchi archivi"
+    }
+  ],
+  "technical_characteristics": [
+    {
+      "subject_ref": "product:avvodesk",
+      "kind": "client_platform",
+      "term_slug": "ios-ipad-android-app",
+      "term_name": "App per iPhone, iPad e Android",
+      "relationship_type": "available_as",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-home-20260730",
+      "evidence_excerpt": "app per iPhone, iPad e Android"
+    },
+    {
+      "subject_ref": "product:avvodesk",
+      "kind": "api_protocol",
+      "term_slug": "google-calendar-api",
+      "term_name": "Google Calendar API",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-privacy-20260730",
+      "evidence_excerpt": "utilizza le API ... per creare, aggiornare o collegare eventi"
+    },
+    {
+      "subject_ref": "product:avvodesk",
+      "kind": "authentication",
+      "term_slug": "oauth-2-google-calendar",
+      "term_name": "OAuth 2.0 per Google Calendar",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-privacy-20260730",
+      "evidence_excerpt": "flusso OAuth 2.0 di Google"
+    },
+    {
+      "subject_ref": "product:avvodesk",
+      "kind": "security_standard",
+      "term_slug": "end-to-end-encryption",
+      "term_name": "Crittografia end-to-end dei documenti",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-privacy-20260730",
+      "evidence_excerpt": "i documenti caricati ... sono cifrati"
+    },
+    {
+      "subject_ref": "product:avvodesk",
+      "kind": "auditability",
+      "term_slug": "audit-trail",
+      "term_name": "Audit trail completo",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-home-20260730",
+      "evidence_excerpt": "audit trail ... completo"
+    },
+    {
+      "subject_ref": "product:avvodesk",
+      "kind": "authentication",
+      "term_slug": "role-based-permissions",
+      "term_name": "Permessi granulari per ruoli e documenti",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-home-20260730",
+      "evidence_excerpt": "team multi-utente con permessi granulari su pratiche e documenti"
+    },
+    {
+      "subject_ref": "product:avvodesk",
+      "kind": "cloud_provider",
+      "term_slug": "netcup-germany",
+      "term_name": "Hosting Netcup in Germania",
+      "relationship_type": "uses",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-privacy-20260730",
+      "evidence_excerpt": "L'hosting è effettuato da Netcup GmbH (Germania, UE)"
+    },
+    {
+      "subject_ref": "product:avvodesk",
+      "kind": "security_standard",
+      "term_slug": "iso-iec-27001-hosting-provider",
+      "term_name": "Provider di hosting certificato ISO/IEC 27001",
+      "relationship_type": "compatible_with",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-privacy-20260730",
+      "evidence_excerpt": "provider certificato ISO/IEC 27001"
+    },
+    {
+      "subject_ref": "product:avvodesk",
+      "kind": "data_residency",
+      "term_slug": "eu-germany",
+      "term_name": "Archiviazione diretta nell'Unione Europea",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-privacy-20260730",
+      "evidence_excerpt": "Nessun dato personale è direttamente archiviato fuori dall’Unione Europea"
+    },
+    {
+      "subject_ref": "product:regestio",
+      "kind": "delivery_model",
+      "term_slug": "browser-zero-installation",
+      "term_name": "Accesso da browser senza installazione",
+      "relationship_type": "available_as",
+      "confidence": "high",
+      "source_ref": "source:regestio-home-20260730",
+      "evidence_excerpt": "Funziona da browser ... Niente da installare"
+    },
+    {
+      "subject_ref": "product:regestio",
+      "kind": "integration_standard",
+      "term_slug": "stripe-card-payments",
+      "term_name": "Pagamenti con carta tramite Stripe",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:regestio-home-20260730",
+      "evidence_excerpt": "Pagamento sicuro con carta tramite Stripe"
+    },
+    {
+      "subject_ref": "product:gb-inweb",
+      "kind": "authentication",
+      "term_slug": "otp-authenticator-push-approval",
+      "term_name": "OTP con approvazione tramite notifica push",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:gb-inweb-security-20260730",
+      "evidence_excerpt": "codice OTP ... approvare l’accesso ... notifica push"
+    },
+    {
+      "subject_ref": "product:revisione-legale-gb",
+      "kind": "integration_standard",
+      "term_slug": "xbrl-financial-statement-import",
+      "term_name": "Importazione bilancio XBRL",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:gb-revisione-workpapers-20260730",
+      "evidence_excerpt": "Importazione Bilancio in formato XBRL e CSV"
+    },
+    {
+      "subject_ref": "product:documentale-gb",
+      "kind": "integration_standard",
+      "term_slug": "nso-direct-connection",
+      "term_name": "Collegamento diretto al Nodo Smistamento Ordini",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:gb-documentale-20260730",
+      "evidence_excerpt": "collegamento diretto al Nodo Smistamento Ordini"
+    }
+  ],
+  "facts": [
+    {
+      "subject_ref": "product:avvodesk",
+      "predicate": "technical.google_calendar_oauth_scopes",
+      "value": ["https://www.googleapis.com/auth/calendar", "https://www.googleapis.com/auth/calendar.events"],
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-privacy-20260730",
+      "evidence_excerpt": "Ambiti OAuth Google richiesti: calendar e calendar.events"
+    },
+    {
+      "subject_ref": "product:avvodesk",
+      "predicate": "technical.backup_retention_days",
+      "value": 30,
+      "unit": "days",
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-privacy-20260730",
+      "evidence_excerpt": "Backup tecnici: 30 giorni"
+    },
+    {
+      "subject_ref": "company:datev-koinos",
+      "predicate": "integration.api_ecosystem",
+      "value": {
+        "documented": true,
+        "scope": "Datev Koinos product ecosystem",
+        "developer_accreditation_required": true
+      },
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:datev-developer-20260730",
+      "evidence_excerpt": "connettere ... applicazioni ... all’ecosistema dei prodotti Datev Koinos"
+    },
+    {
+      "subject_ref": "company:datev-koinos",
+      "predicate": "integration.api_documentation_scope",
+      "value": {
+        "api_documentation": true,
+        "api_references": ["SuperBill.Fatture", "SuperBill.Impresa", "IntegraSDI"]
+      },
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:datev-api-architecture-20260730",
+      "evidence_excerpt": "API Reference ... SuperBill.Fatture ... SuperBill.Impresa ... IntegraSDI"
+    },
+    {
+      "subject_ref": "company:datev-koinos",
+      "predicate": "technical.api_authentication",
+      "value": {
+        "protocols": ["OAuth 2.0", "OpenID Connect"],
+        "authorization_key": true,
+        "pkce": true
+      },
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:datev-api-auth-20260730",
+      "evidence_excerpt": "OAuth 2.0 e OpenID Connect ... code_verifier (PKCE)"
+    },
+    {
+      "subject_ref": "product:genya",
+      "predicate": "technical.import_automation",
+      "value": {
+        "inputs": ["invoices", "bank_statements"],
+        "mode": "automatic"
+      },
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:genya-professional-20260730",
+      "evidence_excerpt": "import automatico ... di fatture ed estratti conto"
+    },
+    {
+      "subject_ref": "product:gb-inweb",
+      "predicate": "technical.mfa_otp_push",
+      "value": {
+        "otp": true,
+        "push_approval": true,
+        "platforms": ["Android", "iOS"]
+      },
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:gb-inweb-security-20260730",
+      "evidence_excerpt": "app ... disponibile per dispositivi Android e iOS ... codice OTP ... notifica push"
+    },
+    {
+      "subject_ref": "product:gb-inweb",
+      "predicate": "technical.cie_document_signature",
+      "value": {
+        "declared": true,
+        "context": "documents shared by the studio"
+      },
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:gb-inweb-security-20260730",
+      "evidence_excerpt": "firmare direttamente i documenti condivisi dallo studio ... CIE"
+    },
+    {
+      "subject_ref": "product:revisione-legale-gb",
+      "predicate": "technical.access_model",
+      "value": {
+        "delivery": "web",
+        "internet_required": true,
+        "users": "unlimited"
+      },
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:gb-revisione-20260730",
+      "evidence_excerpt": "Il software è in web ... utenti illimitati inclusi"
+    },
+    {
+      "subject_ref": "product:antiriciclaggio-gb",
+      "predicate": "technical.regulatory_alignment",
+      "value": {
+        "legislation": ["D.lgs. 231/2007", "D.lgs. 90/2017", "D.lgs. 125/2019"],
+        "guidelines": ["CNDCEC"]
+      },
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:gb-antiriciclaggio-20260730",
+      "evidence_excerpt": "In linea con il D.lgs. 231/2007 ... e con le linee guida del CNDCEC"
+    },
+    {
+      "subject_ref": "product:documentale-gb",
+      "predicate": "technical.bank_statement_import_formats",
+      "value": ["Excel", "TXT", "CSV"],
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:gb-documentale-20260730",
+      "evidence_excerpt": "Importazione estratti conto bancari in formato Excel, TXT, CSV"
+    },
+    {
+      "subject_ref": "product:documentale-gb",
+      "predicate": "technical.electronic_order_protocol",
+      "value": {
+        "standard": "NSO",
+        "direct_connection": true,
+        "period_archive": true
+      },
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:gb-documentale-20260730",
+      "evidence_excerpt": "collegamento diretto al Nodo Smistamento Ordini e archiviazione per periodo"
+    }
+  ],
+  "claims": [
+    {
+      "subject_ref": "product:avvodesk",
+      "claim_type": "inferred",
+      "predicate": "module.implementation_complexity",
+      "statement": "Per una nuova applicazione, la complessità di implementare un modulo equivalente ad AvvoDesk è molto alta.",
+      "assessment": "very_high",
+      "methodology": "Heuristica basata su workflow legali regolati, deposito PCT/PEC, ruoli multiutente, E2EE, audit trail, app mobile e sincronizzazione OAuth; la valutazione riguarda una nuova applicazione, non il prezzo o la qualità di AvvoDesk.",
+      "confidence": "medium",
+      "source_ref": "source:avvodesk-home-20260730",
+      "evidence_excerpt": "Deposito telematico, PEC integrata, permessi granulari, audit trail e app"
+    },
+    {
+      "subject_ref": "product:avvodesk",
+      "claim_type": "inferred",
+      "predicate": "module.market_fit",
+      "statement": "Il fit di mercato osservato è studi legali italiani, inclusi team multi-avvocato.",
+      "assessment": "legal_firms",
+      "methodology": "Mappatura qualitativa del mercato esplicitamente indicato nella pagina prodotto e dei moduli legal-specific presenti.",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-home-20260730",
+      "evidence_excerpt": "Gestionale per avvocati ... pensata per l'avvocatura italiana"
+    },
+    {
+      "subject_ref": "product:avvodesk",
+      "claim_type": "inferred",
+      "predicate": "module.hardware_moat",
+      "statement": "Il moat hardware non è determinabile dal corpus ufficiale consultato; l'assenza di evidenza non è interpretata come assenza di hardware nel prodotto.",
+      "assessment": "insufficient_evidence",
+      "methodology": "Sono state esaminate pagine prodotto, brochure e privacy ufficiali; sono stati rilevati app e hosting, ma non un dispositivo proprietario o un processo hardware installato.",
+      "confidence": "high",
+      "source_ref": "source:avvodesk-home-20260730",
+      "evidence_excerpt": "App ufficiale ... Crittografia E2EE"
+    },
+    {
+      "subject_ref": "product:regestio",
+      "claim_type": "inferred",
+      "predicate": "module.implementation_complexity",
+      "statement": "Per una nuova applicazione, la complessità di implementare un modulo equivalente a Regestio è media.",
+      "assessment": "medium",
+      "methodology": "Heuristica basata su browser/cloud, ruoli, app mobile, notifiche, documenti PDF, comunicazioni e pagamento Stripe; non include compliance normativa specialistica.",
+      "confidence": "medium",
+      "source_ref": "source:regestio-home-20260730",
+      "evidence_excerpt": "browser ... database in cloud ... app mobile ... notifiche ... Stripe"
+    },
+    {
+      "subject_ref": "product:regestio",
+      "claim_type": "inferred",
+      "predicate": "module.hardware_moat",
+      "statement": "Il moat hardware non è determinabile dal corpus ufficiale consultato; l'assenza di evidenza non è interpretata come assenza di hardware nel prodotto.",
+      "assessment": "insufficient_evidence",
+      "methodology": "La pagina ufficiale dichiara cloud, browser, app e backup, ma non documenta hardware proprietario o installato.",
+      "confidence": "high",
+      "source_ref": "source:regestio-home-20260730",
+      "evidence_excerpt": "Funziona da browser ... Database in cloud con backup automatici"
+    },
+    {
+      "subject_ref": "product:brainy-datev-koinos",
+      "claim_type": "inferred",
+      "predicate": "module.implementation_complexity",
+      "statement": "Per una nuova applicazione, la complessità di implementare una piattaforma equivalente a Brainy è alta.",
+      "assessment": "high",
+      "methodology": "Heuristica basata su piattaforma cloud multi-app per attività contabili, fiscali e organizzative; il portale API del produttore è considerato solo come driver di ecosistema e non come capacità API specifica di Brainy.",
+      "confidence": "medium",
+      "source_ref": "source:brainy-home-20260730",
+      "evidence_excerpt": "cloud-based platform ... integra applicazioni e servizi ... accounting, tax and organizational activities"
+    },
+    {
+      "subject_ref": "product:brainy-datev-koinos",
+      "claim_type": "inferred",
+      "predicate": "module.market_fit",
+      "statement": "Il fit di mercato osservato è studi commercialisti e professionisti contabili/fiscali.",
+      "assessment": "accounting_firms",
+      "methodology": "Mappatura qualitativa della descrizione ufficiale del prodotto e delle attività dichiarate.",
+      "confidence": "high",
+      "source_ref": "source:brainy-home-20260730",
+      "evidence_excerpt": "platform ... for chartered accountants"
+    },
+    {
+      "subject_ref": "product:brainy-datev-koinos",
+      "claim_type": "inferred",
+      "predicate": "module.hardware_moat",
+      "statement": "Il moat hardware non è determinabile dal corpus ufficiale consultato; l'assenza di evidenza non è interpretata come assenza di hardware nel prodotto.",
+      "assessment": "insufficient_evidence",
+      "methodology": "Sono state esaminate la pagina Brainy e la documentazione API del produttore; non è stato rilevato hardware proprietario associato al prodotto.",
+      "confidence": "high",
+      "source_ref": "source:brainy-home-20260730",
+      "evidence_excerpt": "cloud-based platform ... maximum security ... operational continuity"
+    },
+    {
+      "subject_ref": "product:genya",
+      "claim_type": "inferred",
+      "predicate": "module.implementation_complexity",
+      "statement": "Per una nuova applicazione, la complessità di implementare un modulo equivalente a Genya è alta.",
+      "assessment": "high",
+      "methodology": "Heuristica basata su cloud multi-device, workflow personalizzabili, import automatici, CRM, scadenze con alert, parcellazione, archiviazione e AI; non è una valutazione del prodotto esistente.",
+      "confidence": "medium",
+      "source_ref": "source:genya-accounting-20260730",
+      "evidence_excerpt": "flusso di lavoro ... tempo ... scadenze con alert ... CRM"
+    },
+    {
+      "subject_ref": "product:genya",
+      "claim_type": "inferred",
+      "predicate": "module.market_fit",
+      "statement": "Il fit di mercato osservato è studi di commercialisti e loro clienti.",
+      "assessment": "accounting_firms",
+      "methodology": "Mappatura qualitativa del target dichiarato dal produttore e dei moduli per studio-cliente.",
+      "confidence": "high",
+      "source_ref": "source:genya-professional-20260730",
+      "evidence_excerpt": "piattaforma cloud pensata per commercialisti"
+    },
+    {
+      "subject_ref": "product:genya",
+      "claim_type": "inferred",
+      "predicate": "module.hardware_moat",
+      "statement": "Il moat hardware non è determinabile dal corpus ufficiale consultato; l'assenza di evidenza non è interpretata come assenza di hardware nel prodotto.",
+      "assessment": "insufficient_evidence",
+      "methodology": "Le pagine ufficiali esaminate descrivono cloud, dispositivi client e moduli software, senza documentare hardware proprietario installato.",
+      "confidence": "high",
+      "source_ref": "source:genya-professional-20260730",
+      "evidence_excerpt": "Accedi a Genya ovunque ... da qualsiasi dispositivo"
+    },
+    {
+      "subject_ref": "product:gb-inweb",
+      "claim_type": "inferred",
+      "predicate": "module.implementation_complexity",
+      "statement": "Per una nuova applicazione, la complessità di implementare un modulo equivalente a GB inWeb è alta.",
+      "assessment": "high",
+      "methodology": "Heuristica basata su multiutenza, documentale collaborativo, app mobile, MFA/OTP, approvazione push e firma CIE; la complessità non è una valutazione del prezzo o della qualità del prodotto.",
+      "confidence": "medium",
+      "source_ref": "source:gb-inweb-security-20260730",
+      "evidence_excerpt": "MFA ... OTP ... app Android e iOS ... firma CIE"
+    },
+    {
+      "subject_ref": "product:gb-inweb",
+      "claim_type": "inferred",
+      "predicate": "module.market_fit",
+      "statement": "Il fit di mercato osservato è studi professionali e flussi studio-cliente.",
+      "assessment": "professional_firms_and_clients",
+      "methodology": "Mappatura qualitativa delle funzionalità di ambiente web, documentale e collaborazione dichiarate dal produttore.",
+      "confidence": "high",
+      "source_ref": "source:gb-inweb-documentale-20260730",
+      "evidence_excerpt": "unico spazio web ... condividere ... con soggetti terzi"
+    },
+    {
+      "subject_ref": "product:gb-inweb",
+      "claim_type": "inferred",
+      "predicate": "module.hardware_moat",
+      "statement": "Il moat hardware non è determinabile dal corpus ufficiale consultato; l'assenza di evidenza non è interpretata come assenza di hardware nel prodotto.",
+      "assessment": "insufficient_evidence",
+      "methodology": "Sono state rilevate app e autenticazione, ma non terminali o hardware proprietario associato a GB inWeb.",
+      "confidence": "high",
+      "source_ref": "source:gb-inweb-security-20260730",
+      "evidence_excerpt": "app GB inWeb ... generatore di codici OTP"
+    },
+    {
+      "subject_ref": "product:revisione-legale-gb",
+      "claim_type": "inferred",
+      "predicate": "module.implementation_complexity",
+      "statement": "Per una nuova applicazione, la complessità di implementare un modulo equivalente a REVISIONE LEGALE GB è molto alta.",
+      "assessment": "very_high",
+      "methodology": "Heuristica basata su workflow di revisione normato, carte di lavoro, valutazione rischi, validazioni procedurali, import XBRL/CSV, archivio online e integrazione con suite audit.",
+      "confidence": "medium",
+      "source_ref": "source:gb-revisione-20260730",
+      "evidence_excerpt": "fasi previste dalla normativa ... carte di lavoro ... controlli interni"
+    },
+    {
+      "subject_ref": "product:revisione-legale-gb",
+      "claim_type": "inferred",
+      "predicate": "module.market_fit",
+      "statement": "Il fit di mercato osservato è revisori legali e studi che gestiscono incarichi di revisione.",
+      "assessment": "audit_firms",
+      "methodology": "Mappatura qualitativa del titolo, del target dichiarato e delle fasi operative descritte nella pagina ufficiale.",
+      "confidence": "high",
+      "source_ref": "source:gb-revisione-20260730",
+      "evidence_excerpt": "Software Revisione Legale per Revisori"
+    },
+    {
+      "subject_ref": "product:revisione-legale-gb",
+      "claim_type": "inferred",
+      "predicate": "module.hardware_moat",
+      "statement": "Il moat hardware non è determinabile dal corpus ufficiale consultato; l'assenza di evidenza non è interpretata come assenza di hardware nel prodotto.",
+      "assessment": "insufficient_evidence",
+      "methodology": "Le pagine esaminate descrivono accesso web e software di revisione, ma non documentano hardware proprietario installato.",
+      "confidence": "high",
+      "source_ref": "source:gb-revisione-20260730",
+      "evidence_excerpt": "Il software è in web, accessibile da qualunque pc"
+    },
+    {
+      "subject_ref": "product:antiriciclaggio-gb",
+      "claim_type": "inferred",
+      "predicate": "module.implementation_complexity",
+      "statement": "Per una nuova applicazione, la complessità di implementare un modulo equivalente ad ANTIRICICLAGGIO GB è alta.",
+      "assessment": "high",
+      "methodology": "Heuristica basata su valutazione rischio, adeguata verifica, fascicolo cliente, monitoraggio scadenze, formazione e aggiornamenti normativi; non attribuisce al prodotto qualità normativa ulteriore rispetto alle dichiarazioni citate.",
+      "confidence": "medium",
+      "source_ref": "source:gb-antiriciclaggio-20260730",
+      "evidence_excerpt": "valutazione del rischio ... adeguata verifica ... aggiornamenti normativi"
+    },
+    {
+      "subject_ref": "product:antiriciclaggio-gb",
+      "claim_type": "inferred",
+      "predicate": "module.market_fit",
+      "statement": "Il fit di mercato osservato comprende commercialisti, avvocati, notai, revisori e altri professionisti soggetti ad adempimenti antiriciclaggio.",
+      "assessment": "regulated_professional_firms",
+      "methodology": "Mappatura qualitativa dell'elenco di professionisti esplicitamente indicato dal produttore.",
+      "confidence": "high",
+      "source_ref": "source:gb-antiriciclaggio-20260730",
+      "evidence_excerpt": "Commercialisti ... Avvocati ... Notai ... Revisori Legali"
+    },
+    {
+      "subject_ref": "product:antiriciclaggio-gb",
+      "claim_type": "inferred",
+      "predicate": "module.hardware_moat",
+      "statement": "Il moat hardware non è determinabile dal corpus ufficiale consultato; l'assenza di evidenza non è interpretata come assenza di hardware nel prodotto.",
+      "assessment": "insufficient_evidence",
+      "methodology": "La fonte descrive applicazioni e adempimenti software, senza documentare hardware proprietario o installato.",
+      "confidence": "high",
+      "source_ref": "source:gb-antiriciclaggio-20260730",
+      "evidence_excerpt": "Il software per gestire tutti gli adempimenti in materia di antiriciclaggio"
+    },
+    {
+      "subject_ref": "product:documentale-gb",
+      "claim_type": "inferred",
+      "predicate": "module.implementation_complexity",
+      "statement": "Per una nuova applicazione, la complessità di implementare un modulo equivalente a DOCUMENTALE GB è alta.",
+      "assessment": "high",
+      "methodology": "Heuristica basata su ambiente web collaborativo, accessi per profilo, conservazione digitale, import multiformato, NSO e notifiche; non è una valutazione del prodotto esistente.",
+      "confidence": "medium",
+      "source_ref": "source:gb-documentale-20260730",
+      "evidence_excerpt": "documentale web ... privacy per ciascun utente ... Conservazione ... NSO"
+    },
+    {
+      "subject_ref": "product:documentale-gb",
+      "claim_type": "inferred",
+      "predicate": "module.market_fit",
+      "statement": "Il fit di mercato osservato è studi professionali, aziende e partite IVA con flussi documentali condivisi.",
+      "assessment": "professional_studios_and_sme",
+      "methodology": "Mappatura qualitativa del target esplicitato nel titolo della pagina e dei flussi studio-cliente descritti.",
+      "confidence": "high",
+      "source_ref": "source:gb-documentale-20260730",
+      "evidence_excerpt": "DOCUMENTALE per Studi, Aziende e P.IVA"
+    },
+    {
+      "subject_ref": "product:documentale-gb",
+      "claim_type": "inferred",
+      "predicate": "module.hardware_moat",
+      "statement": "Il moat hardware non è determinabile dal corpus ufficiale consultato; l'assenza di evidenza non è interpretata come assenza di hardware nel prodotto.",
+      "assessment": "insufficient_evidence",
+      "methodology": "La fonte descrive accesso web da PC, tablet e smartphone e servizi documentali, ma non documenta hardware proprietario installato.",
+      "confidence": "high",
+      "source_ref": "source:gb-documentale-20260730",
+      "evidence_excerpt": "prestazioni ... da ogni tipo di dispositivo collegato ad Internet"
+    }
+  ],
+  "notes": [
+    {
+      "subject_ref": "product:avvodesk",
+      "note_type": "data_quality",
+      "text": "Non è stata trovata una dichiarazione ufficiale specifica su SSO, MFA, API generiche, modalità offline o deployment on-premise; il gap non è interpretato come assenza del prodotto.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "product:regestio",
+      "note_type": "data_quality",
+      "text": "La pagina ufficiale documenta browser/cloud, backup, app, comunicazioni e Stripe, ma non API, SSO o offline/sync; il gap non è interpretato come assenza del prodotto.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "product:brainy-datev-koinos",
+      "note_type": "data_quality",
+      "text": "Le API, OAuth 2.0 e OpenID Connect sono state registrate come fact del produttore DATEV KOINOS e non come capacità tecnica specifica di Brainy, perché la documentazione consultata parla dell'ecosistema nel suo complesso.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "product:genya",
+      "note_type": "data_quality",
+      "text": "Le fonti ufficiali consultate dichiarano cloud, multi-device, workflow, import e collaborazione, ma non una API pubblica, SSO, MFA o modalità offline specifica di Genya; il gap non è interpretato come assenza del prodotto.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "product:gb-inweb",
+      "note_type": "data_quality",
+      "text": "Sono state verificate MFA/OTP, push, app Android/iOS, firma CIE e documentale; non è stata trovata una dichiarazione ufficiale su API pubbliche, SSO enterprise o offline/sync.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "product:revisione-legale-gb",
+      "note_type": "data_quality",
+      "text": "Sono stati verificati web/cloud, utenti illimitati, import XBRL/CSV e archivio online; non è stata trovata una dichiarazione ufficiale su API, SSO, MFA, mobile o offline/sync.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "product:antiriciclaggio-gb",
+      "note_type": "data_quality",
+      "text": "Sono stati verificati adempimenti, workflow di rischio, fascicolo, monitoraggio e aggiornamenti normativi; la fonte consultata non dichiara API, SSO, MFA, mobile, offline o deployment specifico del modulo.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "product:documentale-gb",
+      "note_type": "data_quality",
+      "text": "Sono stati verificati web, profili di accesso, conservazione, import, NSO, notifiche e accesso da PC/tablet/smartphone; non è stata trovata una dichiarazione ufficiale su API pubbliche, SSO o offline/sync.",
+      "confidence": "high"
+    }
+  ]
+}

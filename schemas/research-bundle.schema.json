@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Research bundle for Italian management-software catalogue",
+  "type": "object",
+  "required": ["schema_version", "record_id", "created_at", "created_by", "entities", "sources"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "record_id": {"type": "string", "minLength": 8},
+    "supersedes_record_id": {"type": "string"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "created_by": {
+      "type": "object",
+      "required": ["agent_id"],
+      "properties": {"agent_id": {"type": "string", "minLength": 1}}
+    },
+    "scope": {"type": "object"},
+    "entities": {"type": "array", "items": {"type": "object"}},
+    "sources": {"type": "array", "items": {"type": "object"}},
+    "documents": {"type": "array", "items": {"type": "object"}},
+    "classifications": {"type": "array", "items": {"type": "object"}},
+    "features": {"type": "array", "items": {"type": "object"}},
+    "technical_characteristics": {"type": "array", "items": {"type": "object"}},
+    "industry_classifications": {"type": "array", "items": {"type": "object"}},
+    "financial_metrics": {"type": "array", "items": {"type": "object"}},
+    "facts": {"type": "array", "items": {"type": "object"}},
+    "claims": {"type": "array", "items": {"type": "object"}},
+    "notes": {"type": "array", "items": {"type": "object"}}
+  },
+  "additionalProperties": true
+}

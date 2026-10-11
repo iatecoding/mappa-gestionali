@@ -1,0 +1,301 @@
+{
+  "schema_version": "1.0",
+  "record_id": "research-deda-epcx-20261011",
+  "created_at": "2026-10-11T10:00:00Z",
+  "created_by": {"agent_id": "research_bundle_agent"},
+  "scope": {"country": "IT", "language": "it"},
+  "entities": [
+    {
+      "local_id": "company:dedagroup",
+      "entity_type": "company",
+      "name": "Dedagroup S.p.A.",
+      "legal_name": "Dedagroup S.p.A.",
+      "identifiers": {"vat_id": "01763870225", "tax_code": "01763870225"},
+      "website": "https://www.deda.com/",
+      "headquarters_city": "Trento",
+      "headquarters_region": "Trentino-Alto Adige",
+      "headquarters_country": "IT",
+      "employee_band": "oltre 1000",
+      "metadata": {
+        "ownership": "società a socio unico, soggetta a direzione e coordinamento di Lillo S.p.A.",
+        "note": "capogruppo del Gruppo Dedagroup; il prodotto è sviluppato dalla controllata Deda Credit S.r.l."
+      }
+    },
+    {
+      "local_id": "product:epc-x",
+      "entity_type": "product",
+      "company_ref": "company:dedagroup",
+      "name": "EPC X",
+      "slug": "epc-x",
+      "website": "https://www.dedacredit.it/soluzioni/epc-x/",
+      "deployment": ["cloud", "on_premise"],
+      "description": "Piattaforma software di Deda Credit (Gruppo Dedagroup) per la gestione degli NPE (Non Performing Exposure) e delle posizioni performing ad alto rischio di insolvenza, flessibile e personalizzabile, per i settori bancario, leasing, factoring, legale, multiutility e credito al consumo.",
+      "metadata": {"aliases": ["EPC X", "EPCX"], "sviluppatore": "Deda Credit S.r.l. (società del Gruppo Dedagroup)"}
+    }
+  ],
+  "sources": [
+    {
+      "local_id": "source:dedacredit-home",
+      "url": "https://www.dedacredit.it/",
+      "source_type": "official_product_page",
+      "publisher": "Deda Credit S.r.l.",
+      "title": "Deda Credit - Building Trust Driving Value",
+      "accessed_at": "2026-10-11T09:50:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:dedacredit-epcx",
+      "url": "https://www.dedacredit.it/soluzioni/epc-x/",
+      "source_type": "official_product_page",
+      "publisher": "Deda Credit S.r.l.",
+      "title": "EPC X - soluzioni Deda Credit",
+      "accessed_at": "2026-10-11T09:51:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:deda-company-profile",
+      "url": "https://www.deda.com/allegati/company-profile/Company-Profile-Deda-eng-99abb.pdf",
+      "source_type": "other",
+      "publisher": "Dedagroup S.p.A.",
+      "title": "Company Profile - Deda Group",
+      "accessed_at": "2026-10-11T09:42:00Z",
+      "language": "en"
+    },
+    {
+      "local_id": "source:deda-bilancio2025",
+      "url": "https://www.deda.com/media/comunicati-stampa/dedagroup-approva-il-bilancio-2025",
+      "source_type": "press_release",
+      "publisher": "Dedagroup S.p.A.",
+      "title": "Dedagroup approva il Bilancio 2025",
+      "accessed_at": "2026-10-11T09:44:00Z",
+      "language": "it"
+    }
+  ],
+  "documents": [
+    {
+      "local_id": "document:dedacredit-home",
+      "source_ref": "source:dedacredit-home",
+      "title": "Deda Credit - home",
+      "document_type": "web_page",
+      "extraction_method": "web_manual_excerpt",
+      "text": "In Deda Credit sviluppiamo software per la gestione di tutto il processo di recupero del credito bancario e finanziario; implementiamo suite che si adattano ai diversi contesti applicativi, grazie all'automazione di tutte le operazioni. EPC X è la piattaforma specializzata per la gestione degli NPE e delle posizioni performing ad alto rischio di insolvenza: flessibile, veloce, sempre aggiornata e personalizzabile, ideale per i settori bancario, leasing, factoring, legale, multiutility e credito al consumo. Deda Credit è una società del Gruppo Dedagroup."
+    }
+  ],
+  "classifications": [
+    {
+      "subject_ref": "product:epc-x",
+      "kind": "category",
+      "term_slug": "credit-management",
+      "term_name": "Gestione crediti (NPE)",
+      "confidence": "high",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "sviluppiamo software per la gestione di tutto il processo di recupero del credito bancario e finanziario"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "kind": "vertical",
+      "term_slug": "banking-finance",
+      "term_name": "Banking & Finance",
+      "confidence": "high",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "Banche e finanziarie"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "kind": "segment",
+      "term_slug": "banche-e-servicer",
+      "term_name": "Banche, finanziarie e servicer",
+      "confidence": "high",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "istituti di credito, società finanziarie, Master Servicer e Special Servicer"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "kind": "segment",
+      "term_slug": "multiutility",
+      "term_name": "Multiutility",
+      "confidence": "medium",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "ideale per ogni business, per i settori bancario, leasing, factoring, legale, multiutility e credito al consumo"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "kind": "deployment",
+      "term_slug": "cloud",
+      "term_name": "Cloud",
+      "confidence": "low",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "suite che si adattano ai diversi contesti applicativi"
+    }
+  ],
+  "features": [
+    {
+      "subject_ref": "product:epc-x",
+      "feature_slug": "npe_management",
+      "feature_name": "Gestione NPE",
+      "feature_group": "credit",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "gestione degli NPE"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "feature_slug": "performing_high_risk",
+      "feature_name": "Gestione performing ad alto rischio di insolvenza",
+      "feature_group": "credit",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "posizioni performing ad alto rischio di insolvenza"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "feature_slug": "process_automation",
+      "feature_name": "Automazione delle operazioni",
+      "feature_group": "automation",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "grazie all'automazione di tutte le operazioni senza la necessità dell'intervento umano"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "feature_slug": "customization",
+      "feature_name": "Personalizzazione e parametrizzazione",
+      "feature_group": "platform",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "flessibile, veloce, sempre aggiornato e personalizzabile"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "feature_slug": "multi_company_portfolio",
+      "feature_name": "Gestione multi-azienda e multi-portafoglio",
+      "feature_group": "platform",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "consente sessioni multi-azienda e multi-portafoglio"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "feature_slug": "legal_workflow",
+      "feature_name": "Gestione processi legali",
+      "feature_group": "legal",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "settori ... legale"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "feature_slug": "regulatory_reporting",
+      "feature_name": "Reporting regolamentare",
+      "feature_group": "compliance",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "Reporting a fini regolamentari"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "feature_slug": "credit_recovery_process",
+      "feature_name": "Gestione end-to-end del recupero crediti",
+      "feature_group": "credit",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "gestione di tutto il processo di recupero del credito bancario e finanziario"
+    }
+  ],
+  "technical_characteristics": [
+    {
+      "subject_ref": "product:epc-x",
+      "kind": "extensibility",
+      "term_slug": "parametric_adaptation",
+      "term_name": "Adattabilità a contesti applicativi diversi",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "suite che si adattano ai diversi contesti applicativi dei nostri clienti"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "kind": "extensibility",
+      "term_slug": "multi_company",
+      "term_name": "Multi-azienda e multi-portafoglio",
+      "relationship_type": "supports",
+      "confidence": "medium",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "sessioni multi-azienda e multi-portafoglio"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "kind": "data_residency",
+      "term_slug": "italy",
+      "term_name": "Italia",
+      "relationship_type": "available_as",
+      "confidence": "low",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "sviluppiamo software per la gestione di tutto il processo di recupero del credito"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "kind": "security_standard",
+      "term_slug": "settore_bancario",
+      "term_name": "Requisiti settore bancario",
+      "relationship_type": "certified_for",
+      "confidence": "low",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "Banche e finanziarie"
+    }
+  ],
+  "facts": [
+    {
+      "subject_ref": "product:epc-x",
+      "predicate": "served_sectors",
+      "value": ["bancario", "leasing", "factoring", "legale", "multiutility", "credito al consumo"],
+      "value_kind": "reported",
+      "confidence": "high",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "i settori bancario, leasing, factoring, legale, multiutility e credito al consumo"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "predicate": "reference_customer",
+      "value": {"name": "AMCO", "context": "gestione unitaria dei crediti"},
+      "value_kind": "reported",
+      "confidence": "medium",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "AMCO ha scelto EPC X di Deda Credit per la gestione unitaria dei crediti"
+    }
+  ],
+  "claims": [
+    {
+      "subject_ref": "product:epc-x",
+      "claim_type": "observed",
+      "predicate": "positioning",
+      "statement": "EPC X è la piattaforma di Deda Credit specializzata nella gestione degli NPE e delle posizioni performing ad alto rischio di insolvenza, per banche, finanziarie e servicer.",
+      "assessment": "observed",
+      "confidence": "high",
+      "source_ref": "source:dedacredit-home",
+      "evidence_excerpt": "La piattaforma specializzata per la gestione degli NPE e delle posizioni performing ad alto rischio di insolvenza"
+    }
+  ],
+  "notes": [
+    {
+      "subject_ref": "product:epc-x",
+      "note_type": "classification_rationale",
+      "text": "Prodotto finanza/credito. Il settore primario è Banking & Finance; è inclusa una classificazione segment 'multiutility' perché la fonte indica la multiutility tra i settori serviti.",
+      "confidence": "medium"
+    },
+    {
+      "subject_ref": "product:epc-x",
+      "note_type": "data_quality",
+      "text": "Non sono disponibili dati finanziari riferiti specificamente a Deda Credit; i dati economici del Gruppo Dedagroup sono nel bundle del prodotto Stealth.",
+      "confidence": "medium"
+    }
+  ]
+}

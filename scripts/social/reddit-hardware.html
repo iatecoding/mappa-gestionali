@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Social · Hardware</title>
+<style>
+  :root {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #ffffff; width: 1200px; height: 1200px; overflow: hidden; }
+  .poster { width: 1200px; height: 1200px; padding: 50px 58px 42px; display: flex; flex-direction: column; color: #0f172a; background: #ffffff; }
+  .top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 18px; }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .logo { width: 46px; height: 46px; background: #0f172a; color: #ffffff; display: grid; place-items: center; font-weight: 900; font-size: 1.15rem; }
+  .brand-name { font-weight: 850; font-size: 1.05rem; letter-spacing: -0.01em; color: #0f172a; }
+  .brand-sub { font-size: 0.78rem; color: #64748b; margin-top: 2px; }
+  .tag { text-align: right; }
+  .badge { display: inline-block; border: 1px solid #cbd5e1; background: #f8fafc; color: #334155; font-size: 0.72rem; font-weight: 750; padding: 4px 10px; }
+  .tag-sub { font-size: 0.74rem; color: #64748b; margin-top: 6px; }
+  .kicker { margin-top: 28px; color: #b91c1c; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; }
+  h1 { font-size: 3.05rem; line-height: 1.08; letter-spacing: -0.025em; margin-top: 12px; max-width: 1060px; color: #0f172a; }
+  h1 em { font-style: normal; color: #b91c1c; }
+  .sub { margin-top: 13px; font-size: 0.98rem; color: #475569; line-height: 1.55; max-width: 1010px; }
+  .sub strong { color: #0f172a; }
+  .main { display: flex; gap: 26px; margin-top: 24px; flex: 1; min-height: 0; }
+  .sector-card { flex: 1 1 600px; min-width: 0; background: #ffffff; border: 1px solid #e2e8f0; padding: 18px 20px 12px; display: flex; flex-direction: column; }
+  .chart-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; gap: 10px; }
+  .chart-title { font-size: 0.84rem; font-weight: 800; color: #0f172a; }
+  .chart-cap { font-size: 0.7rem; color: #64748b; text-align: right; }
+  .srows { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+  .srow { display: grid; grid-template-columns: 196px 1fr 46px; align-items: center; gap: 10px; padding: 4px 0; }
+  .slabel { font-size: 0.76rem; font-weight: 650; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #1e293b; }
+  .strack { height: 14px; background: #f1f5f9; position: relative; }
+  .sfill { position: absolute; inset: 0 auto 0 0; }
+  .sval { text-align: right; font-size: 0.8rem; font-weight: 850; font-variant-numeric: tabular-nums; }
+  .avg { position: absolute; top: -3px; bottom: -3px; border-left: 2px dashed #94a3b8; }
+  .note { font-size: 0.71rem; color: #64748b; margin-top: 10px; line-height: 1.5; }
+  .dev-card { flex: 0 0 430px; background: #ffffff; border: 1px solid #e2e8f0; padding: 18px 20px 12px; display: flex; flex-direction: column; }
+  .dev-body { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+  .dev-row { padding: 6px 0; border-bottom: 1px solid #f1f5f9; }
+  .dev-row:last-child { border-bottom: none; }
+  .dev-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .dev-name { flex: 1; font-size: 0.78rem; font-weight: 650; color: #1e293b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .dev-units { display: flex; gap: 3px; align-items: center; margin-top: 6px; }
+  .dev-units i { width: 10px; height: 10px; background: #b91c1c; display: block; }
+  .dev-units i.part { background: transparent; border: 2px solid #b91c1c; opacity: 0.55; }
+  .dev-count { font-size: 0.78rem; font-weight: 850; font-variant-numeric: tabular-nums; text-align: right; color: #0f172a; white-space: nowrap; }
+  .dev-count small { font-size: 0.6rem; font-weight: 650; color: #94a3b8; letter-spacing: 0.03em; margin-left: 3px; }
+  .hl { margin-top: 10px; border: 1px solid #fecaca; background: #fef2f2; padding: 10px 13px; font-size: 0.74rem; color: #7f1d1d; line-height: 1.5; }
+  .hl strong { color: #b91c1c; }
+  .footer { margin-top: 18px; border-top: 1px solid #e2e8f0; padding-top: 14px; display: flex; justify-content: space-between; align-items: center; color: #64748b; font-size: 0.78rem; }
+  .footer .url { color: #0f172a; font-weight: 800; font-size: 0.92rem; }
+  .footer .url span { color: #b91c1c; }
+</style>
+</head>
+<body>
+  <div class="poster">
+    <div class="top">
+      <div class="brand">
+        <div class="logo">OG</div>
+        <div>
+          <div class="brand-name">Osservatorio Gestionali Italiani</div>
+          <div class="brand-sub">business intelligence open source sul software gestionale</div>
+        </div>
+      </div>
+      <div class="tag">
+        <span class="badge">Perimetro: solo software house italiane</span>
+        <div class="tag-sub">esclusi i gruppi esteri che distribuiscono in Italia</div>
+      </div>
+    </div>
+
+    <div class="kicker">Hardware · Barriere competitive</div>
+    <h1>Il <em>41% dei gestionali italiani</em> richiede hardware fisico per funzionare</h1>
+    <div class="sub" id="subtitle">…</div>
+
+    <div class="main">
+      <div class="sector-card">
+        <div class="chart-head">
+          <div class="chart-title">Dipendenza hardware per settore</div>
+          <div class="chart-cap">% di prodotti con dispositivi obbligatori</div>
+        </div>
+        <div class="srows" id="sectors"></div>
+        <div class="note" id="sector-note">…</div>
+      </div>
+      <div class="dev-card">
+        <div class="chart-head">
+          <div class="chart-title">Dispositivi più richiesti</div>
+          <div class="chart-cap">1 quadratino = 5 software</div>
+        </div>
+        <div class="dev-body" id="devices"></div>
+        <div class="hl" id="hl">…</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="url">iatecoding.github.io/<span>mappa-gestionali</span></div>
+      <div>Analisi per prodotto, settore e livello di lock-in · solo aziende italiane · dati CC0</div>
+    </div>
+  </div>
+
+  <script src="../../web/catalog-data.js"></script>
+  <script>
+    const data = window.CATALOGUE_DATA;
+    const mi = data.marketInsights;
+    const hwm = mi.hardwareMatrix;
+    const nf = new Intl.NumberFormat('it-IT');
+    const nProd = data.productCount;
+
+    const hwWith = hwm.highCount + hwm.mediumCount;
+    const hwRate = hwWith / nProd * 100;
+
+    document.getElementById('subtitle').innerHTML =
+      `Su <strong>${nf.format(nProd)} software censiti</strong> (solo produttori italiani), ${nf.format(hwWith)} (${hwRate.toLocaleString('it-IT', { maximumFractionDigits: 0 })}%) richiedono casse RT, tornelli, timbratrici, palmari o sensori: un vincolo che lega il cliente al fornitore. Dato ricostruito dalle schede tecniche dei fornitori.`;
+
+    const SECTOR_SHORT = {
+      'Hospitality & Strutture Ricettive': 'Hospitality & ricettività',
+      'HR, Paghe & Gestione Personale': 'HR, paghe & personale',
+      'Logistica, Magazzino & Flotte': 'Logistica & magazzino',
+      'Pubblica Amministrazione & Utility': 'Pubblica amministrazione',
+      'Professioni, Salute, Sport & No-Profit': 'Professioni & salute',
+      'Field Service, Cantieri & Manutenzione': 'Cantieri & manutenzione',
+      'Manifattura & Industria 4.0': 'Manifattura & industria 4.0',
+      'Ristorazione & Food Service': 'Ristorazione & food',
+      'Retail, Cassa & E-commerce': 'Retail & cassa',
+      'ERP, Finanza & Controllo': 'ERP, finanza & controllo'
+    };
+    const sectorColors = rate => rate > 60 ? '#b91c1c' : (rate > 30 ? '#b45309' : '#0f766e');
+    const sorted = [...mi.macroSectors].sort((a, b) => b.hwRate - a.hwRate);
+    document.getElementById('sectors').innerHTML = sorted.map(s => `
+      <div class="srow">
+        <div class="slabel" title="${s.name}">${SECTOR_SHORT[s.name] || s.name}</div>
+        <div class="strack">
+          <div class="sfill" style="width: ${s.hwRate}%; background: ${sectorColors(s.hwRate)}"></div>
+          <div class="avg" style="left: ${hwRate}%"></div>
+        </div>
+        <div class="sval" style="color: ${sectorColors(s.hwRate)}">${s.hwRate.toLocaleString('it-IT', { maximumFractionDigits: 0 })}%</div>
+      </div>`).join('');
+    document.getElementById('sector-note').innerHTML =
+      `Media del catalogo: <strong style="color:#b91c1c">${hwRate.toLocaleString('it-IT', { maximumFractionDigits: 1 })}%</strong> (tratteggio verticale). In testa la ristorazione (${sorted[0].hwRate.toLocaleString('it-IT')}%), in coda i servizi professionali (${sorted[sorted.length - 1].hwRate.toLocaleString('it-IT')}%).`;
+
+    const SHORT = {
+      'Punto Cassa & Stampanti RT': 'Cassa RT & stampanti fiscali',
+      'IoT Industriale & PLC': 'IoT industriale & PLC',
+      'Scanner Barcode & Terminali Rugged': 'Scanner & palmari industriali',
+      'Terminali Timbratura & Badge': 'Timbratrici & badge presenze',
+      'Tornelli & Varchi di Accesso': 'Tornelli & varchi d\'accesso',
+      'GPS & Telemetria Veicoli': 'GPS & telemetria veicoli',
+      'Smart Lock & Domotica': 'Smart lock & domotica'
+    };
+    const UNIT = 5;
+    document.getElementById('devices').innerHTML = hwm.devices.map(d => {
+      const full = Math.floor(d.count / UNIT);
+      const rest = d.count % UNIT;
+      const dots = Array.from({ length: full }, () => '<i></i>').join('') + (rest ? '<i class="part"></i>' : '');
+      return `
+        <div class="dev-row">
+          <div class="dev-top">
+            <div class="dev-name">${SHORT[d.device] || d.device}</div>
+            <div class="dev-count">${nf.format(d.count)}<small>software</small></div>
+          </div>
+          <div class="dev-units">${dots}</div>
+        </div>`;
+    }).join('');
+
+    document.getElementById('hl').innerHTML =
+      `La <strong>cassa RT omologata</strong> domina: vincolo fiscale oltre che tecnico. Seguono PLC industriali per Industria 4.0, palmari per magazzino e <strong>timbratrici</strong> per le presenze del personale.`;
+  </script>
+</body>
+</html>

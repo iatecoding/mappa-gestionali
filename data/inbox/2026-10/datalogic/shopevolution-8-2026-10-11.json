@@ -1,0 +1,597 @@
+{
+  "schema_version": "1.0",
+  "record_id": "research-retail-datalogic-20261011",
+  "created_at": "2026-10-11T10:00:00Z",
+  "created_by": {"agent_id": "research_retail"},
+  "scope": {"country": "IT", "language": "it", "macro_sector": "Retail/Cassa"},
+  "entities": [
+    {
+      "local_id": "company:datalogic",
+      "entity_type": "company",
+      "name": "Datalogic S.p.A.",
+      "legal_name": "Datalogic S.p.A.",
+      "identifiers": {"vat_id": "01835711209"},
+      "website": "https://www.datalogic.com/",
+      "headquarters_country": "IT",
+      "headquarters_city": "Calderara di Reno",
+      "headquarters_region": "Emilia-Romagna",
+      "employee_band": "1000+",
+      "metadata": {"listed": "Euronext STAR Milan (DAL.MI)", "sector": "Automatic data capture / industrial automation"}
+    },
+    {
+      "local_id": "product:shopevolution-8",
+      "entity_type": "product",
+      "company_ref": "company:datalogic",
+      "name": "Shopevolution 8",
+      "slug": "shopevolution-8",
+      "website": "https://www.datalogic.com/eng/retail/software-solutions/shopevolution-pd-716.html",
+      "deployment": ["cloud"],
+      "description": "Software omnicanale di self-shopping per il retail: Scan and Go, gestione promozioni, tracciamento acquisti in tempo reale e loss prevention basata su AI e machine learning."
+    },
+    {
+      "local_id": "product:smart-vision-suite",
+      "entity_type": "product",
+      "company_ref": "company:datalogic",
+      "name": "Smart Vision Suite for Retail",
+      "slug": "smart-vision-suite-for-retail",
+      "website": "https://www.datalogic.com/eng/media-center/press-releases/datalogic-launches-smart-vision-suite-for-retail-the-industrys-first-all-in-one-embedded-ai-software-solution-for-real-time-loss-prevention-at-checkout-nd-8684.html",
+      "deployment": ["on_premise"],
+      "description": "Suite software AI per la loss prevention al punto cassa, integrata nei lettori Magellan 9600i e 9900i: produce recognition, mis-scan, label switching e multiple item detection."
+    }
+  ],
+  "sources": [
+    {
+      "local_id": "source:shopevolution-product",
+      "url": "https://www.datalogic.com/eng/retail/software-solutions/shopevolution-pd-716.html",
+      "source_type": "official_product_page",
+      "publisher": "Datalogic S.p.A.",
+      "title": "Shopevolution for Self Shopping Software for Mobile Computers",
+      "accessed_at": "2026-10-11T09:10:00Z",
+      "language": "en"
+    },
+    {
+      "local_id": "source:shopevolution-press",
+      "url": "https://www.datalogic.com/eng/media-center/press-releases/shopevolution-8-join-the-retail-self-shopping-revolution-nd-8501.html",
+      "source_type": "press_release",
+      "publisher": "Datalogic S.p.A.",
+      "title": "Shopevolution 8 - Join the Retail Self-Shopping Revolution",
+      "accessed_at": "2026-10-11T09:12:00Z",
+      "language": "en"
+    },
+    {
+      "local_id": "source:smart-vision-press",
+      "url": "https://www.datalogic.com/eng/media-center/press-releases/datalogic-launches-smart-vision-suite-for-retail-the-industrys-first-all-in-one-embedded-ai-software-solution-for-real-time-loss-prevention-at-checkout-nd-8684.html",
+      "source_type": "press_release",
+      "publisher": "Datalogic S.p.A.",
+      "title": "Datalogic Launches Smart Vision Suite for Retail",
+      "accessed_at": "2026-10-11T09:15:00Z",
+      "language": "en"
+    },
+    {
+      "local_id": "source:magellan-9900i",
+      "url": "https://www.datalogic.com/eng/retail-gs1-digital-link/fixed-retail-scanners/magellan-9900i-pd-924.html",
+      "source_type": "official_product_page",
+      "publisher": "Datalogic S.p.A.",
+      "title": "Magellan 9900i Multi-Plane Imaging Scanner/Scales",
+      "accessed_at": "2026-10-11T09:17:00Z",
+      "language": "en"
+    },
+    {
+      "local_id": "source:datalogic-annual-report-2024",
+      "url": "https://www.datalogic.com/upload/pdf/Highlights/DatalogicHighlights_ITA.pdf",
+      "source_type": "annual_report",
+      "publisher": "Datalogic S.p.A.",
+      "title": "Annual Report 2024 - Datalogic Group",
+      "accessed_at": "2026-10-11T09:20:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:datalogic-borsaitaliana",
+      "url": "https://www.borsaitaliana.it/borsa/azioni/profilo-societa-dettaglio.html?isin=IT0004053440&lang=it",
+      "source_type": "directory",
+      "publisher": "Borsa Italiana",
+      "title": "Datalogic S.p.A. - Profilo Societario",
+      "accessed_at": "2026-10-11T09:22:00Z",
+      "language": "it"
+    }
+  ],
+  "documents": [
+    {
+      "local_id": "document:shopevolution-product",
+      "source_ref": "source:shopevolution-product",
+      "title": "Shopevolution 8 - pagina prodotto",
+      "document_type": "web_page",
+      "extraction_method": "web_manual_excerpt",
+      "text": "Shopevolution 8 e' un software omnicanale di self-shopping con Scan and Go, gestione promozioni e tracciamento degli acquisti in tempo reale. Integra algoritmi di loss prevention basati su machine learning e AI, mobile device management (MDM), integrazione out-of-the-box con sistemi POS, programmi fedelta' e pricing engine tramite API flessibile. E' cloud-ready ed elimina la necessita' di server in negozio, con gestione multi-store."
+    },
+    {
+      "local_id": "document:smart-vision-press",
+      "source_ref": "source:smart-vision-press",
+      "title": "Smart Vision Suite for Retail - comunicato",
+      "document_type": "press_release",
+      "extraction_method": "web_manual_excerpt",
+      "text": "Datalogic presenta Smart Vision Suite for Retail, una suite software AI per la loss prevention al checkout, integrata nei lettori Magellan 9600i e 9900i. I casi d'uso includono Produce Recognition, Label Switching e Multiple Item Detection, Mis-scan Detection. L'architettura e' embedded con Tensor Processing Unit (TPU), switch PoE e SDK/API per l'integrazione con POS/SCO."
+    }
+  ],
+  "classifications": [
+    {
+      "subject_ref": "product:shopevolution-8",
+      "kind": "category",
+      "term_slug": "retail-software",
+      "term_name": "Software per il Retail",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "self-shopping software solution designed to improve retail efficiency"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "kind": "vertical",
+      "term_slug": "self-shopping",
+      "term_name": "Self-Shopping / Scan and Go",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "includes Scan and Go, promotion management, and real-time purchase tracking"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "kind": "vertical",
+      "term_slug": "gdo-large-retail",
+      "term_name": "GDO e grandi catene retail",
+      "confidence": "medium",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "A single Shopevolution instance can manage multiple stores"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "kind": "deployment",
+      "term_slug": "cloud",
+      "term_name": "Cloud",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "Shopevolution is cloud-ready"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "kind": "segment",
+      "term_slug": "enterprise",
+      "term_name": "Grandi organizzazioni / Enterprise",
+      "confidence": "medium",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "Multi-Store Management"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "kind": "category",
+      "term_slug": "retail-loss-prevention",
+      "term_name": "Retail Loss Prevention",
+      "confidence": "high",
+      "source_ref": "source:smart-vision-press",
+      "evidence_excerpt": "AI-driven portfolio of software solutions designed to enhance loss prevention"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "kind": "category",
+      "term_slug": "retail-checkout-software",
+      "term_name": "Software per punto cassa Retail",
+      "confidence": "high",
+      "source_ref": "source:smart-vision-press",
+      "evidence_excerpt": "improve front end performance"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "kind": "deployment",
+      "term_slug": "edge-embedded",
+      "term_name": "Edge / embedded",
+      "confidence": "high",
+      "source_ref": "source:smart-vision-press",
+      "evidence_excerpt": "integrates advanced AI algorithms directly into the Magellan 9600i and 9900i scanners"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "kind": "vertical",
+      "term_slug": "grocery-checkout",
+      "term_name": "GDO / checkout alimentare",
+      "confidence": "medium",
+      "source_ref": "source:smart-vision-press",
+      "evidence_excerpt": "Produce Recognition: Automatically identifies fresh items on the scale"
+    }
+  ],
+  "features": [
+    {
+      "subject_ref": "product:shopevolution-8",
+      "feature_slug": "scan_and_go",
+      "feature_name": "Scan and Go",
+      "feature_group": "self_shopping",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "Scan and Go allows quick and convenient product scanning"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "feature_slug": "mobile_self_shopping",
+      "feature_name": "Mobile self-shopping",
+      "feature_group": "self_shopping",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "Retail, Self-Shopping, Mobile Self-Shopping, and Click & Collect"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "feature_slug": "click_and_collect",
+      "feature_name": "Click & Collect",
+      "feature_group": "omnichannel",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "including Click & Collect and mobile self-shopping"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "feature_slug": "promotion_management",
+      "feature_name": "Gestione promozioni",
+      "feature_group": "marketing",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "promotion management"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "feature_slug": "real_time_basket_tracking",
+      "feature_name": "Tracciamento acquisti in tempo reale",
+      "feature_group": "self_shopping",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "track real-time purchase totals"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "feature_slug": "ai_loss_prevention",
+      "feature_name": "Loss prevention con AI",
+      "feature_group": "security",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "underpinned by machine-learning and AI to help with loss-prevention"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "feature_slug": "smart_audit_rules",
+      "feature_name": "Regole di audit intelligenti",
+      "feature_group": "security",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "smart audit rules, and real-time user behavior analysis"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "feature_slug": "mobile_device_management",
+      "feature_name": "Mobile Device Management (MDM)",
+      "feature_group": "platform",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "built-in Mobile Device Management (MDM) feature"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "feature_slug": "net_price_calculator",
+      "feature_name": "Net Price Calculator",
+      "feature_group": "pricing",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "Net Price Calculator providing a real-time overview of pricing"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "feature_slug": "pos_integration",
+      "feature_name": "Integrazione punti cassa (POS)",
+      "feature_group": "integration",
+      "support_level": "integration",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "out-of-the-box integration with Point of Sale systems"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "feature_slug": "loyalty_integration",
+      "feature_name": "Integrazione fedelta' e CRM",
+      "feature_group": "integration",
+      "support_level": "integration",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "customer management, loyalty programs, and pricing engines"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "feature_slug": "api",
+      "feature_name": "API aperte",
+      "feature_group": "platform",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "Its flexible API ensures easy compatibility with any retail ICT system"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "feature_slug": "produce_recognition",
+      "feature_name": "Produce Recognition",
+      "feature_group": "loss_prevention",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:smart-vision-press",
+      "evidence_excerpt": "Automatically identifies fresh items on the scale"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "feature_slug": "mis_scan_detection",
+      "feature_name": "Mis-scan Detection",
+      "feature_group": "loss_prevention",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:smart-vision-press",
+      "evidence_excerpt": "Real-time recognition of \"missed\" items"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "feature_slug": "label_switching_detection",
+      "feature_name": "Label Switching Detection",
+      "feature_group": "loss_prevention",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:smart-vision-press",
+      "evidence_excerpt": "Detects discrepancies between the physical product and its barcode"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "feature_slug": "multiple_item_detection",
+      "feature_name": "Multiple Item Detection",
+      "feature_group": "loss_prevention",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:smart-vision-press",
+      "evidence_excerpt": "identifying stacked items to ensure every product is accounted for"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "feature_slug": "edge_ai_processing",
+      "feature_name": "Elaborazione AI at the Edge",
+      "feature_group": "platform",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:smart-vision-press",
+      "evidence_excerpt": "integrates advanced AI algorithms directly into the Magellan 9600i and 9900i scanners"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "feature_slug": "sdk",
+      "feature_name": "SDK per sviluppatori",
+      "feature_group": "platform",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:magellan-9900i",
+      "evidence_excerpt": "A comprehensive SDK (Software Development Kit) empowers third-party developers"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "feature_slug": "pos_sco_api",
+      "feature_name": "API per integrazione POS/SCO",
+      "feature_group": "integration",
+      "support_level": "integration",
+      "confidence": "medium",
+      "source_ref": "source:magellan-9900i",
+      "evidence_excerpt": "An API set allows the straightforward integration of Loss Prevention services into POS/SCO solutions"
+    }
+  ],
+  "technical_characteristics": [
+    {
+      "subject_ref": "product:shopevolution-8",
+      "kind": "deployment_model",
+      "term_slug": "cloud",
+      "term_name": "Cloud",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "Shopevolution is cloud-ready"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "kind": "client_platform",
+      "term_slug": "android-ios",
+      "term_name": "Android e iOS",
+      "relationship_type": "compatible_with",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-press",
+      "evidence_excerpt": "available on other handheld devices smartphones running Android or IOS"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "kind": "hardware_integration",
+      "term_slug": "joya-devices",
+      "term_name": "Lettori Joya / mobile computer",
+      "relationship_type": "compatible_with",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "seamlessly integrates with Datalogic's Joya family of Personal Self Shopping devices"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "kind": "api_protocol",
+      "term_slug": "rest_api",
+      "term_name": "API (integrazione POS/ICT)",
+      "relationship_type": "supports",
+      "confidence": "medium",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "Its flexible API ensures easy compatibility with any retail ICT system"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "kind": "integration_standard",
+      "term_slug": "pos_loyalty_pricing",
+      "term_name": "POS, fedelta' e pricing engine",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "out-of-the-box integration with Point of Sale systems, customer management, loyalty programs, and pricing engines"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "kind": "deployment_model",
+      "term_slug": "edge_embedded",
+      "term_name": "Edge / embedded nello scanner",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:smart-vision-press",
+      "evidence_excerpt": "embedded architecture addresses shrink instantaneously"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "kind": "hardware_integration",
+      "term_slug": "magellan-9600i-9900i",
+      "term_name": "Scanner Magellan 9600i / 9900i",
+      "relationship_type": "certified_for",
+      "confidence": "high",
+      "source_ref": "source:smart-vision-press",
+      "evidence_excerpt": "directly embedded in the updated Magellan 9600i and 9900i scanner platforms"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "kind": "api_protocol",
+      "term_slug": "rest_api",
+      "term_name": "API per POS/SCO",
+      "relationship_type": "supports",
+      "confidence": "medium",
+      "source_ref": "source:magellan-9900i",
+      "evidence_excerpt": "An API set allows the straightforward integration of Loss Prevention services"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "kind": "extensibility",
+      "term_slug": "sdk",
+      "term_name": "SDK per app di terze parti",
+      "relationship_type": "supports",
+      "confidence": "medium",
+      "source_ref": "source:magellan-9900i",
+      "evidence_excerpt": "A comprehensive SDK (Software Development Kit)"
+    }
+  ],
+  "financial_metrics": [
+    {
+      "subject_ref": "company:datalogic",
+      "metric": "revenue",
+      "period_year": 2024,
+      "value": {"exact": 493767000},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Ricavi consolidati di Gruppo 2024 (493,8 milioni di euro).",
+      "confidence": "high",
+      "source_ref": "source:datalogic-annual-report-2024",
+      "evidence_excerpt": "Revenue from sales of EUR493.8 million"
+    },
+    {
+      "subject_ref": "company:datalogic",
+      "metric": "ebitda",
+      "period_year": 2024,
+      "value": {"exact": 44516000},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Adjusted EBITDA di Gruppo 2024 (44,5 milioni di euro).",
+      "confidence": "high",
+      "source_ref": "source:datalogic-annual-report-2024",
+      "evidence_excerpt": "Adjusted EBITDA came to EUR44.5 million"
+    },
+    {
+      "subject_ref": "company:datalogic",
+      "metric": "employees",
+      "period_year": 2024,
+      "value": {"exact": 2751},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Organico di Gruppo a fine 2024.",
+      "confidence": "high",
+      "source_ref": "source:datalogic-annual-report-2024",
+      "evidence_excerpt": "SA8000 employees 2,751"
+    }
+  ],
+  "facts": [
+    {
+      "subject_ref": "product:shopevolution-8",
+      "predicate": "product_version",
+      "value": "8",
+      "value_kind": "observed",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-press",
+      "evidence_excerpt": "launch of Shopevolution 8"
+    },
+    {
+      "subject_ref": "product:shopevolution-8",
+      "predicate": "release_update_cadence",
+      "value": "due aggiornamenti all'anno",
+      "value_kind": "reported",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "regular twice a year updates"
+    },
+    {
+      "subject_ref": "company:datalogic",
+      "predicate": "listing",
+      "value": "Euronext STAR Milan (DAL.MI) dal 2001",
+      "value_kind": "reported",
+      "confidence": "high",
+      "source_ref": "source:datalogic-borsaitaliana",
+      "evidence_excerpt": "Datalogic S.p.A."
+    }
+  ],
+  "claims": [
+    {
+      "subject_ref": "product:shopevolution-8",
+      "claim_type": "observed",
+      "predicate": "positioning",
+      "statement": "Shopevolution 8 e' presentato come soluzione software di self-shopping omnicanale con loss prevention basata su AI, cloud-ready e integrabile con qualsiasi sistema POS retail.",
+      "assessment": "observed",
+      "confidence": "high",
+      "source_ref": "source:shopevolution-product",
+      "evidence_excerpt": "globally recognized Omni-channel self-shopping software solution"
+    },
+    {
+      "subject_ref": "product:smart-vision-suite",
+      "claim_type": "observed",
+      "predicate": "positioning",
+      "statement": "Smart Vision Suite for Retail e' presentata come prima soluzione software AI all-in-one embedded per la loss prevention in tempo reale al punto cassa.",
+      "assessment": "observed",
+      "confidence": "high",
+      "source_ref": "source:smart-vision-press",
+      "evidence_excerpt": "The Industry's First All-in-One Embedded AI Software Solution for Real-Time Loss Prevention at Checkout"
+    },
+    {
+      "subject_ref": "company:datalogic",
+      "claim_type": "inferred",
+      "predicate": "business_focus",
+      "statement": "Il core business del Gruppo resta l'hardware di data capture e automazione; le suite software retail (Shopevolution, Smart Vision Suite) sono abilitanti e bundlate con i dispositivi, non vendute come standalone puro.",
+      "assessment": "inference",
+      "methodology": "Basato sulla descrizione del portafoglio prodotti e dei segmenti Data Capture e Industrial Automation.",
+      "confidence": "medium",
+      "source_ref": "source:datalogic-borsaitaliana",
+      "evidence_excerpt": "specializzata nella progettazione e produzione di lettori di codici a barre, mobile computer, RFID"
+    }
+  ],
+  "notes": [
+    {
+      "subject_ref": "company:datalogic",
+      "note_type": "classification_rationale",
+      "text": "Classificato nel macro-settore Retail/Cassa per la categoria 'Software per il Retail'. Azienda italiana con sede a Calderara di Reno (Bologna), quotata su Euronext STAR Milan.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "company:datalogic",
+      "note_type": "data_quality",
+      "text": "I valori finanziari sono consolidati di Gruppo (Annual Report 2024). Il bilancio civilistico della sola Datalogic S.p.A. riporta ricavi molto inferiori e non rappresenta il perimetro operativo.",
+      "confidence": "high"
+    }
+  ]
+}

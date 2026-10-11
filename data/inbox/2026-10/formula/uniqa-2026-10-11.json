@@ -1,0 +1,461 @@
+{
+  "schema_version": "1.0",
+  "record_id": "research-erp-formula-uniqa-20261011",
+  "created_at": "2026-10-11T11:00:00Z",
+  "created_by": {
+    "agent_id": "research_erp"
+  },
+  "scope": {
+    "country": "IT",
+    "language": "it",
+    "macro_sector": "ERP/Finanza; Manifattura"
+  },
+  "entities": [
+    {
+      "local_id": "group:impresoft",
+      "entity_type": "group",
+      "name": "Impresoft S.p.A.",
+      "headquarters_country": "IT",
+      "website": "https://www.impresoftgroup.com/",
+      "metadata": {
+        "employees_2024": 1700,
+        "revenue_2024_eur": 203000000
+      }
+    },
+    {
+      "local_id": "company:formula",
+      "entity_type": "company",
+      "name": "Formula S.p.A.",
+      "legal_name": "Formula S.p.A.",
+      "identifiers": {
+        "vat_id": "12427540963"
+      },
+      "website": "https://www.formula.it/",
+      "headquarters_country": "IT",
+      "headquarters_city": "Milano",
+      "headquarters_region": "Lombardia",
+      "employee_band": "250-499",
+      "group_ref": "group:impresoft",
+      "metadata": {
+        "founded": 1972,
+        "formerly": "Formula Impresoft S.p.A.",
+        "legal_note": "Societa' soggetta a direzione e coordinamento di Impresoft S.p.A."
+      }
+    },
+    {
+      "local_id": "product:uniqa",
+      "entity_type": "product",
+      "company_ref": "company:formula",
+      "name": "UniQa",
+      "slug": "uniqa",
+      "website": "https://www.formula.it/uniqa",
+      "deployment": [
+        "cloud",
+        "on_premise"
+      ],
+      "description": "Suite digitale integrata e modulare (ERP, CPM/BI, tesoreria, credit management, documentale, CRM, qualita', MES/APS) per PMI e medie imprese che vogliono digitalizzare processi, organizzazione e tecnologia."
+    }
+  ],
+  "sources": [
+    {
+      "local_id": "source:formula-uniqa",
+      "url": "https://www.formula.it/uniqa",
+      "source_type": "official_product_page",
+      "publisher": "Formula S.p.A.",
+      "title": "UniQa | FORMULA",
+      "accessed_at": "2026-10-11T10:30:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:formula-home",
+      "url": "https://www.formula.it/",
+      "source_type": "official_company_page",
+      "publisher": "Formula S.p.A.",
+      "title": "Soluzioni e Software Gestionale per Imprese ed Aziende | FORMULA",
+      "accessed_at": "2026-10-11T10:32:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:formula-chi-siamo",
+      "url": "https://www.formula.it/chi-siamo",
+      "source_type": "official_company_page",
+      "publisher": "Formula S.p.A.",
+      "title": "Fornitura di Software Imprese Nazionali e Internazionali | FORMULA",
+      "accessed_at": "2026-10-11T10:34:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:formula-manifatturiero",
+      "url": "https://www.formula.it/uniqa/manifatturiero-e-produzione",
+      "source_type": "official_product_page",
+      "publisher": "Formula S.p.A.",
+      "title": "Manifatturiero e Produzione | FORMULA",
+      "accessed_at": "2026-10-11T10:36:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:formula-direttore-produzione",
+      "url": "https://www.formula.it/uniqa/direttore-produzione",
+      "source_type": "official_product_page",
+      "publisher": "Formula S.p.A.",
+      "title": "Direttore Produzione | FORMULA",
+      "accessed_at": "2026-10-11T10:38:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:formula-financial",
+      "url": "https://www.fatturatoazienda.it/azienda/formula-spa-12427540963",
+      "source_type": "company_register",
+      "publisher": "FatturatoAzienda.it",
+      "title": "Formula | Fatturato 48,3 Mln €, 375 dipendenti | Bilancio 2024",
+      "accessed_at": "2026-10-11T10:42:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:formula-datamanager",
+      "url": "https://www.datamanager.it/2025/06/formula-radici-solide-sguardo-al-futuro/",
+      "source_type": "news_article",
+      "publisher": "Data Manager Online",
+      "title": "Formula: radici solide, sguardo al futuro",
+      "accessed_at": "2026-10-11T10:44:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:impresoft-2024",
+      "url": "https://www.impresoftgroup.com/it/blog/impresoft-risultati-2024-approvato-il-bilancio-consolidato.-superati-i-200m-di-ricavi",
+      "source_type": "press_release",
+      "publisher": "Impresoft",
+      "title": "Impresoft, risultati 2024: superati i €200M di ricavi",
+      "accessed_at": "2026-10-11T10:46:00Z",
+      "language": "it"
+    }
+  ],
+  "documents": [
+    {
+      "local_id": "document:formula-uniqa",
+      "source_ref": "source:formula-uniqa",
+      "title": "UniQa - pagina prodotto",
+      "document_type": "web_page",
+      "extraction_method": "web_manual_excerpt",
+      "text": "UniQa e' descritta come la soluzione che include tutte le tecnologie, gli strumenti di execution e governance indispensabili a una moderna gestione aziendale. Opera su tre dimensioni: processi, organizzazione e tecnologia, con approccio modulare, scalabile e orientato all'implementazione per processo."
+    }
+  ],
+  "classifications": [
+    {
+      "subject_ref": "product:uniqa",
+      "kind": "category",
+      "term_slug": "erp",
+      "term_name": "ERP",
+      "confidence": "high",
+      "source_ref": "source:formula-home",
+      "evidence_excerpt": "ERP"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "kind": "category",
+      "term_slug": "cpm-bi",
+      "term_name": "CPM / Business Intelligence",
+      "confidence": "high",
+      "source_ref": "source:formula-home",
+      "evidence_excerpt": "CPM"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "kind": "vertical",
+      "term_slug": "manifatturiero-produzione",
+      "term_name": "Manifatturiero e Produzione",
+      "confidence": "high",
+      "source_ref": "source:formula-manifatturiero",
+      "evidence_excerpt": "Manifatturiero e Produzione"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "kind": "segment",
+      "term_slug": "pmi-midmarket",
+      "term_name": "PMI e medie imprese",
+      "confidence": "high",
+      "source_ref": "source:formula-datamanager",
+      "evidence_excerpt": "affianca le PMI italiane dal 1972"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "kind": "deployment",
+      "term_slug": "cloud-onpremise",
+      "term_name": "Cloud e on-premise",
+      "confidence": "medium",
+      "source_ref": "source:formula-direttore-produzione",
+      "evidence_excerpt": "data center, cloud-based oppure on premise"
+    }
+  ],
+  "features": [
+    {
+      "subject_ref": "product:uniqa",
+      "feature_slug": "amministrazione_finanza_controllo",
+      "feature_name": "Amministrazione, Finanza e Controllo (AFC)",
+      "feature_group": "finance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:formula-home",
+      "evidence_excerpt": "AFC"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "feature_slug": "sales_management",
+      "feature_name": "Gestione vendite",
+      "feature_group": "sales",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:formula-home",
+      "evidence_excerpt": "vendite"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "feature_slug": "purchasing",
+      "feature_name": "Gestione acquisti",
+      "feature_group": "operations",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:formula-home",
+      "evidence_excerpt": "acquisti"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "feature_slug": "warehouse_management",
+      "feature_name": "Gestione magazzino",
+      "feature_group": "operations",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:formula-home",
+      "evidence_excerpt": "magazzino"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "feature_slug": "production_management",
+      "feature_name": "Gestione produzione",
+      "feature_group": "manufacturing",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:formula-home",
+      "evidence_excerpt": "produzione"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "feature_slug": "cpm_bi",
+      "feature_name": "CPM / Business Intelligence",
+      "feature_group": "analytics",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:formula-home",
+      "evidence_excerpt": "CPM"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "feature_slug": "treasury",
+      "feature_name": "Tesoreria",
+      "feature_group": "finance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:formula-home",
+      "evidence_excerpt": "Tesoreria"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "feature_slug": "credit_management",
+      "feature_name": "Gestione del credito",
+      "feature_group": "finance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:formula-home",
+      "evidence_excerpt": "Gestione del credito"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "feature_slug": "document_management",
+      "feature_name": "Gestione documentale",
+      "feature_group": "platform",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:formula-home",
+      "evidence_excerpt": "Gestione documentale"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "feature_slug": "crm",
+      "feature_name": "CRM",
+      "feature_group": "crm",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:formula-home",
+      "evidence_excerpt": "CRM Quando ERP e CRM parlano la stessa lingua"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "feature_slug": "quality_management",
+      "feature_name": "Gestione qualita'",
+      "feature_group": "quality",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:formula-home",
+      "evidence_excerpt": "Digitalizza il sistema Qualita'"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "feature_slug": "multi_platform_multi_legislation",
+      "feature_name": "Multipiattaforma, multivaluta, multilingua e multilegislazione",
+      "feature_group": "platform",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:formula-home",
+      "evidence_excerpt": "multipiattaforma, multivaluta, multilingua e anche multilegislazione"
+    }
+  ],
+  "technical_characteristics": [
+    {
+      "subject_ref": "product:uniqa",
+      "kind": "deployment_model",
+      "term_slug": "cloud",
+      "term_name": "Cloud",
+      "relationship_type": "supports",
+      "confidence": "medium",
+      "source_ref": "source:formula-direttore-produzione",
+      "evidence_excerpt": "data center, cloud-based oppure on premise"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "kind": "deployment_model",
+      "term_slug": "on_premise",
+      "term_name": "On-premise",
+      "relationship_type": "supports",
+      "confidence": "medium",
+      "source_ref": "source:formula-direttore-produzione",
+      "evidence_excerpt": "data center, cloud-based oppure on premise"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "kind": "extensibility",
+      "term_slug": "modular_suite",
+      "term_name": "Architettura modulare",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:formula-uniqa",
+      "evidence_excerpt": "modularita' delle soluzioni, la scalabilita' delle piattaforme"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "kind": "integration_standard",
+      "term_slug": "erp_crm_bi",
+      "term_name": "Integrazione ERP/CRM/BI",
+      "relationship_type": "supports",
+      "confidence": "medium",
+      "source_ref": "source:formula-home",
+      "evidence_excerpt": "Quando ERP e CRM parlano la stessa lingua"
+    }
+  ],
+  "financial_metrics": [
+    {
+      "subject_ref": "company:formula",
+      "metric": "revenue",
+      "period_year": 2024,
+      "value": {
+        "exact": 48269576
+      },
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Fatturato Formula S.p.A. 2024 da bilancio depositato.",
+      "confidence": "high",
+      "source_ref": "source:formula-financial",
+      "evidence_excerpt": "Fatturato 2024 48.269.576 €"
+    },
+    {
+      "subject_ref": "company:formula",
+      "metric": "employees",
+      "period_year": 2024,
+      "value": {
+        "exact": 375
+      },
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Dipendenti Formula S.p.A. 2024.",
+      "confidence": "high",
+      "source_ref": "source:formula-financial",
+      "evidence_excerpt": "Dipendenti 375"
+    },
+    {
+      "subject_ref": "company:formula",
+      "metric": "customers",
+      "period_year": 2024,
+      "value": {
+        "min": 2500
+      },
+      "currency": "EUR",
+      "value_kind": "estimated",
+      "methodology": "Oltre 2.500 clienti dichiarati dall'azienda; valore minimo.",
+      "confidence": "low",
+      "source_ref": "source:formula-chi-siamo",
+      "evidence_excerpt": "gli oltre 2.500 clienti certificano la qualita' del lavoro svolto"
+    }
+  ],
+  "facts": [
+    {
+      "subject_ref": "company:formula",
+      "predicate": "founded_year",
+      "value": 1972,
+      "value_kind": "reported",
+      "confidence": "high",
+      "source_ref": "source:formula-datamanager",
+      "evidence_excerpt": "affianca le PMI italiane dal 1972"
+    },
+    {
+      "subject_ref": "company:formula",
+      "predicate": "first_sage_x3_italy",
+      "value": "Prima azienda a portare Sage X3 in Italia",
+      "value_kind": "reported",
+      "confidence": "medium",
+      "source_ref": "source:formula-chi-siamo",
+      "evidence_excerpt": "e' stata la prima azienda a portare in Italia Sage X3"
+    }
+  ],
+  "claims": [
+    {
+      "subject_ref": "product:uniqa",
+      "claim_type": "observed",
+      "predicate": "positioning",
+      "statement": "UniQa e' presentata come offerta digitale unica, integrata e modulare (ERP, CPM/BI, CRM, documentale, qualita', MES) per la digitalizzazione dei processi delle PMI e medie imprese.",
+      "assessment": "observed",
+      "confidence": "high",
+      "source_ref": "source:formula-uniqa",
+      "evidence_excerpt": "La soluzione che include tutte le tecnologie, gli strumenti di execution e governance"
+    },
+    {
+      "subject_ref": "product:uniqa",
+      "claim_type": "inferred",
+      "predicate": "business_focus",
+      "statement": "UniQa si basa anche su tecnologie di terze parti (es. Sage X3, Sugar CRM) rivendute e integrate da Formula; il valore differenziale sta nell'integrazione e nei servizi piu' che in un unico prodotto proprietario.",
+      "assessment": "inference",
+      "methodology": "Basato sulla descrizione della soluzione UniQa che combina Sage X3 e SugarAI.",
+      "confidence": "medium",
+      "source_ref": "source:formula-chi-siamo",
+      "evidence_excerpt": "UniQa include tutte le tecnologie"
+    }
+  ],
+  "notes": [
+    {
+      "subject_ref": "company:formula",
+      "note_type": "classification_rationale",
+      "text": "Formula S.p.A. ha categoria principale ERP e CPM/BI; la presenza del vertical manifatturiero colloca UniQa nel macro-settore Manifattura & Industria 4.0.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "company:formula",
+      "note_type": "data_quality",
+      "text": "Prodotti gia' presenti non duplicati: 'DUE Retail Fashion' (Formula) e 'NET@PRO' (vendor Qualitas). In questo bundle e' censito il solo prodotto UniQa.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "group:impresoft",
+      "note_type": "research_note",
+      "text": "Impresoft Group (gruppo italiano) nel 2024 ha ricavi consolidati pro-forma di circa 203 milioni di euro e circa 1.700 dipendenti; Formula ne fa parte e ne rappresenta una delle principali controllate.",
+      "confidence": "medium"
+    }
+  ]
+}

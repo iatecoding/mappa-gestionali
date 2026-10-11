@@ -1,0 +1,439 @@
+{
+  "schema_version": "1.0",
+  "record_id": "research-deda-stealth-fashion-20261011",
+  "created_at": "2026-10-11T10:00:00Z",
+  "created_by": {"agent_id": "research_bundle_agent"},
+  "scope": {"country": "IT", "language": "it"},
+  "entities": [
+    {
+      "local_id": "company:dedagroup",
+      "entity_type": "company",
+      "name": "Dedagroup S.p.A.",
+      "legal_name": "Dedagroup S.p.A.",
+      "identifiers": {"vat_id": "01763870225", "tax_code": "01763870225"},
+      "website": "https://www.deda.com/",
+      "headquarters_city": "Trento",
+      "headquarters_region": "Trentino-Alto Adige",
+      "headquarters_country": "IT",
+      "employee_band": "oltre 1000",
+      "metadata": {
+        "ownership": "società a socio unico, soggetta a direzione e coordinamento di Lillo S.p.A.",
+        "note": "capogruppo del Gruppo Dedagroup (oltre 50 Paesi); le controllate operative includono Dedagroup Stealth e Deda Next"
+      }
+    },
+    {
+      "local_id": "product:stealth-fashion-platform",
+      "entity_type": "product",
+      "company_ref": "company:dedagroup",
+      "name": "Stealth - The Fashion Platform",
+      "slug": "stealth-fashion-platform",
+      "website": "https://www.dedastealth.com/products/stealth",
+      "deployment": ["cloud", "on_premise"],
+      "description": "ERP verticale per il settore Fashion & Luxury, sviluppato da Dedagroup Stealth, che gestisce i processi chiave della filiera (product development, produzione, supply chain, wholesale, retail e omnichannel) su un'unica piattaforma integrata.",
+      "metadata": {"aliases": ["Stealth", "Stealth Platform"], "sviluppatore": "Dedagroup Stealth S.p.A. (società del Gruppo Dedagroup)"}
+    }
+  ],
+  "sources": [
+    {
+      "local_id": "source:deda-stealth-platform",
+      "url": "https://www.dedastealth.com/products/stealth",
+      "source_type": "official_product_page",
+      "publisher": "Dedagroup Stealth S.p.A.",
+      "title": "Stealth Platform: ERP for Fashion & Luxury Brands",
+      "accessed_at": "2026-10-11T09:40:00Z",
+      "language": "en"
+    },
+    {
+      "local_id": "source:deda-stealth-bestinclass",
+      "url": "https://www.dedastealth.com/en/products/platform/best-in-class-solutions",
+      "source_type": "official_product_page",
+      "publisher": "Dedagroup Stealth S.p.A.",
+      "title": "Best-in-class Software Solutions | Deda Stealth",
+      "accessed_at": "2026-10-11T09:41:00Z",
+      "language": "en"
+    },
+    {
+      "local_id": "source:deda-company-profile",
+      "url": "https://www.deda.com/allegati/company-profile/Company-Profile-Deda-eng-99abb.pdf",
+      "source_type": "other",
+      "publisher": "Dedagroup S.p.A.",
+      "title": "Company Profile - Deda Group",
+      "accessed_at": "2026-10-11T09:42:00Z",
+      "language": "en"
+    },
+    {
+      "local_id": "source:deda-bilancio2024",
+      "url": "https://www.deda.com/gruppo/corporate-governance/finance-control/bilancio",
+      "source_type": "official_company_page",
+      "publisher": "Dedagroup S.p.A.",
+      "title": "Bilancio 2024 - Deda Group",
+      "accessed_at": "2026-10-11T09:43:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:deda-bilancio2025",
+      "url": "https://www.deda.com/media/comunicati-stampa/dedagroup-approva-il-bilancio-2025",
+      "source_type": "press_release",
+      "publisher": "Dedagroup S.p.A.",
+      "title": "Dedagroup approva il Bilancio 2025",
+      "accessed_at": "2026-10-11T09:44:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:deda-stealth-mccartney",
+      "url": "https://www.deda.com/media/press-release/deda-stealth-in-stella-mccartney-stores-worldwide",
+      "source_type": "press_release",
+      "publisher": "Dedagroup S.p.A.",
+      "title": "Deda Stealth in Stella McCartney stores worldwide",
+      "accessed_at": "2026-10-11T09:45:00Z",
+      "language": "en"
+    }
+  ],
+  "documents": [
+    {
+      "local_id": "document:deda-stealth-bestinclass",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "title": "Best-in-class Software Solutions - Deda Stealth",
+      "document_type": "web_page",
+      "extraction_method": "web_manual_excerpt",
+      "text": "Dedagroup Stealth combina conoscenza del settore Fashion & Luxury e tecnologia per offrire una soluzione retail completa. Stealth® The Fashion Platform gestisce i processi chiave della supply chain. Le soluzioni abilitano strategie omnichannel; tra i processi gestiti e le funzioni integrate: PDM/PLM, Finance (SAP, Oracle JD Edwards), POS (Retail Pro Prism), CRM ed e-commerce, WMS, Planning/MES, RFID. Integrazione con oltre cinquanta soluzioni best-in-class."
+    },
+    {
+      "local_id": "document:deda-stealth-mccartney",
+      "source_ref": "source:deda-stealth-mccartney",
+      "title": "Deda Stealth in Stella McCartney stores worldwide",
+      "document_type": "web_page",
+      "extraction_method": "web_manual_excerpt",
+      "text": "Il progetto di trasformazione digitale di Stella McCartney usa la Stealth Platform, che gestisce tutti i processi specifici del mondo fashion: dalla produzione e approvvigionamento alle vendite e distribuzione, abilitando strategie omnichannel e garantendo controllo ottimale di dati e processi lungo la catena del valore."
+    }
+  ],
+  "classifications": [
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "kind": "category",
+      "term_slug": "erp",
+      "term_name": "ERP",
+      "confidence": "high",
+      "source_ref": "source:deda-stealth-platform",
+      "evidence_excerpt": "ERP for Fashion & Luxury Brands"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "kind": "vertical",
+      "term_slug": "fashion-luxury",
+      "term_name": "Fashion & Luxury",
+      "confidence": "high",
+      "source_ref": "source:deda-stealth-platform",
+      "evidence_excerpt": "ERP for Fashion & Luxury Brands"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "kind": "category",
+      "term_slug": "omnichannel-retail",
+      "term_name": "Omnichannel / Retail",
+      "confidence": "high",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "evidence_excerpt": "solutions enable the creation and management of efficient omnichannel strategies"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "kind": "segment",
+      "term_slug": "fashion-retail-brand",
+      "term_name": "Brand del fashion & luxury retail",
+      "confidence": "high",
+      "source_ref": "source:deda-stealth-mccartney",
+      "evidence_excerpt": "la Stealth Platform, che gestisce tutti i processi specifici del mondo fashion"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "kind": "deployment",
+      "term_slug": "cloud",
+      "term_name": "Cloud",
+      "confidence": "medium",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "evidence_excerpt": "service-oriented architecture compliant with the digital transformation"
+    }
+  ],
+  "features": [
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "feature_slug": "production_management",
+      "feature_name": "Gestione produzione",
+      "feature_group": "manufacturing",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:deda-stealth-platform",
+      "evidence_excerpt": "connessione di ogni fase del processo, dalla selezione delle materie prime alla produzione"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "feature_slug": "supply_chain_management",
+      "feature_name": "Supply chain management",
+      "feature_group": "supply_chain",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:deda-stealth-mccartney",
+      "evidence_excerpt": "dalla produzione e approvvigionamento alle vendite e distribuzione"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "feature_slug": "pdm_plm_integration",
+      "feature_name": "Integrazione PDM/PLM",
+      "feature_group": "product_development",
+      "support_level": "integration",
+      "confidence": "high",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "evidence_excerpt": "PDM/PLM - Kubix Link, Lectra, wTrendy, Captha Systems"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "feature_slug": "order_management",
+      "feature_name": "Order management",
+      "feature_group": "sales",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "evidence_excerpt": "Order Management System"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "feature_slug": "omnichannel_retail",
+      "feature_name": "Retail omnichannel",
+      "feature_group": "retail",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "evidence_excerpt": "Stealth® Retail - An integrated management solution for international fashion wholesale and retail"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "feature_slug": "pos_integration",
+      "feature_name": "Integrazione POS",
+      "feature_group": "retail",
+      "support_level": "integration",
+      "confidence": "high",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "evidence_excerpt": "POS - Retail Pro Prism"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "feature_slug": "wms_integration",
+      "feature_name": "WMS / logistica",
+      "feature_group": "supply_chain",
+      "support_level": "integration",
+      "confidence": "high",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "evidence_excerpt": "WMS - Logimoda, eFashion"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "feature_slug": "finance_integration",
+      "feature_name": "Integrazione finance/ERP amministrativo",
+      "feature_group": "finance",
+      "support_level": "integration",
+      "confidence": "high",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "evidence_excerpt": "FINANCE - SAP, Oracle JD Edwards | RTT, Econ | MCG"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "feature_slug": "ai_data_analytics",
+      "feature_name": "AI e analytics",
+      "feature_group": "analytics",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "evidence_excerpt": "Stealth® AI, Analytics & BI for Fashion Operations"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "feature_slug": "sustainability_module",
+      "feature_name": "Modulo sostenibilità",
+      "feature_group": "compliance",
+      "support_level": "native",
+      "confidence": "medium",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "evidence_excerpt": "Stealth® Sustainability Solution"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "feature_slug": "rfid_integration",
+      "feature_name": "Integrazione RFID",
+      "feature_group": "retail",
+      "support_level": "integration",
+      "confidence": "medium",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "evidence_excerpt": "RFID - Temera"
+    }
+  ],
+  "technical_characteristics": [
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "kind": "extensibility",
+      "term_slug": "service_oriented_architecture",
+      "term_name": "Architettura service-oriented",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:deda-stealth-platform",
+      "evidence_excerpt": "service-oriented architecture compliant with the digital transformation"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "kind": "integration_standard",
+      "term_slug": "api_integration",
+      "term_name": "API per integrazioni",
+      "relationship_type": "supports",
+      "confidence": "medium",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "evidence_excerpt": "Experienced integration with more than fifty best-in-class solutions"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "kind": "deployment_model",
+      "term_slug": "cloud",
+      "term_name": "Cloud",
+      "relationship_type": "compatible_with",
+      "confidence": "medium",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "evidence_excerpt": "Google Cloud (Alliance Partner)"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "kind": "mobile_platform",
+      "term_slug": "mobile_app",
+      "term_name": "App mobile",
+      "relationship_type": "available_as",
+      "confidence": "high",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "evidence_excerpt": "Mobile App Retail, Mobile Inventory Management"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "kind": "database",
+      "term_slug": "oracle",
+      "term_name": "Oracle",
+      "relationship_type": "compatible_with",
+      "confidence": "low",
+      "source_ref": "source:deda-stealth-bestinclass",
+      "evidence_excerpt": "Oracle JD Edwards, Oracle EBS, Oracle XStore"
+    }
+  ],
+  "financial_metrics": [
+    {
+      "subject_ref": "company:dedagroup",
+      "metric": "revenue",
+      "period_year": 2025,
+      "value": {"exact": 601000000},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Ricavi consolidati di Gruppo 2025 (+28% vs 2024).",
+      "confidence": "high",
+      "source_ref": "source:deda-bilancio2025",
+      "evidence_excerpt": "ha registrato ricavi pari a 601 milioni di euro in crescita del 28% rispetto al 2024"
+    },
+    {
+      "subject_ref": "company:dedagroup",
+      "metric": "ebitda",
+      "period_year": 2025,
+      "value": {"exact": 54600000},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "EBITDA consolidato di Gruppo 2025 (+29% vs 2024).",
+      "confidence": "high",
+      "source_ref": "source:deda-bilancio2025",
+      "evidence_excerpt": "l'Ebitda a 54,6 milioni di euro (+29% vs 2024)"
+    },
+    {
+      "subject_ref": "company:dedagroup",
+      "metric": "net_income",
+      "period_year": 2025,
+      "value": {"exact": -13700000},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Risultato netto consolidato 2025 (negativo, in miglioramento sul 2024).",
+      "confidence": "high",
+      "source_ref": "source:deda-bilancio2025",
+      "evidence_excerpt": "Il risultato netto si attesta a –13,7 milioni di euro"
+    },
+    {
+      "subject_ref": "company:dedagroup",
+      "metric": "revenue",
+      "period_year": 2024,
+      "value": {"exact": 472000000},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Ricavi consolidati di Gruppo 2024 (+38% sul 2023).",
+      "confidence": "high",
+      "source_ref": "source:deda-bilancio2024",
+      "evidence_excerpt": "Ricavi consolidati a 472 milioni di euro (+38% sul 2023)"
+    },
+    {
+      "subject_ref": "company:dedagroup",
+      "metric": "employees",
+      "period_year": 2024,
+      "value": {"exact": 5000},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Dipendenti di Gruppo al 31/12/2024 (circa 5.000).",
+      "confidence": "medium",
+      "source_ref": "source:deda-company-profile",
+      "evidence_excerpt": "oltre 5.000 collaboratori"
+    }
+  ],
+  "facts": [
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "predicate": "market_penetration",
+      "value": {"share": "oltre il 60%", "context": "brand fashion italiani più noti a livello globale"},
+      "value_kind": "reported",
+      "confidence": "low",
+      "source_ref": "source:deda-company-profile",
+      "evidence_excerpt": "the tech company behind more than 60% of Italy's best-known global fashion brands"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "predicate": "longevity_years",
+      "value": {"years": 30, "context": "esperienza su software per il fashion"},
+      "value_kind": "reported",
+      "confidence": "high",
+      "source_ref": "source:deda-stealth-mccartney",
+      "evidence_excerpt": "its expertise and software platform for 30 years"
+    }
+  ],
+  "claims": [
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "claim_type": "observed",
+      "predicate": "positioning",
+      "statement": "Stealth - The Fashion Platform è un ERP verticale per il Fashion & Luxury che copre l'intera catena del valore, dalla produzione alla distribuzione e al retail omnichannel.",
+      "assessment": "observed",
+      "confidence": "high",
+      "source_ref": "source:deda-stealth-mccartney",
+      "evidence_excerpt": "gestisce tutti i processi specifici del mondo fashion"
+    },
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "claim_type": "inferred",
+      "predicate": "market_position",
+      "statement": "È uno dei pochi software specificamente sviluppati per il fashion retail, con una base clienti di brand internazionali (es. Stella McCartney).",
+      "assessment": "inference",
+      "confidence": "medium",
+      "source_ref": "source:deda-company-profile",
+      "evidence_excerpt": "one of only a handful of international companies with a wide range of software solutions"
+    }
+  ],
+  "notes": [
+    {
+      "subject_ref": "product:stealth-fashion-platform",
+      "note_type": "classification_rationale",
+      "text": "Prodotto Fashion & Luxury: la categoria 'erp' non contiene i keyword PA/utility/sanità, quindi il macro-settore non viene mappato su PA/Utility/Salute; assegnato per analogia al settore Moda/Retail.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "company:dedagroup",
+      "note_type": "research_note",
+      "text": "Per evitare duplicati non è stata usata la controllata Deda Next (già presente nel catalogo) né i suoi prodotti PA (es. CiviliaNext, già catalogato). Stealth è un prodotto di Dedagroup Stealth S.p.A., società diversa da Deda Next.",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "schema_version": "1.0",
+  "record_id": "research-eng-areas-20261011",
+  "created_at": "2026-10-11T10:00:00Z",
+  "created_by": {"agent_id": "research_bundle_agent"},
+  "scope": {"country": "IT", "language": "it"},
+  "entities": [
+    {
+      "local_id": "company:engineering",
+      "entity_type": "company",
+      "name": "Engineering Ingegneria Informatica S.p.A.",
+      "legal_name": "Engineering Ingegneria Informatica S.p.A.",
+      "identifiers": {"vat_id": "05724831002", "tax_code": "00967720285"},
+      "website": "https://www.eng.it/",
+      "headquarters_city": "Roma",
+      "headquarters_region": "Lazio",
+      "headquarters_country": "IT",
+      "founded_year": 1980,
+      "employee_band": "oltre 10000",
+      "metadata": {"capogruppo": "Engineering Group (società unipersonale di Centurion Newco S.p.A.)"}
+    },
+    {
+      "local_id": "product:areas",
+      "entity_type": "product",
+      "company_ref": "company:engineering",
+      "name": "AREAS",
+      "slug": "areas",
+      "website": "https://www.eng.it/en/solutions/platforms/areas",
+      "deployment": ["on_premise", "cloud"],
+      "description": "Piattaforma proprietaria di Engineering per la digitalizzazione e l'integrazione dei processi clinici e amministrativi delle aziende sanitarie: sette aree applicative native (governo, accessi, ospedaliera, territorio, diagnostica, amministrazione e controllo, risorse umane) componibili in un Hospital Information System.",
+      "metadata": {"aliases": ["AREAS®", "AREAS Healthcare Platform"]}
+    }
+  ],
+  "sources": [
+    {
+      "local_id": "source:areas-platform",
+      "url": "https://www.eng.it/en/solutions/platforms/areas",
+      "source_type": "official_product_page",
+      "publisher": "Engineering Ingegneria Informatica S.p.A.",
+      "title": "AREAS - Engineering Group",
+      "accessed_at": "2026-10-11T09:30:00Z",
+      "language": "en"
+    },
+    {
+      "local_id": "source:eng-ehealth-wp",
+      "url": "https://www.eng.it/content/dam/eng-portal/resources/documents/white-paper/portfolio/healthcare/ENG24_WP_E-Health_ITA.pdf",
+      "source_type": "other",
+      "publisher": "Engineering Ingegneria Informatica S.p.A.",
+      "title": "E-HEALTH - white paper Engineering",
+      "accessed_at": "2026-10-11T09:31:00Z",
+      "language": "it"
+    },
+    {
+      "local_id": "source:eng-healthcare",
+      "url": "https://www.eng.it/en/solutions/markets/healthcare",
+      "source_type": "official_product_page",
+      "publisher": "Engineering Ingegneria Informatica S.p.A.",
+      "title": "Healthcare - Engineering Group",
+      "accessed_at": "2026-10-11T09:32:00Z",
+      "language": "en"
+    },
+    {
+      "local_id": "source:eng-bilancio2024",
+      "url": "https://www.eng.it/content/dam/eng-portal/resources/documents/corporate-governance/bilancio/Engineering_BilancioAnnualeConsolidato2024.pdf",
+      "source_type": "annual_report",
+      "publisher": "Engineering Ingegneria Informatica S.p.A.",
+      "title": "Bilancio Consolidato 2024 - Engineering Group",
+      "accessed_at": "2026-10-11T09:24:00Z",
+      "language": "it"
+    }
+  ],
+  "documents": [
+    {
+      "local_id": "document:areas-platform",
+      "source_ref": "source:areas-platform",
+      "title": "AREAS - Engineering Group",
+      "document_type": "web_page",
+      "extraction_method": "web_manual_excerpt",
+      "text": "AREAS® è la piattaforma sviluppata da Engineering per il settore healthcare, scelta da più di 160 strutture sanitarie e usata ogni giorno da oltre 100.000 professionisti sanitari. È composta da sistemi indipendenti organizzati in sette aree applicative nativamente integrate: Governance, Access Management, Hospital, Community Care, Diagnostics, Administration and Control, Human Resources. Grazie a certificazioni e codifiche internazionali comunica con sistemi di terze parti, progetti regionali/nazionali, dispositivi medicali e strumenti di laboratorio; è allineata a normative civili, fiscali e del lavoro, firma elettronica, GDPR e conservazione sostitutiva."
+    },
+    {
+      "local_id": "document:eng-ehealth-wp",
+      "source_ref": "source:eng-ehealth-wp",
+      "title": "E-HEALTH - white paper Engineering",
+      "document_type": "pdf_document",
+      "extraction_method": "web_manual_excerpt",
+      "text": "Engineering dedica oltre 900 professionisti alla sanità elettronica. AREAS da oltre dieci anni è la risposta applicativa di riferimento per l'informatizzazione diffusa e integrata di tutti i processi della sanità, da quelli clinico-diagnostici a quelli amministrativi e contabili; con oltre 100.000 utenti. La piattaforma ellipse porta il software per l'E-Health su un livello più evoluto e specialistico, focalizzato sulla dimensione clinica."
+    }
+  ],
+  "classifications": [
+    {
+      "subject_ref": "product:areas",
+      "kind": "category",
+      "term_slug": "sanita-digitale",
+      "term_name": "Sanità digitale",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "platform for the digitization and integration of clinical and administrative health processes"
+    },
+    {
+      "subject_ref": "product:areas",
+      "kind": "category",
+      "term_slug": "hospital-information-system",
+      "term_name": "Hospital Information System (HIS)",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "whether at departmental or enterprise level (Hospital Information System)"
+    },
+    {
+      "subject_ref": "product:areas",
+      "kind": "vertical",
+      "term_slug": "sanita",
+      "term_name": "Sanità",
+      "confidence": "high",
+      "source_ref": "source:eng-healthcare",
+      "evidence_excerpt": "Healthcare"
+    },
+    {
+      "subject_ref": "product:areas",
+      "kind": "segment",
+      "term_slug": "aziende-sanitarie-ospedaliere",
+      "term_name": "Aziende sanitarie e ospedaliere",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "chosen by more than 160 healthcare organizations"
+    },
+    {
+      "subject_ref": "product:areas",
+      "kind": "deployment",
+      "term_slug": "on_premise",
+      "term_name": "On premise",
+      "confidence": "medium",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "each healthcare organization can build and evolve its own information system"
+    }
+  ],
+  "features": [
+    {
+      "subject_ref": "product:areas",
+      "feature_slug": "governance",
+      "feature_name": "Governance sanitaria",
+      "feature_group": "governance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "Governance"
+    },
+    {
+      "subject_ref": "product:areas",
+      "feature_slug": "access_management",
+      "feature_name": "Gestione accessi e prenotazioni (CUP)",
+      "feature_group": "access",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "Access Management"
+    },
+    {
+      "subject_ref": "product:areas",
+      "feature_slug": "hospital_management",
+      "feature_name": "Gestione ospedaliera",
+      "feature_group": "clinical",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "Hospital"
+    },
+    {
+      "subject_ref": "product:areas",
+      "feature_slug": "community_care",
+      "feature_name": "Assistenza territoriale",
+      "feature_group": "clinical",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "Community Care"
+    },
+    {
+      "subject_ref": "product:areas",
+      "feature_slug": "diagnostics",
+      "feature_name": "Diagnostica di laboratorio",
+      "feature_group": "diagnostics",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "Diagnostics"
+    },
+    {
+      "subject_ref": "product:areas",
+      "feature_slug": "administration_control",
+      "feature_name": "Amministrazione e controllo",
+      "feature_group": "finance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "Administration and Control"
+    },
+    {
+      "subject_ref": "product:areas",
+      "feature_slug": "human_resources",
+      "feature_name": "Risorse umane",
+      "feature_group": "hr",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "Human Resources"
+    },
+    {
+      "subject_ref": "product:areas",
+      "feature_slug": "electronic_signature",
+      "feature_name": "Firma elettronica e conservazione sostitutiva",
+      "feature_group": "compliance",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "electronic signatures, GDPR, digital document preservation"
+    },
+    {
+      "subject_ref": "product:areas",
+      "feature_slug": "medical_device_integration",
+      "feature_name": "Integrazione dispositivi medicali e strumenti di laboratorio",
+      "feature_group": "integration",
+      "support_level": "native",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "communicate with third-party systems, regional or national projects, medical devices, and laboratory equipment"
+    }
+  ],
+  "technical_characteristics": [
+    {
+      "subject_ref": "product:areas",
+      "kind": "integration_standard",
+      "term_slug": "ihe",
+      "term_name": "IHE",
+      "relationship_type": "supports",
+      "confidence": "medium",
+      "source_ref": "source:eng-ehealth-wp",
+      "evidence_excerpt": "profili IHE per l'interoperabilità tra le applicazioni E-Health"
+    },
+    {
+      "subject_ref": "product:areas",
+      "kind": "security_standard",
+      "term_slug": "gdpr",
+      "term_name": "GDPR",
+      "relationship_type": "certified_for",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "aligned with ... GDPR"
+    },
+    {
+      "subject_ref": "product:areas",
+      "kind": "auditability",
+      "term_slug": "conservazione_sostitutiva",
+      "term_name": "Conservazione sostitutiva",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "digital document preservation"
+    },
+    {
+      "subject_ref": "product:areas",
+      "kind": "extensibility",
+      "term_slug": "configurazione_e_programmazione",
+      "term_name": "Configurazione e programmazione per singola organizzazione",
+      "relationship_type": "supports",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "each AREAS® system can be configured and programmed down to the smallest detail"
+    },
+    {
+      "subject_ref": "product:areas",
+      "kind": "deployment_model",
+      "term_slug": "cloud",
+      "term_name": "Cloud",
+      "relationship_type": "compatible_with",
+      "confidence": "low",
+      "source_ref": "source:eng-bilancio2024",
+      "evidence_excerpt": "soluzioni proprietarie, in particolare nel Cloud"
+    },
+    {
+      "subject_ref": "product:areas",
+      "kind": "integration_standard",
+      "term_slug": "hl7_fhir",
+      "term_name": "Standard clinici (HL7/FHIR)",
+      "relationship_type": "supports",
+      "confidence": "low",
+      "source_ref": "source:eng-ehealth-wp",
+      "evidence_excerpt": "standard sintattici e semantici"
+    }
+  ],
+  "financial_metrics": [
+    {
+      "subject_ref": "company:engineering",
+      "metric": "employees",
+      "period_year": 2024,
+      "value": {"exact": 900},
+      "currency": "EUR",
+      "value_kind": "reported",
+      "methodology": "Professionisti dedicati esclusivamente alla sanità elettronica (non l'organico aziendale complessivo).",
+      "confidence": "medium",
+      "source_ref": "source:eng-ehealth-wp",
+      "evidence_excerpt": "oltre 900 professionisti esclusivamente dedicati alla sanit"
+    }
+  ],
+  "facts": [
+    {
+      "subject_ref": "product:areas",
+      "predicate": "installed_base",
+      "value": {"healthcare_organizations": "160+", "daily_users": "100000+"},
+      "value_kind": "reported",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "chosen by more than 160 healthcare organizations and used every day by over 100,000 healthcare professionals"
+    },
+    {
+      "subject_ref": "product:areas",
+      "predicate": "application_areas",
+      "value": ["governance", "access", "hospital", "community_care", "diagnostics", "administration_control", "human_resources"],
+      "value_kind": "reported",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "seven natively integrated application areas"
+    }
+  ],
+  "claims": [
+    {
+      "subject_ref": "product:areas",
+      "claim_type": "observed",
+      "predicate": "positioning",
+      "statement": "AREAS è presentato come benchmark di mercato per l'healthcare in Italia: oltre 160 strutture sanitarie e 100.000 professionisti lo usano quotidianamente.",
+      "assessment": "observed",
+      "confidence": "high",
+      "source_ref": "source:areas-platform",
+      "evidence_excerpt": "has become a benchmark in the market"
+    }
+  ],
+  "notes": [
+    {
+      "subject_ref": "product:areas",
+      "note_type": "classification_rationale",
+      "text": "Prodotto sanitario: categoria/vertical 'sanità digitale' per mappatura macro-settore verso Professioni/Salute.",
+      "confidence": "high"
+    },
+    {
+      "subject_ref": "product:areas",
+      "note_type": "data_quality",
+      "text": "Le caratteristiche tecniche su standard clinici (HL7/FHIR) e deployment cloud sono supportate solo indirettamente dalle fonti: confidenza bassa.",
+      "confidence": "medium"
+    }
+  ]
+}
