@@ -1,0 +1,773 @@
+{
+  "schema_version": "1.0",
+  "record_id": "fmr-software-engineering-2026-11-07-v1",
+  "created_at": "2026-11-07T17:35:00Z",
+  "created_by": {
+    "agent_id": "chatgpt-assisted-draft"
+  },
+  "scope": {
+    "country": "IT",
+    "language": "it",
+    "purpose": "Candidatura preliminare di una software house italiana e dei suoi prodotti gestionali",
+    "status": "draft_for_vendor_review",
+    "important": "Dati da verificare dal titolare prima dell'invio; non è una dichiarazione di validazione del catalogo."
+  },
+  "entities": [
+    {
+      "local_id": "company:fmr-software-engineering",
+      "entity_type": "company",
+      "name": "FMR Software Engineering",
+      "legal_name": "FMR Software Engineering",
+      "identifiers": {
+        "vat_id": "04584900163"
+      },
+      "website": "https://www.fmrbg.com/",
+      "headquarters_city": "Bergamo",
+      "headquarters_region": "Lombardia",
+      "headquarters_country": "IT",
+      "founded_year": 1994,
+      "metadata": {
+        "address_as_published": "Via T. Calzecchi Onesti 4, Bergamo (BG)",
+        "phone_as_published": "035 6017466",
+        "email_as_published": "info@fmrbg.com",
+        "address_note": "Confermare che sia la sede da pubblicare e distinguere sede legale/operativa se necessario.",
+        "legal_name_note": "La denominazione legale completa e la forma societaria vanno confermate da visura camerale.",
+        "founded_year_note": "Anno di attività dichiarato dal sito aziendale; non equivale necessariamente all'anno di costituzione della società."
+      }
+    },
+    {
+      "local_id": "product:cantieri",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Cantieri",
+      "slug": "cantieri",
+      "description": "Gestione imprese edili e impiantistiche; commesse e cantieri.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:computo-professional",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Computo Professional",
+      "slug": "computo-professional",
+      "description": "Computi metrici e contabilità dei lavori.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:impianti",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Impianti",
+      "slug": "impianti",
+      "description": "Preventivazione per attività impiantistiche.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:mille",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Mille",
+      "slug": "mille",
+      "description": "Elaborazione e gestione di tabelle millesimali.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:building",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Building",
+      "slug": "building",
+      "description": "Gestione di attività di agenzia immobiliare e vendite immobiliari.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:rent",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Rent",
+      "slug": "rent",
+      "description": "Gestione delle locazioni e degli affitti.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:stralcio",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Stralcio",
+      "slug": "stralcio",
+      "description": "Gestione di pratiche di saldo e stralcio.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:studio-s",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Studio's",
+      "slug": "studio-s",
+      "description": "Software gestionale per studi professionali.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:tower",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Tower",
+      "slug": "tower",
+      "description": "Amministrazione e gestione condominiale.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:artigian",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Artigian",
+      "slug": "artigian",
+      "description": "Gestione dell'attività di imprese artigiane.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:gemia",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Gemia",
+      "slug": "gemia",
+      "description": "Gestione delle manutenzioni e degli interventi antincendio.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:magic",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Magic",
+      "slug": "magic",
+      "description": "Gestione aziendale.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:gestass",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "GestAss",
+      "slug": "gestass",
+      "description": "Gestione di associazioni non profit e del Terzo Settore.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:gestcoll",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "GestColl",
+      "slug": "gestcoll",
+      "description": "Gestione di collegi e ordini professionali.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:calcio",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Calcio",
+      "slug": "calcio",
+      "description": "Gestione di società e attività calcistiche.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:sporting",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Sporting",
+      "slug": "sporting",
+      "description": "Gestione di associazioni e attività sportive.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:alloggiati",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Alloggiati",
+      "slug": "alloggiati",
+      "description": "Gestione degli adempimenti relativi agli ospiti delle strutture ricettive.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:hotel",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Hotel",
+      "slug": "hotel",
+      "description": "Gestione di strutture ricettive e attività alberghiere.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:ingressi",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Ingressi",
+      "slug": "ingressi",
+      "description": "Gestione di club e circoli.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:fata",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Fata",
+      "slug": "fata",
+      "description": "Fatturazione elettronica.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:bank",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Bank",
+      "slug": "bank",
+      "description": "Gestione e controllo dei conti correnti.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:bonus",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Bonus",
+      "slug": "bonus",
+      "description": "Gestione di buoni postali.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    },
+    {
+      "local_id": "product:market",
+      "entity_type": "product",
+      "company_ref": "company:fmr-software-engineering",
+      "name": "Market",
+      "slug": "market",
+      "description": "Gestione di attività di marketing e mailing.",
+      "status": "active",
+      "metadata": {
+        "classification_status": "preliminary",
+        "description_status": "summary_to_be_checked_against_current_product_page",
+        "product_url": null,
+        "note": "Non è stato inserito un URL individuale perché deve essere verificato nella pagina prodotto live."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "local_id": "source:fmr-llms-full",
+      "url": "https://www.fmrbg.com/llms-full.txt",
+      "source_type": "official_company_page",
+      "publisher": "FMR Software Engineering",
+      "title": "FMR — documentazione completa per sistemi LLM (llms-full.txt)",
+      "accessed_at": "2026-11-07T17:35:00Z",
+      "language": "it",
+      "metadata": {
+        "role": "Fonte primaria indicata dal titolare per denominazioni e descrizioni dei prodotti.",
+        "retrieval_note": "L'URL è indicato come fonte; il testo integrale va allegato o verificato nuovamente prima dell'invio."
+      }
+    },
+    {
+      "local_id": "source:fmr-homepage",
+      "url": "https://www.fmrbg.com/",
+      "source_type": "official_company_page",
+      "publisher": "FMR Software Engineering",
+      "title": "Sito ufficiale FMR",
+      "accessed_at": "2026-11-07T17:35:00Z",
+      "language": "it",
+      "metadata": {
+        "role": "Fonte per presentazione aziendale e collegamento al catalogo."
+      }
+    }
+  ],
+  "documents": [],
+  "classifications": [
+    {
+      "subject_ref": "product:cantieri",
+      "kind": "category",
+      "term_slug": "field-service-cantieri-manutenzione",
+      "term_name": "Field Service, Cantieri & Manutenzione",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Cantieri; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:computo-professional",
+      "kind": "category",
+      "term_slug": "field-service-cantieri-manutenzione",
+      "term_name": "Field Service, Cantieri & Manutenzione",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Computo Professional; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:impianti",
+      "kind": "category",
+      "term_slug": "field-service-cantieri-manutenzione",
+      "term_name": "Field Service, Cantieri & Manutenzione",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Impianti; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:mille",
+      "kind": "category",
+      "term_slug": "professioni-salute-sport-no-profit",
+      "term_name": "Professioni, Salute, Sport & No-Profit",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Mille; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:building",
+      "kind": "category",
+      "term_slug": "professioni-salute-sport-no-profit",
+      "term_name": "Professioni, Salute, Sport & No-Profit",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Building; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:rent",
+      "kind": "category",
+      "term_slug": "professioni-salute-sport-no-profit",
+      "term_name": "Professioni, Salute, Sport & No-Profit",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Rent; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:stralcio",
+      "kind": "category",
+      "term_slug": "erp-finanza-controllo",
+      "term_name": "ERP, Finanza & Controllo",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Stralcio; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:studio-s",
+      "kind": "category",
+      "term_slug": "professioni-salute-sport-no-profit",
+      "term_name": "Professioni, Salute, Sport & No-Profit",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Studio's; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:tower",
+      "kind": "category",
+      "term_slug": "professioni-salute-sport-no-profit",
+      "term_name": "Professioni, Salute, Sport & No-Profit",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Tower; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:artigian",
+      "kind": "category",
+      "term_slug": "erp-finanza-controllo",
+      "term_name": "ERP, Finanza & Controllo",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Artigian; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:gemia",
+      "kind": "category",
+      "term_slug": "field-service-cantieri-manutenzione",
+      "term_name": "Field Service, Cantieri & Manutenzione",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Gemia; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:magic",
+      "kind": "category",
+      "term_slug": "erp-finanza-controllo",
+      "term_name": "ERP, Finanza & Controllo",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Magic; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:gestass",
+      "kind": "category",
+      "term_slug": "professioni-salute-sport-no-profit",
+      "term_name": "Professioni, Salute, Sport & No-Profit",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto GestAss; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:gestcoll",
+      "kind": "category",
+      "term_slug": "professioni-salute-sport-no-profit",
+      "term_name": "Professioni, Salute, Sport & No-Profit",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto GestColl; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:calcio",
+      "kind": "category",
+      "term_slug": "professioni-salute-sport-no-profit",
+      "term_name": "Professioni, Salute, Sport & No-Profit",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Calcio; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:sporting",
+      "kind": "category",
+      "term_slug": "professioni-salute-sport-no-profit",
+      "term_name": "Professioni, Salute, Sport & No-Profit",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Sporting; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:alloggiati",
+      "kind": "category",
+      "term_slug": "hospitality-strutture-ricettive",
+      "term_name": "Hospitality & Strutture Ricettive",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Alloggiati; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:hotel",
+      "kind": "category",
+      "term_slug": "hospitality-strutture-ricettive",
+      "term_name": "Hospitality & Strutture Ricettive",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Hotel; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:ingressi",
+      "kind": "category",
+      "term_slug": "professioni-salute-sport-no-profit",
+      "term_name": "Professioni, Salute, Sport & No-Profit",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Ingressi; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:fata",
+      "kind": "category",
+      "term_slug": "erp-finanza-controllo",
+      "term_name": "ERP, Finanza & Controllo",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Fata; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:bank",
+      "kind": "category",
+      "term_slug": "erp-finanza-controllo",
+      "term_name": "ERP, Finanza & Controllo",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Bank; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:bonus",
+      "kind": "category",
+      "term_slug": "erp-finanza-controllo",
+      "term_name": "ERP, Finanza & Controllo",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Bonus; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    },
+    {
+      "subject_ref": "product:market",
+      "kind": "category",
+      "term_slug": "erp-finanza-controllo",
+      "term_name": "ERP, Finanza & Controllo",
+      "confidence": "low",
+      "source_ref": "source:fmr-llms-full",
+      "evidence_excerpt": "Classificazione preliminare del prodotto Market; da confermare rispetto alla tassonomia e alla scheda prodotto."
+    }
+  ],
+  "features": [],
+  "technical_characteristics": [],
+  "industry_classifications": [],
+  "financial_metrics": [],
+  "facts": [],
+  "claims": [],
+  "notes": [
+    {
+      "subject_ref": "product:cantieri",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:computo-professional",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:impianti",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:mille",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:building",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:rent",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:stralcio",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:studio-s",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:tower",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:artigian",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:gemia",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:magic",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:gestass",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:gestcoll",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:calcio",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:sporting",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:alloggiati",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:hotel",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:ingressi",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:fata",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:bank",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:bonus",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "product:market",
+      "note_type": "data_quality",
+      "text": "Scheda preliminare: verificare nome commerciale, URL individuale, descrizione estesa, funzionalità, deployment, integrazioni, prezzi e categoria prima dell'importazione definitiva.",
+      "confidence": "low"
+    },
+    {
+      "subject_ref": "company:fmr-software-engineering",
+      "note_type": "data_quality",
+      "text": "Candidatura preliminare basata sulle informazioni già raccolte nella conversazione e sul riferimento al llms-full.txt del produttore. Verificare ragione sociale esatta, sede, P.IVA, data di fondazione e dati societari con fonti ufficiali aggiornate. Non sono stati inventati ricavi, ATECO, numero dipendenti, prezzi o caratteristiche tecniche specifiche per singolo prodotto.",
+      "confidence": "low"
+    }
+  ]
+}
